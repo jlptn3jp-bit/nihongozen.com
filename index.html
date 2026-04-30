@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NihongoZen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+<h2>🇯🇵 NihongoZen Login</h2>
+<input id="user" placeholder="Enter Name">
+<button onclick="login()">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+<h2>Welcome 👤 <span id="name"></span></h2>
+
+<div onclick="openCourse()">📘 N5–N1 Learning</div>
+<div onclick="openKanji()">🈶 Kanji Quiz</div>
+
+<div>
+Progress:
+<div id="bar"></div>
+</div>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- COURSE -->
+<div id="course" class="hidden">
+<h2>Lesson</h2>
+<p id="jp"></p>
+<p id="en"></p>
+
+<button onclick="next()">Next</button>
+<button onclick="back()">Back</button>
+</div>
+
+<!-- KANJI -->
+<div id="kanji" class="hidden">
+<h2>Kanji Practice</h2>
+<p id="kdata"></p>
+
+<button onclick="kanjiNext()">Next</button>
+<button onclick="backDash()">Dashboard</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
