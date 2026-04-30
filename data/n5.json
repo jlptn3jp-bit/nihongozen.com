@@ -1,10 +1,15 @@
-[
-  {
-    "jp": "私は学生です",
-    "en": "I am a student"
-  },
-  {
-    "jp": "水を飲みます",
-    "en": "I drink water"
-  }
-]
+{
+  "level": "N5",
+  "lessons": [
+    {
+      "title": "Hiragana Basics",
+      "description": "Learn basic Hiragana characters",
+      "content": "あ い う え お"
+    },
+    {
+      "title": "Basic Greetings",
+      "description": "Common Japanese greetings",
+      "content": "こんにちは = Hello"
+    }
+  ]
+}
