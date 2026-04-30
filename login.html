@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Login - NihongoZen</title>
+<meta charset="UTF-8">
+<title>Nihongo Zen Master - Login</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<div class="center">
-<h2>🇯🇵 NihongoZen Login</h2>
+<div class="login-container">
+    <h1>🇯🇵 Nihongo Zen Master</h1>
+    <p>Login to start your journey</p>
 
-<input id="name" placeholder="Enter Name">
-<button onclick="login()">Login</button>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
+    <button onclick="login()">Login</button>
 </div>
 
 <script src="js/auth.js"></script>
+
 </body>
 </html>
