@@ -1,18 +1,12 @@
 function login(){
-  let name = document.getElementById("user").value;
+let name = document.getElementById("name").value;
 
-  if(name === ""){
-    alert("Enter your name");
-    return;
-  }
-
-  localStorage.setItem("user", name);
-  localStorage.setItem("progress", 0);
-
-  window.location.href = "dashboard.html";
+if(name === ""){
+alert("Enter name");
+return;
 }
 
-function logout(){
-  localStorage.clear();
-  window.location.href = "login.html";
+localStorage.setItem("user",name);
+
+window.location.href="dashboard.html";
 }
