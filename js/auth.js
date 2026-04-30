@@ -1,12 +1,11 @@
-function login(){
-let name = document.getElementById("name").value;
+function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
 
-if(name === ""){
-alert("Enter name");
-return;
-}
-
-localStorage.setItem("user",name);
-
-window.location.href="dashboard.html";
+    if(user && pass){
+        localStorage.setItem("user", user);
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Please enter details");
+    }
 }
