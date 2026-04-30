@@ -1,6 +1,1 @@
-icons/
-├── kanji.png
-├── login.png
-├── lesson.png
-├── quiz.png
-├── progress.png
+<img src="assets/icons/kanji.svg" width="30">
