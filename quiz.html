@@ -1,1 +1,15 @@
+let current = 0;
+let score = 0;
 
+async function loadQuiz() {
+    const res = await fetch("data/quiz/n5_quiz.json");
+    const quiz = await res.json();
+
+    showQuestion(quiz);
+}
+
+function showQuestion(quiz) {
+    let q = quiz[current];
+
+    document.getElementById("question").innerText = q.question;
+}
