@@ -1,22 +1,12 @@
 [
   {
     "kanji": "日",
-    "meaning": "Sun / Day"
-  },
-  {
-    "kanji": "月",
-    "meaning": "Moon"
+    "meaning": "Sun / Day",
+    "reading": "nichi / hi"
   },
   {
     "kanji": "水",
-    "meaning": "Water"
-  },
-  {
-    "kanji": "火",
-    "meaning": "Fire"
-  },
-  {
-    "kanji": "木",
-    "meaning": "Tree / Wood"
+    "meaning": "Water",
+    "reading": "sui / mizu"
   }
 ]
