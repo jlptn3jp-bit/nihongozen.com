@@ -1,31 +1,232 @@
-NihongoZen/
-│
-├── index.html
-├── dashboard.html
-├── login.html
-├── kanji.html
-├── lessons.html
-│
-├── /css
-│   └── style.css
-│
-├── /js
-│   ├── app.js
-│   ├── auth.js
-│   ├── lessons.js
-│   ├── kanji.js
-│   └── progress.js
-│
-├── /data
-│   ├── n5.json
-│   ├── n4.json
-│   ├── kanji.json
-│   ├── jlpt.json
-│
-├── /assets
-│   ├── images/
-│   ├── icons/
-│
-└── /audio
-    ├── n5/
-    ├── kanji/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nihongo Master Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+.hidden{display:none;}
+
+.center{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+}
+
+input{
+padding:10px;
+margin:5px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:5px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+padding:15px;
+margin:10px;
+border-radius:12px;
+cursor:pointer;
+}
+
+.container{
+padding:15px;
+}
+
+.progress{
+background:#444;
+border-radius:10px;
+overflow:hidden;
+height:15px;
+width:100%;
+}
+
+.bar{
+height:15px;
+background:limegreen;
+width:0%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="center">
+<h2>🇯🇵 Nihongo Master Login</h2>
+<input id="user" placeholder="Enter Name">
+<button onclick="login()">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden container">
+
+<h2>Welcome, <span id="name"></span> 👤</h2>
+
+<div class="card" onclick="openCourse()">📘 Start N5–N1 Learning</div>
+<div class="card" onclick="openKanji()">🈶 Kanji Practice</div>
+
+<h3>📊 Progress</h3>
+<div class="progress">
+<div id="bar" class="bar"></div>
+</div>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- COURSE -->
+<div id="course" class="hidden container">
+<h2>Japanese Learning</h2>
+
+<p id="jp"></p>
+<p id="en"></p>
+
+<button onclick="next()">Next</button>
+<button onclick="back()">Back</button>
+</div>
+
+<!-- KANJI -->
+<div id="kanji" class="hidden container">
+<h2>Kanji System 🈶</h2>
+
+<p id="kdata"></p>
+
+<button onclick="kanjiNext()">Next Kanji</button>
+<button onclick="backDash()">Dashboard</button>
+</div>
+
+<script>
+
+/* LOGIN */
+function login(){
+let name = document.getElementById("user").value;
+if(name==="") return;
+
+localStorage.setItem("user",name);
+localStorage.setItem("progress",0);
+
+showDashboard();
+}
+
+/* DASHBOARD */
+function showDashboard(){
+document.getElementById("loginPage").style.display="none";
+document.getElementById("dashboard").style.display="block";
+
+document.getElementById("name").innerText =
+localStorage.getItem("user");
+
+updateProgress();
+}
+
+function logout(){
+localStorage.clear();
+location.reload();
+}
+
+/* COURSE DATA */
+let lessons=[
+["私は学生です","I am a student"],
+["水を飲みます","I drink water"],
+["日本語を勉強します","I study Japanese"],
+["映画を見ます","I watch movies"]
+];
+
+let i=0;
+
+function openCourse(){
+document.getElementById("dashboard").style.display="none";
+document.getElementById("course").style.display="block";
+showLesson();
+}
+
+function showLesson(){
+document.getElementById("jp").innerText=lessons[i][0];
+document.getElementById("en").innerText=lessons[i][1];
+}
+
+function next(){
+i++;
+if(i>=lessons.length) i=0;
+
+let p = parseInt(localStorage.getItem("progress")||0);
+p = Math.min(100,p+10);
+localStorage.setItem("progress",p);
+
+updateProgress();
+showLesson();
+}
+
+function back(){
+document.getElementById("course").style.display="none";
+document.getElementById("dashboard").style.display="block";
+}
+
+/* PROGRESS */
+function updateProgress(){
+let p = localStorage.getItem("progress")||0;
+document.getElementById("bar").style.width=p+"%";
+}
+
+/* KANJI SYSTEM (EXPANDABLE 1000+) */
+let kanjiList=[];
+
+/* generate structure for 1000+ system */
+for(let x=1;x<=100;x++){
+kanjiList.push({
+k:"漢字 "+x,
+m:"Meaning "+x
+});
+}
+
+let k=0;
+
+function openKanji(){
+document.getElementById("dashboard").style.display="none";
+document.getElementById("kanji").style.display="block";
+showKanji();
+}
+
+function showKanji(){
+document.getElementById("kdata").innerText =
+kanjiList[k].k+" = "+kanjiList[k].m;
+}
+
+function kanjiNext(){
+k++;
+if(k>=kanjiList.length) k=0;
+showKanji();
+}
+
+function backDash(){
+document.getElementById("kanji").style.display="none";
+document.getElementById("dashboard").style.display="block";
+}
+
+/* AUTO LOGIN CHECK */
+if(localStorage.getItem("user")){
+showDashboard();
+}
+
+</script>
+
+</body>
+</html>
