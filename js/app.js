@@ -1,15 +1,6 @@
-function showUser(){
-  let name = localStorage.getItem("user");
+document.getElementById("user").innerText =
+localStorage.getItem("user");
 
-  if(!name){
-    window.location.href = "login.html";
-  }
-
-  document.getElementById("name").innerText = name;
+function go(page){
+window.location.href = page;
 }
-
-function goTo(page){
-  window.location.href = page;
-}
-
-window.onload = showUser;
