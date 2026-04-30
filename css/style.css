@@ -1,36 +1,26 @@
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
 }
 
-.center{
-display:flex;
-height:100vh;
-justify-content:center;
-align-items:center;
-flex-direction:column;
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
 }
 
-input{
-padding:10px;
-margin:5px;
-border:none;
-border-radius:8px;
+button {
+    background: #22c55e;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
 }
 
-button{
-padding:10px 15px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.card{
-background:rgba(255,255,255,0.1);
-padding:20px;
-margin:10px;
-border-radius:12px;
-cursor:pointer;
+.lesson-card, .kanji-card {
+    background: #1e293b;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
 }
