@@ -1,43 +1,57 @@
-/* style/login.css */
+/* Merged and organized CSS */
 
+/* General Body Styles */
 body {
-  background-color: #202124; /* fallback background color */
   font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #f1f3f4; /* Default background for entire site */
   margin: 0;
-  /* Optional: add a background pattern or image for the whole page */
-  /* background-image: url('your-background-image-url.jpg'); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  padding: 0;
 }
 
-.login-container {
+/* Header Styles */
+.header {
   background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Login Container Styles */
+.login-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
   padding: 40px;
   border-radius: 8px;
   width: 90%;
   max-width: 400px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   text-align: center;
-  /* Add background image or pattern here for style similar to Japanese app */
+  overflow: hidden;
+  /* ensure the background image appears behind content */
+}
+
+/* Background Image with Overlay Effect */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+  opacity: 0.2; /* Adjust for desired overlay effect */
+  z-index: -1;
 }
 
+/* Logo Styles */
 .logo {
   width: 60px;
   margin-bottom: 20px;
-  /* Optional: add a semi-transparent overlay for a stylish effect */
-  /* background: rgba(255, 255, 255, 0.7); */
-  /* border-radius: 4px; */
+  /* Optional: add styling for logo overlay or effects */
 }
 
+/* Heading Styles */
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
@@ -48,8 +62,9 @@ h2 {
   border-radius: 4px;
 }
 
-/* Style inputs with semi-transparent background for overlay effect */
-input[type="text"], input[type="password"] {
+/* Input Fields Styles */
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 14px;
   margin-bottom: 16px;
@@ -57,9 +72,19 @@ input[type="text"], input[type="password"] {
   border-radius: 4px;
   font-size: 16px;
   background: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
-/* Buttons with transparent background to blend with background image */
+/* Input Focus Style for Better UX */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3);
+  border-color: #1a73e8;
+}
+
+/* Buttons Styles */
 button {
   width: 100%;
   padding: 14px;
@@ -72,11 +97,12 @@ button {
   transition: background-color 0.3s;
 }
 
+/* Button Hover Effect */
 button:hover {
   background-color: #1558b0;
 }
 
-/* Additional styles for sign-in options */
+/* Sign-in Options Styles */
 .signin-options {
   margin-top: 20px;
 }
