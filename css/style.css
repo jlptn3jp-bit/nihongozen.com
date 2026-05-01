@@ -1,26 +1,216 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
 body {
-    font-family: Arial;
-    background: #0f172a;
-    color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    text-align: center;
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-button {
-    background: #22c55e;
-    border: none;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
+/* Header styles */
+header {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.lesson-card, .kanji-card {
-    background: #1e293b;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #fff;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Site Title */
+.site-title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Navigation menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #333;
+}
+
+/* Hero section style */
+.hero-section {
+  position: relative;
+  height: 300px;
+  background: url('../assets/images/tokyo-bg.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 0 0 20px 20px;
+}
+
+.page-title {
+  position: relative;
+  font-size: 2.5em;
+  color: #fff;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Main content styles */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Introduction section */
+.section-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-intro h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.section-intro p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+/* Pattern cards grid */
+.grammar-patterns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Individual pattern card */
+.pattern-card {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pattern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+/* Icon circle for icons */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.icon-circle img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Headings inside pattern cards */
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+.examples {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+.examples p {
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+/* Footer styles */
+footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px){
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-section {
+    height: 200px;
+  }
+  .page-title {
+    font-size: 2em;
+  }
 }
