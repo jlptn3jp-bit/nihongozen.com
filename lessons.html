@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NihongoZen - レッスン一覧</title>
+<link rel="stylesheet" href="css/style.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f0f0f0;
+    margin: 0; padding: 0;
+  }
+  header {
+    background-color: #1A1A2E;
+    padding: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: #fff;
+  }
+  header h1 { margin: 0; font-size: 24px; }
+  header nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: 600; }
+  main { padding: 30px; max-width: 1200px; margin: auto; }
+  h2 { font-size: 28px; margin-bottom: 10px; color: #333; }
+  .lesson-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .lesson-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.2); transform: translateY(-2px); }
+  .lesson-title { font-size: 20px; font-weight: 700; }
+  .lesson-info { font-size: 14px; color: #666; }
+  .lesson-count { font-weight: 600; color: #444; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>NihongoZen</h1>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="login.html">ログイン</a>
+    <a href="lessons.html" style="font-weight: bold;">レッスン一覧</a>
+  </nav>
+</header>
+
+<main>
+<h2>レッスン一覧</h2>
+<div id="lessons-container"></div>
+</main>
+
+<script>
+  const lessons = [
+    { lesson: 0, title: "Preliminary", vocabCount: 25 },
+    { lesson: 1, title: "Introduction & People", vocabCount: 35 },
+    { lesson: 2, title: "Objects & Things", vocabCount: 40 },
+    { lesson: 3, title: "Places & Shopping", vocabCount: 40 },
+    { lesson: 4, title: "Time & Routine", vocabCount: 50 },
+    { lesson: 5, title: "Travel & Movement", vocabCount: 45 },
+    { lesson: 6, title: "Daily Activities", vocabCount: 50 },
+    { lesson: 7, title: "Giving & Receiving", vocabCount: 40 },
+    { lesson: 8, title: "Adjectives & Descriptions", vocabCount: 55 },
+    { lesson: 9, title: "Preferences & Skills", vocabCount: 45 },
+    { lesson: 10, title: "Existence & Location", vocabCount: 50 },
+    { lesson: 11, title: "Counters & Quantities", vocabCount: 50 },
+    { lesson: 12, title: "Weather & Seasons", vocabCount: 45 },
+    { lesson: 13, title: "Activities & Wants", vocabCount: 50 },
+    { lesson: 14, title: "Requests & Actions", vocabCount: 45 },
+    { lesson: 15, title: "Work & Life", vocabCount: 50 },
+    { lesson: 16, title: "Movement & Body", vocabCount: 45 },
+    { lesson: 17, title: "Health & Daily Actions", vocabCount: 50 },
+    { lesson: 18, title: "Hobbies & Abilities", vocabCount: 45 },
+    { lesson: 19, title: "Lifestyle & Health", vocabCount: 50 },
+    { lesson: 20, title: "Casual Speech", vocabCount: 40 },
+    { lesson: 21, title: "Opinions & Society", vocabCount: 50 },
+    { lesson: 22, title: "Clothing & Housing", vocabCount: 40 },
+    { lesson: 23, title: "Instructions & Navigation", vocabCount: 30 },
+    { lesson: 24, title: "Favors & Giving", vocabCount: 40 },
+    { lesson: 25, title: "Plans & Future", vocabCount: 50 }
+  ];
+
+  const container = document.getElementById('lessons-container');
+
+  lessons.forEach(l => {
+    const div = document.createElement('div');
+    div.className = 'lesson-card';
+    div.innerHTML = `
+      <div class="lesson-title">${l.title}</div>
+      <div class="lesson-info">${l.vocabCount} words</div>
+    `;
+    div.onclick = () => {
+      location.href = `levels/n${l.lesson + 5}/vocabulary.html`; // Example link
+    };
+    container.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
