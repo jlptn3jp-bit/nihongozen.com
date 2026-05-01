@@ -1,216 +1,93 @@
-/* Reset basic styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* style/login.css */
 
-/* Body styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text for contrast */
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Header styles */
-header {
-  background-color: #1f1f1f;
-  padding: 15px 20px;
+  background-color: #202124; /* fallback background color */
+  font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  height: 100vh;
+  margin: 0;
+  /* Optional: add a background pattern or image for the whole page */
+  /* background-image: url('your-background-image-url.jpg'); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
-/* Logo container */
-.logo-container {
-  display: flex;
-  align-items: center;
+.login-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  /* Add background image or pattern here for style similar to Japanese app */
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #4CAF50, #81C784);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #fff;
-  margin-right: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-/* Site Title */
-.site-title {
-  font-size: 1.8em;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Navigation menu */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-nav ul li a {
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: background-color 0.3s;
-  font-size: 1em;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #333;
-}
-
-/* Hero section style */
-.hero-section {
-  position: relative;
-  height: 300px;
-  background: url('../assets/images/tokyo-bg.jpg') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 0 0 20px 20px;
-}
-
-.page-title {
-  position: relative;
-  font-size: 2.5em;
-  color: #fff;
-  padding: 0 20px;
-  z-index: 1;
-}
-
-/* Main content styles */
-main {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* Introduction section */
-.section-intro {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.section-intro h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.section-intro p {
-  font-size: 1.1em;
-  color: #ccc;
-}
-
-/* Pattern cards grid */
-.grammar-patterns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* Individual pattern card */
-.pattern-card {
-  background-color: #222;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.pattern-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
-}
-
-/* Icon circle for icons */
-.icon-circle {
   width: 60px;
-  height: 60px;
-  background-color: #4CAF50;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.icon-circle img {
-  width: 30px;
-  height: 30px;
+  margin-bottom: 20px;
+  /* Optional: add a semi-transparent overlay for a stylish effect */
+  /* background: rgba(255, 255, 255, 0.7); */
+  /* border-radius: 4px; */
 }
 
-/* Headings inside pattern cards */
-h4 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #202124;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* Style inputs with semi-transparent background for overlay effect */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Buttons with transparent background to blend with background image */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a73e8; /* Gmail blue */
+  border: none;
+  border-radius: 4px;
   color: #fff;
-}
-p {
-  font-size: 1em;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-.examples {
-  background-color: #333;
-  padding: 10px;
-  border-radius: 10px;
-}
-.examples p {
-  font-size: 0.95em;
-  color: #ddd;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Footer styles */
-footer {
-  background-color: #1f1f1f;
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #777;
+button:hover {
+  background-color: #1558b0;
 }
 
-/* Responsive adjustments */
-@media(max-width: 768px){
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero-section {
-    height: 200px;
-  }
-  .page-title {
-    font-size: 2em;
-  }
+/* Additional styles for sign-in options */
+.signin-options {
+  margin-top: 20px;
+}
+
+.signin-options button {
+  background-color: #f1f3f4;
+  color: #202124;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.signin-options button:hover {
+  background-color: #e2e2e2;
 }
