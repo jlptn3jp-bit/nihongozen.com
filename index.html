@@ -2,57 +2,73 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NihongoZen - Learn Japanese</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Japanese Vocabulary App</title>
+<!-- Optional: Google Fonts for Japanese style -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #F5F0E8;
+    /* Add a vibrant background pattern or image */
+    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%), 
+                      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+    background-size: cover, contain;
+    background-repeat: no-repeat, repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #1A1A2E;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  /* Button styles */
+  a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background-color: #E8B86D;
+    color: #1A1A2E;
+    font-weight: 600;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+
+  a.button:hover {
+    background-color: #d4a057;
+  }
+</style>
 </head>
 <body>
-<header>
-  <div class="logo-container">
-    <div class="logo"></div>
-    <h1>NihongoZen</h1>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lessons.html">Lessons</a></li>
-      <li><a href="grammar.html">Grammar</a></li>
-      <li><a href="vocabulary.html">Vocabulary</a></li>
-      <li><a href="reading.html">Reading</a></li>
-      <li><a href="listening.html">Listening</a></li>
-      <li><a href="kanji.html">Kanji</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
-  </nav>
-</header>
 
-<section class="hero">
-  <h2>Welcome to NihongoZen</h2>
-  <p>Your modern Japanese learning app</p>
-  <a href="lessons.html" class="btn-primary">Start Learning</a>
-</section>
+<div class="container">
+  <h1>ようこそ！</h1>
+  <p>日本語の語彙学習へようこそ。このアプリで勉強を始めましょう！</p>
+  <a href="app.html" class="button">スタート</a>
+</div>
 
-<section class="features">
-  <div class="feature-card">
-    <img src="assets/icons/grammar.svg" alt="Grammar Icon" />
-    <h3>Grammar Lessons</h3>
-    <p>Clear explanations and examples for all levels.</p>
-  </div>
-  <div class="feature-card">
-    <img src="assets/icons/vocabulary.svg" alt="Vocabulary Icon" />
-    <h3>Vocabulary Practice</h3>
-    <p>Build your word bank with interactive cards.</p>
-  </div>
-  <div class="feature-card">
-    <img src="assets/icons/reading.svg" alt="Reading Icon" />
-    <h3>Reading & Listening</h3>
-    <p>Improve comprehension with real-world content.</p>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2026 NihongoZen. All rights reserved.</p>
-</footer>
 </body>
 </html>
