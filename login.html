@@ -3,21 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NihongoZen - ログイン</title>
+<title>NihongoZen - 日本語学習</title>
 <link rel="stylesheet" href="css/style.css" />
 
-<!-- Google Fonts -->
+<!-- Google Fonts for modern style -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
 
-<!-- Animate.css for effects -->
+<!-- Animate.css for subtle animations -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-<script src="firebase/firebase-config.js"></script>
-
-<!-- Custom Style for Login -->
+<!-- Custom Styles -->
 <style>
   body {
     margin: 0;
@@ -25,86 +20,168 @@
     background: linear-gradient(135deg, #f0f0f0, #ffffff);
   }
 
-  .login-box {
-    max-width: 400px;
-    margin: 80px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    text-align: center;
+  header {
+    background-color: #1A1A2E;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  .login-box h2 {
+  header h1 {
     font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  header nav a {
+    color: #fff;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+  }
+
+  header nav a:hover {
+    color: #E8B86D;
+  }
+
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .hero h2 {
+    font-size: 36px;
     margin-bottom: 20px;
+    font-weight: 700;
     color: #1A1A2E;
   }
 
-  .btn-google {
-    background: #fff;
-    border: 2px solid #4285F4;
-    color: #4285F4;
-    padding: 14px;
-    width: 100%;
-    border-radius: 8px;
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
     font-size: 16px;
     font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: 0.3s;
+    border-radius: 25px;
+    background-color: #E8B86D;
+    color: #1A1A2E;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
   }
 
-  .btn-google:hover {
-    background: #f1f1f1;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  .cta-btn:hover {
+    background-color: #d9a057;
+    transform: translateY(-2px);
   }
 
-  /* Styling for user info after login */
-  #user-info {
-    margin-top: 20px;
+  /* Large Data Section - Featured Lessons or Data */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
   }
 
-  /* Responsive adjustments */
-  @media(max-width: 500px) {
-    .login-box { padding: 20px; }
+  .feature-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+  }
+
+  .feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1A1A2E;
+  }
+
+  .feature-desc {
+    font-size: 14px;
+    color: #555;
+  }
+
+  footer {
+    background-color: #1A1A2E;
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
   }
 </style>
 </head>
 <body>
 
-<div class="login-box animate__animated animate__fadeIn">
-  <h2>ログイン / Sign In</h2>
-  <button id="googleSignIn" class="btn-google">
-    <img src="assets/icons/google.svg" width="20" /> Googleでログイン
-  </button>
+<!-- Header -->
+<header>
+  <h1 class="logo">NihongoZen</h1>
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="login.html">ログイン</a>
+    <a href="lessons.html">レッスン</a>
+    <a href="dashboard.html">ダッシュボード</a>
+  </nav>
+</header>
 
-  <div id="user-info"></div>
+<!-- Hero Section -->
+<section class="hero animate__animated animate__fadeInDown">
+  <h2>日本語を簡単に、楽しく学ぼう！</h2>
+  <p>大規模なデータと洗練されたデザインであなたの日本語学習をサポートします。さあ、始めましょう！</p>
+  <a class="cta-btn" href="lessons.html">レッスンを見る / View Lessons</a>
+</section>
+
+<!-- Features / Data Highlights -->
+<div class="features">
+  <!-- Feature 1: Vocabulary Data -->
+  <div class="feature-card">
+    <div class="feature-title">豊富な語彙</div>
+    <div class="feature-desc">数千の単語とフレーズを学習できます。レベル別に整理されたデータで体系的に学習！</div>
+  </div>
+  <!-- Feature 2: Kanji & Grammar -->
+  <div class="feature-card">
+    <div class="feature-title">漢字 & 文法</div>
+    <div class="feature-desc">漢字や文法も豊富に収録。実践的な学習コンテンツで習得度アップ！</div>
+  </div>
+  <!-- Feature 3: Reading & Listening -->
+  <div class="feature-card">
+    <div class="feature-title">リーディング & リスニング</div>
+    <div class="feature-desc">多彩な読解・聴解問題で実力を磨く。音声データも多数！</div>
+  </div>
+  <!-- Feature 4: Progress Tracking -->
+  <div class="feature-card">
+    <div class="feature-title">進捗管理</div>
+    <div class="feature-desc">学習の進捗をしっかり把握。目標設定や振り返りも簡単に！</div>
+  </div>
 </div>
 
-<script>
-  // Firebase auth
-  const auth = firebase.auth();
-
-  document.getElementById('googleSignIn').addEventListener('click', () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider)
-      .then((result) => {
-        const user = result.user;
-        document.getElementById('user-info').innerHTML = `
-          <p>ようこそ、${user.displayName} さん！</p>
-          <img src="${user.photoURL}" style="border-radius:50%; width:80px; margin-top:10px;" />
-          <button style="margin-top:20px; padding:10px 20px; border:none; background:#E8B86D; border-radius:8px; font-weight:600; cursor:pointer;" onclick="location.href='dashboard.html'">ダッシュボードへ / Dashboard</button>
-        `;
-      })
-      .catch((error) => {
-        alert('エラー：' + error.message);
-      });
-  });
-</script>
+<!-- Footer -->
+<footer>
+  &copy; 2024 NihongoZen. All rights reserved.
+</footer>
 
 </body>
 </html>
