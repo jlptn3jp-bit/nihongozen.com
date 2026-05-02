@@ -1,20 +1,8 @@
 {
-  "name": "NihonZen",
+  "name": "NihongoZen",
   "short_name": "NihonZen",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#ffe4e1",
-  "theme_color": "#ff69b4",
-  "icons": [
-    {
-      "src": "assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "background_color": "#fff5f7",
+  "theme_color": "#ff8fab"
 }
