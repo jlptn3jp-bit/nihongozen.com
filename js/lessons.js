@@ -1,18 +1,23 @@
-async function loadLessons(level) {
-    const res = await fetch(`data/jlpt/${level}.json`);
-    const data = await res.json();
+// lessons.js
+async function loadLessonData(level, type) {
+  const response = await fetch(`/data/${level}/${type}.json`);
+  const data = await response.json();
+  displayLessonItems(data, type);
+}
 
-    let output = "";
+function displayLessonItems(data, type) {
+  const container = document.getElementById('content');
+  container.innerHTML = '';
+  data.forEach(item => {
+    const elem = document.createElement('button');
+    elem.className = 'clickable-item';
+    elem.textContent = item.word || item.sentence || item.grammar;
+    elem.addEventListener('click', () => playAudio(item.audio));
+    container.appendChild(elem);
+  });
+}
 
-    data.lessons.forEach((lesson, index) => {
-        output += `
-            <div class="lesson-card">
-                <h3>${lesson.title}</h3>
-                <p>${lesson.description}</p>
-                <button onclick="openLesson(${index})">Start</button>
-            </div>
-        `;
-    });
-
-    document.getElementById("lessons").innerHTML = output;
+function playAudio(audioPath) {
+  const audio = new Audio(audioPath);
+  audio.play();
 }
