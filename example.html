@@ -1,0 +1,11 @@
+<!-- example.html -->
+<a href="#" onclick="playAudio('vocabulary.mp3')">Vocabulary</a>
+
+<script>
+  function playAudio(url) {
+    // Create an audio element
+    var audio = new Audio(url);
+    // Play the audio
+    audio.play();
+  }
+</script>
