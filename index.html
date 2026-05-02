@@ -1,40 +1,28 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NihongoZen - Learning Japanese</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-  <script src="firebase/firebase-config.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NihongoZen</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script type="module" src="js/auth.js"></script>
 </head>
+
 <body>
-  <!-- Animated Wallpaper -->
-  <div class="wallpaper"></div>
 
-  <!-- Login Content -->
-  <div class="login-wrapper">
-    <div class="login-box">
-      <img src="https://catbox.moe/user/download/3k7zjz/logo.png" alt="NihongoZen Logo" class="logo"/>
-      <h1 class="title">NihonZen</h1>
-      <h2 class="subtitle">Learning Japanese together</h2>
-      <p class="slogan">Join us to explore the beauty of Japanese language and culture!</p>
-      
-      <div class="auth-buttons">
-        <button id="email-login">Login with Email</button>
-        <button id="google-login">Login with Google</button>
-        <button id="facebook-login">Login with Facebook</button>
-      </div>
-      
-      <div id="auth-status"></div>
-    </div>
-  </div>
+<div class="bg"></div>
 
-  <!-- Right scenery background -->
-  <div class="scenery"></div>
+<div class="card">
 
-  <script src="js/auth.js"></script>
+  <img src="https://files.catbox.moe/fxwgtd.png" class="logo">
+
+  <h1>ようこそ</h1>
+  <p>Learning Japanese together</p>
+
+  <button id="google-login">Login with Google</button>
+
+</div>
+
 </body>
 </html>
