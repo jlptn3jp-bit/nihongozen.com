@@ -1,68 +1,35 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffe4e1; /* Light pink background for dashboard */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: #fff5f7;
+  font-family: sans-serif;
 }
 
 header {
-  background-color: #fff;
-  padding: 1em;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  background: white;
+  justify-content: space-between;
 }
 
-header h1 { margin: 0; font-size: 1.8em; }
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+header img {
+  width: 40px;
 }
-nav ul li { margin: 0 10px; }
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-nav ul li a:hover { text-decoration: underline; }
 
-main {
-  flex: 1;
+nav a {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.timer {
+  text-align: center;
   padding: 20px;
 }
-#lesson-container {
-  margin-top: 1em;
+
+#time {
+  font-size: 2em;
 }
 
-.clickable-item {
-  display: block;
-  background-color: #fff;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.2em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s;
-}
-.clickable-item:hover {
-  background-color: #f0f0f0;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  nav ul li { margin: 5px 0; }
+main {
+  padding: 20px;
 }
