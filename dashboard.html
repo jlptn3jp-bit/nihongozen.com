@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NihonZen - Learning Dashboard</title>
-  <link rel="stylesheet" href="css/dashboard.css" />
-  <script src="js/app.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NihongoZen</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<script type="module" src="js/auth-guard.js"></script>
+<script type="module" src="js/app.js"></script>
+<script src="js/timer.js" defer></script>
+
 </head>
+
 <body>
-  <header>
-    <h1>NihonZen</h1>
-    <nav>
-      <ul>
-        <li><a href="#n5" data-level="n5">N5</a></li>
-        <li><a href="#n4" data-level="n4">N4</a></li>
-        <li><a href="#n3" data-level="n3">N3</a></li>
-        <li><a href="#n2" data-level="n2">N2</a></li>
-        <li><a href="#n1" data-level="n1">N1</a></li>
-        <li><a href="#kanji" data-section="kanji">Kanji</a></li>
-        <li><a href="#contact" data-section="contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="section-title"><h2>Welcome to NihonZen</h2></section>
-    <div id="lesson-container">Select a section to begin learning.</div>
-  </main>
+
+<header>
+  <img src="https://files.catbox.moe/fxwgtd.png">
+  <h2>NihongoZen</h2>
+
+  <nav>
+    <a href="#">Home</a>
+    <a data-level="n5">N5</a>
+    <a data-level="n4">N4</a>
+    <a data-level="n3">N3</a>
+    <a data-level="n2">N2</a>
+    <a data-level="n1">N1</a>
+  </nav>
+</header>
+
+<section class="timer">
+  <h3>Study Timer</h3>
+  <span id="time">25:00</span>
+  <button onclick="startTimer()">Start</button>
+</section>
+
+<main id="content">
+  <h2>Select Level</h2>
+</main>
+
 </body>
 </html>
