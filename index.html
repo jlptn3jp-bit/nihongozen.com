@@ -1,25 +1,127 @@
-<!-- index.html -->
-<div id="login-section">
-  <button onclick="auth.loginWithGmail()">Login with Gmail</button>
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Japanese Vocabulary App</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #F5F0E8;
+    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-size: cover, contain;
+    background-repeat: no-repeat, repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  h1 {
+    color: #1A1A2E;
+  }
+
+  p {
+    color: #333;
+  }
+
+  button, a.button {
+    margin-top: 20px;
+    padding: 14px 24px;
+    background-color: #E8B86D;
+    color: #1A1A2E;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  button:hover, a.button:hover {
+    background-color: #d4a057;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGIN SECTION -->
+  <div id="login-section">
+    <h1>ようこそ！</h1>
+    <p>ログインして勉強を始めましょう</p>
+    <button onclick="loginWithGmail()">Login with Gmail</button>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="main-section" style="display:none;">
+    <h1>日本語の語彙学習</h1>
+    <p id="user-info"></p>
+    <a href="app.html" class="button">スタート</a><br>
+    <button onclick="logout()">Logout</button>
+  </div>
+
 </div>
 
-<div id="main-section" style="display:none;">
-  <!-- Your main site content here -->
-  <button onclick="auth.logout()">Logout</button>
-  <script>
-    // Initialize Firebase
-    var provider = new firebase.auth.GoogleAuthProvider();
-    var auth = firebase.auth();
+<script>
+  // 🔥 Replace with your Firebase config
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    appId: "YOUR_APP_ID"
+  };
 
-    // Listen for auth state changes
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        // User is signed in
-        document.getElementById('main-section').style.display = 'block';
-      } else {
-        // User is signed out
-        document.getElementById('main-section').style.display = 'none';
-      }
-    });
-  </script>
-</div>
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  function loginWithGmail() {
+    auth.signInWithPopup(provider)
+      .catch(error => console.error(error));
+  }
+
+  function logout() {
+    auth.signOut();
+  }
+
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('main-section').style.display = 'block';
+      document.getElementById('user-info').innerText =
+        "Welcome " + user.displayName;
+    } else {
+      document.getElementById('login-section').style.display = 'block';
+      document.getElementById('main-section').style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
+```
