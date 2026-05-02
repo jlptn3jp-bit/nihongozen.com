@@ -8,10 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const level = link.dataset.level;
       const section = link.dataset.section;
-
       if (level) {
         sectionTitle.innerHTML = `<h2>Level ${level.toUpperCase()}</h2>`;
-        loadLevelSection(level);
+        loadLevel(level);
       } else if (section) {
         sectionTitle.innerHTML = `<h2>${section.charAt(0).toUpperCase() + section.slice(1)}</h2>`;
         loadSection(section);
@@ -19,14 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  async function loadLevelSection(level) {
+  async function loadLevel(level) {
     container.innerHTML = `<p>Loading ${level.toUpperCase()} lessons...</p>`;
-    // Load data (JSON) dynamically
     try {
       const response = await fetch(`data/${level}/vocabulary.json`);
-      const vocabData = await response.json();
-      displayItems(vocabData, 'Vocabulary');
-    } catch (e) {
+      const data = await response.json();
+      displayItems(data, 'Vocabulary');
+    } catch {
       container.innerHTML = `<p>No data available for ${level.toUpperCase()}</p>`;
     }
   }
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch(`data/n5/${section}.json`);
       const data = await response.json();
       displayItems(data, section);
-    } catch (e) {
+    } catch {
       container.innerHTML = `<p>No data available for ${section}</p>`;
     }
   }
@@ -49,24 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.className = 'clickable-item';
       btn.innerHTML = generateItemHTML(item, type);
       btn.addEventListener('click', () => {
-        if (item.audio) {
-          new Audio(item.audio).play();
-        }
+        if (item.audio) new Audio(item.audio).play();
       });
       container.appendChild(btn);
     });
   }
 
   function generateItemHTML(item, type) {
-    if (type === 'Vocabulary') {
-      return `<strong>${item.word}</strong><br/>${item.translation}`;
-    } else if (type === 'Grammar') {
-      return `<strong>${item.pattern}</strong><br/>${item.explanation}`;
-    } else if (type === 'Sentence') {
-      return `${item.sentence}`;
-    } else if (type === 'Kanji') {
-      return `<strong>${item.kanji}</strong>`;
-    }
+    if (type === 'Vocabulary') return `<strong>${item.word}</strong><br/>${item.translation}`;
+    if (type === 'Grammar') return `<strong>${item.pattern}</strong><br/>${item.explanation}`;
+    if (type === 'Sentence') return `${item.sentence}`;
+    if (type === 'Kanji') return `<strong>${item.kanji}</strong>`;
     return '';
   }
 });
