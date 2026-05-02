@@ -1,1 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-left: 2em;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main-content {
+  flex: 1;
+  padding: 1em;
+}
+
+#lesson-container {
+  margin-top: 1em;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  nav ul {
+    display: block;
+    margin: 1em 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
