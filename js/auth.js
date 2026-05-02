@@ -2,20 +2,19 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, sendEmailVerification } f
 
 const auth = getAuth();
 
-export async function loginWithGoogle() {
+document.getElementById('login-btn').addEventListener('click', async () => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);
-
-    if (result.user.emailVerified) {
-      return result.user;
+    const user = result.user;
+    if (!user.emailVerified) {
+      await sendEmailVerification(user);
+      document.getElementById('status').textContent = 'Verification email sent. Please verify your email.';
     } else {
-      await sendEmailVerification(result.user);
-      alert('Verification email sent. Please verify your email.');
+      window.location.href = "dashboard.html"; // redirect after login
     }
-
   } catch (error) {
     console.error(error);
-    alert('Login failed.');
+    document.getElementById('status').textContent = 'Login failed.';
   }
-}
+});
