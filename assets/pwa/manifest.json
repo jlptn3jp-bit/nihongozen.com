@@ -1,10 +1,10 @@
 {
-  "name": "NihongoZen",
-  "short_name": "NihongoZen",
+  "name": "NihonZen",
+  "short_name": "NihonZen",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#333",
+  "background_color": "#ffe4e1",
+  "theme_color": "#ff69b4",
   "icons": [
     {
       "src": "assets/icons/icon-192.png",
