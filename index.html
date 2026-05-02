@@ -3,25 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NihongoZen</title>
+<title>NihongoZen Login</title>
 
-<link rel="stylesheet" href="css/style.css">
 <script type="module" src="js/auth.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffd6e0, #d6d6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-<div class="bg"></div>
-
 <div class="card">
+  <h2>Login</h2>
 
-  <img src="https://files.catbox.moe/fxwgtd.png" class="logo">
+  <input type="email" id="email" placeholder="Enter Email">
+  <input type="password" id="password" placeholder="Enter Password">
 
-  <h1>ようこそ</h1>
-  <p>Learning Japanese together</p>
-
-  <button id="google-login">Login with Google</button>
-
+  <button id="login-btn">Login</button>
+  <button id="signup-btn">Sign Up</button>
 </div>
 
 </body>
