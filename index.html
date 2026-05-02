@@ -1,122 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Japanese Vocabulary App</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
-
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #F5F0E8;
-    background-image: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%), 
-                      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
-    background-size: cover, contain;
-    background-repeat: no-repeat, repeat;
-  }
-
-  nav {
-    background: rgba(0,0,0,0.7);
-    padding: 10px;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 0 10px;
-  }
-
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 600px;
-    width: 90%;
-    margin: 40px auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #1A1A2E;
-  }
-
-  p {
-    font-size: 1.2em;
-    color: #333;
-  }
-
-  a.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 24px;
-    background-color: #E8B86D;
-    color: #1A1A2E;
-    font-weight: 600;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-
-  a.button:hover {
-    background-color: #d4a057;
-  }
-
-  #content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NihongoZen</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+  <script src="firebase/firebase-config.js"></script>
 </head>
-
 <body>
-
-<!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="#n5">N5</a></li>
-    <li><a href="#n4">N4</a></li>
-    <li><a href="#n3">N3</a></li>
-    <li><a href="#n2">N2</a></li>
-    <li><a href="#n1">N1</a></li>
-    <li><a href="#kanji">Kanji</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- Main Container -->
-<div class="container">
-  <h1>ようこそ！</h1>
-  <p>日本語の語彙学習へようこそ。このアプリで勉強を始めましょう！</p>
-  <a href="app.html" class="button">スタート</a>
-</div>
-
-<!-- Dynamic Content Section -->
-<section id="content">
-  <!-- JS will load content here -->
-</section>
-
+  <div class="wallpaper"></div>
+  <div class="login-container">
+    <img src="https://catbox.moe/user/download/3k7zjz/logo.png" alt="NihongoZen Logo" class="logo"/>
+    <h1>NihongoZen</h1>
+    <button id="login-btn">Login with Gmail</button>
+    <p id="status"></p>
+  </div>
+  <script src="js/auth.js"></script>
 </body>
 </html>
