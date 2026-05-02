@@ -1,1 +1,25 @@
+<!-- levels/n5/grammar.html -->
+<h2>N5 Grammar</h2>
+<ul>
+  <li>
+    <a href="#" onclick="playAudio('example.mp3')">Example Sentence</a>
+    <p>Click to play the audio for this example sentence.</p>
+  </li>
+  <li>
+    <a href="#" onclick="playAudio('another-example.mp3')">Another Example Sentence</a>
+    <p>Click to play the audio for this example sentence.</p>
+  </li>
+</ul>
 
+<script>
+  // Populate the data from a JSON file
+  var data = JSON.parse(localStorage.getItem('n5_grammar'));
+  document.querySelector('ul').innerHTML = data.map(item => {
+    return `
+      <li>
+        <a href="#" onclick="playAudio('${item.audioUrl}')" title="${item.title}">${item.title}</a>
+        <p>${item.description}</p>
+      </li>
+    `;
+  }).join('');
+</script>
