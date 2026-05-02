@@ -1,14 +1,12 @@
-/* Merged and organized CSS */
-
-/* General Body Styles */
+/* ===== GENERAL BODY ===== */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f1f3f4; /* Default background for entire site */
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f4;
   margin: 0;
   padding: 0;
 }
 
-/* Header Styles */
+/* ===== HEADER ===== */
 .header {
   background-color: #fff;
   padding: 20px;
@@ -18,10 +16,18 @@ body {
   gap: 10px;
 }
 
-/* Login Container Styles */
+/* ===== CENTER LOGIN ===== */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== LOGIN CONTAINER ===== */
 .login-container {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 40px;
   border-radius: 8px;
   width: 90%;
@@ -29,40 +35,35 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   text-align: center;
   overflow: hidden;
-  /* ensure the background image appears behind content */
+  z-index: 1;
 }
 
-/* Background Image with Overlay Effect */
+/* ===== BACKGROUND IMAGE ===== */
 .login-container::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Adjust for desired overlay effect */
+  opacity: 0.2;
   z-index: -1;
 }
 
-/* Logo Styles */
+/* ===== LOGO ===== */
 .logo {
   width: 60px;
   margin-bottom: 20px;
-  /* Optional: add styling for logo overlay or effects */
 }
 
-/* Heading Styles */
+/* ===== HEADING ===== */
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #202124;
-  background: rgba(255, 255, 255, 0.8);
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 4px;
 }
 
-/* Input Fields Styles */
+/* ===== INPUT ===== */
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -71,38 +72,33 @@ input[type="password"] {
   border: 1px solid #dadce0;
   border-radius: 4px;
   font-size: 16px;
-  background: rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
-  transition: box-shadow 0.3s, border-color 0.3s;
 }
 
-/* Input Focus Style for Better UX */
-input[type="text"]:focus,
-input[type="password"]:focus {
+/* ===== INPUT FOCUS ===== */
+input:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3);
+  box-shadow: 0 0 0 3px rgba(26,115,232,0.3);
   border-color: #1a73e8;
 }
 
-/* Buttons Styles */
+/* ===== BUTTON ===== */
 button {
   width: 100%;
   padding: 14px;
-  background-color: #1a73e8; /* Gmail blue */
+  background-color: #1a73e8;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-/* Button Hover Effect */
 button:hover {
   background-color: #1558b0;
 }
 
-/* Sign-in Options Styles */
+/* ===== SIGN-IN OPTIONS ===== */
 .signin-options {
   margin-top: 20px;
 }
@@ -116,4 +112,59 @@ button:hover {
 
 .signin-options button:hover {
   background-color: #e2e2e2;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* ===== CONTENT ===== */
+section#content {
+  padding: 20px;
+}
+
+/* ===== BUTTON ITEMS ===== */
+.clickable-item {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .clickable-item {
+    width: 90%;
+  }
 }
