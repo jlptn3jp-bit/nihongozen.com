@@ -1,57 +1,112 @@
-/* style.css */
+/* Body and wallpaper */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
-nav {
+/* Wallpaper background animation with gradient (not anime style) */
+.wallpaper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(270deg, #89f7fe, #66a6ff, #fbc7d4, #f9c2ff);
+  background-size: 800% 800%;
+  animation: gradientAnim 20s ease infinite;
+  z-index: -1;
+}
+
+/* Animation keyframes */
+@keyframes gradientAnim {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Login wrapper centered */
+.login-wrapper {
   display: flex;
   justify-content: center;
-  background-color: #333;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
-
-section#content {
-  padding: 20px;
-}
-
-.clickable-item {
-  display: block;
+  align-items: center;
   width: 100%;
-  max-width: 300px;
-  margin: 10px auto;
-  padding: 15px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Login box styling */
+.login-box {
+  background-color: rgba(255,255,255,0.95);
+  padding: 2em;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 1em;
+}
+
+.title {
+  font-size: 2em;
+  margin: 0.2em 0;
+}
+.subtitle {
   font-size: 1.2em;
-  cursor: pointer;
-  background-color: #f0f0f0;
+  margin-bottom: 0.5em;
+}
+.slogan {
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.auth-buttons button {
+  width: 100%;
+  padding: 0.8em;
+  margin: 0.5em 0;
+  font-size: 1em;
   border: none;
   border-radius: 8px;
-  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#email-login { background-color: #555; color: #fff; }
+#google-login { background-color: #db4437; color: #fff; }
+#facebook-login { background-color: #3b5998; color: #fff; }
+
+.auth-buttons button:hover {
+  opacity: 0.9;
 }
 
-@media(max-width: 768px) {
-  /* Mobile styles */
-  nav {
-    flex-direction: column;
-  }
-  .clickable-item {
-    width: 90%;
+#auth-status {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Scenery background on right side */
+.scenery {
+  position: fixed;
+  top: 0; right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); /* Placeholder, replace with scenery of Tokyo */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  display: none; /* Hidden on mobile */
+}
+
+/* Show scenery on larger screens */
+@media(min-width: 1024px){
+  .scenery {
+    display: block;
   }
 }
