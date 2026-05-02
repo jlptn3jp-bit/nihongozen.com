@@ -1,20 +1,53 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, sendEmailVerification } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, sendEmailVerification } from "firebase/auth";
 
 const auth = getAuth();
 
-document.getElementById('login-btn').addEventListener('click', async () => {
+document.getElementById('email-login').addEventListener('click', () => {
+  const email = prompt("Enter your email:");
+  const password = prompt("Enter your password:");
+  signInWithEmailAndPassword(auth, email, password)
+    .then(userCredential => {
+      const user = userCredential.user;
+      if (!user.emailVerified) {
+        sendEmailVerification(user);
+        alert('Verification email sent. Please verify your email.');
+      } else {
+        window.location.href = "dashboard.html";
+      }
+    })
+    .catch(error => {
+      alert("Login failed: " + error.message);
+    });
+});
+
+document.getElementById('google-login').addEventListener('click', () => {
   const provider = new GoogleAuthProvider();
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const user = result.user;
-    if (!user.emailVerified) {
-      await sendEmailVerification(user);
-      document.getElementById('status').textContent = 'Verification email sent. Please verify your email.';
-    } else {
-      window.location.href = "dashboard.html"; // redirect after login
-    }
-  } catch (error) {
-    console.error(error);
-    document.getElementById('status').textContent = 'Login failed.';
-  }
+  signInWithPopup(auth, provider)
+    .then(result => {
+      if (!result.user.emailVerified) {
+        sendEmailVerification(result.user);
+        alert('Verification email sent. Please verify your email.');
+      } else {
+        window.location.href = "dashboard.html";
+      }
+    })
+    .catch(error => {
+      alert("Google login failed: " + error.message);
+    });
+});
+
+document.getElementById('facebook-login').addEventListener('click', () => {
+  const provider = new FacebookAuthProvider();
+  signInWithPopup(auth, provider)
+    .then(result => {
+      if (!result.user.emailVerified) {
+        sendEmailVerification(result.user);
+        alert('Verification email sent. Please verify your email.');
+      } else {
+        window.location.href = "dashboard.html";
+      }
+    })
+    .catch(error => {
+      alert("Facebook login failed: " + error.message);
+    });
 });
