@@ -1,53 +1,32 @@
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, sendEmailVerification } from "firebase/auth";
+import { auth } from "./firebase.js";
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-const auth = getAuth();
+const loginBtn = document.getElementById("login-btn");
+const signupBtn = document.getElementById("signup-btn");
 
-document.getElementById('email-login').addEventListener('click', () => {
-  const email = prompt("Enter your email:");
-  const password = prompt("Enter your password:");
-  signInWithEmailAndPassword(auth, email, password)
-    .then(userCredential => {
-      const user = userCredential.user;
-      if (!user.emailVerified) {
-        sendEmailVerification(user);
-        alert('Verification email sent. Please verify your email.');
-      } else {
-        window.location.href = "dashboard.html";
-      }
-    })
-    .catch(error => {
-      alert("Login failed: " + error.message);
-    });
+loginBtn.addEventListener("click", async () => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    window.location.href = "dashboard.html";
+  } catch (err) {
+    alert(err.message);
+  }
 });
 
-document.getElementById('google-login').addEventListener('click', () => {
-  const provider = new GoogleAuthProvider();
-  signInWithPopup(auth, provider)
-    .then(result => {
-      if (!result.user.emailVerified) {
-        sendEmailVerification(result.user);
-        alert('Verification email sent. Please verify your email.');
-      } else {
-        window.location.href = "dashboard.html";
-      }
-    })
-    .catch(error => {
-      alert("Google login failed: " + error.message);
-    });
-});
+signupBtn.addEventListener("click", async () => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-document.getElementById('facebook-login').addEventListener('click', () => {
-  const provider = new FacebookAuthProvider();
-  signInWithPopup(auth, provider)
-    .then(result => {
-      if (!result.user.emailVerified) {
-        sendEmailVerification(result.user);
-        alert('Verification email sent. Please verify your email.');
-      } else {
-        window.location.href = "dashboard.html";
-      }
-    })
-    .catch(error => {
-      alert("Facebook login failed: " + error.message);
-    });
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("Account created! Now login.");
+  } catch (err) {
+    alert(err.message);
+  }
 });
