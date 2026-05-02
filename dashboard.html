@@ -1,7 +1,95 @@
-<h1>Welcome to Nihongo Zen Master</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NihongoZen Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="js/app.js" defer></script>
 
-<div class="menu">
-    <a href="lessons.html">📘 Lessons</a>
-    <a href="kanji.html">🈶 Kanji</a>
-    <a href="quiz.html">📝 Quiz</a>
-</div>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu {
+      margin: 20px 0;
+    }
+
+    .menu a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .menu a:hover {
+      background: #45a049;
+    }
+
+    main {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>NihongoZen</h1>
+    <nav>
+      <ul>
+        <li><a href="#n5" data-level="n5">N5</a></li>
+        <li><a href="#n4" data-level="n4">N4</a></li>
+        <li><a href="#n3" data-level="n3">N3</a></li>
+        <li><a href="#n2" data-level="n2">N2</a></li>
+        <li><a href="#n1" data-level="n1">N1</a></li>
+        <li><a href="#kanji" data-section="kanji">Kanji</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Welcome Section -->
+    <section id="section-title">
+      <h1>Welcome to Nihongo Zen Master</h1>
+    </section>
+
+    <!-- Menu Section -->
+    <div class="menu">
+      <a href="lessons.html">📘 Lessons</a>
+      <a href="kanji.html">🈶 Kanji</a>
+      <a href="quiz.html">📝 Quiz</a>
+    </div>
+
+    <!-- Dynamic Content -->
+    <div id="lesson-container"></div>
+
+  </main>
+
+</body>
+</html>
