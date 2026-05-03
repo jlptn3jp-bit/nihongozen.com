@@ -1,4 +1,4 @@
-import { auth } from "./firebase.js";
+import { auth, db } from "./firebase.js";
 
 import {
   signInWithEmailAndPassword,
@@ -7,17 +7,22 @@ import {
   signInWithPopup,
   sendSignInLinkToEmail,
   isSignInWithEmailLink,
-  signInWithEmailLink
+  signInWithEmailLink,
+  updateProfile,
+  sendEmailVerification
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+import {
+  doc,
+  setDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 /* ================= EMAIL LOGIN ================= */
 document.getElementById("login-btn")?.addEventListener("click", async () => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  if (!email || !password) {
-    return alert("Please enter email and password");
-  }
+  if (!email || !password) return alert("Enter email & password");
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
@@ -29,16 +34,46 @@ document.getElementById("login-btn")?.addEventListener("click", async () => {
 
 /* ================= SIGNUP ================= */
 document.getElementById("signup-btn")?.addEventListener("click", async () => {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  const firstName = document.getElementById("firstName")?.value || "";
+  const lastName = document.getElementById("lastName")?.value || "";
+  const email = document.getElementById("signupEmail")?.value || "";
+  const phone = document.getElementById("phone")?.value || "";
+  const password = document.getElementById("password")?.value || "";
 
-  if (!email || !password) {
-    return alert("Please enter email and password");
-  }
+  if (!email || !password) return alert("Fill required fields");
 
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    alert("Account created! Now login.");
+    const userCred = await createUserWithEmailAndPassword(auth, email, password);
+
+    // update profile
+    await updateProfile(userCred.user, {
+      displayName: firstName + " " + lastName,
+      photoURL: "assets/default-avatar.png"
+    });
+
+    // send verification
+    await sendEmailVerification(userCred.user);
+
+    // save to firestore
+    await setDoc(doc(db, "users", userCred.user.uid), {
+      firstName,
+      lastName,
+      email,
+      phone,
+      xp: 0,
+      level: 1,
+      streak: 0,
+      progress: {
+        n5: [],
+        n4: [],
+        n3: [],
+        n2: [],
+        n1: [],
+        kanji: []
+      }
+    });
+
+    alert("Account created! Verify your email.");
   } catch (err) {
     alert(err.message);
   }
@@ -80,9 +115,7 @@ document.getElementById("emailLogin")?.addEventListener("click", async () => {
 if (isSignInWithEmailLink(auth, window.location.href)) {
   let email = localStorage.getItem("emailForSignIn");
 
-  if (!email) {
-    email = prompt("Enter your email again");
-  }
+  if (!email) email = prompt("Enter your email again");
 
   signInWithEmailLink(auth, email, window.location.href)
     .then(() => {
