@@ -1,132 +1,27 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>NihongoZen Dashboard</title>
-<link rel="stylesheet" href="css/dashboard.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
 <script type="module" src="js/auth-guard.js"></script>
 <script type="module" src="js/app.js"></script>
+<script type="module" src="js/progress.js"></script>
 </head>
+
 <body>
 
 <header class="header">
-  <div class="logo-box">
-    <img src="assets/logo.png" alt="Logo" />
-    <span>Nihongo Zen</span>
-  </div>
-  <nav>
-    <button onclick="loadLevel('n5')">N5</button>
-    <button onclick="loadLevel('n4')">N4</button>
-    <button onclick="loadLevel('n3')">N3</button>
-    <button onclick="loadLevel('n2')">N2</button>
-    <button onclick="loadLevel('n1')">N1</button>
-    <button onclick="goPage('kanji.html')">Kanji</button>
-    <button onclick="goPage('lessons.html')">Lessons</button>
-    <button onclick="goPage('quiz.html')">Quiz</button>
-    <button onclick="logout()">Logout</button>
-  </nav>
+  <h2>Nihongo Zen Dashboard</h2>
 </header>
 
-<section class="user-info">
-  <h3 id="profile-name">Loading...</h3>
-  <p id="profile-email"></p>
-  <p>Level: <span id="user-level">0</span></p>
-  <p>XP: <span id="user-xp">0</span></p>
-  <p>Streak: <span id="user-streak">0</span></p>
+<section class="cards" id="levels">
+  <!-- Dynamic levels load here -->
 </section>
-
-<main id="main-content">
-  <h2>Welcome to NihongoZen</h2>
-</main>
-
-<script>
-import { auth } from './js/firebase.js';
-import {
-  getDoc,
-  doc,
-  updateDoc,
-  increment
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
-
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
-const userRef = () => {
-  const user = auth.currentUser;
-  return doc(db, "users", user.uid);
-};
-
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    const snap = await getDoc(userRef());
-    if (snap.exists()) {
-      const data = snap.data();
-      document.getElementById("profile-name").textContent = data.firstName + " " + data.lastName;
-      document.getElementById("profile-email").textContent = data.email;
-      document.getElementById("user-level").textContent = data.level;
-      document.getElementById("user-xp").textContent = data.xp;
-      document.getElementById("user-streak").textContent = data.streak;
-    }
-  } else {
-    window.location.href = "index.html";
-  }
-});
-
-// Logout function
-function logout() {
-  auth.signOut().then(() => {
-    window.location.href = "index.html";
-  });
-}
-
-// Load level data
-async function loadLevel(level) {
-  try {
-    const res = await fetch(`data/${level}/vocab.json`);
-    const data = await res.json();
-    const content = document.getElementById("main-content");
-    content.innerHTML = `<h2>${level.toUpperCase()} Vocabulary</h2>`;
-    data.forEach(item => {
-      const el = document.createElement("div");
-      el.innerHTML = `<h3>${item.word}</h3><p>${item.meaning}</p>`;
-      el.onclick = () => {
-        if (item.audio) {
-          new Audio(item.audio).play();
-        }
-        // Save progress & XP in Firestore
-        saveProgress(level, item.word);
-        addXP(10);
-      };
-      content.appendChild(el);
-    });
-  } catch {
-    document.getElementById("main-content").innerHTML = "<p>No data uploaded yet</p>";
-  }
-}
-
-// Save progress and add XP
-async function saveProgress(level, word) {
-  const user = auth.currentUser;
-  const ref = doc(db, "users", user.uid);
-  await updateDoc(ref, {
-    [`progress.${level}`]: arrayUnion(word)
-  });
-}
-
-async function addXP(amount) {
-  const user = auth.currentUser;
-  const ref = doc(db, "users", user.uid);
-  await updateDoc(ref, {
-    xp: increment(amount),
-    level: increment(0) // to trigger reactivity if needed
-  });
-}
-
-// Page navigation
-function goPage(page) {
-  window.location.href = page;
-}
-</script>
 
 </body>
 </html>
