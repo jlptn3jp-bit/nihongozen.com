@@ -1,86 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NihongoZen Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NihongoZen</title>
 
-<script type="module" src="js/auth.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/welcome.css">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #ffd6e0, #d6d6ff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-}
+  <!-- AUTH JS -->
+  <script type="module" src="js/auth.js"></script>
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background: white;
-  position: fixed;
-  top: 0;
-}
+  <!-- LOGIN STYLE -->
+  <style>
+    .login-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ffd6e0, #d6d6ff);
+    }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  width: 300px;
-  margin-top: 80px;
-}
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+    }
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-}
+    .card input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #ff8fab;
-  color: white;
-  cursor: pointer;
-  margin: 5px;
-}
-</style>
+    .card button {
+      padding: 10px 20px;
+      border: none;
+      background: #ff8fab;
+      color: white;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER (ab sahi jagah) -->
+<!-- HEADER -->
 <header class="header">
-  <div class="logo-box">
-    <img src="assets/logo.png" width="40">
-    <span>Nihongo Zen</span>
+  <div class="logo">
+    <img src="https://files.catbox.moe/fxwgtd.png" alt="logo">
+    <span>NihongoZen</span>
   </div>
 
   <nav>
-    <a class="active">Home</a>
-    <a>Courses</a>
-    <a>Practice</a>
+    <a class="active" href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Resources</a>
+    <a href="#">Practice</a>
+    <a href="#">Community</a>
+    <a href="#">Blog</a>
+    <a href="#">About</a>
   </nav>
+
+  <button class="login-btn" onclick="scrollToLogin()">Sign In</button>
 </header>
 
-<!-- LOGIN CARD -->
-<div class="card">
-  <h2>Login</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Learn Japanese<br>The Natural Way</h1>
 
-  <input type="email" id="email" placeholder="Enter Email">
-  <input type="password" id="password" placeholder="Enter Password">
+    <p>
+      Your journey to Japanese fluency starts here.<br>
+      Simple lessons, real conversations, and a supportive community.
+    </p>
 
-  <button id="login-btn">Login</button>
-  <button id="signup-btn">Sign Up</button>
-</div>
+    <button class="cta" onclick="goSignup()">Start Learning Free →</button>
+
+    <p class="users">Join 25,000+ happy learners</p>
+  </div>
+
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1526481280691-906c2c3b7f62" alt="Japan">
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <h2>Everything You Need to Succeed</h2>
+
+  <div class="cards">
+    <div class="card"><h3>Structured Lessons</h3><p>Step-by-step curriculum</p></div>
+    <div class="card"><h3>Real Conversations</h3><p>Practice speaking</p></div>
+    <div class="card"><h3>Practice & Review</h3><p>Quizzes & tests</p></div>
+    <div class="card"><h3>Community</h3><p>Learn together</p></div>
+  </div>
+</section>
+
+<!-- LOGIN SECTION (MERGED HERE) -->
+<section class="login-section" id="login">
+  <div class="card">
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button id="login-btn">Login</button>
+    <button id="signup-btn">Sign Up</button>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Start Your Japanese Journey?</h2>
+  <button class="cta" onclick="goSignup()">Start Learning Free →</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>NihongoZen</h3>
+      <p>Making Japanese learning simple.</p>
+    </div>
+
+    <div>
+      <h4>Learn</h4>
+      <p>Courses</p>
+      <p>Vocabulary</p>
+    </div>
+
+    <div>
+      <h4>Practice</h4>
+      <p>Quiz</p>
+      <p>Flashcards</p>
+    </div>
+
+    <div>
+      <h4>Community</h4>
+      <p>Forums</p>
+      <p>Events</p>
+    </div>
+  </div>
+
+  <p class="copyright">© 2026 NihongoZen</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  function goSignup() {
+    window.location.href = "signup.html";
+  }
+
+  function scrollToLogin() {
+    document.getElementById("login").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
 
 </body>
 </html>
