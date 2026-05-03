@@ -1,35 +1,26 @@
 body {
-  margin: 0;
-  background: #fff5f7;
   font-family: sans-serif;
+  margin: 0;
+  background: #fafafa;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
+.header {
+  padding: 20px;
+  background: #ff4d6d;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
   background: white;
-  justify-content: space-between;
-}
-
-header img {
-  width: 40px;
-}
-
-nav a {
-  margin: 0 10px;
+  padding: 20px;
+  border-radius: 12px;
   cursor: pointer;
-}
-
-.timer {
   text-align: center;
-  padding: 20px;
-}
-
-#time {
-  font-size: 2em;
-}
-
-main {
-  padding: 20px;
 }
