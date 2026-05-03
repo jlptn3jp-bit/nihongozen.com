@@ -18,7 +18,7 @@ import {
   getDoc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* ================= COMMON FUNCTION ================= */
+/* ================= SAVE USER ================= */
 async function saveUserData(user, extraData = {}) {
   const userRef = doc(db, "users", user.uid);
   const existing = await getDoc(userRef);
@@ -46,8 +46,8 @@ async function saveUserData(user, extraData = {}) {
 
 /* ================= EMAIL LOGIN ================= */
 document.getElementById("login-btn")?.addEventListener("click", async () => {
-  const email = document.getElementById("loginEmail")?.value.trim();
-  const password = document.getElementById("loginPassword")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
+  const password = document.getElementById("password")?.value.trim();
 
   if (!email || !password) return alert("Enter email & password");
 
@@ -67,31 +67,22 @@ document.getElementById("login-btn")?.addEventListener("click", async () => {
 
 /* ================= SIGNUP ================= */
 document.getElementById("signup-btn")?.addEventListener("click", async () => {
-  const firstName = document.getElementById("firstName")?.value.trim();
-  const lastName = document.getElementById("lastName")?.value.trim();
-  const email = document.getElementById("signupEmail")?.value.trim();
-  const phone = document.getElementById("phone")?.value.trim();
-  const password = document.getElementById("signupPassword")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
+  const password = document.getElementById("password")?.value.trim();
 
   if (!email || !password) return alert("Fill required fields");
 
   try {
     const userCred = await createUserWithEmailAndPassword(auth, email, password);
 
-    const fullName = `${firstName} ${lastName}`;
-
     await updateProfile(userCred.user, {
-      displayName: fullName,
+      displayName: "New User",
       photoURL: "assets/default-avatar.png"
     });
 
     await sendEmailVerification(userCred.user);
 
-    await saveUserData(userCred.user, {
-      firstName,
-      lastName,
-      phone
-    });
+    await saveUserData(userCred.user);
 
     alert("Account created! Verify your email.");
   } catch (err) {
@@ -121,20 +112,20 @@ const actionCodeSettings = {
 };
 
 document.getElementById("emailLogin")?.addEventListener("click", async () => {
-  const email = document.getElementById("emailInput")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
 
   if (!email) return alert("Enter email");
 
   try {
     await sendSignInLinkToEmail(auth, email, actionCodeSettings);
     localStorage.setItem("emailForSignIn", email);
-    alert("Login link sent!");
+    alert("Login link sent! Check your email.");
   } catch (err) {
     alert(err.message);
   }
 });
 
-/* ================= COMPLETE EMAIL LINK LOGIN ================= */
+/* ================= COMPLETE EMAIL LINK ================= */
 if (isSignInWithEmailLink(auth, window.location.href)) {
   let email = localStorage.getItem("emailForSignIn");
 
@@ -151,7 +142,7 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
     .catch(err => alert(err.message));
 }
 
-/* ================= GLOBAL NAV ================= */
+/* ================= NAV ================= */
 window.goSignup = () => {
   window.location.href = "signup.html";
 };
