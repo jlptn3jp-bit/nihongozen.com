@@ -4,37 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dashboard</title>
+<title>NihongoZen Dashboard</title>
 
-<script type="module" src="js/auth-guard.js"></script>
+<link rel="stylesheet" href="css/dashboard.css">
+
+<!-- SCRIPTS -->
+<script type="module" src="js/protect.js"></script>
 <script type="module" src="js/dashboard.js"></script>
 
 <style>
 body {
   font-family: Arial;
   background: #fff5f7;
-  text-align: center;
+  margin: 0;
 }
 
-.card {
-  margin-top: 50px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
   background: white;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 40px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+main {
   padding: 20px;
-  display: inline-block;
-  border-radius: 10px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="card">
-  <h2>Welcome</h2>
-  <p id="user-email"></p>
+<header>
+  <div class="logo-box">
+    <img src="assets/logo.png" alt="logo">
+    <span>NihongoZen</span>
+  </div>
 
-  <button id="logout">Logout</button>
-</div>
+  <button id="logoutBtn">Logout</button>
+</header>
+
+<nav>
+  <button data-level="n5">N5</button>
+  <button data-level="n4">N4</button>
+  <button data-level="n3">N3</button>
+  <button data-level="n2">N2</button>
+  <button data-level="n1">N1</button>
+</nav>
+
+<main>
+  <h2 id="userEmail">Loading...</h2>
+
+  <div id="content">
+    <h3>Select a level to start</h3>
+  </div>
+</main>
 
 </body>
 </html>
