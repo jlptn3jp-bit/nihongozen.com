@@ -13,48 +13,97 @@
 <script type="module" src="js/dashboard.js"></script>
 
 <style>
+/* GLOBAL */
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #fff5f7;
   margin: 0;
 }
 
-header {
+/* HEADER */
+.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
   background: white;
 }
 
-.logo-box {
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo-box img {
+.logo img {
   width: 40px;
 }
 
-nav button {
+/* LOGOUT BUTTON */
+#logoutBtn {
+  background: #e85d75;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* LEVEL NAV */
+.level-nav {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+}
+
+.level-nav button {
   margin: 5px;
   padding: 8px 12px;
   background: black;
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 
+/* MAIN */
 main {
   padding: 20px;
+}
+
+/* USER INFO */
+#userEmail {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo-box">
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
     <img src="assets/logo.png" alt="logo">
     <span>NihongoZen</span>
   </div>
@@ -62,21 +111,39 @@ main {
   <button id="logoutBtn">Logout</button>
 </header>
 
-<nav>
+<!-- LEVEL NAV -->
+<section class="level-nav">
   <button data-level="n5">N5</button>
   <button data-level="n4">N4</button>
   <button data-level="n3">N3</button>
   <button data-level="n2">N2</button>
   <button data-level="n1">N1</button>
-</nav>
+</section>
 
+<!-- MAIN CONTENT -->
 <main>
+
   <h2 id="userEmail">Loading...</h2>
 
   <div id="content">
     <h3>Select a level to start</h3>
   </div>
+
+  <!-- DASHBOARD CARDS -->
+  <section class="cards">
+    <div class="card" onclick="goPage('lessons.html')">📘 Lessons</div>
+    <div class="card" onclick="goPage('kanji.html')">🈶 Kanji</div>
+    <div class="card" onclick="goPage('quiz.html')">📝 Quiz</div>
+  </section>
+
 </main>
+
+<!-- BASIC NAV SCRIPT -->
+<script>
+function goPage(page) {
+  window.location.href = page;
+}
+</script>
 
 </body>
 </html>
