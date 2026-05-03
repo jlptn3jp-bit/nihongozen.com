@@ -1,9 +1,9 @@
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-const auth = getAuth();
+// js/auth-guard.js
+import { auth } from "./firebase.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
 onAuthStateChanged(auth, (user) => {
-  if (!user) {
-    window.location.href = "index.html";
+  if (!user || !user.emailVerified) {
+    window.location.href = "index.html"; // or welcome.html
   }
 });
