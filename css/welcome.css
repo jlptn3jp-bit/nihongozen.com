@@ -11,22 +11,23 @@ body {
 
 .welcome-container {
   animation: fadeIn 1.5s ease;
+  padding: 20px;
 }
 
-.logo {
+.welcome-logo {
   width: 150px;
   margin-bottom: 20px;
 }
 
-h1 {
+.welcome-container h1 {
   font-size: 28px;
 }
 
-p {
+.welcome-container p {
   color: #555;
 }
 
-button {
+.start-btn {
   margin-top: 20px;
   padding: 12px 20px;
   background: #e85d75;
