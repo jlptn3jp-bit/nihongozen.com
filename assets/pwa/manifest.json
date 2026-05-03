@@ -1,8 +1,8 @@
 {
   "name": "NihongoZen",
-  "short_name": "NihonZen",
+  "short_name": "NZ",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#fff5f7",
-  "theme_color": "#ff8fab"
+  "background_color": "#ffffff",
+  "theme_color": "#ff4d6d"
 }
