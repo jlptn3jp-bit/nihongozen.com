@@ -11,12 +11,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 /* ================= EMAIL LOGIN ================= */
-const loginBtn = document.getElementById("login-btn");
-const signupBtn = document.getElementById("signup-btn");
+document.getElementById("login-btn")?.addEventListener("click", async () => {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-loginBtn?.addEventListener("click", async () => {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  if (!email || !password) {
+    return alert("Please enter email and password");
+  }
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
@@ -26,9 +27,14 @@ loginBtn?.addEventListener("click", async () => {
   }
 });
 
-signupBtn?.addEventListener("click", async () => {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+/* ================= SIGNUP ================= */
+document.getElementById("signup-btn")?.addEventListener("click", async () => {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!email || !password) {
+    return alert("Please enter email and password");
+  }
 
   try {
     await createUserWithEmailAndPassword(auth, email, password);
@@ -57,7 +63,7 @@ const actionCodeSettings = {
 };
 
 document.getElementById("emailLogin")?.addEventListener("click", async () => {
-  const email = document.getElementById("emailInput").value;
+  const email = document.getElementById("emailInput").value.trim();
 
   if (!email) return alert("Enter email");
 
@@ -85,3 +91,8 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
     })
     .catch(err => alert(err.message));
 }
+
+/* ================= GLOBAL NAV ================= */
+window.goSignup = () => {
+  window.location.href = "signup.html";
+};
