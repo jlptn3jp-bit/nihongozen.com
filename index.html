@@ -1,1 +1,431 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NihongoZen – Learn Japanese The Natural Way</title>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="https://files.catbox.moe/fxwgtd.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sakura: #f2a7b8;
+      --sakura-light: #fde8ef;
+      --ink: #1a1a2e;
+      --gold: #c9a84c;
+      --white: #fffaf9;
+      --gray: #6b7280;
+      --red: #e05252;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── LANDING PAGE ── */
+    #landing {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* LEFT – Tokyo scenery */
+    .landing-left {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: none;
+    }
+    @media(min-width:768px){ .landing-left { display: block; } }
+
+    .landing-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10,10,30,0.55) 0%, rgba(30,10,10,0.35) 60%, rgba(0,0,0,0.6) 100%),
+        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&q=80') center/cover no-repeat;
+    }
+
+    .landing-overlay {
+      position: relative; z-index: 2;
+      height: 100%; display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 3rem;
+    }
+
+    .kanji-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: .75rem;
+    }
+
+    .slogan {
+      font-size: 1rem;
+      color: rgba(255,255,255,.75);
+      letter-spacing: .05em;
+      margin-bottom: .5rem;
+    }
+
+    .sakura-deco {
+      display: flex; gap: .5rem; margin-top: 1.5rem;
+    }
+    .sakura-deco span {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sakura); opacity: .7;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .sakura-deco span:nth-child(2){ animation-delay:.4s; }
+    .sakura-deco span:nth-child(3){ animation-delay:.8s; }
+
+    /* RIGHT – Auth panel */
+    .landing-right {
+      width: 100%; max-width: 480px;
+      background: var(--white);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 3rem 2.5rem;
+      position: relative;
+    }
+    @media(min-width:768px){ .landing-right { min-height: 100vh; } }
+
+    .auth-logo { display: flex; align-items: center; gap: .75rem; margin-bottom: 2.5rem; }
+    .auth-logo img { width: 48px; height: 48px; border-radius: 12px; }
+    .auth-logo-text { font-family: 'Noto Serif JP', serif; font-size: 1.4rem; color: var(--ink); font-weight: 700; }
+
+    .auth-tabs {
+      display: flex; width: 100%; margin-bottom: 2rem;
+      background: #f3f4f6; border-radius: 12px; padding: 4px;
+    }
+    .auth-tab {
+      flex: 1; padding: .65rem; text-align: center; font-size: .9rem; font-weight: 500;
+      border-radius: 9px; cursor: pointer; transition: all .2s; color: var(--gray);
+      border: none; background: transparent;
+    }
+    .auth-tab.active { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+
+    .auth-form { width: 100%; }
+    .form-row { display: flex; gap: .75rem; }
+    .form-group { margin-bottom: 1rem; flex: 1; }
+    .form-group label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+    .form-group input {
+      width: 100%; padding: .75rem 1rem; border: 1.5px solid #e5e7eb;
+      border-radius: 10px; font-size: .9rem; font-family: inherit;
+      outline: none; transition: border-color .2s; background: #fff;
+    }
+    .form-group input:focus { border-color: var(--sakura); }
+
+    .btn-primary {
+      width: 100%; padding: .85rem; background: var(--sakura);
+      color: #fff; border: none; border-radius: 12px; font-size: 1rem;
+      font-weight: 600; cursor: pointer; font-family: inherit;
+      transition: all .2s; margin-top: .5rem;
+    }
+    .btn-primary:hover { background: #e8899c; transform: translateY(-1px); }
+
+    .divider { display: flex; align-items: center; gap: .75rem; margin: 1.25rem 0; }
+    .divider::before, .divider::after { content:''; flex:1; height:1px; background:#e5e7eb; }
+    .divider span { font-size: .8rem; color: var(--gray); }
+
+    .btn-social {
+      width: 100%; padding: .75rem; border: 1.5px solid #e5e7eb;
+      border-radius: 12px; font-size: .9rem; font-weight: 500;
+      cursor: pointer; font-family: inherit; background: #fff;
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      transition: all .2s; margin-bottom: .65rem; color: var(--ink);
+    }
+    .btn-social:hover { border-color: var(--sakura); background: var(--sakura-light); }
+    .btn-social img { width: 20px; height: 20px; }
+
+    .auth-panel { display: none; }
+    .auth-panel.active { display: block; }
+
+    /* ── VERIFICATION OVERLAY ── */
+    #verify-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
+    }
+    #verify-overlay.show { display: flex; }
+    .verify-box {
+      background: #fff; border-radius: 20px; padding: 3rem 2.5rem;
+      max-width: 400px; width: 90%; text-align: center;
+    }
+    .verify-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .verify-box h2 { font-family: 'Noto Serif JP', serif; margin-bottom: .75rem; }
+    .verify-box p { color: var(--gray); font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .otp-inputs { display: flex; gap: .5rem; justify-content: center; margin-bottom: 1.5rem; }
+    .otp-inputs input {
+      width: 48px; height: 56px; text-align: center; font-size: 1.4rem;
+      font-weight: 700; border: 2px solid #e5e7eb; border-radius: 10px;
+      outline: none; transition: border-color .2s;
+    }
+    .otp-inputs input:focus { border-color: var(--sakura); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes pulse { 0%,100%{opacity:.7;transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .landing-right > * { animation: fadeUp .5s ease both; }
+    .landing-right > *:nth-child(1){ animation-delay:.1s }
+    .landing-right > *:nth-child(2){ animation-delay:.2s }
+    .landing-right > *:nth-child(3){ animation-delay:.3s }
+
+    .msg-error { color: var(--red); font-size: .8rem; margin-top: .5rem; display: none; }
+    .msg-error.show { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div id="landing">
+  <!-- LEFT: Tokyo scenery -->
+  <div class="landing-left">
+    <div class="landing-bg"></div>
+    <div class="landing-overlay">
+      <div class="kanji-title">日本語を学ぼう<br/>一緒に</div>
+      <div class="slogan">Learning Japanese Together</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6">
+        Every kanji tells a story.<br/>Every sentence opens a world.
+      </p>
+      <div class="sakura-deco">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Auth -->
+  <div class="landing-right">
+    <div class="auth-logo">
+      <img src="https://files.catbox.moe/fxwgtd.png" alt="NihongoZen" onerror="this.style.display='none'"/>
+      <div class="auth-logo-text">NihongoZen</div>
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" onclick="switchTab('login')">Log In</button>
+      <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- LOGIN PANEL -->
+    <div class="auth-panel active" id="panel-login">
+      <div class="auth-form">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="login-email" placeholder="you@example.com"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" placeholder="••••••••"/>
+        </div>
+        <div class="msg-error" id="login-error">Invalid email or password.</div>
+        <button class="btn-primary" onclick="handleLogin()">Log In →</button>
+        <div class="divider"><span>or continue with</span></div>
+        <button class="btn-social" onclick="handleGoogleLogin()">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"/>
+          Continue with Google
+        </button>
+        <button class="btn-social" onclick="handleFacebookLogin()">
+          <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" alt="Facebook"/>
+          Continue with Facebook
+        </button>
+      </div>
+    </div>
+
+    <!-- SIGNUP PANEL -->
+    <div class="auth-panel" id="panel-signup">
+      <div class="auth-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="signup-fname" placeholder="Sakura"/>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="signup-lname" placeholder="Yamada"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="signup-email" placeholder="you@example.com"/>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="signup-phone" placeholder="+1 (555) 000-0000"/>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="signup-password" placeholder="Min 8 characters"/>
+        </div>
+        <div class="msg-error" id="signup-error">Please fill all fields correctly.</div>
+        <button class="btn-primary" onclick="handleSignup()">Create Account →</button>
+        <div class="divider"><span>or sign up with</span></div>
+        <button class="btn-social" onclick="handleGoogleLogin()">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"/>
+          Sign up with Google
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EMAIL VERIFICATION OVERLAY -->
+<div id="verify-overlay">
+  <div class="verify-box">
+    <div class="verify-icon">📧</div>
+    <h2>Verify Your Email</h2>
+    <p>We sent a 6-digit code to <strong id="verify-email-display"></strong>.<br/>Enter it below to activate your account.</p>
+    <div class="otp-inputs">
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,0)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,1)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,2)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,3)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,4)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,5)"/>
+    </div>
+    <button class="btn-primary" onclick="verifyOTP()" style="max-width:200px;margin:0 auto">Verify →</button>
+    <p style="margin-top:1rem;font-size:.8rem;color:#9ca3af">Didn't receive it? <a href="#" onclick="resendOTP()" style="color:var(--sakura)">Resend code</a></p>
+  </div>
+</div>
+
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+           GoogleAuthProvider, signInWithPopup, FacebookAuthProvider,
+           sendEmailVerification, onAuthStateChanged, updateProfile }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getFirestore, doc, setDoc, getDoc, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
+    authDomain: "nihongo-zen-cd97d.firebaseapp.com",
+    projectId: "nihongo-zen-cd97d",
+    storageBucket: "nihongo-zen-cd97d.firebasestorage.app",
+    messagingSenderId: "513320956483",
+    appId: "1:513320956483:web:84729a0c4c44b76af65af6",
+    measurementId: "G-PCERH9R58D"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const googleProvider = new GoogleAuthProvider();
+  const fbProvider = new FacebookAuthProvider();
+
+  // Auto-redirect if already logged in
+  onAuthStateChanged(auth, user => {
+    if (user) window.location.href = 'dashboard.html';
+  });
+
+  // Create/update user Firestore profile
+  async function createUserProfile(user, extra = {}) {
+    const ref = doc(db, 'users', user.uid);
+    const snap = await getDoc(ref);
+    if (!snap.exists()) {
+      await setDoc(ref, {
+        uid: user.uid,
+        email: user.email,
+        displayName: extra.displayName || user.displayName || '',
+        photoURL: user.photoURL || '',
+        phone: extra.phone || '',
+        xp: 0, level: 1, streak: 0,
+        lessonsCompleted: 0, vocabMastered: 0, kanjiProgress: 0,
+        createdAt: serverTimestamp(),
+        lastLogin: serverTimestamp()
+      });
+    } else {
+      await setDoc(ref, { lastLogin: serverTimestamp() }, { merge: true });
+    }
+  }
+
+  // EMAIL LOGIN
+  window.handleLogin = async () => {
+    const email = document.getElementById('login-email').value.trim();
+    const pass  = document.getElementById('login-password').value;
+    const err   = document.getElementById('login-error');
+    err.classList.remove('show');
+    try {
+      const cred = await signInWithEmailAndPassword(auth, email, pass);
+      await createUserProfile(cred.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) {
+      err.textContent = e.message; err.classList.add('show');
+    }
+  };
+
+  // EMAIL SIGNUP
+  window.handleSignup = async () => {
+    const fname = document.getElementById('signup-fname').value.trim();
+    const lname = document.getElementById('signup-lname').value.trim();
+    const email = document.getElementById('signup-email').value.trim();
+    const phone = document.getElementById('signup-phone').value.trim();
+    const pass  = document.getElementById('signup-password').value;
+    const err   = document.getElementById('signup-error');
+    err.classList.remove('show');
+    if (!fname || !lname || !email || !pass || pass.length < 8) {
+      err.textContent = 'Please fill all fields (password min 8 chars).';
+      err.classList.add('show'); return;
+    }
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email, pass);
+      await updateProfile(cred.user, { displayName: `${fname} ${lname}` });
+      await createUserProfile(cred.user, { displayName:`${fname} ${lname}`, phone });
+      await sendEmailVerification(cred.user);
+      document.getElementById('verify-email-display').textContent = email;
+      document.getElementById('verify-overlay').classList.add('show');
+    } catch(e) {
+      err.textContent = e.message; err.classList.add('show');
+    }
+  };
+
+  // GOOGLE LOGIN
+  window.handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      await createUserProfile(result.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) { alert(e.message); }
+  };
+
+  // FACEBOOK LOGIN
+  window.handleFacebookLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, fbProvider);
+      await createUserProfile(result.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) { alert(e.message); }
+  };
+
+  // OTP verify (simulated – real use Firebase phone auth or email link)
+  window.verifyOTP = () => {
+    const digits = Array.from(document.querySelectorAll('.otp-digit')).map(i=>i.value).join('');
+    if (digits.length === 6) {
+      document.getElementById('verify-overlay').classList.remove('show');
+      window.location.href = 'dashboard.html';
+    } else { alert('Enter the full 6-digit code.'); }
+  };
+  window.resendOTP = () => alert('Verification email resent!');
+</script>
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.auth-tab').forEach((t,i)=> {
+      t.classList.toggle('active', (tab==='login'&&i===0)||(tab==='signup'&&i===1));
+    });
+    document.getElementById('panel-login').classList.toggle('active', tab==='login');
+    document.getElementById('panel-signup').classList.toggle('active', tab==='signup');
+  }
+  function otpMove(el, idx) {
+    if (el.value && idx < 5) document.querySelectorAll('.otp-digit')[idx+1].focus();
+  }
+
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  }
+</script>
+</body>
+</html>
