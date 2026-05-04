@@ -12,7 +12,7 @@ import {
 
 // 🔥 FIREBASE CONFIG (YOUR KEY ADDED)
 const firebaseConfig = {
-  apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
+  apiKey: "AIzaSyB-v5yOx6EwLEEfXknGAw1hZNG4XblVGVc",
   authDomain: "YOUR_PROJECT.firebaseapp.com", // ⚠️ replace this
   projectId: "YOUR_PROJECT_ID" // ⚠️ replace this
 };
