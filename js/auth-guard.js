@@ -12,9 +12,13 @@ import {
 
 // 🔥 FIREBASE CONFIG (YOUR KEY ADDED)
 const firebaseConfig = {
-  apiKey: "AIzaSyB-v5yOx6EwLEEfXknGAw1hZNG4XblVGVc",
-  authDomain: "YOUR_PROJECT.firebaseapp.com", // ⚠️ replace this
-  projectId: "YOUR_PROJECT_ID" // ⚠️ replace this
+  apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
+  authDomain: "nihongo-zen-cd97d.firebaseapp.com",
+  projectId: "nihongo-zen-cd97d",
+  storageBucket: "nihongo-zen-cd97d.firebasestorage.app",
+  messagingSenderId: "513320956483",
+  appId: "1:513320956483:web:a1069825e0df3587f65af6",
+  measurementId: "G-1WTJ5ML3R2"
 };
 
 // ✅ INIT
