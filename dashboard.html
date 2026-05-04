@@ -1,27 +1,829 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NihongoZen Dashboard</title>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="https://files.catbox.moe/fxwgtd.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sakura: #f2a7b8;
+      --sakura-light: #fde8ef;
+      --sakura-mid: #f8cfd9;
+      --ink: #1a1a2e;
+      --ink-light: #4b4b6b;
+      --gold: #c9a84c;
+      --white: #fffaf9;
+      --card: #ffffff;
+      --border: #f0e8eb;
+      --green: #4ade80;
+      --blue: #60a5fa;
+      --orange: #fb923c;
+      --purple: #a78bfa;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      min-height: 100vh;
+    }
 
-<title>Dashboard</title>
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,250,249,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; gap: 1.5rem; height: 64px;
+    }
+    .header-logo { display:flex; align-items:center; gap:.6rem; text-decoration:none; }
+    .header-logo img { width:36px; height:36px; border-radius:8px; }
+    .header-logo span { font-family:'Noto Serif JP',serif; font-size:1.1rem; font-weight:700; color:var(--ink); }
 
-<link rel="stylesheet" href="css/dashboard.css">
+    nav { display:flex; gap:.25rem; margin-left:1rem; flex:1; overflow-x:auto; }
+    nav a {
+      padding:.45rem .9rem; border-radius:8px; font-size:.85rem;
+      font-weight:500; color:var(--ink-light); text-decoration:none;
+      white-space:nowrap; transition:all .2s;
+    }
+    nav a:hover, nav a.active { background:var(--sakura-light); color:var(--ink); }
+    nav a.active { font-weight:600; }
 
-<script type="module" src="js/auth-guard.js"></script>
-<script type="module" src="js/app.js"></script>
-<script type="module" src="js/progress.js"></script>
+    .header-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+    .streak-badge {
+      display:flex; align-items:center; gap:.4rem;
+      background:#fff7ed; border:1px solid #fed7aa;
+      padding:.35rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600;
+      color:#ea580c;
+    }
+    .xp-badge {
+      display:flex; align-items:center; gap:.4rem;
+      background:#f0fdf4; border:1px solid #bbf7d0;
+      padding:.35rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600;
+      color:#16a34a;
+    }
+    .user-avatar {
+      width:38px; height:38px; border-radius:50%;
+      background:var(--sakura); cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; color:#fff; font-size:.9rem;
+      border:2px solid var(--sakura-mid); position:relative;
+    }
+    .user-avatar img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
+    .user-dropdown {
+      position:absolute; top:46px; right:0; background:#fff;
+      border:1px solid var(--border); border-radius:14px;
+      padding:.5rem; min-width:180px; box-shadow:0 8px 30px rgba(0,0,0,.1);
+      display:none; z-index:200;
+    }
+    .user-avatar:hover .user-dropdown { display:block; }
+    .user-dropdown a {
+      display:block; padding:.6rem 1rem; border-radius:8px;
+      font-size:.85rem; text-decoration:none; color:var(--ink); transition:background .15s;
+    }
+    .user-dropdown a:hover { background:var(--sakura-light); }
+    .user-dropdown hr { margin:.35rem 0; border:none; border-top:1px solid var(--border); }
+
+    /* ── SIDEBAR ── */
+    .layout { display:flex; min-height:calc(100vh - 64px); }
+    aside {
+      width:240px; flex-shrink:0; padding:1.5rem 1rem;
+      border-right:1px solid var(--border); background:#fff;
+      display:flex; flex-direction:column; gap:.25rem;
+    }
+    @media(max-width:900px){ aside { display:none; } }
+
+    .sidebar-section { font-size:.7rem; font-weight:600; color:var(--sakura); letter-spacing:.1em;
+      text-transform:uppercase; padding:.5rem .75rem .25rem; margin-top:.5rem; }
+    .sidebar-link {
+      display:flex; align-items:center; gap:.7rem;
+      padding:.65rem .75rem; border-radius:10px; cursor:pointer;
+      font-size:.875rem; color:var(--ink-light); transition:all .15s;
+      text-decoration:none;
+    }
+    .sidebar-link:hover, .sidebar-link.active {
+      background:var(--sakura-light); color:var(--ink); font-weight:500;
+    }
+    .sidebar-link .icon { font-size:1rem; width:20px; text-align:center; }
+    .sidebar-link .badge {
+      margin-left:auto; background:var(--sakura); color:#fff;
+      font-size:.65rem; font-weight:700; padding:.15rem .45rem;
+      border-radius:20px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main { flex:1; padding:2rem; overflow-x:hidden; }
+    @media(max-width:600px){ main { padding:1rem; } }
+
+    /* ── WELCOME BANNER ── */
+    .welcome-banner {
+      background: linear-gradient(135deg, #fde8ef 0%, #fdf2f8 50%, #f0f4ff 100%);
+      border-radius:20px; padding:2rem 2.5rem;
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:2rem; overflow:hidden; position:relative;
+    }
+    .welcome-banner::after {
+      content:'桜'; position:absolute; right:120px; top:-10px;
+      font-size:8rem; opacity:.06; font-family:'Noto Serif JP',serif;
+    }
+    .welcome-text h2 { font-family:'Noto Serif JP',serif; font-size:1.4rem; margin-bottom:.4rem; }
+    .welcome-text p { color:var(--ink-light); font-size:.9rem; }
+    .daily-goal {
+      background:#fff; border-radius:14px; padding:1rem 1.5rem;
+      text-align:center; min-width:140px;
+    }
+    .daily-goal .goal-num { font-size:2rem; font-weight:700; color:var(--sakura); }
+    .daily-goal .goal-label { font-size:.75rem; color:var(--gray,#6b7280); margin-top:.2rem; }
+    .progress-ring { width:60px; height:60px; margin:0 auto .5rem; }
+
+    /* ── STATS GRID ── */
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; margin-bottom:2rem; }
+    .stat-card {
+      background:var(--card); border:1px solid var(--border); border-radius:16px;
+      padding:1.25rem; transition:transform .2s; cursor:default;
+    }
+    .stat-card:hover { transform:translateY(-3px); }
+    .stat-card .stat-icon { font-size:1.5rem; margin-bottom:.6rem; }
+    .stat-card .stat-val { font-size:1.75rem; font-weight:700; margin-bottom:.2rem; }
+    .stat-card .stat-label { font-size:.8rem; color:var(--ink-light); }
+    .stat-card .stat-change { font-size:.75rem; margin-top:.4rem; }
+    .stat-card .stat-change.up { color:#16a34a; }
+    .stat-card .stat-change.down { color:#dc2626; }
+
+    /* ── SECTION HEADERS ── */
+    .section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; }
+    .section-header h3 { font-family:'Noto Serif JP',serif; font-size:1.1rem; }
+    .section-header a { font-size:.8rem; color:var(--sakura); text-decoration:none; font-weight:500; }
+
+    /* ── JLPT LEVEL CARDS ── */
+    .levels-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-bottom:2.5rem; }
+    .level-card {
+      background:var(--card); border:1px solid var(--border); border-radius:18px;
+      padding:1.5rem; cursor:pointer; transition:all .2s; position:relative; overflow:hidden;
+    }
+    .level-card::before {
+      content:''; position:absolute; top:-20px; right:-20px;
+      width:80px; height:80px; border-radius:50%; opacity:.1;
+    }
+    .level-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(242,167,184,.2); }
+    .level-card.n5::before { background:#f2a7b8; }
+    .level-card.n4::before { background:#a78bfa; }
+    .level-card.n3::before { background:#60a5fa; }
+    .level-card.n2::before { background:#4ade80; }
+    .level-card.n1::before { background:#c9a84c; }
+    .level-badge {
+      display:inline-block; padding:.3rem .8rem; border-radius:20px;
+      font-size:.75rem; font-weight:700; margin-bottom:.75rem;
+    }
+    .n5 .level-badge { background:#fde8ef; color:#e05252; }
+    .n4 .level-badge { background:#f5f3ff; color:#7c3aed; }
+    .n3 .level-badge { background:#eff6ff; color:#2563eb; }
+    .n2 .level-badge { background:#f0fdf4; color:#16a34a; }
+    .n1 .level-badge { background:#fffbeb; color:#d97706; }
+    .level-card h4 { font-size:1rem; font-weight:600; margin-bottom:.25rem; }
+    .level-card p { font-size:.8rem; color:var(--ink-light); margin-bottom:1rem; }
+    .level-progress { height:5px; background:#f3f4f6; border-radius:10px; overflow:hidden; }
+    .level-progress-fill { height:100%; border-radius:10px; transition:width .8s ease; }
+    .n5 .level-progress-fill { background:var(--sakura); }
+    .n4 .level-progress-fill { background:var(--purple); }
+    .n3 .level-progress-fill { background:var(--blue); }
+    .n2 .level-progress-fill { background:var(--green); }
+    .n1 .level-progress-fill { background:var(--gold); }
+    .level-pct { font-size:.75rem; color:var(--ink-light); margin-top:.35rem; text-align:right; }
+
+    /* ── STUDY TIMER ── */
+    .timer-card {
+      background:linear-gradient(135deg,var(--ink) 0%,#2d2a5e 100%);
+      border-radius:20px; padding:1.75rem; color:#fff; margin-bottom:2rem;
+    }
+    .timer-display {
+      font-size:3rem; font-weight:700; font-variant-numeric:tabular-nums;
+      letter-spacing:.05em; margin:1rem 0; text-align:center;
+    }
+    .timer-controls { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
+    .timer-btn {
+      padding:.6rem 1.4rem; border-radius:10px; border:none; cursor:pointer;
+      font-size:.875rem; font-weight:600; font-family:inherit; transition:all .2s;
+    }
+    .timer-btn.start { background:var(--sakura); color:#fff; }
+    .timer-btn.pause { background:rgba(255,255,255,.15); color:#fff; }
+    .timer-btn.reset { background:rgba(255,255,255,.1); color:rgba(255,255,255,.7); }
+    .timer-btn:hover { opacity:.85; transform:scale(.97); }
+    .timer-modes { display:flex; gap:.5rem; margin-bottom:1rem; flex-wrap:wrap; }
+    .timer-mode {
+      padding:.35rem .85rem; border-radius:8px; font-size:.8rem; font-weight:500;
+      cursor:pointer; background:rgba(255,255,255,.1); color:rgba(255,255,255,.7);
+      border:1px solid rgba(255,255,255,.1); transition:all .2s;
+    }
+    .timer-mode.active { background:rgba(242,167,184,.3); color:#fff; border-color:var(--sakura); }
+
+    /* ── XP / LEVEL BAR ── */
+    .xp-card {
+      background:var(--card); border:1px solid var(--border); border-radius:18px;
+      padding:1.5rem; margin-bottom:2rem;
+    }
+    .xp-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
+    .xp-level { font-size:1.8rem; font-weight:700; color:var(--gold); }
+    .xp-bar-wrap { height:12px; background:#f3f4f6; border-radius:10px; overflow:hidden; }
+    .xp-bar-fill {
+      height:100%; border-radius:10px;
+      background:linear-gradient(90deg,var(--sakura),var(--gold));
+      transition:width 1s ease;
+    }
+    .xp-labels { display:flex; justify-content:space-between; font-size:.75rem; color:var(--ink-light); margin-top:.4rem; }
+
+    /* ── VOCAB/GRAMMAR LESSONS ── */
+    .lesson-list { display:flex; flex-direction:column; gap:.75rem; margin-bottom:2rem; }
+    .lesson-item {
+      background:var(--card); border:1px solid var(--border); border-radius:14px;
+      padding:1rem 1.25rem; display:flex; align-items:center; gap:1rem;
+      cursor:pointer; transition:all .2s;
+    }
+    .lesson-item:hover { border-color:var(--sakura); background:var(--sakura-light); }
+    .lesson-item .lesson-icon { font-size:1.4rem; width:42px; height:42px;
+      background:#f9fafb; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .lesson-item .lesson-info { flex:1; }
+    .lesson-item h5 { font-size:.9rem; font-weight:600; margin-bottom:.2rem; }
+    .lesson-item p { font-size:.8rem; color:var(--ink-light); }
+    .lesson-item .lesson-meta { display:flex; gap:.5rem; align-items:center; }
+    .lesson-item .tag { font-size:.7rem; padding:.2rem .55rem; border-radius:6px; font-weight:500; }
+    .tag.vocab { background:#fde8ef; color:#e05252; }
+    .tag.grammar { background:#eff6ff; color:#2563eb; }
+    .tag.kanji { background:#fffbeb; color:#d97706; }
+    .tag.reading { background:#f0fdf4; color:#16a34a; }
+    .lesson-item .play-btn {
+      width:36px; height:36px; border-radius:50%; background:var(--sakura);
+      color:#fff; border:none; cursor:pointer; font-size:.9rem;
+      display:flex; align-items:center; justify-content:center;
+      transition:transform .2s;
+    }
+    .lesson-item .play-btn:hover { transform:scale(1.1); }
+
+    /* ── KANJI GRID ── */
+    .kanji-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:.75rem; margin-bottom:2rem; }
+    .kanji-card {
+      background:var(--card); border:1px solid var(--border); border-radius:12px;
+      padding:.75rem; text-align:center; cursor:pointer; transition:all .2s;
+    }
+    .kanji-card:hover { border-color:var(--sakura); transform:scale(1.05); }
+    .kanji-char { font-family:'Noto Serif JP',serif; font-size:1.8rem; color:var(--ink); }
+    .kanji-reading { font-size:.65rem; color:var(--ink-light); margin-top:.2rem; }
+    .kanji-meaning { font-size:.65rem; color:var(--sakura); font-weight:500; }
+
+    /* ── QUIZ CTA ── */
+    .quiz-cta {
+      background:linear-gradient(135deg,var(--sakura-light) 0%,#f0f4ff 100%);
+      border:1px solid var(--sakura-mid); border-radius:18px;
+      padding:1.5rem; display:flex; align-items:center; justify-content:space-between;
+      gap:1rem; margin-bottom:2rem; flex-wrap:wrap;
+    }
+    .quiz-cta-text h4 { font-size:1.05rem; font-weight:600; margin-bottom:.3rem; }
+    .quiz-cta-text p { font-size:.85rem; color:var(--ink-light); }
+    .btn-quiz {
+      padding:.7rem 1.6rem; background:var(--sakura); color:#fff;
+      border:none; border-radius:10px; font-size:.875rem; font-weight:600;
+      cursor:pointer; font-family:inherit; white-space:nowrap;
+      transition:all .2s;
+    }
+    .btn-quiz:hover { background:#e8899c; transform:translateY(-1px); }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav {
+      display:none; position:fixed; bottom:0; left:0; right:0;
+      background:rgba(255,250,249,.95); backdrop-filter:blur(12px);
+      border-top:1px solid var(--border); padding:.5rem 1rem;
+      justify-content:space-around; z-index:100;
+    }
+    @media(max-width:900px){ .mobile-nav { display:flex; } }
+    .mobile-nav-btn {
+      display:flex; flex-direction:column; align-items:center; gap:.2rem;
+      padding:.5rem .75rem; border-radius:10px; cursor:pointer;
+      border:none; background:transparent; color:var(--ink-light);
+      font-size:.65rem; font-weight:500; font-family:inherit;
+    }
+    .mobile-nav-btn .nav-icon { font-size:1.2rem; }
+    .mobile-nav-btn.active { color:var(--sakura); }
+
+    /* ── TOAST ── */
+    #toast {
+      position:fixed; bottom:5rem; left:50%; transform:translateX(-50%);
+      background:var(--ink); color:#fff; padding:.75rem 1.5rem;
+      border-radius:10px; font-size:.85rem; opacity:0; pointer-events:none;
+      transition:opacity .3s; z-index:999; white-space:nowrap;
+    }
+    #toast.show { opacity:1; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+    .anim { animation:fadeUp .5s ease both; }
+    .anim:nth-child(1){animation-delay:.05s}
+    .anim:nth-child(2){animation-delay:.1s}
+    .anim:nth-child(3){animation-delay:.15s}
+    .anim:nth-child(4){animation-delay:.2s}
+    .anim:nth-child(5){animation-delay:.25s}
+
+    @media(max-width:600px){
+      .welcome-banner { flex-direction:column; text-align:center; }
+      .daily-goal { width:100%; }
+      main { padding-bottom:80px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="header">
-  <h2>Nihongo Zen Dashboard</h2>
+<!-- HEADER -->
+<header>
+  <a href="dashboard.html" class="header-logo">
+    <img src="https://files.catbox.moe/fxwgtd.png" alt="NihongoZen" onerror="this.style.display='none'"/>
+    <span>NihongoZen</span>
+  </a>
+
+  <nav id="main-nav">
+    <a href="#" class="active" data-section="home">Home</a>
+    <a href="#" data-section="n5">N5</a>
+    <a href="#" data-section="n4">N4</a>
+    <a href="#" data-section="n3">N3</a>
+    <a href="#" data-section="n2">N2</a>
+    <a href="#" data-section="n1">N1</a>
+    <a href="#" data-section="kanji">Kanji</a>
+    <a href="#" data-section="listening">Listening</a>
+  </nav>
+
+  <div class="header-right">
+    <div class="streak-badge">🔥 <span id="streak-count">0</span> day streak</div>
+    <div class="xp-badge">⭐ <span id="xp-count">0</span> XP</div>
+    <div class="user-avatar" id="user-avatar-btn">
+      <span id="avatar-initials">?</span>
+      <img id="avatar-img" src="" alt="" style="display:none"/>
+      <div class="user-dropdown">
+        <div style="padding:.6rem 1rem; font-size:.85rem; font-weight:600;" id="dd-name">User</div>
+        <div style="padding:0 1rem .6rem; font-size:.75rem; color:#9ca3af;" id="dd-email"></div>
+        <hr/>
+        <a href="#">👤 Profile</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">📊 Progress</a>
+        <hr/>
+        <a href="#" onclick="handleLogout()">🚪 Log Out</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section class="cards" id="levels">
-  <!-- Dynamic levels load here -->
-</section>
+<div class="layout">
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-section">Learn</div>
+    <a class="sidebar-link active" href="#" data-section="home"><span class="icon">🏠</span> Dashboard</a>
+    <a class="sidebar-link" href="#" data-section="lessons"><span class="icon">📘</span> Lessons <span class="badge">New</span></a>
+    <a class="sidebar-link" href="#" data-section="vocab"><span class="icon">🔤</span> Vocabulary</a>
+    <a class="sidebar-link" href="#" data-section="grammar"><span class="icon">📐</span> Grammar</a>
+    <a class="sidebar-link" href="#" data-section="kanji"><span class="icon">🈶</span> Kanji</a>
 
+    <div class="sidebar-section">Practice</div>
+    <a class="sidebar-link" href="#" data-section="quiz"><span class="icon">📝</span> Quiz</a>
+    <a class="sidebar-link" href="#" data-section="flashcards"><span class="icon">🃏</span> Flashcards</a>
+    <a class="sidebar-link" href="#" data-section="reading"><span class="icon">📖</span> Reading</a>
+    <a class="sidebar-link" href="#" data-section="listening"><span class="icon">🎧</span> Listening</a>
+
+    <div class="sidebar-section">JLPT</div>
+    <a class="sidebar-link" href="#" data-section="n5"><span class="icon">🌸</span> N5 – Beginner</a>
+    <a class="sidebar-link" href="#" data-section="n4"><span class="icon">🌷</span> N4 – Elementary</a>
+    <a class="sidebar-link" href="#" data-section="n3"><span class="icon">🌺</span> N3 – Intermediate</a>
+    <a class="sidebar-link" href="#" data-section="n2"><span class="icon">🌻</span> N2 – Upper</a>
+    <a class="sidebar-link" href="#" data-section="n1"><span class="icon">🏆</span> N1 – Advanced</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- HOME SECTION -->
+    <div id="section-home">
+      <!-- Welcome Banner -->
+      <div class="welcome-banner anim">
+        <div class="welcome-text">
+          <h2>おかえり、<span id="welcome-name">Learner</span>！</h2>
+          <p>You're on a <strong id="streak-inline">0</strong>-day streak. Keep it up!</p>
+        </div>
+        <div class="daily-goal">
+          <svg class="progress-ring" viewBox="0 0 60 60">
+            <circle cx="30" cy="30" r="25" fill="none" stroke="#f3f4f6" stroke-width="5"/>
+            <circle id="daily-ring" cx="30" cy="30" r="25" fill="none"
+              stroke="var(--sakura)" stroke-width="5"
+              stroke-dasharray="157" stroke-dashoffset="100"
+              stroke-linecap="round" transform="rotate(-90 30 30)"
+              style="transition:stroke-dashoffset 1s ease"/>
+          </svg>
+          <div class="goal-num" id="daily-xp">0</div>
+          <div class="goal-label">XP today / 50 goal</div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card anim">
+          <div class="stat-icon">📚</div>
+          <div class="stat-val" id="stat-lessons">0</div>
+          <div class="stat-label">Lessons Completed</div>
+          <div class="stat-change up">+2 this week</div>
+        </div>
+        <div class="stat-card anim">
+          <div class="stat-icon">🔤</div>
+          <div class="stat-val" id="stat-vocab">0</div>
+          <div class="stat-label">Vocabulary Mastered</div>
+          <div class="stat-change up">+15 this week</div>
+        </div>
+        <div class="stat-card anim">
+          <div class="stat-icon">🈶</div>
+          <div class="stat-val" id="stat-kanji">0</div>
+          <div class="stat-label">Kanji Learned</div>
+          <div class="stat-change up">+5 this week</div>
+        </div>
+        <div class="stat-card anim">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-val" id="stat-accuracy">0%</div>
+          <div class="stat-label">Quiz Accuracy</div>
+          <div class="stat-change up">↑ 3% this week</div>
+        </div>
+      </div>
+
+      <!-- XP / Level -->
+      <div class="xp-card anim">
+        <div class="xp-header">
+          <div>
+            <div style="font-size:.8rem;color:var(--ink-light);margin-bottom:.2rem">Current Level</div>
+            <div class="xp-level">⚡ Level <span id="user-level">1</span></div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--ink-light)">Total XP</div>
+            <div style="font-size:1.2rem;font-weight:700;color:var(--gold)" id="total-xp">0</div>
+          </div>
+        </div>
+        <div class="xp-bar-wrap"><div class="xp-bar-fill" id="xp-bar" style="width:0%"></div></div>
+        <div class="xp-labels">
+          <span id="xp-cur">0 XP</span>
+          <span id="xp-next">Next: 100 XP</span>
+        </div>
+      </div>
+
+      <!-- JLPT Levels -->
+      <div class="section-header">
+        <h3>JLPT Levels</h3>
+        <a href="#">View all →</a>
+      </div>
+      <div class="levels-grid" id="levels-grid"></div>
+
+      <!-- Study Timer -->
+      <div class="section-header"><h3>Study Timer</h3></div>
+      <div class="timer-card anim">
+        <div class="timer-modes">
+          <div class="timer-mode active" onclick="setTimer(25*60,this)">🍅 Pomodoro 25m</div>
+          <div class="timer-mode" onclick="setTimer(5*60,this)">☕ Short Break 5m</div>
+          <div class="timer-mode" onclick="setTimer(15*60,this)">🌿 Long Break 15m</div>
+          <div class="timer-mode" onclick="setTimer(45*60,this)">📖 Deep Study 45m</div>
+        </div>
+        <div class="timer-display" id="timer-display">25:00</div>
+        <div class="timer-controls">
+          <button class="timer-btn start" onclick="startTimer()">▶ Start</button>
+          <button class="timer-btn pause" onclick="pauseTimer()">⏸ Pause</button>
+          <button class="timer-btn reset" onclick="resetTimer()">↺ Reset</button>
+        </div>
+      </div>
+
+      <!-- Daily Quiz CTA -->
+      <div class="quiz-cta anim">
+        <div class="quiz-cta-text">
+          <h4>📝 Daily Quiz Available!</h4>
+          <p>Test your knowledge and earn 20 XP. 10 questions • ~5 min</p>
+        </div>
+        <button class="btn-quiz" onclick="navigateTo('quiz')">Start Quiz →</button>
+      </div>
+
+      <!-- Today's Lessons -->
+      <div class="section-header">
+        <h3>Today's Lessons</h3>
+        <a href="#">See all →</a>
+      </div>
+      <div class="lesson-list" id="lesson-list"></div>
+
+      <!-- Kanji of the Day -->
+      <div class="section-header">
+        <h3>Kanji Practice</h3>
+        <a href="#">More →</a>
+      </div>
+      <div class="kanji-grid" id="kanji-grid"></div>
+    </div>
+
+    <!-- LEVEL SECTIONS (N5-N1, etc) – shown dynamically -->
+    <div id="section-level" style="display:none">
+      <div id="level-content"></div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MOBILE BOTTOM NAV -->
+<div class="mobile-nav">
+  <button class="mobile-nav-btn active" onclick="navigateTo('home')">
+    <span class="nav-icon">🏠</span> Home
+  </button>
+  <button class="mobile-nav-btn" onclick="navigateTo('lessons')">
+    <span class="nav-icon">📘</span> Lessons
+  </button>
+  <button class="mobile-nav-btn" onclick="navigateTo('quiz')">
+    <span class="nav-icon">📝</span> Quiz
+  </button>
+  <button class="mobile-nav-btn" onclick="navigateTo('kanji')">
+    <span class="nav-icon">🈶</span> Kanji
+  </button>
+  <button class="mobile-nav-btn" onclick="navigateTo('profile')">
+    <span class="nav-icon">👤</span> Profile
+  </button>
+</div>
+
+<div id="toast"></div>
+
+<!-- Firebase -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getFirestore, doc, getDoc, updateDoc, increment, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
+    authDomain: "nihongo-zen-cd97d.firebaseapp.com",
+    projectId: "nihongo-zen-cd97d",
+    storageBucket: "nihongo-zen-cd97d.firebasestorage.app",
+    messagingSenderId: "513320956483",
+    appId: "1:513320956483:web:84729a0c4c44b76af65af6"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  onAuthStateChanged(auth, async user => {
+    if (!user) { window.location.href = 'index.html'; return; }
+
+    // Load profile
+    const snap = await getDoc(doc(db, 'users', user.uid));
+    const data = snap.exists() ? snap.data() : {};
+
+    const name = data.displayName || user.displayName || 'Learner';
+    const xp   = data.xp || 0;
+    const lvl  = data.level || 1;
+    const streak = data.streak || 0;
+
+    // Update header
+    document.getElementById('welcome-name').textContent = name.split(' ')[0];
+    document.getElementById('streak-count').textContent = streak;
+    document.getElementById('streak-inline').textContent = streak;
+    document.getElementById('xp-count').textContent = xp;
+    document.getElementById('dd-name').textContent = name;
+    document.getElementById('dd-email').textContent = user.email;
+
+    // Avatar
+    const initials = name.split(' ').map(p=>p[0]).join('').toUpperCase().slice(0,2);
+    if (user.photoURL) {
+      document.getElementById('avatar-img').src = user.photoURL;
+      document.getElementById('avatar-img').style.display = 'block';
+      document.getElementById('avatar-initials').style.display = 'none';
+    } else {
+      document.getElementById('avatar-initials').textContent = initials;
+    }
+
+    // Stats
+    document.getElementById('stat-lessons').textContent = data.lessonsCompleted || 0;
+    document.getElementById('stat-vocab').textContent = data.vocabMastered || 0;
+    document.getElementById('stat-kanji').textContent = data.kanjiProgress || 0;
+    document.getElementById('stat-accuracy').textContent = (data.quizAccuracy || 0) + '%';
+
+    // XP bar
+    const xpForNext = lvl * 100;
+    const xpProgress = ((xp % 100) / 100) * 100;
+    document.getElementById('user-level').textContent = lvl;
+    document.getElementById('total-xp').textContent = xp;
+    document.getElementById('xp-bar').style.width = xpProgress + '%';
+    document.getElementById('xp-cur').textContent = (xp % 100) + ' XP';
+    document.getElementById('xp-next').textContent = 'Next: ' + xpForNext + ' XP';
+
+    // Daily XP ring
+    const dailyXp = data.dailyXp || 0;
+    document.getElementById('daily-xp').textContent = dailyXp;
+    const offset = 157 - (dailyXp / 50) * 157;
+    document.getElementById('daily-ring').style.strokeDashoffset = Math.max(0, offset);
+
+    // Update streak in Firestore
+    await updateDoc(doc(db, 'users', user.uid), { lastLogin: serverTimestamp() });
+  });
+
+  window.handleLogout = async () => {
+    await signOut(auth);
+    window.location.href = 'index.html';
+  };
+
+  // Award XP
+  window.awardXP = async (amount) => {
+    const user = auth.currentUser;
+    if (!user) return;
+    await updateDoc(doc(db, 'users', user.uid), {
+      xp: increment(amount),
+      dailyXp: increment(amount)
+    });
+    showToast(`+${amount} XP earned! 🌸`);
+  };
+</script>
+
+<script>
+  // ── SAMPLE DATA ──
+  const levels = [
+    { id:'n5', name:'N5', desc:'Beginner – Basic Japanese', topics:['Hiragana','Katakana','Basic Vocab','Simple Grammar'], pct:35 },
+    { id:'n4', name:'N4', desc:'Elementary – Simple sentences', topics:['Daily Vocabulary','て-form','Adjectives'], pct:20 },
+    { id:'n3', name:'N3', desc:'Intermediate – Everyday use', topics:['Intermediate Grammar','Keigo intro','Reading'], pct:10 },
+    { id:'n2', name:'N2', desc:'Upper Intermediate', topics:['Advanced Grammar','Formal Writing','JLPT N2 vocab'], pct:5 },
+    { id:'n1', name:'N1', desc:'Advanced – Near fluency', topics:['Classical Japanese','Complex Kanji','Full JLPT prep'], pct:0 },
+  ];
+
+  const sampleLessons = [
+    { icon:'🌸', title:'Greetings & Introductions', sub:'Learn おはようございます, こんにちは...', tag:'vocab', audio:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+    { icon:'📝', title:'Basic Sentence Patterns', sub:'は・が・を particle usage explained', tag:'grammar', audio:'' },
+    { icon:'🈶', title:'Kanji Radicals N5', sub:'50 essential kanji with readings', tag:'kanji', audio:'' },
+    { icon:'📖', title:'Short Story Reading', sub:'Simple dialogue with furigana', tag:'reading', audio:'' },
+  ];
+
+  const sampleKanji = [
+    { char:'日', read:'にち・ひ', mean:'Sun/Day' },
+    { char:'月', read:'つき・げつ', mean:'Moon' },
+    { char:'山', read:'やま・さん', mean:'Mountain' },
+    { char:'川', read:'かわ・せん', mean:'River' },
+    { char:'人', read:'ひと・じん', mean:'Person' },
+    { char:'大', read:'おお・だい', mean:'Big' },
+    { char:'小', read:'ちい・しょう', mean:'Small' },
+    { char:'火', read:'ひ・か', mean:'Fire' },
+    { char:'水', read:'みず・すい', mean:'Water' },
+    { char:'木', read:'き・もく', mean:'Tree' },
+  ];
+
+  // Build levels grid
+  const levelsGrid = document.getElementById('levels-grid');
+  levels.forEach(l => {
+    const card = document.createElement('div');
+    card.className = `level-card ${l.id}`;
+    card.innerHTML = `
+      <div class="level-badge">${l.name}</div>
+      <h4>${l.name} – ${l.name==='N5'?'Beginner':l.name==='N4'?'Elementary':l.name==='N3'?'Intermediate':l.name==='N2'?'Upper Int.':'Advanced'}</h4>
+      <p>${l.desc}</p>
+      <div class="level-progress"><div class="level-progress-fill" style="width:${l.pct}%"></div></div>
+      <div class="level-pct">${l.pct}% complete</div>`;
+    card.onclick = () => navigateTo(l.id);
+    levelsGrid.appendChild(card);
+  });
+
+  // Build lessons
+  const lessonList = document.getElementById('lesson-list');
+  sampleLessons.forEach(l => {
+    const item = document.createElement('div');
+    item.className = 'lesson-item';
+    item.innerHTML = `
+      <div class="lesson-icon">${l.icon}</div>
+      <div class="lesson-info">
+        <h5>${l.title}</h5>
+        <div class="lesson-meta">
+          <span class="tag ${l.tag}">${l.tag}</span>
+          <p>${l.sub}</p>
+        </div>
+      </div>
+      ${l.audio ? `<button class="play-btn" onclick="playAudio('${l.audio}',event)">🔊</button>` : ''}`;
+    item.onclick = (e) => { if(!e.target.classList.contains('play-btn')) { awardXP(5); showToast('Lesson started!'); } };
+    lessonList.appendChild(item);
+  });
+
+  // Build kanji grid
+  const kanjiGrid = document.getElementById('kanji-grid');
+  sampleKanji.forEach(k => {
+    const card = document.createElement('div');
+    card.className = 'kanji-card';
+    card.innerHTML = `<div class="kanji-char">${k.char}</div><div class="kanji-reading">${k.read}</div><div class="kanji-meaning">${k.mean}</div>`;
+    card.onclick = () => { awardXP(2); showToast(`${k.char} – ${k.mean} 🎉`); };
+    kanjiGrid.appendChild(card);
+  });
+
+  // ── STUDY TIMER ──
+  let timerDuration = 25 * 60, timerLeft = 25 * 60, timerInterval = null, timerRunning = false;
+
+  function setTimer(secs, el) {
+    document.querySelectorAll('.timer-mode').forEach(m => m.classList.remove('active'));
+    el.classList.add('active');
+    timerDuration = timerLeft = secs;
+    renderTimer(); if(timerRunning) { clearInterval(timerInterval); timerRunning = false; }
+  }
+  function renderTimer() {
+    const m = Math.floor(timerLeft/60).toString().padStart(2,'0');
+    const s = (timerLeft%60).toString().padStart(2,'0');
+    document.getElementById('timer-display').textContent = `${m}:${s}`;
+  }
+  function startTimer() {
+    if (timerRunning) return;
+    timerRunning = true;
+    timerInterval = setInterval(() => {
+      if (timerLeft <= 0) { clearInterval(timerInterval); timerRunning = false; showToast('⏰ Timer done! +10 XP'); awardXP(10); return; }
+      timerLeft--; renderTimer();
+    }, 1000);
+  }
+  function pauseTimer() { clearInterval(timerInterval); timerRunning = false; }
+  function resetTimer() { pauseTimer(); timerLeft = timerDuration; renderTimer(); }
+  window.startTimer = startTimer; window.pauseTimer = pauseTimer; window.resetTimer = resetTimer; window.setTimer = setTimer;
+
+  // ── NAVIGATION ──
+  function navigateTo(section) {
+    document.querySelectorAll('nav a').forEach(a => {
+      a.classList.toggle('active', a.dataset.section === section);
+    });
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.classList.toggle('active', a.dataset.section === section);
+    });
+    document.querySelectorAll('.mobile-nav-btn').forEach((b,i) => {
+      b.classList.remove('active');
+    });
+
+    if (section === 'home') {
+      document.getElementById('section-home').style.display = '';
+      document.getElementById('section-level').style.display = 'none';
+    } else {
+      document.getElementById('section-home').style.display = 'none';
+      document.getElementById('section-level').style.display = '';
+      renderLevelSection(section);
+    }
+  }
+
+  function renderLevelSection(section) {
+    const lvl = levels.find(l => l.id === section);
+    const content = document.getElementById('level-content');
+    if (lvl) {
+      content.innerHTML = `
+        <div class="welcome-banner" style="margin-bottom:2rem">
+          <div class="welcome-text">
+            <h2 style="font-family:'Noto Serif JP',serif">${lvl.name} – ${lvl.desc}</h2>
+            <p>Start your ${lvl.name} journey. ${lvl.pct}% complete.</p>
+          </div>
+        </div>
+        <div class="section-header"><h3>Topics</h3></div>
+        <div class="lesson-list">
+          ${lvl.topics.map(t => `
+            <div class="lesson-item" onclick="awardXP(5);showToast('Lesson started! +5 XP')">
+              <div class="lesson-icon">📘</div>
+              <div class="lesson-info"><h5>${t}</h5><p>Click to begin this topic</p></div>
+            </div>`).join('')}
+        </div>
+        <div class="quiz-cta">
+          <div class="quiz-cta-text"><h4>📝 ${lvl.name} Practice Quiz</h4><p>Test your ${lvl.name} knowledge</p></div>
+          <button class="btn-quiz" onclick="awardXP(20);showToast('Quiz started! 📝')">Start Quiz →</button>
+        </div>`;
+    } else {
+      content.innerHTML = `
+        <div class="welcome-banner">
+          <div class="welcome-text">
+            <h2 style="font-family:'Noto Serif JP',serif;text-transform:capitalize">${section}</h2>
+            <p>This section is ready. Content will be loaded from your data folder.</p>
+          </div>
+        </div>
+        <div style="text-align:center;padding:4rem;color:var(--ink-light)">
+          <div style="font-size:3rem;margin-bottom:1rem">🌸</div>
+          <p>Upload content to <strong>data/${section}/</strong> to populate this section.</p>
+        </div>`;
+    }
+  }
+  window.navigateTo = navigateTo;
+
+  // ── AUDIO ──
+  let currentAudio = null;
+  function playAudio(url, e) {
+    e.stopPropagation();
+    if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+    if (url) { currentAudio = new Audio(url); currentAudio.play(); showToast('🔊 Playing audio...'); }
+    else showToast('Audio coming soon!');
+  }
+  window.playAudio = playAudio;
+
+  // ── TOAST ──
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+  window.showToast = showToast;
+
+  // Nav links
+  document.querySelectorAll('nav a, .sidebar-link').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); navigateTo(a.dataset.section || 'home'); });
+  });
+
+  // SW
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
 </body>
 </html>
