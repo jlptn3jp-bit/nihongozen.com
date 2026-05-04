@@ -1,12 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 
-// Firebase config
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com", // localhost ke liye bhi ye hi rahega
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_APP_ID",
+//firebaseConfig = {
+  apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
+  authDomain: "nihongo-zen-cd97d.firebaseapp.com",
+  projectId: "nihongo-zen-cd97d",
+  storageBucket: "nihongo-zen-cd97d.firebasestorage.app",
+  messagingSenderId: "513320956483",
+  appId: "1:513320956483:web:84729a0c4c44b76af65af6",
+  measurementId: "G-PCERH9R58D",
 };
 
 // Initialize Firebase
