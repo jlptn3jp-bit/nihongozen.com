@@ -1,0 +1,14 @@
+{
+  "name": "NihongoZen",
+  "short_name": "NihongoZen",
+  "description": "Learn Japanese The Natural Way",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fffaf9",
+  "theme_color": "#f2a7b8",
+  "orientation": "any",
+  "icons": [
+    { "src": "https://files.catbox.moe/fxwgtd.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://files.catbox.moe/fxwgtd.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
