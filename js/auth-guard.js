@@ -2,26 +2,98 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 
 import {
   getAuth,
-  onAuthStateChanged
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
+  sendSignInLinkToEmail,
+  isSignInWithEmailLink,
+  signInWithEmailLink
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-// 🔥 SAME CONFIG (must match your login file)
+// 🔥 FIREBASE CONFIG (YOUR KEY ADDED)
 const firebaseConfig = {
   apiKey: "AIzaSyCP2Uwo1lx996q0l3nkC7RhAesVuIHEXiA",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID"
+  authDomain: "YOUR_PROJECT.firebaseapp.com", // ⚠️ replace this
+  projectId: "YOUR_PROJECT_ID" // ⚠️ replace this
 };
 
-// ✅ INIT (ONLY ONCE)
+// ✅ INIT
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+
+// ==============================
+// 🔵 GOOGLE LOGIN
+// ==============================
+document.getElementById("googleLogin")?.addEventListener("click", async () => {
+  try {
+    await signInWithPopup(auth, provider);
+    window.location.href = "dashboard.html";
+  } catch (err) {
+    alert(err.message);
+  }
+});
+
+
+// ==============================
+// 🟡 EMAIL LINK LOGIN
+// ==============================
+const actionCodeSettings = {
+  url: window.location.href,
+  handleCodeInApp: true
+};
+
+document.getElementById("emailLogin")?.addEventListener("click", async () => {
+  const email = document.getElementById("emailInput")?.value;
+
+  if (!email) return alert("Enter email");
+
+  try {
+    await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+    localStorage.setItem("emailForSignIn", email);
+    alert("Login link sent to your email!");
+  } catch (err) {
+    alert(err.message);
+  }
+});
+
+
+// ==============================
+// ✅ COMPLETE EMAIL LOGIN
+// ==============================
+if (isSignInWithEmailLink(auth, window.location.href)) {
+  let email = localStorage.getItem("emailForSignIn");
+
+  if (!email) {
+    email = prompt("Enter your email again");
+  }
+
+  signInWithEmailLink(auth, email, window.location.href)
+    .then(() => {
+      localStorage.removeItem("emailForSignIn");
+      window.location.href = "dashboard.html";
+    })
+    .catch(err => alert(err.message));
+}
+
 
 // ==============================
 // 🔐 PROTECT PAGE (AUTH CHECK)
 // ==============================
-
 onAuthStateChanged(auth, (user) => {
   if (!user) {
-    window.location.href = "index.html"; // redirect if not logged in
+    // only redirect if NOT on login page
+    if (!window.location.pathname.includes("index.html")) {
+      window.location.href = "index.html";
+    }
   }
 });
+
+
+// ==============================
+// 🔗 NAVIGATION
+// ==============================
+window.goSignup = () => {
+  window.location.href = "signup.html";
+};
