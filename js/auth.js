@@ -11,7 +11,7 @@ import {
 
 // 🔥 FIREBASE CONFIG
 const firebaseConfig = {
-  apiKey: "YOUR_KEY",
+  apiKey: "AIzaSyB-v5yOx6EwLEEfXknGAw1hZNG4XblVGVc",
   authDomain: "YOUR_PROJECT.firebaseapp.com",
   projectId: "YOUR_PROJECT_ID"
 };
