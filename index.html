@@ -3,650 +3,300 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NihongoZen Dashboard</title>
+  <title>NihongoZen – Learn Japanese The Natural Way</title>
   <link rel="manifest" href="manifest.json"/>
   <link rel="icon" href="https://files.catbox.moe/fxwgtd.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
       --sakura: #f2a7b8;
       --sakura-light: #fde8ef;
-      --sakura-mid: #f8cfd9;
       --ink: #1a1a2e;
-      --ink-light: #4b4b6b;
       --gold: #c9a84c;
       --white: #fffaf9;
-      --card: #ffffff;
-      --border: #f0e8eb;
-      --green: #4ade80;
-      --blue: #60a5fa;
-      --orange: #fb923c;
-      --purple: #a78bfa;
+      --gray: #6b7280;
+      --red: #e05252;
     }
+
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--white);
-      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ── LANDING PAGE ── */
+    #landing {
+      display: flex;
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,250,249,.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      display: flex; align-items: center; gap: 1.5rem; height: 64px;
+    /* LEFT – Tokyo scenery */
+    .landing-left {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: none;
     }
-    .header-logo { display:flex; align-items:center; gap:.6rem; text-decoration:none; }
-    .header-logo img { width:36px; height:36px; border-radius:8px; }
-    .header-logo span { font-family:'Noto Serif JP',serif; font-size:1.1rem; font-weight:700; color:var(--ink); }
+    @media(min-width:768px){ .landing-left { display: block; } }
 
-    nav { display:flex; gap:.25rem; margin-left:1rem; flex:1; overflow-x:auto; }
-    nav a {
-      padding:.45rem .9rem; border-radius:8px; font-size:.85rem;
-      font-weight:500; color:var(--ink-light); text-decoration:none;
-      white-space:nowrap; transition:all .2s;
-    }
-    nav a:hover, nav a.active { background:var(--sakura-light); color:var(--ink); }
-    nav a.active { font-weight:600; }
-
-    .header-right { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
-    .streak-badge {
-      display:flex; align-items:center; gap:.4rem;
-      background:#fff7ed; border:1px solid #fed7aa;
-      padding:.35rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600;
-      color:#ea580c;
-    }
-    .xp-badge {
-      display:flex; align-items:center; gap:.4rem;
-      background:#f0fdf4; border:1px solid #bbf7d0;
-      padding:.35rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600;
-      color:#16a34a;
-    }
-    .user-avatar {
-      width:38px; height:38px; border-radius:50%;
-      background:var(--sakura); cursor:pointer;
-      display:flex; align-items:center; justify-content:center;
-      font-weight:700; color:#fff; font-size:.9rem;
-      border:2px solid var(--sakura-mid); position:relative;
-    }
-    .user-avatar img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
-    .user-dropdown {
-      position:absolute; top:46px; right:0; background:#fff;
-      border:1px solid var(--border); border-radius:14px;
-      padding:.5rem; min-width:180px; box-shadow:0 8px 30px rgba(0,0,0,.1);
-      display:none; z-index:200;
-    }
-    .user-avatar:hover .user-dropdown { display:block; }
-    .user-dropdown a {
-      display:block; padding:.6rem 1rem; border-radius:8px;
-      font-size:.85rem; text-decoration:none; color:var(--ink); transition:background .15s;
-    }
-    .user-dropdown a:hover { background:var(--sakura-light); }
-    .user-dropdown hr { margin:.35rem 0; border:none; border-top:1px solid var(--border); }
-
-    /* ── SIDEBAR ── */
-    .layout { display:flex; min-height:calc(100vh - 64px); }
-    aside {
-      width:240px; flex-shrink:0; padding:1.5rem 1rem;
-      border-right:1px solid var(--border); background:#fff;
-      display:flex; flex-direction:column; gap:.25rem;
-    }
-    @media(max-width:900px){ aside { display:none; } }
-
-    .sidebar-section { font-size:.7rem; font-weight:600; color:var(--sakura); letter-spacing:.1em;
-      text-transform:uppercase; padding:.5rem .75rem .25rem; margin-top:.5rem; }
-    .sidebar-link {
-      display:flex; align-items:center; gap:.7rem;
-      padding:.65rem .75rem; border-radius:10px; cursor:pointer;
-      font-size:.875rem; color:var(--ink-light); transition:all .15s;
-      text-decoration:none;
-    }
-    .sidebar-link:hover, .sidebar-link.active {
-      background:var(--sakura-light); color:var(--ink); font-weight:500;
-    }
-    .sidebar-link .icon { font-size:1rem; width:20px; text-align:center; }
-    .sidebar-link .badge {
-      margin-left:auto; background:var(--sakura); color:#fff;
-      font-size:.65rem; font-weight:700; padding:.15rem .45rem;
-      border-radius:20px;
+    .landing-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10,10,30,0.55) 0%, rgba(30,10,10,0.35) 60%, rgba(0,0,0,0.6) 100%),
+        url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&q=80') center/cover no-repeat;
     }
 
-    /* ── MAIN CONTENT ── */
-    main { flex:1; padding:2rem; overflow-x:hidden; }
-    @media(max-width:600px){ main { padding:1rem; } }
+    .landing-overlay {
+      position: relative; z-index: 2;
+      height: 100%; display: flex; flex-direction: column;
+      justify-content: flex-end; padding: 3rem;
+    }
 
-    /* ── WELCOME BANNER ── */
-    .welcome-banner {
-      background: linear-gradient(135deg, #fde8ef 0%, #fdf2f8 50%, #f0f4ff 100%);
-      border-radius:20px; padding:2rem 2.5rem;
-      display:flex; justify-content:space-between; align-items:center;
-      margin-bottom:2rem; overflow:hidden; position:relative;
+    .kanji-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: .75rem;
     }
-    .welcome-banner::after {
-      content:'桜'; position:absolute; right:120px; top:-10px;
-      font-size:8rem; opacity:.06; font-family:'Noto Serif JP',serif;
-    }
-    .welcome-text h2 { font-family:'Noto Serif JP',serif; font-size:1.4rem; margin-bottom:.4rem; }
-    .welcome-text p { color:var(--ink-light); font-size:.9rem; }
-    .daily-goal {
-      background:#fff; border-radius:14px; padding:1rem 1.5rem;
-      text-align:center; min-width:140px;
-    }
-    .daily-goal .goal-num { font-size:2rem; font-weight:700; color:var(--sakura); }
-    .daily-goal .goal-label { font-size:.75rem; color:var(--gray,#6b7280); margin-top:.2rem; }
-    .progress-ring { width:60px; height:60px; margin:0 auto .5rem; }
 
-    /* ── STATS GRID ── */
-    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; margin-bottom:2rem; }
-    .stat-card {
-      background:var(--card); border:1px solid var(--border); border-radius:16px;
-      padding:1.25rem; transition:transform .2s; cursor:default;
+    .slogan {
+      font-size: 1rem;
+      color: rgba(255,255,255,.75);
+      letter-spacing: .05em;
+      margin-bottom: .5rem;
     }
-    .stat-card:hover { transform:translateY(-3px); }
-    .stat-card .stat-icon { font-size:1.5rem; margin-bottom:.6rem; }
-    .stat-card .stat-val { font-size:1.75rem; font-weight:700; margin-bottom:.2rem; }
-    .stat-card .stat-label { font-size:.8rem; color:var(--ink-light); }
-    .stat-card .stat-change { font-size:.75rem; margin-top:.4rem; }
-    .stat-card .stat-change.up { color:#16a34a; }
-    .stat-card .stat-change.down { color:#dc2626; }
 
-    /* ── SECTION HEADERS ── */
-    .section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; }
-    .section-header h3 { font-family:'Noto Serif JP',serif; font-size:1.1rem; }
-    .section-header a { font-size:.8rem; color:var(--sakura); text-decoration:none; font-weight:500; }
+    .sakura-deco {
+      display: flex; gap: .5rem; margin-top: 1.5rem;
+    }
+    .sakura-deco span {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sakura); opacity: .7;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .sakura-deco span:nth-child(2){ animation-delay:.4s; }
+    .sakura-deco span:nth-child(3){ animation-delay:.8s; }
 
-    /* ── JLPT LEVEL CARDS ── */
-    .levels-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-bottom:2.5rem; }
-    .level-card {
-      background:var(--card); border:1px solid var(--border); border-radius:18px;
-      padding:1.5rem; cursor:pointer; transition:all .2s; position:relative; overflow:hidden;
+    /* RIGHT – Auth panel */
+    .landing-right {
+      width: 100%; max-width: 480px;
+      background: var(--white);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 3rem 2.5rem;
+      position: relative;
     }
-    .level-card::before {
-      content:''; position:absolute; top:-20px; right:-20px;
-      width:80px; height:80px; border-radius:50%; opacity:.1;
-    }
-    .level-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(242,167,184,.2); }
-    .level-card.n5::before { background:#f2a7b8; }
-    .level-card.n4::before { background:#a78bfa; }
-    .level-card.n3::before { background:#60a5fa; }
-    .level-card.n2::before { background:#4ade80; }
-    .level-card.n1::before { background:#c9a84c; }
-    .level-badge {
-      display:inline-block; padding:.3rem .8rem; border-radius:20px;
-      font-size:.75rem; font-weight:700; margin-bottom:.75rem;
-    }
-    .n5 .level-badge { background:#fde8ef; color:#e05252; }
-    .n4 .level-badge { background:#f5f3ff; color:#7c3aed; }
-    .n3 .level-badge { background:#eff6ff; color:#2563eb; }
-    .n2 .level-badge { background:#f0fdf4; color:#16a34a; }
-    .n1 .level-badge { background:#fffbeb; color:#d97706; }
-    .level-card h4 { font-size:1rem; font-weight:600; margin-bottom:.25rem; }
-    .level-card p { font-size:.8rem; color:var(--ink-light); margin-bottom:1rem; }
-    .level-progress { height:5px; background:#f3f4f6; border-radius:10px; overflow:hidden; }
-    .level-progress-fill { height:100%; border-radius:10px; transition:width .8s ease; }
-    .n5 .level-progress-fill { background:var(--sakura); }
-    .n4 .level-progress-fill { background:var(--purple); }
-    .n3 .level-progress-fill { background:var(--blue); }
-    .n2 .level-progress-fill { background:var(--green); }
-    .n1 .level-progress-fill { background:var(--gold); }
-    .level-pct { font-size:.75rem; color:var(--ink-light); margin-top:.35rem; text-align:right; }
+    @media(min-width:768px){ .landing-right { min-height: 100vh; } }
 
-    /* ── STUDY TIMER ── */
-    .timer-card {
-      background:linear-gradient(135deg,var(--ink) 0%,#2d2a5e 100%);
-      border-radius:20px; padding:1.75rem; color:#fff; margin-bottom:2rem;
-    }
-    .timer-display {
-      font-size:3rem; font-weight:700; font-variant-numeric:tabular-nums;
-      letter-spacing:.05em; margin:1rem 0; text-align:center;
-    }
-    .timer-controls { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
-    .timer-btn {
-      padding:.6rem 1.4rem; border-radius:10px; border:none; cursor:pointer;
-      font-size:.875rem; font-weight:600; font-family:inherit; transition:all .2s;
-    }
-    .timer-btn.start { background:var(--sakura); color:#fff; }
-    .timer-btn.pause { background:rgba(255,255,255,.15); color:#fff; }
-    .timer-btn.reset { background:rgba(255,255,255,.1); color:rgba(255,255,255,.7); }
-    .timer-btn:hover { opacity:.85; transform:scale(.97); }
-    .timer-modes { display:flex; gap:.5rem; margin-bottom:1rem; flex-wrap:wrap; }
-    .timer-mode {
-      padding:.35rem .85rem; border-radius:8px; font-size:.8rem; font-weight:500;
-      cursor:pointer; background:rgba(255,255,255,.1); color:rgba(255,255,255,.7);
-      border:1px solid rgba(255,255,255,.1); transition:all .2s;
-    }
-    .timer-mode.active { background:rgba(242,167,184,.3); color:#fff; border-color:var(--sakura); }
+    .auth-logo { display: flex; align-items: center; gap: .75rem; margin-bottom: 2.5rem; }
+    .auth-logo img { width: 48px; height: 48px; border-radius: 12px; }
+    .auth-logo-text { font-family: 'Noto Serif JP', serif; font-size: 1.4rem; color: var(--ink); font-weight: 700; }
 
-    /* ── XP / LEVEL BAR ── */
-    .xp-card {
-      background:var(--card); border:1px solid var(--border); border-radius:18px;
-      padding:1.5rem; margin-bottom:2rem;
+    .auth-tabs {
+      display: flex; width: 100%; margin-bottom: 2rem;
+      background: #f3f4f6; border-radius: 12px; padding: 4px;
     }
-    .xp-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
-    .xp-level { font-size:1.8rem; font-weight:700; color:var(--gold); }
-    .xp-bar-wrap { height:12px; background:#f3f4f6; border-radius:10px; overflow:hidden; }
-    .xp-bar-fill {
-      height:100%; border-radius:10px;
-      background:linear-gradient(90deg,var(--sakura),var(--gold));
-      transition:width 1s ease;
+    .auth-tab {
+      flex: 1; padding: .65rem; text-align: center; font-size: .9rem; font-weight: 500;
+      border-radius: 9px; cursor: pointer; transition: all .2s; color: var(--gray);
+      border: none; background: transparent;
     }
-    .xp-labels { display:flex; justify-content:space-between; font-size:.75rem; color:var(--ink-light); margin-top:.4rem; }
+    .auth-tab.active { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.1); }
 
-    /* ── VOCAB/GRAMMAR LESSONS ── */
-    .lesson-list { display:flex; flex-direction:column; gap:.75rem; margin-bottom:2rem; }
-    .lesson-item {
-      background:var(--card); border:1px solid var(--border); border-radius:14px;
-      padding:1rem 1.25rem; display:flex; align-items:center; gap:1rem;
-      cursor:pointer; transition:all .2s;
+    .auth-form { width: 100%; }
+    .form-row { display: flex; gap: .75rem; }
+    .form-group { margin-bottom: 1rem; flex: 1; }
+    .form-group label { display: block; font-size: .8rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+    .form-group input {
+      width: 100%; padding: .75rem 1rem; border: 1.5px solid #e5e7eb;
+      border-radius: 10px; font-size: .9rem; font-family: inherit;
+      outline: none; transition: border-color .2s; background: #fff;
     }
-    .lesson-item:hover { border-color:var(--sakura); background:var(--sakura-light); }
-    .lesson-item .lesson-icon { font-size:1.4rem; width:42px; height:42px;
-      background:#f9fafb; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .lesson-item .lesson-info { flex:1; }
-    .lesson-item h5 { font-size:.9rem; font-weight:600; margin-bottom:.2rem; }
-    .lesson-item p { font-size:.8rem; color:var(--ink-light); }
-    .lesson-item .lesson-meta { display:flex; gap:.5rem; align-items:center; }
-    .lesson-item .tag { font-size:.7rem; padding:.2rem .55rem; border-radius:6px; font-weight:500; }
-    .tag.vocab { background:#fde8ef; color:#e05252; }
-    .tag.grammar { background:#eff6ff; color:#2563eb; }
-    .tag.kanji { background:#fffbeb; color:#d97706; }
-    .tag.reading { background:#f0fdf4; color:#16a34a; }
-    .lesson-item .play-btn {
-      width:36px; height:36px; border-radius:50%; background:var(--sakura);
-      color:#fff; border:none; cursor:pointer; font-size:.9rem;
-      display:flex; align-items:center; justify-content:center;
-      transition:transform .2s;
-    }
-    .lesson-item .play-btn:hover { transform:scale(1.1); }
+    .form-group input:focus { border-color: var(--sakura); }
 
-    /* ── KANJI GRID ── */
-    .kanji-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:.75rem; margin-bottom:2rem; }
-    .kanji-card {
-      background:var(--card); border:1px solid var(--border); border-radius:12px;
-      padding:.75rem; text-align:center; cursor:pointer; transition:all .2s;
+    .btn-primary {
+      width: 100%; padding: .85rem; background: var(--sakura);
+      color: #fff; border: none; border-radius: 12px; font-size: 1rem;
+      font-weight: 600; cursor: pointer; font-family: inherit;
+      transition: all .2s; margin-top: .5rem;
     }
-    .kanji-card:hover { border-color:var(--sakura); transform:scale(1.05); }
-    .kanji-char { font-family:'Noto Serif JP',serif; font-size:1.8rem; color:var(--ink); }
-    .kanji-reading { font-size:.65rem; color:var(--ink-light); margin-top:.2rem; }
-    .kanji-meaning { font-size:.65rem; color:var(--sakura); font-weight:500; }
+    .btn-primary:hover { background: #e8899c; transform: translateY(-1px); }
 
-    /* ── QUIZ CTA ── */
-    .quiz-cta {
-      background:linear-gradient(135deg,var(--sakura-light) 0%,#f0f4ff 100%);
-      border:1px solid var(--sakura-mid); border-radius:18px;
-      padding:1.5rem; display:flex; align-items:center; justify-content:space-between;
-      gap:1rem; margin-bottom:2rem; flex-wrap:wrap;
-    }
-    .quiz-cta-text h4 { font-size:1.05rem; font-weight:600; margin-bottom:.3rem; }
-    .quiz-cta-text p { font-size:.85rem; color:var(--ink-light); }
-    .btn-quiz {
-      padding:.7rem 1.6rem; background:var(--sakura); color:#fff;
-      border:none; border-radius:10px; font-size:.875rem; font-weight:600;
-      cursor:pointer; font-family:inherit; white-space:nowrap;
-      transition:all .2s;
-    }
-    .btn-quiz:hover { background:#e8899c; transform:translateY(-1px); }
+    .divider { display: flex; align-items: center; gap: .75rem; margin: 1.25rem 0; }
+    .divider::before, .divider::after { content:''; flex:1; height:1px; background:#e5e7eb; }
+    .divider span { font-size: .8rem; color: var(--gray); }
 
-    /* ── MOBILE NAV ── */
-    .mobile-nav {
-      display:none; position:fixed; bottom:0; left:0; right:0;
-      background:rgba(255,250,249,.95); backdrop-filter:blur(12px);
-      border-top:1px solid var(--border); padding:.5rem 1rem;
-      justify-content:space-around; z-index:100;
+    .btn-social {
+      width: 100%; padding: .75rem; border: 1.5px solid #e5e7eb;
+      border-radius: 12px; font-size: .9rem; font-weight: 500;
+      cursor: pointer; font-family: inherit; background: #fff;
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+      transition: all .2s; margin-bottom: .65rem; color: var(--ink);
     }
-    @media(max-width:900px){ .mobile-nav { display:flex; } }
-    .mobile-nav-btn {
-      display:flex; flex-direction:column; align-items:center; gap:.2rem;
-      padding:.5rem .75rem; border-radius:10px; cursor:pointer;
-      border:none; background:transparent; color:var(--ink-light);
-      font-size:.65rem; font-weight:500; font-family:inherit;
-    }
-    .mobile-nav-btn .nav-icon { font-size:1.2rem; }
-    .mobile-nav-btn.active { color:var(--sakura); }
+    .btn-social:hover { border-color: var(--sakura); background: var(--sakura-light); }
+    .btn-social img { width: 20px; height: 20px; }
 
-    /* ── TOAST ── */
-    #toast {
-      position:fixed; bottom:5rem; left:50%; transform:translateX(-50%);
-      background:var(--ink); color:#fff; padding:.75rem 1.5rem;
-      border-radius:10px; font-size:.85rem; opacity:0; pointer-events:none;
-      transition:opacity .3s; z-index:999; white-space:nowrap;
+    .auth-panel { display: none; }
+    .auth-panel.active { display: block; }
+
+    /* ── VERIFICATION OVERLAY ── */
+    #verify-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
     }
-    #toast.show { opacity:1; }
+    #verify-overlay.show { display: flex; }
+    .verify-box {
+      background: #fff; border-radius: 20px; padding: 3rem 2.5rem;
+      max-width: 400px; width: 90%; text-align: center;
+    }
+    .verify-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .verify-box h2 { font-family: 'Noto Serif JP', serif; margin-bottom: .75rem; }
+    .verify-box p { color: var(--gray); font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .otp-inputs { display: flex; gap: .5rem; justify-content: center; margin-bottom: 1.5rem; }
+    .otp-inputs input {
+      width: 48px; height: 56px; text-align: center; font-size: 1.4rem;
+      font-weight: 700; border: 2px solid #e5e7eb; border-radius: 10px;
+      outline: none; transition: border-color .2s;
+    }
+    .otp-inputs input:focus { border-color: var(--sakura); }
 
     /* ── ANIMATIONS ── */
-    @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
-    .anim { animation:fadeUp .5s ease both; }
-    .anim:nth-child(1){animation-delay:.05s}
-    .anim:nth-child(2){animation-delay:.1s}
-    .anim:nth-child(3){animation-delay:.15s}
-    .anim:nth-child(4){animation-delay:.2s}
-    .anim:nth-child(5){animation-delay:.25s}
+    @keyframes pulse { 0%,100%{opacity:.7;transform:scale(1)} 50%{opacity:1;transform:scale(1.3)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .landing-right > * { animation: fadeUp .5s ease both; }
+    .landing-right > *:nth-child(1){ animation-delay:.1s }
+    .landing-right > *:nth-child(2){ animation-delay:.2s }
+    .landing-right > *:nth-child(3){ animation-delay:.3s }
 
-    @media(max-width:600px){
-      .welcome-banner { flex-direction:column; text-align:center; }
-      .daily-goal { width:100%; }
-      main { padding-bottom:80px; }
-    }
-
-    /* ── VOCAB BROWSER ── */
-    .vocab-lesson-tabs { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.5rem; }
-    .vocab-tab {
-      padding:.4rem .9rem; border-radius:20px; font-size:.8rem; font-weight:500;
-      cursor:pointer; background:var(--sakura-light); color:var(--ink-light);
-      border:1px solid var(--border); transition:all .2s; white-space:nowrap;
-    }
-    .vocab-tab.active, .vocab-tab:hover { background:var(--sakura); color:#fff; border-color:var(--sakura); }
-
-    .vocab-search {
-      width:100%; padding:.7rem 1rem; border:1px solid var(--border);
-      border-radius:12px; font-size:.9rem; font-family:inherit; outline:none;
-      margin-bottom:1.25rem; background:var(--card);
-    }
-    .vocab-search:focus { border-color:var(--sakura); }
-
-    .vocab-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:.75rem; }
-    .vocab-card {
-      background:var(--card); border:1px solid var(--border); border-radius:14px;
-      padding:1rem; cursor:pointer; transition:all .2s; position:relative;
-    }
-    .vocab-card:hover { border-color:var(--sakura); transform:translateY(-2px); box-shadow:0 4px 16px rgba(242,167,184,.2); }
-    .vocab-card.mastered { border-color:var(--green); background:#f0fdf4; }
-    .vocab-kanji { font-family:'Noto Serif JP',serif; font-size:1.4rem; color:var(--ink); margin-bottom:.3rem; }
-    .vocab-hira { font-size:.75rem; color:var(--ink-light); margin-bottom:.4rem; font-family:'Noto Serif JP',serif; }
-    .vocab-en { font-size:.85rem; font-weight:500; color:var(--ink); }
-    .vocab-lesson-tag { font-size:.65rem; color:var(--sakura); font-weight:600; margin-top:.5rem; }
-    .vocab-master-btn {
-      position:absolute; top:.6rem; right:.6rem;
-      width:24px; height:24px; border-radius:50%; border:none;
-      background:transparent; cursor:pointer; font-size:.85rem; transition:transform .2s;
-    }
-    .vocab-master-btn:hover { transform:scale(1.2); }
-    .vocab-stats-bar {
-      display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem;
-      background:var(--sakura-light); border-radius:12px; margin-bottom:1.25rem;
-      font-size:.85rem; flex-wrap:wrap;
-    }
-    .vocab-stats-bar strong { color:var(--ink); }
-
-    /* ── LESSON DETAIL MODAL ── */
-    .modal-overlay {
-      position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:500;
-      display:flex; align-items:center; justify-content:center; padding:1rem;
-    }
-    .modal-box {
-      background:#fff; border-radius:20px; max-width:520px; width:100%;
-      max-height:85vh; overflow-y:auto; padding:2rem; position:relative;
-    }
-    .modal-close {
-      position:absolute; top:1rem; right:1rem; width:32px; height:32px;
-      border-radius:50%; border:none; background:var(--sakura-light);
-      cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center;
-    }
-    .modal-word { font-family:'Noto Serif JP',serif; font-size:2.5rem; color:var(--ink); text-align:center; margin-bottom:.5rem; }
-    .modal-hira { text-align:center; font-size:1rem; color:var(--ink-light); margin-bottom:.3rem; font-family:'Noto Serif JP',serif; }
-    .modal-en { text-align:center; font-size:1.1rem; font-weight:600; margin-bottom:1.5rem; }
-    .modal-lesson { text-align:center; font-size:.8rem; color:var(--sakura); font-weight:600; }
-    .modal-actions { display:flex; gap:.75rem; justify-content:center; margin-top:1.5rem; }
-    .modal-btn {
-      padding:.6rem 1.4rem; border-radius:10px; border:none; cursor:pointer;
-      font-size:.875rem; font-weight:600; font-family:inherit; transition:all .2s;
-    }
-    .modal-btn.primary { background:var(--sakura); color:#fff; }
-    .modal-btn.secondary { background:var(--sakura-light); color:var(--ink); }
-    .modal-btn:hover { opacity:.85; transform:translateY(-1px); }
+    .msg-error { color: var(--red); font-size: .8rem; margin-top: .5rem; display: none; }
+    .msg-error.show { display: block; }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <a href="dashboard.html" class="header-logo">
-    <img src="https://files.catbox.moe/fxwgtd.png" alt="NihongoZen" onerror="this.style.display='none'"/>
-    <span>NihongoZen</span>
-  </a>
-
-  <nav id="main-nav">
-    <a href="#" class="active" data-section="home">Home</a>
-    <a href="#" data-section="n5">N5</a>
-    <a href="#" data-section="n4">N4</a>
-    <a href="#" data-section="n3">N3</a>
-    <a href="#" data-section="n2">N2</a>
-    <a href="#" data-section="n1">N1</a>
-    <a href="#" data-section="kanji">Kanji</a>
-    <a href="#" data-section="listening">Listening</a>
-  </nav>
-
-  <div class="header-right">
-    <div class="streak-badge">🔥 <span id="streak-count">0</span> day streak</div>
-    <div class="xp-badge">⭐ <span id="xp-count">0</span> XP</div>
-    <div class="user-avatar" id="user-avatar-btn">
-      <span id="avatar-initials">?</span>
-      <img id="avatar-img" src="" alt="" style="display:none"/>
-      <div class="user-dropdown">
-        <div style="padding:.6rem 1rem; font-size:.85rem; font-weight:600;" id="dd-name">User</div>
-        <div style="padding:0 1rem .6rem; font-size:.75rem; color:#9ca3af;" id="dd-email"></div>
-        <hr/>
-        <a href="#">👤 Profile</a>
-        <a href="#">⚙️ Settings</a>
-        <a href="#">📊 Progress</a>
-        <hr/>
-        <a href="#" onclick="handleLogout()">🚪 Log Out</a>
+<!-- LANDING PAGE -->
+<div id="landing">
+  <!-- LEFT: Tokyo scenery -->
+  <div class="landing-left">
+    <div class="landing-bg"></div>
+    <div class="landing-overlay">
+      <div class="kanji-title">日本語を学ぼう<br/>一緒に</div>
+      <div class="slogan">Learning Japanese Together</div>
+      <p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6">
+        Every kanji tells a story.<br/>Every sentence opens a world.
+      </p>
+      <div class="sakura-deco">
+        <span></span><span></span><span></span>
       </div>
     </div>
   </div>
-</header>
 
-<div class="layout">
-  <!-- SIDEBAR -->
-  <aside>
-    <div class="sidebar-section">Learn</div>
-    <a class="sidebar-link active" href="#" data-section="home"><span class="icon">🏠</span> Dashboard</a>
-    <a class="sidebar-link" href="#" data-section="lessons"><span class="icon">📘</span> Lessons <span class="badge">New</span></a>
-    <a class="sidebar-link" href="#" data-section="vocab"><span class="icon">🔤</span> Vocabulary</a>
-    <a class="sidebar-link" href="#" data-section="grammar"><span class="icon">📐</span> Grammar</a>
-    <a class="sidebar-link" href="#" data-section="kanji"><span class="icon">🈶</span> Kanji</a>
+  <!-- RIGHT: Auth -->
+  <div class="landing-right">
+    <div class="auth-logo">
+      <img src="https://files.catbox.moe/fxwgtd.png" alt="NihongoZen" onerror="this.style.display='none'"/>
+      <div class="auth-logo-text">NihongoZen</div>
+    </div>
 
-    <div class="sidebar-section">Practice</div>
-    <a class="sidebar-link" href="#" data-section="quiz"><span class="icon">📝</span> Quiz</a>
-    <a class="sidebar-link" href="#" data-section="flashcards"><span class="icon">🃏</span> Flashcards</a>
-    <a class="sidebar-link" href="#" data-section="reading"><span class="icon">📖</span> Reading</a>
-    <a class="sidebar-link" href="#" data-section="listening"><span class="icon">🎧</span> Listening</a>
+    <div class="auth-tabs">
+      <button class="auth-tab active" onclick="switchTab('login')">Log In</button>
+      <button class="auth-tab" onclick="switchTab('signup')">Sign Up</button>
+    </div>
 
-    <div class="sidebar-section">JLPT</div>
-    <a class="sidebar-link" href="#" data-section="n5"><span class="icon">🌸</span> N5 – Beginner</a>
-    <a class="sidebar-link" href="#" data-section="n4"><span class="icon">🌷</span> N4 – Elementary</a>
-    <a class="sidebar-link" href="#" data-section="n3"><span class="icon">🌺</span> N3 – Intermediate</a>
-    <a class="sidebar-link" href="#" data-section="n2"><span class="icon">🌻</span> N2 – Upper</a>
-    <a class="sidebar-link" href="#" data-section="n1"><span class="icon">🏆</span> N1 – Advanced</a>
-  </aside>
-
-  <!-- MAIN -->
-  <main id="main-content">
-
-    <!-- HOME SECTION -->
-    <div id="section-home">
-      <!-- Welcome Banner -->
-      <div class="welcome-banner anim">
-        <div class="welcome-text">
-          <h2>おかえり、<span id="welcome-name">Learner</span>！</h2>
-          <p>You're on a <strong id="streak-inline">0</strong>-day streak. Keep it up!</p>
+    <!-- LOGIN PANEL -->
+    <div class="auth-panel active" id="panel-login">
+      <div class="auth-form">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="login-email" placeholder="you@example.com"/>
         </div>
-        <div class="daily-goal">
-          <svg class="progress-ring" viewBox="0 0 60 60">
-            <circle cx="30" cy="30" r="25" fill="none" stroke="#f3f4f6" stroke-width="5"/>
-            <circle id="daily-ring" cx="30" cy="30" r="25" fill="none"
-              stroke="var(--sakura)" stroke-width="5"
-              stroke-dasharray="157" stroke-dashoffset="100"
-              stroke-linecap="round" transform="rotate(-90 30 30)"
-              style="transition:stroke-dashoffset 1s ease"/>
-          </svg>
-          <div class="goal-num" id="daily-xp">0</div>
-          <div class="goal-label">XP today / 50 goal</div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" placeholder="••••••••"/>
         </div>
+        <div class="msg-error" id="login-error">Invalid email or password.</div>
+        <button class="btn-primary" onclick="handleLogin()">Log In →</button>
+        <div class="divider"><span>or continue with</span></div>
+        <button class="btn-social" onclick="handleGoogleLogin()">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"/>
+          Continue with Google
+        </button>
+        <button class="btn-social" onclick="handleFacebookLogin()">
+          <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" alt="Facebook"/>
+          Continue with Facebook
+        </button>
       </div>
+    </div>
 
-      <!-- Stats Grid -->
-      <div class="stats-grid">
-        <div class="stat-card anim">
-          <div class="stat-icon">📚</div>
-          <div class="stat-val" id="stat-lessons">0</div>
-          <div class="stat-label">Lessons Completed</div>
-          <div class="stat-change up">+2 this week</div>
-        </div>
-        <div class="stat-card anim">
-          <div class="stat-icon">🔤</div>
-          <div class="stat-val" id="stat-vocab">0</div>
-          <div class="stat-label">Vocabulary Mastered</div>
-          <div class="stat-change up">+15 this week</div>
-        </div>
-        <div class="stat-card anim">
-          <div class="stat-icon">🈶</div>
-          <div class="stat-val" id="stat-kanji">0</div>
-          <div class="stat-label">Kanji Learned</div>
-          <div class="stat-change up">+5 this week</div>
-        </div>
-        <div class="stat-card anim">
-          <div class="stat-icon">🎯</div>
-          <div class="stat-val" id="stat-accuracy">0%</div>
-          <div class="stat-label">Quiz Accuracy</div>
-          <div class="stat-change up">↑ 3% this week</div>
-        </div>
-      </div>
-
-      <!-- XP / Level -->
-      <div class="xp-card anim">
-        <div class="xp-header">
-          <div>
-            <div style="font-size:.8rem;color:var(--ink-light);margin-bottom:.2rem">Current Level</div>
-            <div class="xp-level">⚡ Level <span id="user-level">1</span></div>
+    <!-- SIGNUP PANEL -->
+    <div class="auth-panel" id="panel-signup">
+      <div class="auth-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="signup-fname" placeholder="Sakura"/>
           </div>
-          <div style="text-align:right">
-            <div style="font-size:.8rem;color:var(--ink-light)">Total XP</div>
-            <div style="font-size:1.2rem;font-weight:700;color:var(--gold)" id="total-xp">0</div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="signup-lname" placeholder="Yamada"/>
           </div>
         </div>
-        <div class="xp-bar-wrap"><div class="xp-bar-fill" id="xp-bar" style="width:0%"></div></div>
-        <div class="xp-labels">
-          <span id="xp-cur">0 XP</span>
-          <span id="xp-next">Next: 100 XP</span>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="signup-email" placeholder="you@example.com"/>
         </div>
-      </div>
-
-      <!-- JLPT Levels -->
-      <div class="section-header">
-        <h3>JLPT Levels</h3>
-        <a href="#">View all →</a>
-      </div>
-      <div class="levels-grid" id="levels-grid"></div>
-
-      <!-- Study Timer -->
-      <div class="section-header"><h3>Study Timer</h3></div>
-      <div class="timer-card anim">
-        <div class="timer-modes">
-          <div class="timer-mode active" onclick="setTimer(25*60,this)">🍅 Pomodoro 25m</div>
-          <div class="timer-mode" onclick="setTimer(5*60,this)">☕ Short Break 5m</div>
-          <div class="timer-mode" onclick="setTimer(15*60,this)">🌿 Long Break 15m</div>
-          <div class="timer-mode" onclick="setTimer(45*60,this)">📖 Deep Study 45m</div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="signup-phone" placeholder="+1 (555) 000-0000"/>
         </div>
-        <div class="timer-display" id="timer-display">25:00</div>
-        <div class="timer-controls">
-          <button class="timer-btn start" onclick="startTimer()">▶ Start</button>
-          <button class="timer-btn pause" onclick="pauseTimer()">⏸ Pause</button>
-          <button class="timer-btn reset" onclick="resetTimer()">↺ Reset</button>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="signup-password" placeholder="Min 8 characters"/>
         </div>
-      </div>
-
-      <!-- Daily Quiz CTA -->
-      <div class="quiz-cta anim">
-        <div class="quiz-cta-text">
-          <h4>📝 Daily Quiz Available!</h4>
-          <p>Test your knowledge and earn 20 XP. 10 questions • ~5 min</p>
-        </div>
-        <button class="btn-quiz" onclick="navigateTo('quiz')">Start Quiz →</button>
-      </div>
-
-      <!-- Today's Lessons -->
-      <div class="section-header">
-        <h3>Today's Lessons</h3>
-        <a href="#">See all →</a>
-      </div>
-      <div class="lesson-list" id="lesson-list"></div>
-
-      <!-- Kanji of the Day -->
-      <div class="section-header">
-        <h3>Kanji Practice</h3>
-        <a href="#">More →</a>
-      </div>
-      <div class="kanji-grid" id="kanji-grid"></div>
-    </div>
-
-    <!-- LEVEL SECTIONS (N5-N1, etc) – shown dynamically -->
-    <div id="section-level" style="display:none">
-      <div id="level-content"></div>
-    </div>
-
-
-    <!-- VOCABULARY SECTION -->
-    <div id="section-vocab" style="display:none">
-      <div class="vocab-stats-bar" id="vocab-stats-bar">
-        📚 <strong id="vs-total">934</strong> words &nbsp;|&nbsp;
-        ✅ <strong id="vs-mastered">0</strong> mastered &nbsp;|&nbsp;
-        📖 <strong id="vs-lesson">All Lessons</strong>
-      </div>
-      <input class="vocab-search" id="vocab-search" type="text" placeholder="Search words in Japanese or English…" oninput="filterVocab()"/>
-      <div class="vocab-lesson-tabs" id="vocab-tabs"></div>
-      <div class="vocab-grid" id="vocab-grid"></div>
-    </div>
-
-    <!-- WORD MODAL -->
-    <div class="modal-overlay" id="word-modal" style="display:none" onclick="closeWordModal(event)">
-      <div class="modal-box">
-        <button class="modal-close" onclick="document.getElementById('word-modal').style.display='none'">✕</button>
-        <div class="modal-word" id="mw-kanji"></div>
-        <div class="modal-hira" id="mw-hira"></div>
-        <div class="modal-en" id="mw-en"></div>
-        <div class="modal-lesson" id="mw-lesson"></div>
-        <div class="modal-actions">
-          <button class="modal-btn secondary" onclick="document.getElementById('word-modal').style.display='none'">Close</button>
-          <button class="modal-btn primary" id="mw-master-btn" onclick="toggleMasterCurrent()">⭐ Mark Mastered</button>
-        </div>
+        <div class="msg-error" id="signup-error">Please fill all fields correctly.</div>
+        <button class="btn-primary" onclick="handleSignup()">Create Account →</button>
+        <div class="divider"><span>or sign up with</span></div>
+        <button class="btn-social" onclick="handleGoogleLogin()">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google"/>
+          Sign up with Google
+        </button>
       </div>
     </div>
-
-  </main>
+  </div>
 </div>
 
-<!-- MOBILE BOTTOM NAV -->
-<div class="mobile-nav">
-  <button class="mobile-nav-btn active" onclick="navigateTo('home')">
-    <span class="nav-icon">🏠</span> Home
-  </button>
-  <button class="mobile-nav-btn" onclick="navigateTo('lessons')">
-    <span class="nav-icon">📘</span> Lessons
-  </button>
-  <button class="mobile-nav-btn" onclick="navigateTo('quiz')">
-    <span class="nav-icon">📝</span> Quiz
-  </button>
-  <button class="mobile-nav-btn" onclick="navigateTo('kanji')">
-    <span class="nav-icon">🈶</span> Kanji
-  </button>
-  <button class="mobile-nav-btn" onclick="navigateTo('profile')">
-    <span class="nav-icon">👤</span> Profile
-  </button>
+<!-- EMAIL VERIFICATION OVERLAY -->
+<div id="verify-overlay">
+  <div class="verify-box">
+    <div class="verify-icon">📧</div>
+    <h2>Verify Your Email</h2>
+    <p>We sent a 6-digit code to <strong id="verify-email-display"></strong>.<br/>Enter it below to activate your account.</p>
+    <div class="otp-inputs">
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,0)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,1)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,2)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,3)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,4)"/>
+      <input type="text" maxlength="1" class="otp-digit" oninput="otpMove(this,5)"/>
+    </div>
+    <button class="btn-primary" onclick="verifyOTP()" style="max-width:200px;margin:0 auto">Verify →</button>
+    <p style="margin-top:1rem;font-size:.8rem;color:#9ca3af">Didn't receive it? <a href="#" onclick="resendOTP()" style="color:var(--sakura)">Resend code</a></p>
+  </div>
 </div>
 
-<div id="toast"></div>
-
-<!-- Firebase -->
+<!-- Firebase SDK -->
 <script src="./firebase-config.js"></script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getAuth, onAuthStateChanged, signOut }
+  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+           GoogleAuthProvider, signInWithPopup, FacebookAuthProvider,
+           sendEmailVerification, onAuthStateChanged, updateProfile }
     from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-  import { getFirestore, doc, getDoc, updateDoc, increment, serverTimestamp }
+  import { getFirestore, doc, setDoc, getDoc, serverTimestamp }
     from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
   const firebaseConfig = window.FIREBASE_CONFIG;
@@ -654,421 +304,120 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const db = getFirestore(app);
+  const googleProvider = new GoogleAuthProvider();
+  const fbProvider = new FacebookAuthProvider();
 
-  onAuthStateChanged(auth, async user => {
-    if (!user) { window.location.href = 'index.html'; return; }
-
-    // Load profile
-    const snap = await getDoc(doc(db, 'users', user.uid));
-    const data = snap.exists() ? snap.data() : {};
-
-    const name = data.displayName || user.displayName || 'Learner';
-    const xp   = data.xp || 0;
-    const lvl  = data.level || 1;
-    const streak = data.streak || 0;
-
-    // Update header
-    document.getElementById('welcome-name').textContent = name.split(' ')[0];
-    document.getElementById('streak-count').textContent = streak;
-    document.getElementById('streak-inline').textContent = streak;
-    document.getElementById('xp-count').textContent = xp;
-    document.getElementById('dd-name').textContent = name;
-    document.getElementById('dd-email').textContent = user.email;
-
-    // Avatar
-    const initials = name.split(' ').map(p=>p[0]).join('').toUpperCase().slice(0,2);
-    if (user.photoURL) {
-      document.getElementById('avatar-img').src = user.photoURL;
-      document.getElementById('avatar-img').style.display = 'block';
-      document.getElementById('avatar-initials').style.display = 'none';
-    } else {
-      document.getElementById('avatar-initials').textContent = initials;
-    }
-
-    // Stats
-    document.getElementById('stat-lessons').textContent = data.lessonsCompleted || 0;
-    document.getElementById('stat-vocab').textContent = data.vocabMastered || 0;
-    document.getElementById('stat-kanji').textContent = data.kanjiProgress || 0;
-    document.getElementById('stat-accuracy').textContent = (data.quizAccuracy || 0) + '%';
-
-    // XP bar
-    const xpForNext = lvl * 100;
-    const xpProgress = ((xp % 100) / 100) * 100;
-    document.getElementById('user-level').textContent = lvl;
-    document.getElementById('total-xp').textContent = xp;
-    document.getElementById('xp-bar').style.width = xpProgress + '%';
-    document.getElementById('xp-cur').textContent = (xp % 100) + ' XP';
-    document.getElementById('xp-next').textContent = 'Next: ' + xpForNext + ' XP';
-
-    // Daily XP ring
-    const dailyXp = data.dailyXp || 0;
-    document.getElementById('daily-xp').textContent = dailyXp;
-    const offset = 157 - (dailyXp / 50) * 157;
-    document.getElementById('daily-ring').style.strokeDashoffset = Math.max(0, offset);
-
-    // Update streak in Firestore
-    await updateDoc(doc(db, 'users', user.uid), { lastLogin: serverTimestamp() });
+  // Auto-redirect if already logged in
+  onAuthStateChanged(auth, user => {
+    if (user) window.location.href = 'dashboard.html';
   });
 
-  window.handleLogout = async () => {
-    await signOut(auth);
-    window.location.href = 'index.html';
+  // Create/update user Firestore profile
+  async function createUserProfile(user, extra = {}) {
+    const ref = doc(db, 'users', user.uid);
+    const snap = await getDoc(ref);
+    if (!snap.exists()) {
+      await setDoc(ref, {
+        uid: user.uid,
+        email: user.email,
+        displayName: extra.displayName || user.displayName || '',
+        photoURL: user.photoURL || '',
+        phone: extra.phone || '',
+        xp: 0, level: 1, streak: 0,
+        lessonsCompleted: 0, vocabMastered: 0, kanjiProgress: 0,
+        createdAt: serverTimestamp(),
+        lastLogin: serverTimestamp()
+      });
+    } else {
+      await setDoc(ref, { lastLogin: serverTimestamp() }, { merge: true });
+    }
+  }
+
+  // EMAIL LOGIN
+  window.handleLogin = async () => {
+    const email = document.getElementById('login-email').value.trim();
+    const pass  = document.getElementById('login-password').value;
+    const err   = document.getElementById('login-error');
+    err.classList.remove('show');
+    try {
+      const cred = await signInWithEmailAndPassword(auth, email, pass);
+      await createUserProfile(cred.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) {
+      err.textContent = e.message; err.classList.add('show');
+    }
   };
 
-  // Award XP
-  window.awardXP = async (amount) => {
-    const user = auth.currentUser;
-    if (!user) return;
-    await updateDoc(doc(db, 'users', user.uid), {
-      xp: increment(amount),
-      dailyXp: increment(amount)
-    });
-    showToast(`+${amount} XP earned! 🌸`);
+  // EMAIL SIGNUP
+  window.handleSignup = async () => {
+    const fname = document.getElementById('signup-fname').value.trim();
+    const lname = document.getElementById('signup-lname').value.trim();
+    const email = document.getElementById('signup-email').value.trim();
+    const phone = document.getElementById('signup-phone').value.trim();
+    const pass  = document.getElementById('signup-password').value;
+    const err   = document.getElementById('signup-error');
+    err.classList.remove('show');
+    if (!fname || !lname || !email || !pass || pass.length < 8) {
+      err.textContent = 'Please fill all fields (password min 8 chars).';
+      err.classList.add('show'); return;
+    }
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email, pass);
+      await updateProfile(cred.user, { displayName: `${fname} ${lname}` });
+      await createUserProfile(cred.user, { displayName:`${fname} ${lname}`, phone });
+      await sendEmailVerification(cred.user);
+      document.getElementById('verify-email-display').textContent = email;
+      document.getElementById('verify-overlay').classList.add('show');
+    } catch(e) {
+      err.textContent = e.message; err.classList.add('show');
+    }
   };
+
+  // GOOGLE LOGIN
+  window.handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      await createUserProfile(result.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) { alert(e.message); }
+  };
+
+  // FACEBOOK LOGIN
+  window.handleFacebookLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, fbProvider);
+      await createUserProfile(result.user);
+      window.location.href = 'dashboard.html';
+    } catch(e) { alert(e.message); }
+  };
+
+  // OTP verify (simulated – real use Firebase phone auth or email link)
+  window.verifyOTP = () => {
+    const digits = Array.from(document.querySelectorAll('.otp-digit')).map(i=>i.value).join('');
+    if (digits.length === 6) {
+      document.getElementById('verify-overlay').classList.remove('show');
+      window.location.href = 'dashboard.html';
+    } else { alert('Enter the full 6-digit code.'); }
+  };
+  window.resendOTP = () => alert('Verification email resent!');
 </script>
 
 <script>
-  // ── SAMPLE DATA ──
-  const levels = [
-    { id:'n5', name:'N5', desc:'Beginner – Basic Japanese', topics:['Hiragana','Katakana','Basic Vocab','Simple Grammar'], pct:35 },
-    { id:'n4', name:'N4', desc:'Elementary – Simple sentences', topics:['Daily Vocabulary','て-form','Adjectives'], pct:20 },
-    { id:'n3', name:'N3', desc:'Intermediate – Everyday use', topics:['Intermediate Grammar','Keigo intro','Reading'], pct:10 },
-    { id:'n2', name:'N2', desc:'Upper Intermediate', topics:['Advanced Grammar','Formal Writing','JLPT N2 vocab'], pct:5 },
-    { id:'n1', name:'N1', desc:'Advanced – Near fluency', topics:['Classical Japanese','Complex Kanji','Full JLPT prep'], pct:0 },
-  ];
-
-  const sampleLessons = [
-    { icon:'🌸', title:'Greetings & Introductions', sub:'Learn おはようございます, こんにちは...', tag:'vocab', audio:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
-    { icon:'📝', title:'Basic Sentence Patterns', sub:'は・が・を particle usage explained', tag:'grammar', audio:'' },
-    { icon:'🈶', title:'Kanji Radicals N5', sub:'50 essential kanji with readings', tag:'kanji', audio:'' },
-    { icon:'📖', title:'Short Story Reading', sub:'Simple dialogue with furigana', tag:'reading', audio:'' },
-  ];
-
-  const sampleKanji = [
-    { char:'日', read:'にち・ひ', mean:'Sun/Day' },
-    { char:'月', read:'つき・げつ', mean:'Moon' },
-    { char:'山', read:'やま・さん', mean:'Mountain' },
-    { char:'川', read:'かわ・せん', mean:'River' },
-    { char:'人', read:'ひと・じん', mean:'Person' },
-    { char:'大', read:'おお・だい', mean:'Big' },
-    { char:'小', read:'ちい・しょう', mean:'Small' },
-    { char:'火', read:'ひ・か', mean:'Fire' },
-    { char:'水', read:'みず・すい', mean:'Water' },
-    { char:'木', read:'き・もく', mean:'Tree' },
-  ];
-
-  // Build levels grid
-  const levelsGrid = document.getElementById('levels-grid');
-  levels.forEach(l => {
-    const card = document.createElement('div');
-    card.className = `level-card ${l.id}`;
-    card.innerHTML = `
-      <div class="level-badge">${l.name}</div>
-      <h4>${l.name} – ${l.name==='N5'?'Beginner':l.name==='N4'?'Elementary':l.name==='N3'?'Intermediate':l.name==='N2'?'Upper Int.':'Advanced'}</h4>
-      <p>${l.desc}</p>
-      <div class="level-progress"><div class="level-progress-fill" style="width:${l.pct}%"></div></div>
-      <div class="level-pct">${l.pct}% complete</div>`;
-    card.onclick = () => navigateTo(l.id);
-    levelsGrid.appendChild(card);
-  });
-
-  // Build lessons
-  const lessonList = document.getElementById('lesson-list');
-  sampleLessons.forEach(l => {
-    const item = document.createElement('div');
-    item.className = 'lesson-item';
-    item.innerHTML = `
-      <div class="lesson-icon">${l.icon}</div>
-      <div class="lesson-info">
-        <h5>${l.title}</h5>
-        <div class="lesson-meta">
-          <span class="tag ${l.tag}">${l.tag}</span>
-          <p>${l.sub}</p>
-        </div>
-      </div>
-      ${l.audio ? `<button class="play-btn" onclick="playAudio('${l.audio}',event)">🔊</button>` : ''}`;
-    item.onclick = (e) => { if(!e.target.classList.contains('play-btn')) { awardXP(5); showToast('Lesson started!'); } };
-    lessonList.appendChild(item);
-  });
-
-  // Build kanji grid
-  const kanjiGrid = document.getElementById('kanji-grid');
-  sampleKanji.forEach(k => {
-    const card = document.createElement('div');
-    card.className = 'kanji-card';
-    card.innerHTML = `<div class="kanji-char">${k.char}</div><div class="kanji-reading">${k.read}</div><div class="kanji-meaning">${k.mean}</div>`;
-    card.onclick = () => { awardXP(2); showToast(`${k.char} – ${k.mean} 🎉`); };
-    kanjiGrid.appendChild(card);
-  });
-
-  // ── STUDY TIMER ──
-  let timerDuration = 25 * 60, timerLeft = 25 * 60, timerInterval = null, timerRunning = false;
-
-  function setTimer(secs, el) {
-    document.querySelectorAll('.timer-mode').forEach(m => m.classList.remove('active'));
-    el.classList.add('active');
-    timerDuration = timerLeft = secs;
-    renderTimer(); if(timerRunning) { clearInterval(timerInterval); timerRunning = false; }
-  }
-  function renderTimer() {
-    const m = Math.floor(timerLeft/60).toString().padStart(2,'0');
-    const s = (timerLeft%60).toString().padStart(2,'0');
-    document.getElementById('timer-display').textContent = `${m}:${s}`;
-  }
-  function startTimer() {
-    if (timerRunning) return;
-    timerRunning = true;
-    timerInterval = setInterval(() => {
-      if (timerLeft <= 0) { clearInterval(timerInterval); timerRunning = false; showToast('⏰ Timer done! +10 XP'); awardXP(10); return; }
-      timerLeft--; renderTimer();
-    }, 1000);
-  }
-  function pauseTimer() { clearInterval(timerInterval); timerRunning = false; }
-  function resetTimer() { pauseTimer(); timerLeft = timerDuration; renderTimer(); }
-  window.startTimer = startTimer; window.pauseTimer = pauseTimer; window.resetTimer = resetTimer; window.setTimer = setTimer;
-
-  // ── NAVIGATION ──
-    document.querySelectorAll('nav a').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === section);
+  function switchTab(tab) {
+    document.querySelectorAll('.auth-tab').forEach((t,i)=> {
+      t.classList.toggle('active', (tab==='login'&&i===0)||(tab==='signup'&&i===1));
     });
-    document.querySelectorAll('.sidebar-link').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === section);
-    });
-    document.querySelectorAll('.mobile-nav-btn').forEach((b,i) => {
-      b.classList.remove('active');
-    });
-
-
-  function navigateTo(section) {
-    document.querySelectorAll('nav a').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === section);
-    });
-    document.querySelectorAll('.sidebar-link').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === section);
-    });
-    document.querySelectorAll('.mobile-nav-btn').forEach((b,i) => {
-      b.classList.remove('active');
-    });
-
-    // hide all sections
-    document.getElementById('section-home').style.display = 'none';
-    document.getElementById('section-level').style.display = 'none';
-    document.getElementById('section-vocab').style.display = 'none';
-
-    if (section === 'home') {
-      document.getElementById('section-home').style.display = '';
-    } else if (section === 'vocab') {
-      document.getElementById('section-vocab').style.display = '';
-    } else {
-      document.getElementById('section-level').style.display = '';
-      renderLevelSection(section);
-    }
+    document.getElementById('panel-login').classList.toggle('active', tab==='login');
+    document.getElementById('panel-signup').classList.toggle('active', tab==='signup');
+  }
+  function otpMove(el, idx) {
+    if (el.value && idx < 5) document.querySelectorAll('.otp-digit')[idx+1].focus();
   }
 
-  function renderLevelSection(section) {
-    const lvl = levels.find(l => l.id === section);
-    const content = document.getElementById('level-content');
-    if (lvl) {
-      content.innerHTML = `
-        <div class="welcome-banner" style="margin-bottom:2rem">
-          <div class="welcome-text">
-            <h2 style="font-family:'Noto Serif JP',serif">${lvl.name} – ${lvl.desc}</h2>
-            <p>Start your ${lvl.name} journey. ${lvl.pct}% complete.</p>
-          </div>
-        </div>
-        <div class="section-header"><h3>Topics</h3></div>
-        <div class="lesson-list">
-          ${lvl.topics.map(t => `
-            <div class="lesson-item" onclick="awardXP(5);showToast('Lesson started! +5 XP')">
-              <div class="lesson-icon">📘</div>
-              <div class="lesson-info"><h5>${t}</h5><p>Click to begin this topic</p></div>
-            </div>`).join('')}
-        </div>
-        <div class="quiz-cta">
-          <div class="quiz-cta-text"><h4>📝 ${lvl.name} Practice Quiz</h4><p>Test your ${lvl.name} knowledge</p></div>
-          <button class="btn-quiz" onclick="awardXP(20);showToast('Quiz started! 📝')">Start Quiz →</button>
-        </div>`;
-    } else {
-      content.innerHTML = `
-        <div class="welcome-banner">
-          <div class="welcome-text">
-            <h2 style="font-family:'Noto Serif JP',serif;text-transform:capitalize">${section}</h2>
-            <p>This section is ready. Content will be loaded from your data folder.</p>
-          </div>
-        </div>
-        <div style="text-align:center;padding:4rem;color:var(--ink-light)">
-          <div style="font-size:3rem;margin-bottom:1rem">🌸</div>
-          <p>Upload content to <strong>data/${section}/</strong> to populate this section.</p>
-        </div>`;
-    }
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
   }
-  window.navigateTo = navigateTo;
-
-
-  // ── VOCABULARY DATA ──
-  const vocabularyData = {"lessons":[{"lesson":0,"title":"Preliminary Lesson – Classroom Instructions, Daily Greetings & Numerals","vocab":[{"id":1,"kanji":"始めましょう","hiragana":"はじめましょう","en":"Let's begin."},{"id":2,"kanji":"終わりましょう","hiragana":"おわりましょう","en":"Let's finish (the lesson)."},{"id":3,"kanji":"休みましょう","hiragana":"やすみましょう","en":"Let's take a break."},{"id":4,"kanji":"分かりますか","hiragana":"わかりますか","en":"Do you understand?"},{"id":5,"kanji":"はい、分かります","hiragana":"はい、わかります","en":"Yes, I do."},{"id":6,"kanji":"いいえ、分かりません","hiragana":"いいえ、わかりません","en":"No, I don't."},{"id":7,"kanji":"もう一度","hiragana":"もういちど","en":"Once more."},{"id":8,"kanji":"結構です","hiragana":"けっこうです","en":"Fine; good."},{"id":9,"kanji":"駄目です","hiragana":"だめです","en":"That's not OK; that's wrong."},{"id":10,"kanji":"名前","hiragana":"なまえ","en":"name"},{"id":11,"kanji":"試験","hiragana":"しけん","en":"exam"},{"id":12,"kanji":"宿題","hiragana":"しゅくだい","en":"homework"},{"id":13,"kanji":"質問","hiragana":"しつもん","en":"question"},{"id":14,"kanji":"答え","hiragana":"こたえ","en":"answer"},{"id":15,"kanji":"例","hiragana":"れい","en":"example"},{"id":1,"kanji":"お早うございます","hiragana":"おはようございます","en":"Good morning."},{"id":2,"kanji":"今日は","hiragana":"こんにちは","en":"Good afternoon."},{"id":3,"kanji":"今晩は","hiragana":"こんばんは","en":"Good evening."},{"id":4,"kanji":"お休みなさい","hiragana":"おやすみなさい","en":"Good night."},{"id":5,"kanji":"さようなら","hiragana":"さようなら","en":"Good-bye."},{"id":6,"kanji":"ありがとうございます","hiragana":"ありがとうございます","en":"Thank you very much."},{"id":7,"kanji":"すみません","hiragana":"すみません","en":"Excuse me; I'm sorry."},{"id":8,"kanji":"お願いします","hiragana":"おねがいします","en":"Please."},{"id":1,"kanji":"零 / れい","hiragana":"ぜろ、れい","en":"0"},{"id":2,"kanji":"一","hiragana":"いち","en":"1"},{"id":3,"kanji":"二","hiragana":"に","en":"2"},{"id":4,"kanji":"三","hiragana":"さん","en":"3"},{"id":5,"kanji":"四","hiragana":"よん、し","en":"4"},{"id":6,"kanji":"五","hiragana":"ご","en":"5"},{"id":7,"kanji":"六","hiragana":"ろく","en":"6"},{"id":8,"kanji":"七","hiragana":"なな、しち","en":"7"},{"id":9,"kanji":"八","hiragana":"はち","en":"8"},{"id":10,"kanji":"九","hiragana":"きゅう、く","en":"9"},{"id":11,"kanji":"十","hiragana":"じゅう","en":"10"}]},{"lesson":1,"title":"Lesson 1 – Introductions & People","vocab":[{"id":1,"kanji":"わたし","hiragana":"","en":"I"},{"id":2,"kanji":"わたしたち","hiragana":"","en":"we"},{"id":3,"kanji":"あなた","hiragana":"","en":"you"},{"id":4,"kanji":"あの人(あのひと)","hiragana":"","en":"that person; he/she"},{"id":5,"kanji":"あの方(あのかた)","hiragana":"","en":"that person (polite)"},{"id":6,"kanji":"皆さん(みなさん)","hiragana":"","en":"everyone; all of you"},{"id":7,"kanji":"〜さん","hiragana":"","en":"Mr./Ms. (polite title)"},{"id":8,"kanji":"〜ちゃん","hiragana":"","en":"suffix for children"},{"id":9,"kanji":"〜くん","hiragana":"","en":"suffix for boys/young males"},{"id":10,"kanji":"〜人(〜じん)","hiragana":"","en":"nationality suffix"},{"id":11,"kanji":"先生(せんせい)","hiragana":"","en":"teacher; instructor"},{"id":12,"kanji":"教師(きょうし)","hiragana":"","en":"teacher (profession)"},{"id":13,"kanji":"学生(がくせい)","hiragana":"","en":"student"},{"id":14,"kanji":"会社員(かいしゃいん)","hiragana":"","en":"company employee"},{"id":15,"kanji":"社員(しゃいん)","hiragana":"","en":"company staff"},{"id":16,"kanji":"銀行員(ぎんこういん)","hiragana":"","en":"bank employee"},{"id":17,"kanji":"医者(いしゃ)","hiragana":"","en":"doctor"},{"id":18,"kanji":"研究者(けんきゅうしゃ)","hiragana":"","en":"researcher"},{"id":19,"kanji":"エンジニア","hiragana":"","en":"engineer"},{"id":20,"kanji":"大学(だいがく)","hiragana":"","en":"university"},{"id":21,"kanji":"病院(びょういん)","hiragana":"","en":"hospital"},{"id":22,"kanji":"電気(でんき)","hiragana":"","en":"electricity; light"},{"id":23,"kanji":"誰(だれ)","hiragana":"","en":"who"},{"id":24,"kanji":"どなた","hiragana":"","en":"who (polite)"},{"id":25,"kanji":"〜歳(〜さい)","hiragana":"","en":"~ years old"},{"id":26,"kanji":"何歳(なんさい)","hiragana":"","en":"how old"},{"id":27,"kanji":"おいくつ","hiragana":"","en":"how old (polite)"},{"id":28,"kanji":"はい","hiragana":"","en":"yes"},{"id":29,"kanji":"いいえ","hiragana":"","en":"no"},{"id":30,"kanji":"失礼ですが(しつれいですが)","hiragana":"","en":"excuse me, but"},{"id":31,"kanji":"お名前は?(おなまえは)","hiragana":"","en":"what is your name?"},{"id":32,"kanji":"はじめまして","hiragana":"","en":"nice to meet you"},{"id":33,"kanji":"どうぞよろしく(お願いします)","hiragana":"","en":"pleased to meet you"},{"id":34,"kanji":"こちらは〜さんです","hiragana":"","en":"this is Mr./Ms. ~"},{"id":35,"kanji":"〜から来ました(きました)","hiragana":"","en":"I am from ~"}]},{"lesson":2,"title":"Lesson 2 – Objects & Things","vocab":[{"id":1,"kanji":"これ","hiragana":"","en":"this (near speaker)"},{"id":2,"kanji":"それ","hiragana":"","en":"that (near listener)"},{"id":3,"kanji":"あれ","hiragana":"","en":"that (over there)"},{"id":4,"kanji":"この〜","hiragana":"","en":"this ~"},{"id":5,"kanji":"その〜","hiragana":"","en":"that ~"},{"id":6,"kanji":"あの〜","hiragana":"","en":"that ~ over there"},{"id":7,"kanji":"本(ほん)","hiragana":"","en":"book"},{"id":8,"kanji":"辞書(じしょ)","hiragana":"","en":"dictionary"},{"id":9,"kanji":"雑誌(ざっし)","hiragana":"","en":"magazine"},{"id":10,"kanji":"新聞(しんぶん)","hiragana":"","en":"newspaper"},{"id":11,"kanji":"ノート","hiragana":"","en":"notebook"},{"id":12,"kanji":"手帳(てちょう)","hiragana":"","en":"pocket notebook"},{"id":13,"kanji":"名刺(めいし)","hiragana":"","en":"business card"},{"id":14,"kanji":"カード","hiragana":"","en":"card"},{"id":15,"kanji":"テレホンカード","hiragana":"","en":"telephone card"},{"id":16,"kanji":"鉛筆(えんぴつ)","hiragana":"","en":"pencil"},{"id":17,"kanji":"ボールペン","hiragana":"","en":"ballpoint pen"},{"id":18,"kanji":"シャープペンシル","hiragana":"","en":"mechanical pencil"},{"id":19,"kanji":"鍵(かぎ)","hiragana":"","en":"key"},{"id":20,"kanji":"時計(とけい)","hiragana":"","en":"watch; clock"},{"id":21,"kanji":"傘(かさ)","hiragana":"","en":"umbrella"},{"id":22,"kanji":"鞄(かばん)","hiragana":"","en":"bag; briefcase"},{"id":23,"kanji":"カセットテープ","hiragana":"","en":"cassette tape"},{"id":24,"kanji":"テープレコーダー","hiragana":"","en":"tape recorder"},{"id":25,"kanji":"テレビ","hiragana":"","en":"television"},{"id":26,"kanji":"ラジオ","hiragana":"","en":"radio"},{"id":27,"kanji":"カメラ","hiragana":"","en":"camera"},{"id":28,"kanji":"コンピューター","hiragana":"","en":"computer"},{"id":29,"kanji":"自動車(じどうしゃ)","hiragana":"","en":"car; automobile"},{"id":30,"kanji":"机(つくえ)","hiragana":"","en":"desk"},{"id":31,"kanji":"椅子(いす)","hiragana":"","en":"chair"},{"id":32,"kanji":"チョコレート","hiragana":"","en":"chocolate"},{"id":33,"kanji":"コーヒー","hiragana":"","en":"coffee"},{"id":34,"kanji":"英語(えいご)","hiragana":"","en":"English (language)"},{"id":35,"kanji":"日本語(にほんご)","hiragana":"","en":"Japanese (language)"},{"id":36,"kanji":"何(なん)","hiragana":"","en":"what"},{"id":37,"kanji":"そう","hiragana":"","en":"so; that’s right"},{"id":38,"kanji":"違います(ちがいます)","hiragana":"","en":"that is not correct"},{"id":39,"kanji":"そうですか","hiragana":"","en":"I see; is that so"},{"id":40,"kanji":"あのう","hiragana":"","en":"well; um (hesitation)"}]},{"lesson":3,"title":"Lesson 3 – Places & Shopping","vocab":[{"id":1,"kanji":"ここ","hiragana":"","en":"here"},{"id":2,"kanji":"そこ","hiragana":"","en":"there (near listener)"},{"id":3,"kanji":"あそこ","hiragana":"","en":"over there"},{"id":4,"kanji":"どこ","hiragana":"","en":"where"},{"id":5,"kanji":"こちら","hiragana":"","en":"this way; here (polite)"},{"id":6,"kanji":"そちら","hiragana":"","en":"that way (polite)"},{"id":7,"kanji":"あちら","hiragana":"","en":"over there (polite)"},{"id":8,"kanji":"どちら","hiragana":"","en":"which way; where (polite)"},{"id":9,"kanji":"教室(きょうしつ)","hiragana":"","en":"classroom"},{"id":10,"kanji":"食堂(しょくどう)","hiragana":"","en":"dining hall; cafeteria"},{"id":11,"kanji":"事務所(じむしょ)","hiragana":"","en":"office"},{"id":12,"kanji":"会議室(かいぎしつ)","hiragana":"","en":"meeting room"},{"id":13,"kanji":"受付(うけつけ)","hiragana":"","en":"reception desk"},{"id":14,"kanji":"ロビー","hiragana":"","en":"lobby"},{"id":15,"kanji":"部屋(へや)","hiragana":"","en":"room"},{"id":16,"kanji":"トイレ(お手洗い)","hiragana":"","en":"toilet; restroom"},{"id":17,"kanji":"階段(かいだん)","hiragana":"","en":"stairs"},{"id":18,"kanji":"エレベーター","hiragana":"","en":"elevator"},{"id":19,"kanji":"エスカレーター","hiragana":"","en":"escalator"},{"id":20,"kanji":"会社(かいしゃ)","hiragana":"","en":"company"},{"id":21,"kanji":"家(うち)","hiragana":"","en":"home; house"},{"id":22,"kanji":"電話(でんわ)","hiragana":"","en":"telephone"},{"id":23,"kanji":"靴(くつ)","hiragana":"","en":"shoes"},{"id":24,"kanji":"ネクタイ","hiragana":"","en":"necktie"},{"id":25,"kanji":"ワイン","hiragana":"","en":"wine"},{"id":26,"kanji":"たばこ","hiragana":"","en":"cigarette; tobacco"},{"id":27,"kanji":"売り場(うりば)","hiragana":"","en":"sales floor; counter"},{"id":28,"kanji":"地下(ちか)","hiragana":"","en":"basement"},{"id":29,"kanji":"〜階(〜かい)","hiragana":"","en":"floor (e.g., 2nd floor)"},{"id":30,"kanji":"何階(なんがい)","hiragana":"","en":"what floor"},{"id":31,"kanji":"〜円(〜えん)","hiragana":"","en":"yen"},{"id":32,"kanji":"いくら","hiragana":"","en":"how much"},{"id":33,"kanji":"百(ひゃく)","hiragana":"","en":"hundred"},{"id":34,"kanji":"千(せん)","hiragana":"","en":"thousand"},{"id":35,"kanji":"万(まん)","hiragana":"","en":"ten thousand"},{"id":36,"kanji":"すみません","hiragana":"","en":"excuse me; sorry"},{"id":37,"kanji":"〜でございます","hiragana":"","en":"is (polite form of です)"},{"id":38,"kanji":"見せてください(みせてください)","hiragana":"","en":"please show me"},{"id":39,"kanji":"じゃ","hiragana":"","en":"well then"},{"id":40,"kanji":"ください","hiragana":"","en":"please give me"}]},{"lesson":4,"title":"Lesson 4 – Time & Daily Routine","vocab":[{"id":1,"kanji":"起きます(おきます)","hiragana":"","en":"wake up"},{"id":2,"kanji":"寝ます(ねます)","hiragana":"","en":"sleep; go to bed"},{"id":3,"kanji":"働きます(はたらきます)","hiragana":"","en":"work"},{"id":4,"kanji":"休みます(やすみます)","hiragana":"","en":"rest; take a day off"},{"id":5,"kanji":"勉強します(べんきょうします)","hiragana":"","en":"study"},{"id":6,"kanji":"終わります(おわります)","hiragana":"","en":"finish"},{"id":7,"kanji":"今(いま)","hiragana":"","en":"now"},{"id":8,"kanji":"〜時(〜じ)","hiragana":"","en":"o’clock"},{"id":9,"kanji":"〜分(〜ふん)","hiragana":"","en":"minute"},{"id":10,"kanji":"半(はん)","hiragana":"","en":"half past"},{"id":11,"kanji":"何時(なんじ)","hiragana":"","en":"what time"},{"id":12,"kanji":"何分(なんぷん)","hiragana":"","en":"what minute"},{"id":13,"kanji":"午前(ごぜん)","hiragana":"","en":"a.m."},{"id":14,"kanji":"午後(ごご)","hiragana":"","en":"p.m."},{"id":15,"kanji":"朝(あさ)","hiragana":"","en":"morning"},{"id":16,"kanji":"昼(ひる)","hiragana":"","en":"daytime; noon"},{"id":17,"kanji":"晩/夜(ばん/よる)","hiragana":"","en":"evening; night"},{"id":18,"kanji":"おととい","hiragana":"","en":"the day before yesterday"},{"id":19,"kanji":"昨日(きのう)","hiragana":"","en":"yesterday"},{"id":20,"kanji":"今日(きょう)","hiragana":"","en":"today"},{"id":21,"kanji":"明日(あした)","hiragana":"","en":"tomorrow"},{"id":22,"kanji":"明後日(あさって)","hiragana":"","en":"the day after tomorrow"},{"id":23,"kanji":"今朝(けさ)","hiragana":"","en":"this morning"},{"id":24,"kanji":"今晩(こんばん)","hiragana":"","en":"tonight"},{"id":25,"kanji":"休み(やすみ)","hiragana":"","en":"holiday; day off"},{"id":26,"kanji":"昼休み(ひるやすみ)","hiragana":"","en":"lunch break"},{"id":27,"kanji":"毎朝(まいあさ)","hiragana":"","en":"every morning"},{"id":28,"kanji":"毎晩(まいばん)","hiragana":"","en":"every night"},{"id":29,"kanji":"毎日(まいにち)","hiragana":"","en":"every day"},{"id":30,"kanji":"月曜日(げつようび)","hiragana":"","en":"Monday"},{"id":31,"kanji":"火曜日(かようび)","hiragana":"","en":"Tuesday"},{"id":32,"kanji":"水曜日(すいようび)","hiragana":"","en":"Wednesday"},{"id":33,"kanji":"木曜日(もくようび)","hiragana":"","en":"Thursday"},{"id":34,"kanji":"金曜日(きんようび)","hiragana":"","en":"Friday"},{"id":35,"kanji":"土曜日(どようび)","hiragana":"","en":"Saturday"},{"id":36,"kanji":"日曜日(にちようび)","hiragana":"","en":"Sunday"},{"id":37,"kanji":"〜から","hiragana":"","en":"from ~"},{"id":38,"kanji":"〜まで","hiragana":"","en":"until ~"},{"id":39,"kanji":"〜と〜","hiragana":"","en":"and (connect nouns)"},{"id":40,"kanji":"えーと","hiragana":"","en":"well; let me see"},{"id":41,"kanji":"かしこまりました","hiragana":"","en":"certainly; understood (polite)"}]},{"lesson":5,"title":"Lesson 5 – Movement & Travel","vocab":[{"id":1,"kanji":"行きます(いきます)","hiragana":"","en":"go"},{"id":2,"kanji":"来ます(きます)","hiragana":"","en":"come"},{"id":3,"kanji":"帰ります(かえります)","hiragana":"","en":"return; go home"},{"id":4,"kanji":"学校(がっこう)","hiragana":"","en":"school"},{"id":5,"kanji":"スーパー","hiragana":"","en":"supermarket"},{"id":6,"kanji":"駅(えき)","hiragana":"","en":"station"},{"id":7,"kanji":"飛行機(ひこうき)","hiragana":"","en":"airplane"},{"id":8,"kanji":"船(ふね)","hiragana":"","en":"ship; boat"},{"id":9,"kanji":"電車(でんしゃ)","hiragana":"","en":"train"},{"id":10,"kanji":"地下鉄(ちかてつ)","hiragana":"","en":"subway"},{"id":11,"kanji":"新幹線(しんかんせん)","hiragana":"","en":"Shinkansen; bullet train"},{"id":12,"kanji":"バス","hiragana":"","en":"bus"},{"id":13,"kanji":"タクシー","hiragana":"","en":"taxi"},{"id":14,"kanji":"自転車(じてんしゃ)","hiragana":"","en":"bicycle"},{"id":15,"kanji":"歩いて(あるいて)","hiragana":"","en":"on foot"},{"id":16,"kanji":"人(ひと)","hiragana":"","en":"person; people"},{"id":17,"kanji":"友達(ともだち)","hiragana":"","en":"friend"},{"id":18,"kanji":"彼(かれ)","hiragana":"","en":"he; boyfriend"},{"id":19,"kanji":"彼女(かのじょ)","hiragana":"","en":"she; girlfriend"},{"id":20,"kanji":"家族(かぞく)","hiragana":"","en":"family"},{"id":21,"kanji":"一人で(ひとりで)","hiragana":"","en":"alone; by oneself"},{"id":22,"kanji":"先週(せんしゅう)","hiragana":"","en":"last week"},{"id":23,"kanji":"今週(こんしゅう)","hiragana":"","en":"this week"},{"id":24,"kanji":"来週(らいしゅう)","hiragana":"","en":"next week"},{"id":25,"kanji":"先月(せんげつ)","hiragana":"","en":"last month"},{"id":26,"kanji":"今月(こんげつ)","hiragana":"","en":"this month"},{"id":27,"kanji":"来月(らいげつ)","hiragana":"","en":"next month"},{"id":28,"kanji":"去年(きょねん)","hiragana":"","en":"last year"},{"id":29,"kanji":"今年(ことし)","hiragana":"","en":"this year"},{"id":30,"kanji":"来年(らいねん)","hiragana":"","en":"next year"},{"id":31,"kanji":"〜月(〜がつ)","hiragana":"","en":"~ month"},{"id":32,"kanji":"何月(なんがつ)","hiragana":"","en":"what month"},{"id":33,"kanji":"一日(ついたち)","hiragana":"","en":"first day of month"},{"id":34,"kanji":"二日(ふつか)","hiragana":"","en":"second day; two days"},{"id":35,"kanji":"三日(みっか)","hiragana":"","en":"third day; three days"},{"id":36,"kanji":"四日(よっか)","hiragana":"","en":"fourth day; four days"},{"id":37,"kanji":"五日(いつか)","hiragana":"","en":"fifth day; five days"},{"id":38,"kanji":"六日(むいか)","hiragana":"","en":"sixth day; six days"},{"id":39,"kanji":"七日(なのか)","hiragana":"","en":"seventh day; seven days"},{"id":40,"kanji":"八日(ようか)","hiragana":"","en":"eighth day; eight days"},{"id":41,"kanji":"九日(ここのか)","hiragana":"","en":"ninth day; nine days"},{"id":42,"kanji":"十日(とおか)","hiragana":"","en":"tenth day; ten days"},{"id":43,"kanji":"十四日(じゅうよっか)","hiragana":"","en":"fourteenth day"},{"id":44,"kanji":"二十日(はつか)","hiragana":"","en":"twentieth day"},{"id":45,"kanji":"二十四日(にじゅうよっか)","hiragana":"","en":"twenty-fourth day"},{"id":46,"kanji":"〜日(〜にち)","hiragana":"","en":"~ day of month"},{"id":47,"kanji":"何日(なんにち)","hiragana":"","en":"which day; how many days"},{"id":48,"kanji":"いつ","hiragana":"","en":"when"},{"id":49,"kanji":"誕生日(たんじょうび)","hiragana":"","en":"birthday"},{"id":50,"kanji":"普通(ふつう)","hiragana":"","en":"local (train)"},{"id":51,"kanji":"急行(きゅうこう)","hiragana":"","en":"rapid"},{"id":52,"kanji":"特急(とっきゅう)","hiragana":"","en":"express"},{"id":53,"kanji":"次の(つぎの)","hiragana":"","en":"next"},{"id":54,"kanji":"どういたしまして","hiragana":"","en":"you're welcome"},{"id":55,"kanji":"〜番線(〜ばんせん)","hiragana":"","en":"platform number"}]},{"lesson":6,"title":"Lesson 6 – Daily Activities","vocab":[{"id":1,"kanji":"食べます(たべます)","hiragana":"","en":"eat"},{"id":2,"kanji":"飲みます(のみます)","hiragana":"","en":"drink"},{"id":3,"kanji":"吸います(すいます)","hiragana":"","en":"smoke"},{"id":4,"kanji":"見ます(みます)","hiragana":"","en":"see; watch"},{"id":5,"kanji":"聞きます(ききます)","hiragana":"","en":"hear; listen"},{"id":6,"kanji":"読みます(よみます)","hiragana":"","en":"read"},{"id":7,"kanji":"書きます(かきます)","hiragana":"","en":"write"},{"id":8,"kanji":"買います(かいます)","hiragana":"","en":"buy"},{"id":9,"kanji":"撮ります(とります)","hiragana":"","en":"take (a photo)"},{"id":10,"kanji":"します","hiragana":"","en":"do"},{"id":11,"kanji":"会います(あいます)","hiragana":"","en":"meet"},{"id":12,"kanji":"ご飯(ごはん)","hiragana":"","en":"meal; rice"},{"id":13,"kanji":"朝ご飯(あさごはん)","hiragana":"","en":"breakfast"},{"id":14,"kanji":"昼ご飯(ひるごはん)","hiragana":"","en":"lunch"},{"id":15,"kanji":"晩ご飯(ばんごはん)","hiragana":"","en":"dinner"},{"id":16,"kanji":"パン","hiragana":"","en":"bread"},{"id":17,"kanji":"卵(たまご)","hiragana":"","en":"egg"},{"id":18,"kanji":"肉(にく)","hiragana":"","en":"meat"},{"id":19,"kanji":"魚(さかな)","hiragana":"","en":"fish"},{"id":20,"kanji":"野菜(やさい)","hiragana":"","en":"vegetable"},{"id":21,"kanji":"果物(くだもの)","hiragana":"","en":"fruit"},{"id":22,"kanji":"水(みず)","hiragana":"","en":"water"},{"id":23,"kanji":"お茶(おちゃ)","hiragana":"","en":"tea"},{"id":24,"kanji":"紅茶(こうちゃ)","hiragana":"","en":"black tea"},{"id":25,"kanji":"牛乳(ぎゅうにゅう)","hiragana":"","en":"milk"},{"id":26,"kanji":"ジュース","hiragana":"","en":"juice"},{"id":27,"kanji":"ビール","hiragana":"","en":"beer"},{"id":28,"kanji":"お酒(おさけ)","hiragana":"","en":"alcohol; sake"},{"id":29,"kanji":"映画(えいが)","hiragana":"","en":"movie"},{"id":30,"kanji":"手紙(てがみ)","hiragana":"","en":"letter"},{"id":31,"kanji":"写真(しゃしん)","hiragana":"","en":"photograph"},{"id":32,"kanji":"店(みせ)","hiragana":"","en":"shop"},{"id":33,"kanji":"レストラン","hiragana":"","en":"restaurant"},{"id":34,"kanji":"庭(にわ)","hiragana":"","en":"garden"},{"id":35,"kanji":"宿題(しゅくだい)","hiragana":"","en":"homework"},{"id":36,"kanji":"何(なに)","hiragana":"","en":"what"},{"id":37,"kanji":"一緒に(いっしょに)","hiragana":"","en":"together"},{"id":38,"kanji":"ちょっと","hiragana":"","en":"a little"},{"id":39,"kanji":"いつも","hiragana":"","en":"always"},{"id":40,"kanji":"時々(ときどき)","hiragana":"","en":"sometimes"},{"id":41,"kanji":"それから","hiragana":"","en":"after that"},{"id":42,"kanji":"いいですね","hiragana":"","en":"that sounds good"},{"id":43,"kanji":"分かりました(わかりました)","hiragana":"","en":"I understand"},{"id":44,"kanji":"じゃ、また","hiragana":"","en":"see you later"}]},{"lesson":7,"title":"Lesson 7 – Giving & Receiving","vocab":[{"id":1,"kanji":"切ります(きります)","hiragana":"","en":"cut"},{"id":2,"kanji":"送ります(おくります)","hiragana":"","en":"send"},{"id":3,"kanji":"あげます","hiragana":"","en":"give"},{"id":4,"kanji":"もらいます","hiragana":"","en":"receive"},{"id":5,"kanji":"貸します(かします)","hiragana":"","en":"lend"},{"id":6,"kanji":"借ります(かります)","hiragana":"","en":"borrow"},{"id":7,"kanji":"教えます(おしえます)","hiragana":"","en":"teach"},{"id":8,"kanji":"習います(ならいます)","hiragana":"","en":"learn"},{"id":9,"kanji":"かけます","hiragana":"","en":"make (a phone call)"},{"id":10,"kanji":"手(て)","hiragana":"","en":"hand"},{"id":11,"kanji":"箸(はし)","hiragana":"","en":"chopsticks"},{"id":12,"kanji":"スプーン","hiragana":"","en":"spoon"},{"id":13,"kanji":"ナイフ","hiragana":"","en":"knife"},{"id":14,"kanji":"フォーク","hiragana":"","en":"fork"},{"id":15,"kanji":"はさみ","hiragana":"","en":"scissors"},{"id":16,"kanji":"ファクス","hiragana":"","en":"fax"},{"id":17,"kanji":"ワープロ","hiragana":"","en":"word processor"},{"id":18,"kanji":"パソコン","hiragana":"","en":"personal computer"},{"id":19,"kanji":"ホッチキス","hiragana":"","en":"stapler"},{"id":20,"kanji":"セロテープ","hiragana":"","en":"adhesive tape"},{"id":21,"kanji":"消しゴム(けしゴム)","hiragana":"","en":"eraser"},{"id":22,"kanji":"紙(かみ)","hiragana":"","en":"paper"},{"id":23,"kanji":"花(はな)","hiragana":"","en":"flower"},{"id":24,"kanji":"荷物(にもつ)","hiragana":"","en":"luggage"},{"id":25,"kanji":"お金(おかね)","hiragana":"","en":"money"},{"id":26,"kanji":"切符(きっぷ)","hiragana":"","en":"ticket"},{"id":27,"kanji":"父(ちち)","hiragana":"","en":"(my) father"},{"id":28,"kanji":"母(はは)","hiragana":"","en":"(my) mother"},{"id":29,"kanji":"お父さん(おとうさん)","hiragana":"","en":"(someone else's) father"},{"id":30,"kanji":"お母さん(おかあさん)","hiragana":"","en":"(someone else's) mother"},{"id":31,"kanji":"もう","hiragana":"","en":"already"},{"id":32,"kanji":"まだ","hiragana":"","en":"not yet"},{"id":33,"kanji":"これから","hiragana":"","en":"from now on"},{"id":34,"kanji":"すてきですね","hiragana":"","en":"that is lovely"},{"id":35,"kanji":"ごめんください","hiragana":"","en":"excuse me (at door)"},{"id":36,"kanji":"いらっしゃい","hiragana":"","en":"welcome"},{"id":37,"kanji":"どうぞお上がりください(どうぞおあがりください)","hiragana":"","en":"please come in"},{"id":38,"kanji":"失礼します(しつれいします)","hiragana":"","en":"excuse me"},{"id":39,"kanji":"いかがですか","hiragana":"","en":"would you like"},{"id":40,"kanji":"いただきます","hiragana":"","en":"I humbly receive (before eating)"},{"id":41,"kanji":"旅行(りょこう)","hiragana":"","en":"trip"},{"id":42,"kanji":"お土産(おみやげ)","hiragana":"","en":"souvenir"},{"id":43,"kanji":"プレゼント","hiragana":"","en":"present; gift"}]},{"lesson":8,"title":"Lesson 8 – Adjectives & Descriptions","vocab":[{"id":1,"kanji":"ハンサム[な]","hiragana":"","en":"handsome"},{"id":2,"kanji":"きれい[な]","hiragana":"","en":"beautiful; clean"},{"id":3,"kanji":"静か[な](しずか)","hiragana":"","en":"quiet"},{"id":4,"kanji":"にぎやか[な]","hiragana":"","en":"lively"},{"id":5,"kanji":"有名[な](ゆうめい)","hiragana":"","en":"famous"},{"id":6,"kanji":"親切[な](しんせつ)","hiragana":"","en":"kind"},{"id":7,"kanji":"元気[な](げんき)","hiragana":"","en":"healthy; cheerful"},{"id":8,"kanji":"暇[な](ひま)","hiragana":"","en":"free (time)"},{"id":9,"kanji":"便利[な](べんり)","hiragana":"","en":"convenient"},{"id":10,"kanji":"すてき[な]","hiragana":"","en":"lovely; wonderful"},{"id":11,"kanji":"大きい(おおきい)","hiragana":"","en":"big"},{"id":12,"kanji":"小さい(ちいさい)","hiragana":"","en":"small"},{"id":13,"kanji":"新しい(あたらしい)","hiragana":"","en":"new"},{"id":14,"kanji":"古い(ふるい)","hiragana":"","en":"old (not for people)"},{"id":15,"kanji":"いい(よい)","hiragana":"","en":"good"},{"id":16,"kanji":"悪い(わるい)","hiragana":"","en":"bad"},{"id":17,"kanji":"暑い/熱い(あつい)","hiragana":"","en":"hot"},{"id":18,"kanji":"寒い(さむい)","hiragana":"","en":"cold (weather)"},{"id":19,"kanji":"冷たい(つめたい)","hiragana":"","en":"cold (touch)"},{"id":20,"kanji":"難しい(むずかしい)","hiragana":"","en":"difficult"},{"id":21,"kanji":"易しい(やさしい)","hiragana":"","en":"easy"},{"id":22,"kanji":"高い(たかい)","hiragana":"","en":"expensive; tall"},{"id":23,"kanji":"安い(やすい)","hiragana":"","en":"cheap"},{"id":24,"kanji":"低い(ひくい)","hiragana":"","en":"low"},{"id":25,"kanji":"おもしろい","hiragana":"","en":"interesting"},{"id":26,"kanji":"おいしい","hiragana":"","en":"delicious"},{"id":27,"kanji":"忙しい(いそがしい)","hiragana":"","en":"busy"},{"id":28,"kanji":"楽しい(たのしい)","hiragana":"","en":"fun"},{"id":29,"kanji":"白い(しろい)","hiragana":"","en":"white"},{"id":30,"kanji":"黒い(くろい)","hiragana":"","en":"black"},{"id":31,"kanji":"赤い(あかい)","hiragana":"","en":"red"},{"id":32,"kanji":"青い(あおい)","hiragana":"","en":"blue"},{"id":33,"kanji":"桜(さくら)","hiragana":"","en":"cherry blossom"},{"id":34,"kanji":"山(やま)","hiragana":"","en":"mountain"},{"id":35,"kanji":"町(まち)","hiragana":"","en":"town; city"},{"id":36,"kanji":"食べ物(たべもの)","hiragana":"","en":"food"},{"id":37,"kanji":"車(くるま)","hiragana":"","en":"car"},{"id":38,"kanji":"所(ところ)","hiragana":"","en":"place"},{"id":39,"kanji":"寮(りょう)","hiragana":"","en":"dormitory"},{"id":40,"kanji":"勉強(べんきょう)","hiragana":"","en":"study"},{"id":41,"kanji":"生活(せいかつ)","hiragana":"","en":"life"},{"id":42,"kanji":"お仕事(おしごと)","hiragana":"","en":"work"},{"id":43,"kanji":"どう","hiragana":"","en":"how"},{"id":44,"kanji":"どんな〜","hiragana":"","en":"what kind of"},{"id":45,"kanji":"どれ","hiragana":"","en":"which"},{"id":46,"kanji":"とても","hiragana":"","en":"very"},{"id":47,"kanji":"あまり","hiragana":"","en":"not very (with negative)"},{"id":48,"kanji":"そして","hiragana":"","en":"and"},{"id":49,"kanji":"〜が、〜","hiragana":"","en":"but"},{"id":50,"kanji":"お元気ですか(おげんきですか)","hiragana":"","en":"how are you"},{"id":51,"kanji":"そうですね","hiragana":"","en":"well, let me see"},{"id":52,"kanji":"日本の生活になれましたか(にほんのせいかつ)","hiragana":"","en":"are you used to life in Japan"},{"id":53,"kanji":"もう一杯いかがですか(もういっぱい)","hiragana":"","en":"would you like another cup"},{"id":54,"kanji":"いいえ、けっこうです","hiragana":"","en":"no, thank you"},{"id":55,"kanji":"もう〜ですね","hiragana":"","en":"already ~, isn’t it"},{"id":56,"kanji":"そろそろ失礼します(しつれいします)","hiragana":"","en":"it is about time to leave"},{"id":57,"kanji":"またいらっしゃってください","hiragana":"","en":"please come again"}]},{"lesson":9,"title":"Lesson 9 – Preferences & Skills","vocab":[{"id":1,"kanji":"分かります(わかります)","hiragana":"","en":"understand"},{"id":2,"kanji":"あります","hiragana":"","en":"have; exist (things)"},{"id":3,"kanji":"好き[な](すき)","hiragana":"","en":"like"},{"id":4,"kanji":"嫌い[な](きらい)","hiragana":"","en":"dislike"},{"id":5,"kanji":"上手[な](じょうず)","hiragana":"","en":"good at"},{"id":6,"kanji":"下手[な](へた)","hiragana":"","en":"poor at"},{"id":7,"kanji":"料理(りょうり)","hiragana":"","en":"cooking; dish"},{"id":8,"kanji":"飲み物(のみもの)","hiragana":"","en":"drinks"},{"id":9,"kanji":"スポーツ","hiragana":"","en":"sports"},{"id":10,"kanji":"野球(やきゅう)","hiragana":"","en":"baseball"},{"id":11,"kanji":"ダンス","hiragana":"","en":"dance"},{"id":12,"kanji":"音楽(おんがく)","hiragana":"","en":"music"},{"id":13,"kanji":"歌(うた)","hiragana":"","en":"song"},{"id":14,"kanji":"クラシック","hiragana":"","en":"classical music"},{"id":15,"kanji":"ジャズ","hiragana":"","en":"jazz"},{"id":16,"kanji":"コンサート","hiragana":"","en":"concert"},{"id":17,"kanji":"カラオケ","hiragana":"","en":"karaoke"},{"id":18,"kanji":"歌舞伎(かぶき)","hiragana":"","en":"Kabuki"},{"id":19,"kanji":"絵(え)","hiragana":"","en":"picture"},{"id":20,"kanji":"字(じ)","hiragana":"","en":"character; letter"},{"id":21,"kanji":"漢字(かんじ)","hiragana":"","en":"kanji"},{"id":22,"kanji":"ひらがな","hiragana":"","en":"hiragana"},{"id":23,"kanji":"カタカナ","hiragana":"","en":"katakana"},{"id":24,"kanji":"ローマ字(ローマじ)","hiragana":"","en":"Roman alphabet"},{"id":25,"kanji":"細かいお金(こまかいおかね)","hiragana":"","en":"small change"},{"id":26,"kanji":"チケット","hiragana":"","en":"ticket"},{"id":27,"kanji":"時間(じかん)","hiragana":"","en":"time"},{"id":28,"kanji":"用事(ようじ)","hiragana":"","en":"errand"},{"id":29,"kanji":"約束(やくそく)","hiragana":"","en":"appointment"},{"id":30,"kanji":"ご主人(ごしゅじん)","hiragana":"","en":"(someone else's) husband"},{"id":31,"kanji":"夫/主人(おっと/しゅじん)","hiragana":"","en":"(my) husband"},{"id":32,"kanji":"奥さん(おくさん)","hiragana":"","en":"(someone else's) wife"},{"id":33,"kanji":"妻/家内(つま/かない)","hiragana":"","en":"(my) wife"},{"id":34,"kanji":"子供(こども)","hiragana":"","en":"child"},{"id":35,"kanji":"よく","hiragana":"","en":"well; often"},{"id":36,"kanji":"だいたい","hiragana":"","en":"mostly"},{"id":37,"kanji":"たくさん","hiragana":"","en":"many; much"},{"id":38,"kanji":"少し(すこし)","hiragana":"","en":"a little"},{"id":39,"kanji":"全然(ぜんぜん)","hiragana":"","en":"not at all (with negative)"},{"id":40,"kanji":"早く/速く(はやく)","hiragana":"","en":"early; fast"},{"id":41,"kanji":"から","hiragana":"","en":"because"},{"id":42,"kanji":"どうして","hiragana":"","en":"why"},{"id":43,"kanji":"残念ですね(ざんねん)","hiragana":"","en":"that is a pity"},{"id":44,"kanji":"もしもし","hiragana":"","en":"hello (phone)"},{"id":45,"kanji":"ああ","hiragana":"","en":"oh"},{"id":46,"kanji":"一緒にいかがですか(いっしょに)","hiragana":"","en":"would you like to join"},{"id":47,"kanji":"ちょっと...","hiragana":"","en":"a little (declining)"},{"id":48,"kanji":"だめですか","hiragana":"","en":"is it not possible"},{"id":49,"kanji":"また今度お願いします(こんど)","hiragana":"","en":"please ask me again next time"}]},{"lesson":10,"title":"Lesson 10 – Existence & Location","vocab":[{"id":1,"kanji":"あります","hiragana":"","en":"exist (things)"},{"id":2,"kanji":"います","hiragana":"","en":"exist (people/animals)"},{"id":3,"kanji":"いろいろ[な]","hiragana":"","en":"various"},{"id":4,"kanji":"男の人(おとこのひと)","hiragana":"","en":"man"},{"id":5,"kanji":"女の人(おんなのひと)","hiragana":"","en":"woman"},{"id":6,"kanji":"男の子(おとこのこ)","hiragana":"","en":"boy"},{"id":7,"kanji":"女の子(おんなのこ)","hiragana":"","en":"girl"},{"id":8,"kanji":"犬(いぬ)","hiragana":"","en":"dog"},{"id":9,"kanji":"猫(ねこ)","hiragana":"","en":"cat"},{"id":10,"kanji":"木(き)","hiragana":"","en":"tree"},{"id":11,"kanji":"物(もの)","hiragana":"","en":"thing"},{"id":12,"kanji":"フィルム","hiragana":"","en":"film"},{"id":13,"kanji":"電池(でんち)","hiragana":"","en":"battery"},{"id":14,"kanji":"箱(はこ)","hiragana":"","en":"box"},{"id":15,"kanji":"スイッチ","hiragana":"","en":"switch"},{"id":16,"kanji":"冷蔵庫(れいぞうこ)","hiragana":"","en":"refrigerator"},{"id":17,"kanji":"テーブル","hiragana":"","en":"table"},{"id":18,"kanji":"ベッド","hiragana":"","en":"bed"},{"id":19,"kanji":"棚(たな)","hiragana":"","en":"shelf"},{"id":20,"kanji":"ドア","hiragana":"","en":"door"},{"id":21,"kanji":"窓(まど)","hiragana":"","en":"window"},{"id":22,"kanji":"ポスト","hiragana":"","en":"mailbox"},{"id":23,"kanji":"ビル","hiragana":"","en":"building"},{"id":24,"kanji":"公園(こうえん)","hiragana":"","en":"park"},{"id":25,"kanji":"喫茶店(きっさてん)","hiragana":"","en":"coffee shop"},{"id":26,"kanji":"本屋(ほんや)","hiragana":"","en":"bookstore"},{"id":27,"kanji":"〜屋(〜や)","hiragana":"","en":"~ shop"},{"id":28,"kanji":"乗り場(のりば)","hiragana":"","en":"boarding place"},{"id":29,"kanji":"県(けん)","hiragana":"","en":"prefecture"},{"id":30,"kanji":"上(うえ)","hiragana":"","en":"above"},{"id":31,"kanji":"下(した)","hiragana":"","en":"below"},{"id":32,"kanji":"前(まえ)","hiragana":"","en":"front"},{"id":33,"kanji":"後ろ(うしろ)","hiragana":"","en":"behind"},{"id":34,"kanji":"右(みぎ)","hiragana":"","en":"right"},{"id":35,"kanji":"左(ひだり)","hiragana":"","en":"left"},{"id":36,"kanji":"中(なか)","hiragana":"","en":"inside"},{"id":37,"kanji":"外(そと)","hiragana":"","en":"outside"},{"id":38,"kanji":"隣(となり)","hiragana":"","en":"next to"},{"id":39,"kanji":"近く(ちかく)","hiragana":"","en":"near"},{"id":40,"kanji":"間(あいだ)","hiragana":"","en":"between"},{"id":41,"kanji":"〜や〜など","hiragana":"","en":"~ and so on"},{"id":42,"kanji":"一番(いちばん)","hiragana":"","en":"the most"},{"id":43,"kanji":"〜段目(〜だんめ)","hiragana":"","en":"~th shelf"},{"id":44,"kanji":"どうもすみません","hiragana":"","en":"thank you very much"},{"id":45,"kanji":"チリソース","hiragana":"","en":"chili sauce"},{"id":46,"kanji":"奥(おく)","hiragana":"","en":"back"},{"id":47,"kanji":"スパイスコーナー","hiragana":"","en":"spice corner"}]},{"lesson":11,"title":"Lesson 11 – Counters & Quantities","vocab":[{"id":1,"kanji":"一つ(ひとつ)","hiragana":"","en":"one (thing)"},{"id":2,"kanji":"二つ(ふたつ)","hiragana":"","en":"two"},{"id":3,"kanji":"三つ(みっつ)","hiragana":"","en":"three"},{"id":4,"kanji":"四つ(よっつ)","hiragana":"","en":"four"},{"id":5,"kanji":"五つ(いつつ)","hiragana":"","en":"five"},{"id":6,"kanji":"六つ(むっつ)","hiragana":"","en":"six"},{"id":7,"kanji":"七つ(ななつ)","hiragana":"","en":"seven"},{"id":8,"kanji":"八つ(やっつ)","hiragana":"","en":"eight"},{"id":9,"kanji":"九つ(ここのつ)","hiragana":"","en":"nine"},{"id":10,"kanji":"十(とお)","hiragana":"","en":"ten"},{"id":11,"kanji":"いくつ","hiragana":"","en":"how many"},{"id":12,"kanji":"一人(ひとり)","hiragana":"","en":"one person"},{"id":13,"kanji":"二人(ふたり)","hiragana":"","en":"two people"},{"id":14,"kanji":"〜人(〜にん)","hiragana":"","en":"~ people"},{"id":15,"kanji":"〜台(〜だい)","hiragana":"","en":"counter for machines"},{"id":16,"kanji":"〜枚(〜まい)","hiragana":"","en":"counter for flat objects"},{"id":17,"kanji":"〜回(〜かい)","hiragana":"","en":"~ times"},{"id":18,"kanji":"りんご","hiragana":"","en":"apple"},{"id":19,"kanji":"みかん","hiragana":"","en":"mandarin orange"},{"id":20,"kanji":"サンドイッチ","hiragana":"","en":"sandwich"},{"id":21,"kanji":"カレーライス","hiragana":"","en":"curry rice"},{"id":22,"kanji":"アイスクリーム","hiragana":"","en":"ice cream"},{"id":23,"kanji":"切手(きって)","hiragana":"","en":"stamp"},{"id":24,"kanji":"葉書(はがき)","hiragana":"","en":"postcard"},{"id":25,"kanji":"封筒(ふうとう)","hiragana":"","en":"envelope"},{"id":26,"kanji":"速達(そくたつ)","hiragana":"","en":"express delivery"},{"id":27,"kanji":"書留(かきとめ)","hiragana":"","en":"registered mail"},{"id":28,"kanji":"航空便(こうくうびん)","hiragana":"","en":"airmail"},{"id":29,"kanji":"船便(ふなびん)","hiragana":"","en":"surface mail"},{"id":30,"kanji":"両親(りょうしん)","hiragana":"","en":"parents"},{"id":31,"kanji":"兄弟(きょうだい)","hiragana":"","en":"siblings"},{"id":32,"kanji":"兄(あに)","hiragana":"","en":"(my) older brother"},{"id":33,"kanji":"お兄さん(おにいさん)","hiragana":"","en":"(someone else's) older brother"},{"id":34,"kanji":"姉(あね)","hiragana":"","en":"(my) older sister"},{"id":35,"kanji":"お姉さん(おねえさん)","hiragana":"","en":"(someone else's) older sister"},{"id":36,"kanji":"弟(おとうと)","hiragana":"","en":"(my) younger brother"},{"id":37,"kanji":"弟さん(おとうとさん)","hiragana":"","en":"(someone else's) younger brother"},{"id":38,"kanji":"妹(いもうと)","hiragana":"","en":"(my) younger sister"},{"id":39,"kanji":"妹さん(いもうとさん)","hiragana":"","en":"(someone else's) younger sister"},{"id":40,"kanji":"外国(がいこく)","hiragana":"","en":"foreign country"},{"id":41,"kanji":"〜時間(〜じかん)","hiragana":"","en":"~ hours"},{"id":42,"kanji":"〜週間(〜しゅうかん)","hiragana":"","en":"~ weeks"},{"id":43,"kanji":"〜か月(〜かげつ)","hiragana":"","en":"~ months"},{"id":44,"kanji":"〜年(〜ねん)","hiragana":"","en":"~ years"},{"id":45,"kanji":"〜ぐらい","hiragana":"","en":"about"},{"id":46,"kanji":"どのくらい","hiragana":"","en":"how long"},{"id":47,"kanji":"全部で(ぜんぶで)","hiragana":"","en":"in total"},{"id":48,"kanji":"みんな","hiragana":"","en":"everyone"},{"id":49,"kanji":"だけ","hiragana":"","en":"only"},{"id":50,"kanji":"いらっしゃいませ","hiragana":"","en":"welcome (shop)"},{"id":51,"kanji":"いい天気ですね(いいてんき)","hiragana":"","en":"nice weather"},{"id":52,"kanji":"お出かけですか(おでかけ)","hiragana":"","en":"going out"},{"id":53,"kanji":"ちょっと〜まで","hiragana":"","en":"just going to"},{"id":54,"kanji":"行ってらっしゃい(いってらっしゃい)","hiragana":"","en":"see you later"},{"id":55,"kanji":"行って参ります(いってまいります)","hiragana":"","en":"I’m leaving"},{"id":56,"kanji":"それから","hiragana":"","en":"after that"},{"id":57,"kanji":"オーストラリア","hiragana":"","en":"Australia"}]},{"lesson":12,"title":"Lesson 12 – Weather, Seasons & Comparison","vocab":[{"id":1,"kanji":"簡単[な](かんたん)","hiragana":"","en":"easy; simple"},{"id":2,"kanji":"近い(ちかい)","hiragana":"","en":"near"},{"id":3,"kanji":"遠い(とおい)","hiragana":"","en":"far"},{"id":4,"kanji":"速い/早い(はやい)","hiragana":"","en":"fast; early"},{"id":5,"kanji":"遅い(おそい)","hiragana":"","en":"slow; late"},{"id":6,"kanji":"多い[人が〜](おおい)","hiragana":"","en":"many; much"},{"id":7,"kanji":"少ない[人が〜](すくない)","hiragana":"","en":"few; little"},{"id":8,"kanji":"暖かい/温かい(あたたかい)","hiragana":"","en":"warm"},{"id":9,"kanji":"涼しい(すずしい)","hiragana":"","en":"cool"},{"id":10,"kanji":"甘い(あまい)","hiragana":"","en":"sweet"},{"id":11,"kanji":"辛い(からい)","hiragana":"","en":"spicy; hot (taste)"},{"id":12,"kanji":"重い(おもい)","hiragana":"","en":"heavy"},{"id":13,"kanji":"軽い(かるい)","hiragana":"","en":"light (weight)"},{"id":14,"kanji":"いい[コーヒーが〜]","hiragana":"","en":"prefer (e.g. I prefer coffee)"},{"id":15,"kanji":"季節(きせつ)","hiragana":"","en":"season"},{"id":16,"kanji":"春(はる)","hiragana":"","en":"spring"},{"id":17,"kanji":"夏(なつ)","hiragana":"","en":"summer"},{"id":18,"kanji":"秋(あき)","hiragana":"","en":"autumn"},{"id":19,"kanji":"冬(ふゆ)","hiragana":"","en":"winter"},{"id":20,"kanji":"天気(てんき)","hiragana":"","en":"weather"},{"id":21,"kanji":"雨(あめ)","hiragana":"","en":"rain"},{"id":22,"kanji":"雪(ゆき)","hiragana":"","en":"snow"},{"id":23,"kanji":"曇り(くもり)","hiragana":"","en":"cloudy"},{"id":24,"kanji":"ホテル","hiragana":"","en":"hotel"},{"id":25,"kanji":"空港(くうこう)","hiragana":"","en":"airport"},{"id":26,"kanji":"海(うみ)","hiragana":"","en":"sea"},{"id":27,"kanji":"世界(せかい)","hiragana":"","en":"world"},{"id":28,"kanji":"パーティー","hiragana":"","en":"party"},{"id":29,"kanji":"お祭り(おまつり)","hiragana":"","en":"festival"},{"id":30,"kanji":"試験(しけん)","hiragana":"","en":"exam"},{"id":31,"kanji":"すき焼き(すきやき)","hiragana":"","en":"sukiyaki"},{"id":32,"kanji":"刺身(さしみ)","hiragana":"","en":"sashimi"},{"id":33,"kanji":"お寿司(おすし)","hiragana":"","en":"sushi"},{"id":34,"kanji":"天ぷら(てんぷら)","hiragana":"","en":"tempura"},{"id":35,"kanji":"生け花(いけばな)","hiragana":"","en":"flower arrangement"},{"id":36,"kanji":"紅葉(もみじ)","hiragana":"","en":"autumn leaves"},{"id":37,"kanji":"どちら","hiragana":"","en":"which (of two)"},{"id":38,"kanji":"どちらも","hiragana":"","en":"both"},{"id":39,"kanji":"ずっと","hiragana":"","en":"by far"},{"id":40,"kanji":"初めて(はじめて)","hiragana":"","en":"for the first time"},{"id":41,"kanji":"ただいま","hiragana":"","en":"I’m home"},{"id":42,"kanji":"おかえりなさい","hiragana":"","en":"welcome home"},{"id":43,"kanji":"すごいですね","hiragana":"","en":"that’s amazing"},{"id":44,"kanji":"でも","hiragana":"","en":"but"},{"id":45,"kanji":"疲れました(つかれました)","hiragana":"","en":"I’m tired"}]},{"lesson":13,"title":"Lesson 13 – Activities & Wants","vocab":[{"id":1,"kanji":"遊びます(あそびます)","hiragana":"","en":"play; enjoy"},{"id":2,"kanji":"泳ぎます(およぎます)","hiragana":"","en":"swim"},{"id":3,"kanji":"迎えます(むかえます)","hiragana":"","en":"go to meet"},{"id":4,"kanji":"疲れます(つかれます)","hiragana":"","en":"get tired"},{"id":5,"kanji":"出します(だします)","hiragana":"","en":"send; submit"},{"id":6,"kanji":"入ります(はいります)","hiragana":"","en":"enter"},{"id":7,"kanji":"出ます(でます)","hiragana":"","en":"leave"},{"id":8,"kanji":"結婚します(けっこんします)","hiragana":"","en":"get married"},{"id":9,"kanji":"買い物します(かいものします)","hiragana":"","en":"shop"},{"id":10,"kanji":"食事します(しょくじします)","hiragana":"","en":"have a meal"},{"id":11,"kanji":"散歩します(さんぽします)","hiragana":"","en":"take a walk"},{"id":12,"kanji":"大変[な](たいへん)","hiragana":"","en":"hard; tough"},{"id":13,"kanji":"欲しい(ほしい)","hiragana":"","en":"want"},{"id":14,"kanji":"寂しい(さびしい)","hiragana":"","en":"lonely"},{"id":15,"kanji":"広い(ひろい)","hiragana":"","en":"wide"},{"id":16,"kanji":"狭い(せまい)","hiragana":"","en":"narrow"},{"id":17,"kanji":"市役所(しやくしょ)","hiragana":"","en":"city hall"},{"id":18,"kanji":"プール","hiragana":"","en":"pool"},{"id":19,"kanji":"川(かわ)","hiragana":"","en":"river"},{"id":20,"kanji":"経済(けいざい)","hiragana":"","en":"economy"},{"id":21,"kanji":"美術(びじゅつ)","hiragana":"","en":"art"},{"id":22,"kanji":"釣り(つり)","hiragana":"","en":"fishing"},{"id":23,"kanji":"スキー","hiragana":"","en":"skiing"},{"id":24,"kanji":"会議(かいぎ)","hiragana":"","en":"meeting"},{"id":25,"kanji":"登録(とうろく)","hiragana":"","en":"registration"},{"id":26,"kanji":"週末(しゅうまつ)","hiragana":"","en":"weekend"},{"id":27,"kanji":"〜ごろ","hiragana":"","en":"about (time)"},{"id":28,"kanji":"何か(なにか)","hiragana":"","en":"something"},{"id":29,"kanji":"どこか","hiragana":"","en":"somewhere"},{"id":30,"kanji":"お腹がすきました(おなか)","hiragana":"","en":"I’m hungry"},{"id":31,"kanji":"お腹がいっぱいです","hiragana":"","en":"I’m full"},{"id":32,"kanji":"のどが渇きました(かわきました)","hiragana":"","en":"I’m thirsty"},{"id":33,"kanji":"そうですね","hiragana":"","en":"I agree"},{"id":34,"kanji":"そうしましょう","hiragana":"","en":"let’s do that"},{"id":35,"kanji":"ご注文は(ごちゅうもん)","hiragana":"","en":"your order"},{"id":36,"kanji":"定食(ていしょく)","hiragana":"","en":"set meal"},{"id":37,"kanji":"牛丼(ぎゅうどん)","hiragana":"","en":"beef bowl"},{"id":38,"kanji":"少々お待ちください(しょうしょう)","hiragana":"","en":"please wait a moment"},{"id":39,"kanji":"別々に(べつべつ)","hiragana":"","en":"separately"}]},{"lesson":14,"title":"Lesson 14 – Requests & Actions","vocab":[{"id":1,"kanji":"つけます","hiragana":"","en":"turn on"},{"id":2,"kanji":"消します(けします)","hiragana":"","en":"turn off"},{"id":3,"kanji":"開けます(あけます)","hiragana":"","en":"open"},{"id":4,"kanji":"閉めます(しめます)","hiragana":"","en":"close"},{"id":5,"kanji":"急ぎます(いそぎます)","hiragana":"","en":"hurry"},{"id":6,"kanji":"待ちます(まちます)","hiragana":"","en":"wait"},{"id":7,"kanji":"止めます(とめます)","hiragana":"","en":"stop; park"},{"id":8,"kanji":"曲がります(まがります)","hiragana":"","en":"turn"},{"id":9,"kanji":"持ちます(もちます)","hiragana":"","en":"hold"},{"id":10,"kanji":"取ります(とります)","hiragana":"","en":"take"},{"id":11,"kanji":"手伝います(てつだいます)","hiragana":"","en":"help"},{"id":12,"kanji":"呼びます(よびます)","hiragana":"","en":"call"},{"id":13,"kanji":"話します(はなします)","hiragana":"","en":"speak"},{"id":14,"kanji":"見せます(みせます)","hiragana":"","en":"show"},{"id":15,"kanji":"教えます(おしえます)","hiragana":"","en":"tell; teach"},{"id":16,"kanji":"始めます(はじめます)","hiragana":"","en":"start"},{"id":17,"kanji":"降ります(ふります)","hiragana":"","en":"fall (rain)"},{"id":18,"kanji":"コピーします","hiragana":"","en":"copy"},{"id":19,"kanji":"エアコン","hiragana":"","en":"air conditioner"},{"id":20,"kanji":"パスポート","hiragana":"","en":"passport"},{"id":21,"kanji":"名前(なまえ)","hiragana":"","en":"name"},{"id":22,"kanji":"住所(じゅうしょ)","hiragana":"","en":"address"},{"id":23,"kanji":"地図(ちず)","hiragana":"","en":"map"},{"id":24,"kanji":"塩(しお)","hiragana":"","en":"salt"},{"id":25,"kanji":"砂糖(さとう)","hiragana":"","en":"sugar"},{"id":26,"kanji":"読み方(よみかた)","hiragana":"","en":"way of reading"},{"id":27,"kanji":"〜方(〜かた)","hiragana":"","en":"how to ~"},{"id":28,"kanji":"ゆっくり","hiragana":"","en":"slowly"},{"id":29,"kanji":"すぐ","hiragana":"","en":"immediately"},{"id":30,"kanji":"また","hiragana":"","en":"again"},{"id":31,"kanji":"あとで","hiragana":"","en":"later"},{"id":32,"kanji":"もう少し(もうすこし)","hiragana":"","en":"a little more"},{"id":33,"kanji":"もう〜","hiragana":"","en":"another ~"},{"id":34,"kanji":"いいですよ","hiragana":"","en":"sure"},{"id":35,"kanji":"さあ","hiragana":"","en":"come on"},{"id":36,"kanji":"あれ?","hiragana":"","en":"huh?"},{"id":37,"kanji":"信号を右へ曲がってください(しんごう)","hiragana":"","en":"turn right at the signal"},{"id":38,"kanji":"まっすぐ","hiragana":"","en":"straight"},{"id":39,"kanji":"これでお願いします","hiragana":"","en":"I’ll pay with this"},{"id":40,"kanji":"お釣り(おつり)","hiragana":"","en":"change"}]},{"lesson":15,"title":"Lesson 15 – Work & Life","vocab":[{"id":1,"kanji":"置きます(おきます)","hiragana":"","en":"put; place"},{"id":2,"kanji":"作ります/造ります(つくります)","hiragana":"","en":"make; produce"},{"id":3,"kanji":"売ります(うります)","hiragana":"","en":"sell"},{"id":4,"kanji":"知ります(しります)","hiragana":"","en":"get to know"},{"id":5,"kanji":"住みます(すみます)","hiragana":"","en":"live; reside"},{"id":6,"kanji":"研究します(けんきゅうします)","hiragana":"","en":"research"},{"id":7,"kanji":"資料(しりょう)","hiragana":"","en":"materials; data"},{"id":8,"kanji":"カタログ","hiragana":"","en":"catalog"},{"id":9,"kanji":"時刻表(じこくひょう)","hiragana":"","en":"timetable"},{"id":10,"kanji":"服(ふく)","hiragana":"","en":"clothes"},{"id":11,"kanji":"製品(せいひん)","hiragana":"","en":"product"},{"id":12,"kanji":"ソフト","hiragana":"","en":"software"},{"id":13,"kanji":"専門(せんもん)","hiragana":"","en":"specialty; field"},{"id":14,"kanji":"歯医者(はいしゃ)","hiragana":"","en":"dentist"},{"id":15,"kanji":"床屋(とこや)","hiragana":"","en":"barber"},{"id":16,"kanji":"プレイガイド","hiragana":"","en":"ticket agency"},{"id":17,"kanji":"独身(どくしん)","hiragana":"","en":"single; unmarried"},{"id":18,"kanji":"特に(とくに)","hiragana":"","en":"especially"},{"id":19,"kanji":"思い出します(おもいだします)","hiragana":"","en":"remember"},{"id":20,"kanji":"ご家族(ごかぞく)","hiragana":"","en":"your family"},{"id":21,"kanji":"いらっしゃいます","hiragana":"","en":"be (honorific)"}]},{"lesson":16,"title":"Lesson 16 – Movement & Body","vocab":[{"id":1,"kanji":"乗ります(のります)","hiragana":"","en":"ride; get on"},{"id":2,"kanji":"降ります(おります)","hiragana":"","en":"get off"},{"id":3,"kanji":"乗り換えます(のりかえます)","hiragana":"","en":"transfer"},{"id":4,"kanji":"浴びます(あびます)","hiragana":"","en":"take (a shower)"},{"id":5,"kanji":"入れます(いれます)","hiragana":"","en":"put in"},{"id":6,"kanji":"出します(だします)","hiragana":"","en":"take out"},{"id":7,"kanji":"入ります(はいります)","hiragana":"","en":"enter"},{"id":8,"kanji":"出ます(でます)","hiragana":"","en":"leave; graduate"},{"id":9,"kanji":"やめます","hiragana":"","en":"quit"},{"id":10,"kanji":"押します(おします)","hiragana":"","en":"push"},{"id":11,"kanji":"若い(わかい)","hiragana":"","en":"young"},{"id":12,"kanji":"長い(ながい)","hiragana":"","en":"long"},{"id":13,"kanji":"短い(みじかい)","hiragana":"","en":"short"},{"id":14,"kanji":"明るい(あかるい)","hiragana":"","en":"bright"},{"id":15,"kanji":"暗い(くらい)","hiragana":"","en":"dark"},{"id":16,"kanji":"背が高い(せがたかい)","hiragana":"","en":"tall"},{"id":17,"kanji":"頭(あたま)","hiragana":"","en":"head"},{"id":18,"kanji":"髪(かみ)","hiragana":"","en":"hair"},{"id":19,"kanji":"顔(かお)","hiragana":"","en":"face"},{"id":20,"kanji":"目(め)","hiragana":"","en":"eye"},{"id":21,"kanji":"耳(みみ)","hiragana":"","en":"ear"},{"id":22,"kanji":"口(くち)","hiragana":"","en":"mouth"},{"id":23,"kanji":"歯(は)","hiragana":"","en":"tooth"},{"id":24,"kanji":"お腹(おなか)","hiragana":"","en":"stomach"},{"id":25,"kanji":"足(あし)","hiragana":"","en":"leg; foot"},{"id":26,"kanji":"サービス","hiragana":"","en":"service"},{"id":27,"kanji":"ジョギング","hiragana":"","en":"jogging"},{"id":28,"kanji":"シャワー","hiragana":"","en":"shower"},{"id":29,"kanji":"緑(みどり)","hiragana":"","en":"green"},{"id":30,"kanji":"お寺(おてら)","hiragana":"","en":"temple"},{"id":31,"kanji":"神社(じんじゃ)","hiragana":"","en":"shrine"},{"id":32,"kanji":"留学生(りゅうがくせい)","hiragana":"","en":"international student"},{"id":33,"kanji":"〜番(〜ばん)","hiragana":"","en":"number ~"},{"id":34,"kanji":"どうやって","hiragana":"","en":"how"},{"id":35,"kanji":"どの〜","hiragana":"","en":"which ~"},{"id":36,"kanji":"まだまだです","hiragana":"","en":"not yet; still a long way"},{"id":37,"kanji":"まず","hiragana":"","en":"first"},{"id":38,"kanji":"キャッシュカード","hiragana":"","en":"cash card"},{"id":39,"kanji":"暗証番号(あんしょうばんごう)","hiragana":"","en":"PIN"},{"id":40,"kanji":"次に(つぎに)","hiragana":"","en":"next"},{"id":41,"kanji":"金額(きんがく)","hiragana":"","en":"amount"},{"id":42,"kanji":"確認(かくにん)","hiragana":"","en":"confirmation"},{"id":43,"kanji":"ボタン","hiragana":"","en":"button"}]},{"lesson":17,"title":"Lesson 17 – Health & Daily Actions","vocab":[{"id":1,"kanji":"覚えます(おぼえます)","hiragana":"","en":"memorize"},{"id":2,"kanji":"忘れます(わすれます)","hiragana":"","en":"forget"},{"id":3,"kanji":"なくします","hiragana":"","en":"lose"},{"id":4,"kanji":"出します(だします)","hiragana":"","en":"submit"},{"id":5,"kanji":"払います(はらいます)","hiragana":"","en":"pay"},{"id":6,"kanji":"返します(かえします)","hiragana":"","en":"return"},{"id":7,"kanji":"出かけます(でかけます)","hiragana":"","en":"go out"},{"id":8,"kanji":"脱ぎます(ぬぎます)","hiragana":"","en":"take off (clothes)"},{"id":9,"kanji":"持って行きます(もっていきます)","hiragana":"","en":"take"},{"id":10,"kanji":"持って来ます(もってきます)","hiragana":"","en":"bring"},{"id":11,"kanji":"心配します(しんぱいします)","hiragana":"","en":"worry"},{"id":12,"kanji":"残業します(ざんぎょうします)","hiragana":"","en":"work overtime"},{"id":13,"kanji":"出張します(しゅっちょうします)","hiragana":"","en":"business trip"},{"id":14,"kanji":"飲みます(のみます)","hiragana":"","en":"take (medicine)"},{"id":15,"kanji":"入ります(はいります)","hiragana":"","en":"take (bath)"},{"id":16,"kanji":"大切[な](たいせつ)","hiragana":"","en":"important"},{"id":17,"kanji":"大丈夫[な](だいじょうぶ)","hiragana":"","en":"okay"},{"id":18,"kanji":"危ない(あぶない)","hiragana":"","en":"dangerous"},{"id":19,"kanji":"問題(もんだい)","hiragana":"","en":"problem"},{"id":20,"kanji":"答え(こたえ)","hiragana":"","en":"answer"},{"id":21,"kanji":"禁煙(きんえん)","hiragana":"","en":"no smoking"},{"id":22,"kanji":"保険証(ほけんしょう)","hiragana":"","en":"insurance card"},{"id":23,"kanji":"風邪(かぜ)","hiragana":"","en":"cold"},{"id":24,"kanji":"熱(ねつ)","hiragana":"","en":"fever"},{"id":25,"kanji":"病気(びょうき)","hiragana":"","en":"illness"},{"id":26,"kanji":"薬(くすり)","hiragana":"","en":"medicine"},{"id":27,"kanji":"お風呂(おふろ)","hiragana":"","en":"bath"},{"id":28,"kanji":"上着(うわぎ)","hiragana":"","en":"jacket"},{"id":29,"kanji":"下着(したぎ)","hiragana":"","en":"underwear"},{"id":30,"kanji":"〜までに","hiragana":"","en":"by (time limit)"},{"id":31,"kanji":"ですから","hiragana":"","en":"therefore"},{"id":32,"kanji":"どうしましたか","hiragana":"","en":"what’s wrong"},{"id":33,"kanji":"痛い(いたい)","hiragana":"","en":"painful"},{"id":34,"kanji":"喉(のど)","hiragana":"","en":"throat"},{"id":35,"kanji":"お大事に(おだいじに)","hiragana":"","en":"take care"}]},{"lesson":18,"title":"Lesson 18 – Ability & Hobbies","vocab":[{"id":1,"kanji":"できます","hiragana":"","en":"can; be able to"},{"id":2,"kanji":"洗います(あらいます)","hiragana":"","en":"wash"},{"id":3,"kanji":"弾きます(ひきます)","hiragana":"","en":"play (instrument)"},{"id":4,"kanji":"歌います(うたいます)","hiragana":"","en":"sing"},{"id":5,"kanji":"集めます(あつめます)","hiragana":"","en":"collect"},{"id":6,"kanji":"捨てます(すてます)","hiragana":"","en":"throw away"},{"id":7,"kanji":"換えます(かえます)","hiragana":"","en":"exchange"},{"id":8,"kanji":"運転します(うんてんします)","hiragana":"","en":"drive"},{"id":9,"kanji":"予約します(よやくします)","hiragana":"","en":"reserve"},{"id":10,"kanji":"見学します(けんがくします)","hiragana":"","en":"visit (for study)"},{"id":11,"kanji":"ピアノ","hiragana":"","en":"piano"},{"id":12,"kanji":"〜メートル","hiragana":"","en":"meter"},{"id":13,"kanji":"国際〜(こくさい)","hiragana":"","en":"international"},{"id":14,"kanji":"現金(げんきん)","hiragana":"","en":"cash"},{"id":15,"kanji":"趣味(しゅみ)","hiragana":"","en":"hobby"},{"id":16,"kanji":"日記(にっき)","hiragana":"","en":"diary"},{"id":17,"kanji":"お祈り(おいのり)","hiragana":"","en":"prayer"},{"id":18,"kanji":"課長(かちょう)","hiragana":"","en":"section chief"},{"id":19,"kanji":"部長(ぶちょう)","hiragana":"","en":"department head"},{"id":20,"kanji":"社長(しゃちょう)","hiragana":"","en":"company president"},{"id":21,"kanji":"動物(どうぶつ)","hiragana":"","en":"animal"},{"id":22,"kanji":"馬(うま)","hiragana":"","en":"horse"},{"id":23,"kanji":"へえ","hiragana":"","en":"really"},{"id":24,"kanji":"なかなか","hiragana":"","en":"not easily"},{"id":25,"kanji":"牧場(ぼくじょう)","hiragana":"","en":"ranch"},{"id":26,"kanji":"本当ですか(ほんとうですか)","hiragana":"","en":"really?"},{"id":27,"kanji":"ぜひ","hiragana":"","en":"by all means"}]},{"lesson":19,"title":"Lesson 19 – Lifestyle & Health","vocab":[{"id":1,"kanji":"登ります/上ります(のぼります)","hiragana":"","en":"climb"},{"id":2,"kanji":"泊まります(とまります)","hiragana":"","en":"stay"},{"id":3,"kanji":"掃除します(そうじします)","hiragana":"","en":"clean"},{"id":4,"kanji":"洗濯します(せんたくします)","hiragana":"","en":"wash clothes"},{"id":5,"kanji":"練習します(れんしゅうします)","hiragana":"","en":"practice"},{"id":6,"kanji":"なります","hiragana":"","en":"become"},{"id":7,"kanji":"眠い(ねむい)","hiragana":"","en":"sleepy"},{"id":8,"kanji":"強い(つよい)","hiragana":"","en":"strong"},{"id":9,"kanji":"弱い(よわい)","hiragana":"","en":"weak"},{"id":10,"kanji":"調子がいい(ちょうし)","hiragana":"","en":"in good condition"},{"id":11,"kanji":"調子が悪い","hiragana":"","en":"in bad condition"},{"id":12,"kanji":"調子(ちょうし)","hiragana":"","en":"condition"},{"id":13,"kanji":"ゴルフ","hiragana":"","en":"golf"},{"id":14,"kanji":"相撲(すもう)","hiragana":"","en":"sumo"},{"id":15,"kanji":"パチンコ","hiragana":"","en":"pachinko"},{"id":16,"kanji":"お茶(おちゃ)","hiragana":"","en":"tea ceremony"},{"id":17,"kanji":"日(ひ)","hiragana":"","en":"day"},{"id":18,"kanji":"一度(いちど)","hiragana":"","en":"once"},{"id":19,"kanji":"一度も(いちども)","hiragana":"","en":"never"},{"id":20,"kanji":"だんだん","hiragana":"","en":"gradually"},{"id":21,"kanji":"もうすぐ","hiragana":"","en":"soon"},{"id":22,"kanji":"おかげさまで","hiragana":"","en":"thanks to you"},{"id":23,"kanji":"乾杯(かんぱい)","hiragana":"","en":"cheers"},{"id":24,"kanji":"ダイエット","hiragana":"","en":"diet"},{"id":25,"kanji":"無理[な](むり)","hiragana":"","en":"impossible"},{"id":26,"kanji":"体にいい(からだ)","hiragana":"","en":"good for health"}]},{"lesson":20,"title":"Lesson 20 – Casual Speech","vocab":[{"id":1,"kanji":"要ります(いります)","hiragana":"","en":"need"},{"id":2,"kanji":"調べます(しらべます)","hiragana":"","en":"check"},{"id":3,"kanji":"直します/治します(なおします)","hiragana":"","en":"fix; cure"},{"id":4,"kanji":"修理します(しゅうりします)","hiragana":"","en":"repair"},{"id":5,"kanji":"電話します(でんわします)","hiragana":"","en":"call"},{"id":6,"kanji":"僕(ぼく)","hiragana":"","en":"I (male informal)"},{"id":7,"kanji":"君(きみ)","hiragana":"","en":"you (informal)"},{"id":8,"kanji":"〜君(〜くん)","hiragana":"","en":"name suffix"},{"id":9,"kanji":"うん","hiragana":"","en":"yes"},{"id":10,"kanji":"ううん","hiragana":"","en":"no"},{"id":11,"kanji":"サラリーマン","hiragana":"","en":"office worker"},{"id":12,"kanji":"言葉(ことば)","hiragana":"","en":"word; language"},{"id":13,"kanji":"物価(ぶっか)","hiragana":"","en":"prices"},{"id":14,"kanji":"着物(きもの)","hiragana":"","en":"kimono"},{"id":15,"kanji":"ビザ","hiragana":"","en":"visa"},{"id":16,"kanji":"初め(はじめ)","hiragana":"","en":"beginning"},{"id":17,"kanji":"終わり(おわり)","hiragana":"","en":"end"},{"id":18,"kanji":"こっち","hiragana":"","en":"this way"},{"id":19,"kanji":"そっち","hiragana":"","en":"that way"},{"id":20,"kanji":"あっち","hiragana":"","en":"over there"},{"id":21,"kanji":"どっち","hiragana":"","en":"which way"},{"id":22,"kanji":"この間(このあいだ)","hiragana":"","en":"the other day"},{"id":23,"kanji":"みんなで","hiragana":"","en":"together"},{"id":24,"kanji":"〜けど","hiragana":"","en":"but"},{"id":25,"kanji":"どうするの","hiragana":"","en":"what will you do"},{"id":26,"kanji":"どうしようかな","hiragana":"","en":"what should I do"}]},{"lesson":21,"title":"第21課","vocab":[{"id":1,"kanji":"思います","hiragana":"おもいます","en":"think"},{"id":2,"kanji":"言います","hiragana":"いいます","en":"say"},{"id":3,"kanji":"足ります","hiragana":"たります","en":"be enough, sufficient"},{"id":4,"kanji":"勝ちます","hiragana":"かちます","en":"win"},{"id":5,"kanji":"負けます","hiragana":"まけます","en":"lose"},{"id":6,"kanji":"あります(お祭りが〜)","hiragana":"あります","en":"be held (festival)"},{"id":7,"kanji":"役に立ちます","hiragana":"やくにたちます","en":"be useful"},{"id":8,"kanji":"無駄な","hiragana":"むだな","en":"wasteful"},{"id":9,"kanji":"不便な","hiragana":"ふべんな","en":"inconvenient"},{"id":10,"kanji":"同じ","hiragana":"おなじ","en":"same"},{"id":11,"kanji":"すごい","hiragana":"","en":"amazing, great"},{"id":12,"kanji":"首相","hiragana":"しゅしょう","en":"prime minister"},{"id":13,"kanji":"大統領","hiragana":"だいとうりょう","en":"president"},{"id":14,"kanji":"政治","hiragana":"せいじ","en":"politics"},{"id":15,"kanji":"ニュース","hiragana":"","en":"news"},{"id":16,"kanji":"スピーチ","hiragana":"","en":"speech"},{"id":17,"kanji":"試合","hiragana":"しあい","en":"match, game"},{"id":18,"kanji":"アルバイト","hiragana":"","en":"part-time job"},{"id":19,"kanji":"意見","hiragana":"いけん","en":"opinion"},{"id":20,"kanji":"お話","hiragana":"おはなし","en":"talk, story"},{"id":21,"kanji":"ユーモア","hiragana":"","en":"humor"},{"id":22,"kanji":"交通","hiragana":"こうつう","en":"traffic, transport"},{"id":23,"kanji":"ラッシュ","hiragana":"","en":"rush hour"},{"id":24,"kanji":"最近","hiragana":"さいきん","en":"recently"},{"id":25,"kanji":"多分","hiragana":"たぶん","en":"probably"},{"id":26,"kanji":"きっと","hiragana":"","en":"surely"},{"id":27,"kanji":"本当に","hiragana":"ほんとうに","en":"really"},{"id":28,"kanji":"そんなに","hiragana":"","en":"not so much"},{"id":29,"kanji":"〜について","hiragana":"","en":"about, concerning"}]},{"lesson":22,"title":"第22課","vocab":[{"id":1,"kanji":"着ます","hiragana":"きます","en":"wear (upper body)"},{"id":2,"kanji":"履きます","hiragana":"はきます","en":"wear (shoes/pants)"},{"id":3,"kanji":"被ります","hiragana":"かぶります","en":"wear (hat)"},{"id":4,"kanji":"かけます(眼鏡を〜)","hiragana":"","en":"wear glasses"},{"id":5,"kanji":"生まれます","hiragana":"うまれます","en":"be born"},{"id":6,"kanji":"コート","hiragana":"","en":"coat"},{"id":7,"kanji":"セーター","hiragana":"","en":"sweater"},{"id":8,"kanji":"スーツ","hiragana":"","en":"suit"},{"id":9,"kanji":"帽子","hiragana":"ぼうし","en":"hat"},{"id":10,"kanji":"眼鏡","hiragana":"めがね","en":"glasses"},{"id":11,"kanji":"家賃","hiragana":"やちん","en":"rent"},{"id":12,"kanji":"和室","hiragana":"わしつ","en":"Japanese-style room"},{"id":13,"kanji":"押入れ","hiragana":"おしいれ","en":"closet"},{"id":14,"kanji":"布団","hiragana":"ふとん","en":"futon"},{"id":15,"kanji":"アパート","hiragana":"","en":"apartment"}]},{"lesson":23,"title":"第23課","vocab":[{"id":1,"kanji":"聞きます(先生に〜)","hiragana":"ききます","en":"ask"},{"id":2,"kanji":"回します","hiragana":"まわします","en":"turn"},{"id":3,"kanji":"引きます","hiragana":"ひきます","en":"pull"},{"id":4,"kanji":"変えます","hiragana":"かえます","en":"change"},{"id":5,"kanji":"触ります","hiragana":"さわります","en":"touch"},{"id":6,"kanji":"動きます","hiragana":"うごきます","en":"move"},{"id":7,"kanji":"歩きます","hiragana":"あるきます","en":"walk"},{"id":8,"kanji":"渡ります","hiragana":"わたります","en":"cross"},{"id":9,"kanji":"気をつけます","hiragana":"きをつけます","en":"be careful"},{"id":10,"kanji":"引越しします","hiragana":"ひっこしします","en":"move house"},{"id":11,"kanji":"電気屋","hiragana":"でんきや","en":"electronics shop"},{"id":12,"kanji":"音","hiragana":"おと","en":"sound"},{"id":13,"kanji":"機械","hiragana":"きかい","en":"machine"},{"id":14,"kanji":"道","hiragana":"みち","en":"road"},{"id":15,"kanji":"交差点","hiragana":"こうさてん","en":"intersection"},{"id":16,"kanji":"信号","hiragana":"しんごう","en":"traffic light"},{"id":17,"kanji":"橋","hiragana":"はし","en":"bridge"},{"id":18,"kanji":"駐車場","hiragana":"ちゅうしゃじょう","en":"parking lot"}]},{"lesson":24,"title":"第24課","vocab":[{"id":1,"kanji":"くれます","hiragana":"","en":"give (to me)"},{"id":2,"kanji":"連れて行きます","hiragana":"つれていきます","en":"take someone"},{"id":3,"kanji":"連れて来ます","hiragana":"つれてきます","en":"bring someone"},{"id":4,"kanji":"送ります","hiragana":"おくります","en":"escort"},{"id":5,"kanji":"紹介します","hiragana":"しょうかいします","en":"introduce"},{"id":6,"kanji":"案内します","hiragana":"あんないします","en":"guide"},{"id":7,"kanji":"説明します","hiragana":"せつめいします","en":"explain"},{"id":8,"kanji":"淹れます","hiragana":"いれます","en":"make (coffee)"},{"id":9,"kanji":"準備します","hiragana":"じゅんびします","en":"prepare"},{"id":10,"kanji":"意味","hiragana":"いみ","en":"meaning"},{"id":11,"kanji":"お菓子","hiragana":"おかし","en":"snacks"},{"id":12,"kanji":"全部","hiragana":"ぜんぶ","en":"all"},{"id":13,"kanji":"自分で","hiragana":"じぶんで","en":"by oneself"},{"id":14,"kanji":"ワゴン車","hiragana":"ワゴンしゃ","en":"station wagon"},{"id":15,"kanji":"お弁当","hiragana":"おべんとう","en":"lunch box"},{"id":16,"kanji":"母の日","hiragana":"ははのひ","en":"Mother's Day"}]},{"lesson":25,"title":"第25課","vocab":[{"id":1,"kanji":"考えます","hiragana":"かんがえます","en":"think, consider"},{"id":2,"kanji":"着きます","hiragana":"つきます","en":"arrive"},{"id":3,"kanji":"留学します","hiragana":"りゅうがくします","en":"study abroad"},{"id":4,"kanji":"取ります(年を〜)","hiragana":"とります","en":"grow old"},{"id":5,"kanji":"田舎","hiragana":"いなか","en":"countryside"},{"id":6,"kanji":"大使館","hiragana":"たいしかん","en":"embassy"},{"id":7,"kanji":"グループ","hiragana":"","en":"group"},{"id":8,"kanji":"チャンス","hiragana":"","en":"chance"},{"id":9,"kanji":"億","hiragana":"おく","en":"hundred million"},{"id":10,"kanji":"転勤","hiragana":"てんきん","en":"job transfer"},{"id":11,"kanji":"事","hiragana":"こと","en":"thing, matter"},{"id":12,"kanji":"頑張ります","hiragana":"がんばります","en":"do one's best"}]}]};
-
-  // Build master set from localStorage
-  const masteredWords = new Set(JSON.parse(localStorage.getItem('nz_mastered') || '[]'));
-  let currentFilter = 'all';
-  let currentWord = null;
-
-  function saveMastered() {
-    localStorage.setItem('nz_mastered', JSON.stringify([...masteredWords]));
-    updateVocabStats();
-  }
-
-  function updateVocabStats() {
-    const total = vocabularyData.lessons.reduce((s,l)=>s+l.vocab.length, 0);
-    document.getElementById('vs-total').textContent = total;
-    document.getElementById('vs-mastered').textContent = masteredWords.size;
-    document.getElementById('stat-vocab').textContent = masteredWords.size;
-  }
-
-  function buildVocabTabs() {
-    const tabs = document.getElementById('vocab-tabs');
-    tabs.innerHTML = '';
-    const allTab = document.createElement('button');
-    allTab.className = 'vocab-tab active';
-    allTab.textContent = '✨ All (' + vocabularyData.lessons.reduce((s,l)=>s+l.vocab.length,0) + ')';
-    allTab.onclick = () => setVocabFilter('all', allTab);
-    tabs.appendChild(allTab);
-
-    vocabularyData.lessons.forEach(lesson => {
-      const btn = document.createElement('button');
-      btn.className = 'vocab-tab';
-      const shortTitle = lesson.lesson === 0 ? 'Intro' : 'L' + lesson.lesson;
-      btn.textContent = shortTitle + ' (' + lesson.vocab.length + ')';
-      btn.title = lesson.title;
-      btn.dataset.lesson = lesson.lesson;
-      btn.onclick = () => setVocabFilter(lesson.lesson, btn);
-      tabs.appendChild(btn);
-    });
-  }
-
-  function setVocabFilter(lessonNum, el) {
-    currentFilter = lessonNum;
-    document.querySelectorAll('.vocab-tab').forEach(t => t.classList.remove('active'));
-    el.classList.add('active');
-    const label = lessonNum === 'all' ? 'All Lessons' :
-      (lessonNum === 0 ? 'Intro Lesson' : 'Lesson ' + lessonNum);
-    document.getElementById('vs-lesson').textContent = label;
-    renderVocabGrid();
-  }
-
-  function getFilteredWords() {
-    const query = (document.getElementById('vocab-search')?.value || '').toLowerCase();
-    let words = [];
-    vocabularyData.lessons.forEach(lesson => {
-      if (currentFilter !== 'all' && lesson.lesson !== currentFilter) return;
-      lesson.vocab.forEach(w => {
-        words.push({ ...w, lessonNum: lesson.lesson, lessonTitle: lesson.title });
-      });
-    });
-    if (query) {
-      words = words.filter(w =>
-        w.kanji.toLowerCase().includes(query) ||
-        (w.hiragana||'').includes(query) ||
-        w.en.toLowerCase().includes(query)
-      );
-    }
-    return words;
-  }
-
-  function renderVocabGrid() {
-    const grid = document.getElementById('vocab-grid');
-    if (!grid) return;
-    const words = getFilteredWords();
-    if (words.length === 0) {
-      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--ink-light)">🔍 No words found</div>';
-      return;
-    }
-    grid.innerHTML = '';
-    words.forEach(w => {
-      const isMastered = masteredWords.has(w.id + '_' + w.lessonNum);
-      const card = document.createElement('div');
-      card.className = 'vocab-card' + (isMastered ? ' mastered' : '');
-      card.innerHTML = `
-        <button class="vocab-master-btn" title="Toggle mastered" onclick="toggleMaster(${w.id},${w.lessonNum},event)">${isMastered ? '✅' : '⭐'}</button>
-        <div class="vocab-kanji">${w.kanji}</div>
-        ${w.hiragana ? `<div class="vocab-hira">${w.hiragana}</div>` : ''}
-        <div class="vocab-en">${w.en}</div>
-        <div class="vocab-lesson-tag">L${w.lessonNum === 0 ? '0 (Intro)' : w.lessonNum}</div>
-      `;
-      card.onclick = (e) => { if(!e.target.classList.contains('vocab-master-btn')) openWordModal(w); };
-      grid.appendChild(card);
-    });
-  }
-
-  window.filterVocab = function() { renderVocabGrid(); };
-
-  window.toggleMaster = function(wordId, lessonNum, e) {
-    e.stopPropagation();
-    const key = wordId + '_' + lessonNum;
-    if (masteredWords.has(key)) masteredWords.delete(key);
-    else { masteredWords.add(key); showToast('✅ Word mastered! +2 XP'); if(typeof awardXP==='function') awardXP(2); }
-    saveMastered();
-    renderVocabGrid();
-  };
-
-  function openWordModal(w) {
-    currentWord = w;
-    document.getElementById('mw-kanji').textContent = w.kanji;
-    document.getElementById('mw-hira').textContent = w.hiragana || '';
-    document.getElementById('mw-en').textContent = w.en;
-    const lessonLabel = w.lessonNum === 0 ? 'Intro Lesson' : 'Lesson ' + w.lessonNum;
-    document.getElementById('mw-lesson').textContent = '📖 ' + lessonLabel + ' · ' + w.lessonTitle;
-    const key = w.id + '_' + w.lessonNum;
-    const btn = document.getElementById('mw-master-btn');
-    btn.textContent = masteredWords.has(key) ? '✅ Mastered!' : '⭐ Mark Mastered';
-    document.getElementById('word-modal').style.display = 'flex';
-  }
-
-  window.closeWordModal = function(e) {
-    if (e.target.id === 'word-modal') document.getElementById('word-modal').style.display = 'none';
-  };
-
-  window.toggleMasterCurrent = function() {
-    if (!currentWord) return;
-    const key = currentWord.id + '_' + currentWord.lessonNum;
-    if (masteredWords.has(key)) masteredWords.delete(key);
-    else { masteredWords.add(key); showToast('✅ Word mastered! +2 XP'); if(typeof awardXP==='function') awardXP(2); }
-    saveMastered();
-    openWordModal(currentWord);
-    renderVocabGrid();
-  };
-
-  // Initialize vocab
-  buildVocabTabs();
-  renderVocabGrid();
-  updateVocabStats();
-
-
-  // ── AUDIO ──
-  let currentAudio = null;
-  function playAudio(url, e) {
-    e.stopPropagation();
-    if (currentAudio) { currentAudio.pause(); currentAudio = null; }
-    if (url) { currentAudio = new Audio(url); currentAudio.play(); showToast('🔊 Playing audio...'); }
-    else showToast('Audio coming soon!');
-  }
-  window.playAudio = playAudio;
-
-  // ── TOAST ──
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg; t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2500);
-  }
-  window.showToast = showToast;
-
-  // Nav links
-  document.querySelectorAll('nav a, .sidebar-link').forEach(a => {
-    a.addEventListener('click', e => { e.preventDefault(); navigateTo(a.dataset.section || 'home'); });
-  });
-
-  // SW
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
