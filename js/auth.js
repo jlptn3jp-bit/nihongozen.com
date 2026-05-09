@@ -17,7 +17,7 @@ const firebaseConfig = {
   storageBucket: "nihongo-zen-cd97d.firebasestorage.app",
   messagingSenderId: "513320956483",
   appId: "1:513320956483:web:a1069825e0df3587f65af6",
-  measurementId: "G-1WTJ5ML3R2""
+  measurementId: "G-1WTJ5ML3R2"
 };
 
 // ✅ INIT
