@@ -309,6 +309,10 @@ googleProvider.addScope('profile');
 const appleProvider = new OAuthProvider('apple.com');
 appleProvider.addScope('email');
 appleProvider.addScope('name');
+appleProvider.setCustomParameters({
+  // Required by Apple for web — forces form_post response mode
+  response_mode: 'form_post'
+});
 
 // ── ACTION CODE SETTINGS (for email magic link) ─
 const actionCodeSettings = {
@@ -370,7 +374,19 @@ onAuthStateChanged(auth, user => {
   try {
     const result = await getRedirectResult(auth);
     if (result?.user) {
-      await saveUserProfile(result.user);
+      // Extract Apple (or Google) credential for token access
+      const credential = OAuthProvider.credentialFromResult(result);
+      if (credential) {
+        const accessToken = credential.accessToken;
+        const idToken     = credential.idToken;
+        if (idToken) window.sessionStorage.setItem('appleIdToken', idToken);
+      }
+      // Apple only returns displayName on first sign-in via _tokenResponse
+      const firstName   = result._tokenResponse?.firstName || '';
+      const lastName    = result._tokenResponse?.lastName  || '';
+      const displayName = result.user.displayName ||
+        (firstName ? (firstName + ' ' + lastName).trim() : '');
+      await saveUserProfile(result.user, { displayName });
       window.location.href = './dashboard.html';
     }
   } catch (e) {
@@ -489,18 +505,28 @@ window.handleAppleLogin = async () => {
   clearMsg('login-error');
   try {
     const result = await signInWithPopup(auth, appleProvider);
-    // Apple may return name only on first sign-in
-    const profile = result.user;
-    const displayName = profile.displayName ||
-      (result._tokenResponse?.firstName ? result._tokenResponse.firstName + ' ' + (result._tokenResponse.lastName||'') : '');
-    await saveUserProfile(profile, { displayName });
+
+    // Extract Apple credential — accessToken & idToken available here
+    const credential  = OAuthProvider.credentialFromResult(result);
+    const accessToken = credential?.accessToken;
+    const idToken     = credential?.idToken;
+    if (idToken) window.sessionStorage.setItem('appleIdToken', idToken);
+
+    // Apple only returns displayName on very first sign-in
+    const firstName   = result._tokenResponse?.firstName || '';
+    const lastName    = result._tokenResponse?.lastName  || '';
+    const displayName = result.user.displayName ||
+      (firstName ? (firstName + ' ' + lastName).trim() : '');
+
+    await saveUserProfile(result.user, { displayName });
     window.location.href = './dashboard.html';
   } catch (e) {
     if (['auth/popup-blocked','auth/popup-closed-by-user','auth/cancelled-popup-request'].includes(e.code)) {
+      // Popup blocked — fall back to redirect flow
       try { await signInWithRedirect(auth, appleProvider); }
       catch (e2) { showMsg('login-error', friendlyError(e2)); }
     } else if (e.code === 'auth/operation-not-supported-in-this-environment') {
-      showMsg('login-error', '⚠️ Apple Sign-In requires HTTPS. Make sure your site is deployed.');
+      showMsg('login-error', '⚠️ Apple Sign-In requires HTTPS. Make sure your site is deployed on HTTPS.');
     } else if (e.code !== 'auth/popup-closed-by-user') {
       showMsg('login-error', friendlyError(e));
     }
