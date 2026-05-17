@@ -1,0 +1,7989 @@
+[
+  {
+    "kanji": "郎",
+    "on": "ロウ",
+    "kun": "",
+    "meaning": "son/young man",
+    "example": "郎 (ロウ) son/young man"
+  },
+  {
+    "kanji": "結",
+    "on": "ケツ",
+    "kun": "むす-ぶ",
+    "meaning": "tie/結果",
+    "example": "結 (むすぶ) tie/結果"
+  },
+  {
+    "kanji": "氏",
+    "on": "シ",
+    "kun": "うじ",
+    "meaning": "Mr./clan",
+    "example": "氏 (うじ) Mr./clan"
+  },
+  {
+    "kanji": "衛",
+    "on": "エイ",
+    "kun": "まも-る",
+    "meaning": "guard/defend",
+    "example": "衛 (まもる) guard/defend"
+  },
+  {
+    "kanji": "第",
+    "on": "ダイ",
+    "kun": "",
+    "meaning": "ordinal number",
+    "example": "第 (ダイ) ordinal number"
+  },
+  {
+    "kanji": "保",
+    "on": "ホ",
+    "kun": "たも-つ",
+    "meaning": "protect/keep",
+    "example": "保 (たもつ) protect/keep"
+  },
+  {
+    "kanji": "義",
+    "on": "ギ",
+    "kun": "",
+    "meaning": "righteousness",
+    "example": "義 (ギ) righteousness"
+  },
+  {
+    "kanji": "吉",
+    "on": "キチ・キツ",
+    "kun": "よし",
+    "meaning": "good luck",
+    "example": "吉 (よし) good luck"
+  },
+  {
+    "kanji": "士",
+    "on": "シ",
+    "kun": "さむらい",
+    "meaning": "samurai/scholar",
+    "example": "士 (さむらい) samurai/scholar"
+  },
+  {
+    "kanji": "藤",
+    "on": "トウ",
+    "kun": "ふじ",
+    "meaning": "wisteria",
+    "example": "藤 (ふじ) wisteria"
+  },
+  {
+    "kanji": "井",
+    "on": "セイ",
+    "kun": "い",
+    "meaning": "well",
+    "example": "井 (い) well"
+  },
+  {
+    "kanji": "江",
+    "on": "コウ",
+    "kun": "え",
+    "meaning": "bay/inlet",
+    "example": "江 (え) bay/inlet"
+  },
+  {
+    "kanji": "張",
+    "on": "チョウ",
+    "kun": "は-る",
+    "meaning": "stretch/expand",
+    "example": "張 (はる) stretch/expand"
+  },
+  {
+    "kanji": "松",
+    "on": "ショウ",
+    "kun": "まつ",
+    "meaning": "pine tree",
+    "example": "松 (まつ) pine tree"
+  },
+  {
+    "kanji": "応",
+    "on": "オウ",
+    "kun": "こた-える",
+    "meaning": "respond",
+    "example": "応 (こたえる) respond"
+  },
+  {
+    "kanji": "視",
+    "on": "シ",
+    "kun": "み-る",
+    "meaning": "look/regard",
+    "example": "視 (みる) look/regard"
+  },
+  {
+    "kanji": "態",
+    "on": "タイ",
+    "kun": "",
+    "meaning": "attitude/state",
+    "example": "態 (タイ) attitude/state"
+  },
+  {
+    "kanji": "姿",
+    "on": "シ",
+    "kun": "すがた",
+    "meaning": "figure/form",
+    "example": "姿 (すがた) figure/form"
+  },
+  {
+    "kanji": "皇",
+    "on": "コウ・オウ",
+    "kun": "",
+    "meaning": "emperor",
+    "example": "皇 (コウ) emperor"
+  },
+  {
+    "kanji": "宮",
+    "on": "キュウ・グウ",
+    "kun": "みや",
+    "meaning": "palace/shrine",
+    "example": "宮 (みや) palace/shrine"
+  },
+  {
+    "kanji": "離",
+    "on": "リ",
+    "kun": "はな-れる",
+    "meaning": "separate",
+    "example": "離 (はなれる) separate"
+  },
+  {
+    "kanji": "基",
+    "on": "キ",
+    "kun": "もと",
+    "meaning": "base/foundation",
+    "example": "基 (もと) base/foundation"
+  },
+  {
+    "kanji": "隊",
+    "on": "タイ",
+    "kun": "",
+    "meaning": "unit/squad",
+    "example": "隊 (タイ) unit/squad"
+  },
+  {
+    "kanji": "素",
+    "on": "ソ・ス",
+    "kun": "もと",
+    "meaning": "element/素直",
+    "example": "素 (もと) element/素直"
+  },
+  {
+    "kanji": "価",
+    "on": "カ",
+    "kun": "あたい",
+    "meaning": "price/value",
+    "example": "価 (あたい) price/value"
+  },
+  {
+    "kanji": "撃",
+    "on": "ゲキ",
+    "kun": "う-つ",
+    "meaning": "strike/attack",
+    "example": "撃 (うつ) strike/attack"
+  },
+  {
+    "kanji": "振",
+    "on": "シン",
+    "kun": "ふ-る",
+    "meaning": "wave/swing",
+    "example": "振 (ふる) wave/swing"
+  },
+  {
+    "kanji": "証",
+    "on": "ショウ",
+    "kun": "あかし",
+    "meaning": "proof/certificate",
+    "example": "証 (あかし) proof/certificate"
+  },
+  {
+    "kanji": "派",
+    "on": "ハ",
+    "kun": "",
+    "meaning": "faction/send",
+    "example": "派 (ハ) faction/send"
+  },
+  {
+    "kanji": "僕",
+    "on": "ボク",
+    "kun": "しもべ",
+    "meaning": "I (boyish)",
+    "example": "僕 (しもべ) I (boyish)"
+  },
+  {
+    "kanji": "佐",
+    "on": "サ",
+    "kun": "たす-ける",
+    "meaning": "assist/Sato",
+    "example": "佐 (たすける) assist/Sato"
+  },
+  {
+    "kanji": "紀",
+    "on": "キ",
+    "kun": "",
+    "meaning": "chronicle",
+    "example": "紀 (キ) chronicle"
+  },
+  {
+    "kanji": "統",
+    "on": "トウ",
+    "kun": "す-べる",
+    "meaning": "unite/govern",
+    "example": "統 (すべる) unite/govern"
+  },
+  {
+    "kanji": "器",
+    "on": "キ",
+    "kun": "うつわ",
+    "meaning": "container/talent",
+    "example": "器 (うつわ) container/talent"
+  },
+  {
+    "kanji": "異",
+    "on": "イ",
+    "kun": "こと-なる",
+    "meaning": "different",
+    "example": "異 (ことなる) different"
+  },
+  {
+    "kanji": "護",
+    "on": "ゴ",
+    "kun": "まも-る",
+    "meaning": "protect",
+    "example": "護 (まもる) protect"
+  },
+  {
+    "kanji": "条",
+    "on": "ジョウ",
+    "kun": "",
+    "meaning": "article/clause",
+    "example": "条 (ジョウ) article/clause"
+  },
+  {
+    "kanji": "独",
+    "on": "ドク",
+    "kun": "ひと-り",
+    "meaning": "alone/Germany",
+    "example": "独 (ひとり) alone/Germany"
+  },
+  {
+    "kanji": "源",
+    "on": "ゲン",
+    "kun": "みなもと",
+    "meaning": "source/origin",
+    "example": "源 (みなもと) source/origin"
+  },
+  {
+    "kanji": "影",
+    "on": "エイ",
+    "kun": "かげ",
+    "meaning": "shadow/influence",
+    "example": "影 (かげ) shadow/influence"
+  },
+  {
+    "kanji": "眼",
+    "on": "ガン・ゲン",
+    "kun": "まなこ",
+    "meaning": "eye/eyeball",
+    "example": "眼 (まなこ) eye/eyeball"
+  },
+  {
+    "kanji": "企",
+    "on": "キ",
+    "kun": "くわだ-てる",
+    "meaning": "plan/企業",
+    "example": "企 (くわだてる) plan/企業"
+  },
+  {
+    "kanji": "津",
+    "on": "シン",
+    "kun": "つ",
+    "meaning": "harbor/ferry",
+    "example": "津 (つ) harbor/ferry"
+  },
+  {
+    "kanji": "案",
+    "on": "アン",
+    "kun": "",
+    "meaning": "plan/idea",
+    "example": "案 (アン) plan/idea"
+  },
+  {
+    "kanji": "策",
+    "on": "サク",
+    "kun": "",
+    "meaning": "plan/policy",
+    "example": "策 (サク) plan/policy"
+  },
+  {
+    "kanji": "宗",
+    "on": "シュウ・ソウ",
+    "kun": "",
+    "meaning": "religion/sect",
+    "example": "宗 (シュウ) religion/sect"
+  },
+  {
+    "kanji": "提",
+    "on": "テイ",
+    "kun": "さ-げる",
+    "meaning": "present/提案",
+    "example": "提 (さげる) present/提案"
+  },
+  {
+    "kanji": "昭",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "bright/shine",
+    "example": "昭 (ショウ) bright/shine"
+  },
+  {
+    "kanji": "密",
+    "on": "ミツ",
+    "kun": "",
+    "meaning": "dense/secret",
+    "example": "密 (ミツ) dense/secret"
+  },
+  {
+    "kanji": "司",
+    "on": "シ",
+    "kun": "つかさど-る",
+    "meaning": "manage/control",
+    "example": "司 (つかさどる) manage/control"
+  },
+  {
+    "kanji": "検",
+    "on": "ケン",
+    "kun": "",
+    "meaning": "inspect",
+    "example": "検 (ケン) inspect"
+  },
+  {
+    "kanji": "康",
+    "on": "コウ",
+    "kun": "やす-い",
+    "meaning": "healthy",
+    "example": "康 (やすい) healthy"
+  },
+  {
+    "kanji": "沢",
+    "on": "タク・ザワ",
+    "kun": "さわ",
+    "meaning": "marsh/glossy",
+    "example": "沢 (さわ) marsh/glossy"
+  },
+  {
+    "kanji": "秀",
+    "on": "シュウ",
+    "kun": "ひい-でる",
+    "meaning": "excel/outstanding",
+    "example": "秀 (ひいでる) excel/outstanding"
+  },
+  {
+    "kanji": "興",
+    "on": "コウ・キョウ",
+    "kun": "おこ-る",
+    "meaning": "interest/prosper",
+    "example": "興 (おこる) interest/prosper"
+  },
+  {
+    "kanji": "率",
+    "on": "ソツ・リツ",
+    "kun": "ひき-いる",
+    "meaning": "rate/lead",
+    "example": "率 (ひきいる) rate/lead"
+  },
+  {
+    "kanji": "評",
+    "on": "ヒョウ",
+    "kun": "",
+    "meaning": "evaluate/comment",
+    "example": "評 (ヒョウ) evaluate/comment"
+  },
+  {
+    "kanji": "監",
+    "on": "カン",
+    "kun": "",
+    "meaning": "oversee",
+    "example": "監 (カン) oversee"
+  },
+  {
+    "kanji": "崎",
+    "on": "キ",
+    "kun": "さき",
+    "meaning": "cape/promontory",
+    "example": "崎 (さき) cape/promontory"
+  },
+  {
+    "kanji": "鮮",
+    "on": "セン",
+    "kun": "あざ-やか",
+    "meaning": "fresh/Korea",
+    "example": "鮮 (あざやか) fresh/Korea"
+  },
+  {
+    "kanji": "激",
+    "on": "ゲキ",
+    "kun": "はげ-しい",
+    "meaning": "intense/violent",
+    "example": "激 (はげしい) intense/violent"
+  },
+  {
+    "kanji": "徳",
+    "on": "トク",
+    "kun": "",
+    "meaning": "virtue",
+    "example": "徳 (トク) virtue"
+  },
+  {
+    "kanji": "挙",
+    "on": "キョ",
+    "kun": "あ-げる",
+    "meaning": "raise/举行",
+    "example": "挙 (あげる) raise/举行"
+  },
+  {
+    "kanji": "志",
+    "on": "シ",
+    "kun": "こころざ-す",
+    "meaning": "will/aspiration",
+    "example": "志 (こころざす) will/aspiration"
+  },
+  {
+    "kanji": "敷",
+    "on": "フ",
+    "kun": "し-く",
+    "meaning": "spread/lay",
+    "example": "敷 (しく) spread/lay"
+  },
+  {
+    "kanji": "系",
+    "on": "ケイ",
+    "kun": "",
+    "meaning": "system/lineage",
+    "example": "系 (ケイ) system/lineage"
+  },
+  {
+    "kanji": "織",
+    "on": "ショク・シキ",
+    "kun": "お-る",
+    "meaning": "weave/organization",
+    "example": "織 (おる) weave/organization"
+  },
+  {
+    "kanji": "製",
+    "on": "セイ",
+    "kun": "",
+    "meaning": "manufacture",
+    "example": "製 (セイ) manufacture"
+  },
+  {
+    "kanji": "端",
+    "on": "タン",
+    "kun": "はし",
+    "meaning": "edge/tip",
+    "example": "端 (はし) edge/tip"
+  },
+  {
+    "kanji": "遺",
+    "on": "イ・ユイ",
+    "kun": "",
+    "meaning": "leave behind",
+    "example": "遺 (イ) leave behind"
+  },
+  {
+    "kanji": "房",
+    "on": "ボウ",
+    "kun": "ふさ",
+    "meaning": "room/bunch",
+    "example": "房 (ふさ) room/bunch"
+  },
+  {
+    "kanji": "街",
+    "on": "ガイ・カイ",
+    "kun": "まち",
+    "meaning": "street/town",
+    "example": "街 (まち) street/town"
+  },
+  {
+    "kanji": "尾",
+    "on": "ビ",
+    "kun": "お",
+    "meaning": "tail/end",
+    "example": "尾 (お) tail/end"
+  },
+  {
+    "kanji": "株",
+    "on": "カブ",
+    "kun": "かぶ",
+    "meaning": "stock/stump",
+    "example": "株 (かぶ) stock/stump"
+  },
+  {
+    "kanji": "従",
+    "on": "ジュウ・ショウ",
+    "kun": "したが-う",
+    "meaning": "follow/obey",
+    "example": "従 (したがう) follow/obey"
+  },
+  {
+    "kanji": "敵",
+    "on": "テキ",
+    "kun": "かたき",
+    "meaning": "enemy",
+    "example": "敵 (かたき) enemy"
+  },
+  {
+    "kanji": "展",
+    "on": "テン",
+    "kun": "",
+    "meaning": "spread/exhibit",
+    "example": "展 (テン) spread/exhibit"
+  },
+  {
+    "kanji": "描",
+    "on": "ビョウ",
+    "kun": "えが-く・か-く",
+    "meaning": "draw/depict",
+    "example": "描 (えがく) draw/depict"
+  },
+  {
+    "kanji": "修",
+    "on": "シュウ・シュ",
+    "kun": "おさ-める",
+    "meaning": "study/repair",
+    "example": "修 (おさめる) study/repair"
+  },
+  {
+    "kanji": "我",
+    "on": "ガ",
+    "kun": "われ・わ",
+    "meaning": "I/self",
+    "example": "我 (われ) I/self"
+  },
+  {
+    "kanji": "載",
+    "on": "サイ",
+    "kun": "の-せる",
+    "meaning": "print/load",
+    "example": "載 (のせる) print/load"
+  },
+  {
+    "kanji": "響",
+    "on": "キョウ",
+    "kun": "ひび-く",
+    "meaning": "echo/influence",
+    "example": "響 (ひびく) echo/influence"
+  },
+  {
+    "kanji": "秘",
+    "on": "ヒ",
+    "kun": "ひ-める",
+    "meaning": "secret",
+    "example": "秘 (ひめる) secret"
+  },
+  {
+    "kanji": "攻",
+    "on": "コウ",
+    "kun": "せ-める",
+    "meaning": "attack",
+    "example": "攻 (せめる) attack"
+  },
+  {
+    "kanji": "健",
+    "on": "ケン",
+    "kun": "すこ-やか",
+    "meaning": "healthy/strong",
+    "example": "健 (すこやか) healthy/strong"
+  },
+  {
+    "kanji": "裁",
+    "on": "サイ",
+    "kun": "さば-く",
+    "meaning": "judge/cut",
+    "example": "裁 (さばく) judge/cut"
+  },
+  {
+    "kanji": "隠",
+    "on": "イン",
+    "kun": "かく-す",
+    "meaning": "hide",
+    "example": "隠 (かくす) hide"
+  },
+  {
+    "kanji": "環",
+    "on": "カン",
+    "kun": "",
+    "meaning": "ring/environment",
+    "example": "環 (カン) ring/environment"
+  },
+  {
+    "kanji": "援",
+    "on": "エン",
+    "kun": "",
+    "meaning": "aid/support",
+    "example": "援 (エン) aid/support"
+  },
+  {
+    "kanji": "故",
+    "on": "コ",
+    "kun": "ゆえ",
+    "meaning": "reason/old",
+    "example": "故 (ゆえ) reason/old"
+  },
+  {
+    "kanji": "幕",
+    "on": "マク・バク",
+    "kun": "",
+    "meaning": "curtain/shogunate",
+    "example": "幕 (マク) curtain/shogunate"
+  },
+  {
+    "kanji": "督",
+    "on": "トク",
+    "kun": "",
+    "meaning": "supervise",
+    "example": "督 (トク) supervise"
+  },
+  {
+    "kanji": "倉",
+    "on": "ソウ",
+    "kun": "くら",
+    "meaning": "warehouse",
+    "example": "倉 (くら) warehouse"
+  },
+  {
+    "kanji": "施",
+    "on": "シ・セ",
+    "kun": "ほどこ-す",
+    "meaning": "perform/施設",
+    "example": "施 (ほどこす) perform/施設"
+  },
+  {
+    "kanji": "嫌",
+    "on": "ケン・ゲン",
+    "kun": "いや・きら-う",
+    "meaning": "dislike",
+    "example": "嫌 (いや) dislike"
+  },
+  {
+    "kanji": "継",
+    "on": "ケイ",
+    "kun": "つ-ぐ",
+    "meaning": "succeed/inherit",
+    "example": "継 (つぐ) succeed/inherit"
+  },
+  {
+    "kanji": "障",
+    "on": "ショウ",
+    "kun": "さわ-る",
+    "meaning": "obstruct/disability",
+    "example": "障 (さわる) obstruct/disability"
+  },
+  {
+    "kanji": "貴",
+    "on": "キ",
+    "kun": "とうと-い",
+    "meaning": "noble/precious",
+    "example": "貴 (とうとい) noble/precious"
+  },
+  {
+    "kanji": "整",
+    "on": "セイ",
+    "kun": "ととの-える",
+    "meaning": "arrange/fix",
+    "example": "整 (ととのえる) arrange/fix"
+  },
+  {
+    "kanji": "衆",
+    "on": "シュウ",
+    "kun": "",
+    "meaning": "masses/many",
+    "example": "衆 (シュウ) masses/many"
+  },
+  {
+    "kanji": "及",
+    "on": "キュウ",
+    "kun": "およ-ぶ",
+    "meaning": "reach/and",
+    "example": "及 (およぶ) reach/and"
+  },
+  {
+    "kanji": "盛",
+    "on": "セイ・ジョウ",
+    "kun": "さか-ん・も-る",
+    "meaning": "prosper/fill",
+    "example": "盛 (さかん) prosper/fill"
+  },
+  {
+    "kanji": "玄",
+    "on": "ゲン",
+    "kun": "",
+    "meaning": "dark/mysterious",
+    "example": "玄 (ゲン) dark/mysterious"
+  },
+  {
+    "kanji": "恵",
+    "on": "ケイ・エ",
+    "kun": "めぐ-む",
+    "meaning": "blessing/mercy",
+    "example": "恵 (めぐむ) blessing/mercy"
+  },
+  {
+    "kanji": "授",
+    "on": "ジュ",
+    "kun": "さず-ける",
+    "meaning": "grant/teach",
+    "example": "授 (さずける) grant/teach"
+  },
+  {
+    "kanji": "弾",
+    "on": "ダン",
+    "kun": "たま・ひ-く",
+    "meaning": "bullet/play",
+    "example": "弾 (たま) bullet/play"
+  },
+  {
+    "kanji": "養",
+    "on": "ヨウ",
+    "kun": "やしな-う",
+    "meaning": "raise/nourish",
+    "example": "養 (やしなう) raise/nourish"
+  },
+  {
+    "kanji": "驚",
+    "on": "キョウ",
+    "kun": "おどろ-く",
+    "meaning": "surprise",
+    "example": "驚 (おどろく) surprise"
+  },
+  {
+    "kanji": "奈",
+    "on": "ナ",
+    "kun": "",
+    "meaning": "Nara/",
+    "example": "奈 (ナ) Nara/"
+  },
+  {
+    "kanji": "推",
+    "on": "スイ",
+    "kun": "お-す",
+    "meaning": "push/recommend",
+    "example": "推 (おす) push/recommend"
+  },
+  {
+    "kanji": "樹",
+    "on": "ジュ",
+    "kun": "き",
+    "meaning": "tree",
+    "example": "樹 (き) tree"
+  },
+  {
+    "kanji": "為",
+    "on": "イ",
+    "kun": "ため",
+    "meaning": "for/do",
+    "example": "為 (ため) for/do"
+  },
+  {
+    "kanji": "雄",
+    "on": "ユウ",
+    "kun": "お",
+    "meaning": "male/hero",
+    "example": "雄 (お) male/hero"
+  },
+  {
+    "kanji": "刀",
+    "on": "トウ",
+    "kun": "かたな",
+    "meaning": "sword",
+    "example": "刀 (かたな) sword"
+  },
+  {
+    "kanji": "弁",
+    "on": "ベン",
+    "kun": "",
+    "meaning": "speech/petal",
+    "example": "弁 (ベン) speech/petal"
+  },
+  {
+    "kanji": "妙",
+    "on": "ミョウ",
+    "kun": "たえ",
+    "meaning": "strange/wonderful",
+    "example": "妙 (たえ) strange/wonderful"
+  },
+  {
+    "kanji": "模",
+    "on": "モ・ボ",
+    "kun": "",
+    "meaning": "pattern/imitate",
+    "example": "模 (モ) pattern/imitate"
+  },
+  {
+    "kanji": "抗",
+    "on": "コウ",
+    "kun": "あら-がう",
+    "meaning": "resist",
+    "example": "抗 (あらがう) resist"
+  },
+  {
+    "kanji": "級",
+    "on": "キュウ",
+    "kun": "",
+    "meaning": "class/rank",
+    "example": "級 (キュウ) class/rank"
+  },
+  {
+    "kanji": "瞬",
+    "on": "シュン",
+    "kun": "またた-く",
+    "meaning": "instant/blink",
+    "example": "瞬 (またたく) instant/blink"
+  },
+  {
+    "kanji": "称",
+    "on": "ショウ",
+    "kun": "となえ-る",
+    "meaning": "name/praise",
+    "example": "称 (となえる) name/praise"
+  },
+  {
+    "kanji": "華",
+    "on": "カ・ケ",
+    "kun": "はな",
+    "meaning": "splendid/China",
+    "example": "華 (はな) splendid/China"
+  },
+  {
+    "kanji": "傷",
+    "on": "ショウ",
+    "kun": "きず",
+    "meaning": "wound",
+    "example": "傷 (きず) wound"
+  },
+  {
+    "kanji": "闘",
+    "on": "トウ",
+    "kun": "たたか-う",
+    "meaning": "fight/struggle",
+    "example": "闘 (たたかう) fight/struggle"
+  },
+  {
+    "kanji": "筋",
+    "on": "キン",
+    "kun": "すじ",
+    "meaning": "muscle/plot",
+    "example": "筋 (すじ) muscle/plot"
+  },
+  {
+    "kanji": "訳",
+    "on": "ヤク",
+    "kun": "わけ",
+    "meaning": "translate/reason",
+    "example": "訳 (わけ) translate/reason"
+  },
+  {
+    "kanji": "射",
+    "on": "シャ",
+    "kun": "い-る",
+    "meaning": "shoot",
+    "example": "射 (いる) shoot"
+  },
+  {
+    "kanji": "善",
+    "on": "ゼン",
+    "kun": "よ-い",
+    "meaning": "good/virtue",
+    "example": "善 (よい) good/virtue"
+  },
+  {
+    "kanji": "黙",
+    "on": "モク",
+    "kun": "だま-る",
+    "meaning": "silent",
+    "example": "黙 (だまる) silent"
+  },
+  {
+    "kanji": "柄",
+    "on": "ヘイ",
+    "kun": "がら・え",
+    "meaning": "handle/character",
+    "example": "柄 (がら) handle/character"
+  },
+  {
+    "kanji": "刑",
+    "on": "ケイ",
+    "kun": "",
+    "meaning": "punishment",
+    "example": "刑 (ケイ) punishment"
+  },
+  {
+    "kanji": "節",
+    "on": "セツ",
+    "kun": "ふし",
+    "meaning": "joint/season",
+    "example": "節 (ふし) joint/season"
+  },
+  {
+    "kanji": "脱",
+    "on": "ダツ",
+    "kun": "ぬ-ぐ",
+    "meaning": "remove/escape",
+    "example": "脱 (ぬぐ) remove/escape"
+  },
+  {
+    "kanji": "厳",
+    "on": "ゲン・ゴン",
+    "kun": "きび-しい",
+    "meaning": "strict/solemn",
+    "example": "厳 (きびしい) strict/solemn"
+  },
+  {
+    "kanji": "博",
+    "on": "ハク・バク",
+    "kun": "",
+    "meaning": "wide/博士",
+    "example": "博 (ハク) wide/博士"
+  },
+  {
+    "kanji": "陣",
+    "on": "ジン",
+    "kun": "",
+    "meaning": "battle array",
+    "example": "陣 (ジン) battle array"
+  },
+  {
+    "kanji": "奇",
+    "on": "キ",
+    "kun": "",
+    "meaning": "strange/odd",
+    "example": "奇 (キ) strange/odd"
+  },
+  {
+    "kanji": "忠",
+    "on": "チュウ",
+    "kun": "",
+    "meaning": "loyal",
+    "example": "忠 (チュウ) loyal"
+  },
+  {
+    "kanji": "染",
+    "on": "セン",
+    "kun": "そ-める",
+    "meaning": "dye/contaminate",
+    "example": "染 (そめる) dye/contaminate"
+  },
+  {
+    "kanji": "微",
+    "on": "ビ",
+    "kun": "",
+    "meaning": "slight/micro",
+    "example": "微 (ビ) slight/micro"
+  },
+  {
+    "kanji": "標",
+    "on": "ヒョウ",
+    "kun": "しるし",
+    "meaning": "mark/target",
+    "example": "標 (しるし) mark/target"
+  },
+  {
+    "kanji": "縁",
+    "on": "エン",
+    "kun": "ふち・えん",
+    "meaning": "relation/edge",
+    "example": "縁 (ふち) relation/edge"
+  },
+  {
+    "kanji": "壁",
+    "on": "ヘキ",
+    "kun": "かべ",
+    "meaning": "wall",
+    "example": "壁 (かべ) wall"
+  },
+  {
+    "kanji": "駆",
+    "on": "ク",
+    "kun": "か-ける",
+    "meaning": "run/drive",
+    "example": "駆 (かける) run/drive"
+  },
+  {
+    "kanji": "麻",
+    "on": "マ",
+    "kun": "あさ",
+    "meaning": "hemp/numb",
+    "example": "麻 (あさ) hemp/numb"
+  },
+  {
+    "kanji": "甲",
+    "on": "コウ・カン",
+    "kun": "",
+    "meaning": "armor/first",
+    "example": "甲 (コウ) armor/first"
+  },
+  {
+    "kanji": "藩",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "feudal domain",
+    "example": "藩 (ハン) feudal domain"
+  },
+  {
+    "kanji": "迫",
+    "on": "ハク",
+    "kun": "せま-る",
+    "meaning": "press/threaten",
+    "example": "迫 (せまる) press/threaten"
+  },
+  {
+    "kanji": "踏",
+    "on": "トウ",
+    "kun": "ふ-む",
+    "meaning": "step on",
+    "example": "踏 (ふむ) step on"
+  },
+  {
+    "kanji": "討",
+    "on": "トウ",
+    "kun": "う-つ",
+    "meaning": "attack/punish",
+    "example": "討 (うつ) attack/punish"
+  },
+  {
+    "kanji": "聖",
+    "on": "セイ",
+    "kun": "ひじり",
+    "meaning": "holy/saint",
+    "example": "聖 (ひじり) holy/saint"
+  },
+  {
+    "kanji": "典",
+    "on": "テン",
+    "kun": "",
+    "meaning": "ceremony/classic",
+    "example": "典 (テン) ceremony/classic"
+  },
+  {
+    "kanji": "剣",
+    "on": "ケン",
+    "kun": "つるぎ",
+    "meaning": "sword",
+    "example": "剣 (つるぎ) sword"
+  },
+  {
+    "kanji": "症",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "symptom",
+    "example": "症 (ショウ) symptom"
+  },
+  {
+    "kanji": "納",
+    "on": "ノウ・ナ",
+    "kun": "おさ-める",
+    "meaning": "pay/store",
+    "example": "納 (おさめる) pay/store"
+  },
+  {
+    "kanji": "弥",
+    "on": "ヤ・ミ",
+    "kun": "いや",
+    "meaning": "more and more",
+    "example": "弥 (いや) more and more"
+  },
+  {
+    "kanji": "融",
+    "on": "ユウ",
+    "kun": "と-ける",
+    "meaning": "melt/finance",
+    "example": "融 (とける) melt/finance"
+  },
+  {
+    "kanji": "浜",
+    "on": "ヒン",
+    "kun": "はま",
+    "meaning": "beach",
+    "example": "浜 (はま) beach"
+  },
+  {
+    "kanji": "郷",
+    "on": "キョウ・ゴウ",
+    "kun": "さと",
+    "meaning": "hometown",
+    "example": "郷 (さと) hometown"
+  },
+  {
+    "kanji": "惑",
+    "on": "ワク",
+    "kun": "まど-う",
+    "meaning": "bewildered",
+    "example": "惑 (まどう) bewildered"
+  },
+  {
+    "kanji": "柳",
+    "on": "リュウ",
+    "kun": "やなぎ",
+    "meaning": "willow",
+    "example": "柳 (やなぎ) willow"
+  },
+  {
+    "kanji": "拠",
+    "on": "キョ",
+    "kun": "",
+    "meaning": "base/grounds",
+    "example": "拠 (キョ) base/grounds"
+  },
+  {
+    "kanji": "奉",
+    "on": "ホウ",
+    "kun": "たてまつ-る",
+    "meaning": "offer/serve",
+    "example": "奉 (たてまつる) offer/serve"
+  },
+  {
+    "kanji": "壊",
+    "on": "カイ",
+    "kun": "こわ-れる",
+    "meaning": "break/destroy",
+    "example": "壊 (こわれる) break/destroy"
+  },
+  {
+    "kanji": "益",
+    "on": "エキ・ヤク",
+    "kun": "ます",
+    "meaning": "benefit/profit",
+    "example": "益 (ます) benefit/profit"
+  },
+  {
+    "kanji": "句",
+    "on": "ク",
+    "kun": "",
+    "meaning": "phrase/clause",
+    "example": "句 (ク) phrase/clause"
+  },
+  {
+    "kanji": "属",
+    "on": "ゾク",
+    "kun": "",
+    "meaning": "belong to",
+    "example": "属 (ゾク) belong to"
+  },
+  {
+    "kanji": "功",
+    "on": "コウ・ク",
+    "kun": "",
+    "meaning": "achievement",
+    "example": "功 (コウ) achievement"
+  },
+  {
+    "kanji": "帝",
+    "on": "テイ",
+    "kun": "みかど",
+    "meaning": "emperor",
+    "example": "帝 (みかど) emperor"
+  },
+  {
+    "kanji": "賀",
+    "on": "ガ",
+    "kun": "",
+    "meaning": "congratulate",
+    "example": "賀 (ガ) congratulate"
+  },
+  {
+    "kanji": "堀",
+    "on": "クツ",
+    "kun": "ほり",
+    "meaning": "moat/canal",
+    "example": "堀 (ほり) moat/canal"
+  },
+  {
+    "kanji": "創",
+    "on": "ソウ",
+    "kun": "つく-る",
+    "meaning": "create/found",
+    "example": "創 (つくる) create/found"
+  },
+  {
+    "kanji": "泣",
+    "on": "キュウ",
+    "kun": "な-く",
+    "meaning": "cry/weep",
+    "example": "泣 (なく) cry/weep"
+  },
+  {
+    "kanji": "憶",
+    "on": "オク",
+    "kun": "",
+    "meaning": "remember",
+    "example": "憶 (オク) remember"
+  },
+  {
+    "kanji": "幹",
+    "on": "カン",
+    "kun": "みき",
+    "meaning": "trunk/main",
+    "example": "幹 (みき) trunk/main"
+  },
+  {
+    "kanji": "露",
+    "on": "ロ・ロウ",
+    "kun": "つゆ",
+    "meaning": "dew/reveal",
+    "example": "露 (つゆ) dew/reveal"
+  },
+  {
+    "kanji": "矢",
+    "on": "シ",
+    "kun": "や",
+    "meaning": "arrow",
+    "example": "矢 (や) arrow"
+  },
+  {
+    "kanji": "握",
+    "on": "アク",
+    "kun": "にぎ-る",
+    "meaning": "grip/hold",
+    "example": "握 (にぎる) grip/hold"
+  },
+  {
+    "kanji": "儀",
+    "on": "ギ",
+    "kun": "",
+    "meaning": "ceremony/manner",
+    "example": "儀 (ギ) ceremony/manner"
+  },
+  {
+    "kanji": "聴",
+    "on": "チョウ",
+    "kun": "き-く",
+    "meaning": "listen carefully",
+    "example": "聴 (きく) listen carefully"
+  },
+  {
+    "kanji": "襲",
+    "on": "シュウ",
+    "kun": "おそ-う",
+    "meaning": "attack/inherit",
+    "example": "襲 (おそう) attack/inherit"
+  },
+  {
+    "kanji": "徴",
+    "on": "チョウ",
+    "kun": "",
+    "meaning": "sign/levy",
+    "example": "徴 (チョウ) sign/levy"
+  },
+  {
+    "kanji": "丁",
+    "on": "チョウ・テイ",
+    "kun": "",
+    "meaning": "town block/counter",
+    "example": "丁 (チョウ) town block/counter"
+  },
+  {
+    "kanji": "憲",
+    "on": "ケン",
+    "kun": "",
+    "meaning": "constitution",
+    "example": "憲 (ケン) constitution"
+  },
+  {
+    "kanji": "閣",
+    "on": "カク",
+    "kun": "",
+    "meaning": "cabinet/tower",
+    "example": "閣 (カク) cabinet/tower"
+  },
+  {
+    "kanji": "救",
+    "on": "キュウ",
+    "kun": "すく-う",
+    "meaning": "rescue",
+    "example": "救 (すくう) rescue"
+  },
+  {
+    "kanji": "陰",
+    "on": "イン",
+    "kun": "かげ",
+    "meaning": "shade/negative",
+    "example": "陰 (かげ) shade/negative"
+  },
+  {
+    "kanji": "繰",
+    "on": "ソウ",
+    "kun": "く-る",
+    "meaning": "reel/repeat",
+    "example": "繰 (くる) reel/repeat"
+  },
+  {
+    "kanji": "那",
+    "on": "ナ",
+    "kun": "",
+    "meaning": "that",
+    "example": "那 (ナ) that"
+  },
+  {
+    "kanji": "操",
+    "on": "ソウ",
+    "kun": "みさお・あやつ-る",
+    "meaning": "operate/chastity",
+    "example": "操 (みさお) operate/chastity"
+  },
+  {
+    "kanji": "騒",
+    "on": "ソウ",
+    "kun": "さわ-ぐ",
+    "meaning": "noisy",
+    "example": "騒 (さわぐ) noisy"
+  },
+  {
+    "kanji": "己",
+    "on": "コ・キ",
+    "kun": "おのれ",
+    "meaning": "self",
+    "example": "己 (おのれ) self"
+  },
+  {
+    "kanji": "魔",
+    "on": "マ",
+    "kun": "",
+    "meaning": "demon/magic",
+    "example": "魔 (マ) demon/magic"
+  },
+  {
+    "kanji": "撮",
+    "on": "サツ",
+    "kun": "と-る",
+    "meaning": "photograph",
+    "example": "撮 (とる) photograph"
+  },
+  {
+    "kanji": "携",
+    "on": "ケイ",
+    "kun": "たずさ-える",
+    "meaning": "carry/cooperate",
+    "example": "携 (たずさえる) carry/cooperate"
+  },
+  {
+    "kanji": "隣",
+    "on": "リン",
+    "kun": "とな-り",
+    "meaning": "neighbor",
+    "example": "隣 (となり) neighbor"
+  },
+  {
+    "kanji": "宣",
+    "on": "セン",
+    "kun": "のたま-う",
+    "meaning": "proclaim",
+    "example": "宣 (のたまう) proclaim"
+  },
+  {
+    "kanji": "遣",
+    "on": "ケン",
+    "kun": "つか-う",
+    "meaning": "send/use",
+    "example": "遣 (つかう) send/use"
+  },
+  {
+    "kanji": "訴",
+    "on": "ソ",
+    "kun": "うった-える",
+    "meaning": "sue/appeal",
+    "example": "訴 (うったえる) sue/appeal"
+  },
+  {
+    "kanji": "茂",
+    "on": "モ",
+    "kun": "しげ-る",
+    "meaning": "overgrown",
+    "example": "茂 (しげる) overgrown"
+  },
+  {
+    "kanji": "釣",
+    "on": "チョウ",
+    "kun": "つ-る",
+    "meaning": "fish/balance",
+    "example": "釣 (つる) fish/balance"
+  },
+  {
+    "kanji": "批",
+    "on": "ヒ",
+    "kun": "",
+    "meaning": "criticize",
+    "example": "批 (ヒ) criticize"
+  },
+  {
+    "kanji": "誘",
+    "on": "ユウ",
+    "kun": "さそ-う",
+    "meaning": "invite/tempt",
+    "example": "誘 (さそう) invite/tempt"
+  },
+  {
+    "kanji": "核",
+    "on": "カク",
+    "kun": "",
+    "meaning": "nucleus/core",
+    "example": "核 (カク) nucleus/core"
+  },
+  {
+    "kanji": "哲",
+    "on": "テツ",
+    "kun": "",
+    "meaning": "wisdom/philosophy",
+    "example": "哲 (テツ) wisdom/philosophy"
+  },
+  {
+    "kanji": "豪",
+    "on": "ゴウ",
+    "kun": "",
+    "meaning": "magnificent/brave",
+    "example": "豪 (ゴウ) magnificent/brave"
+  },
+  {
+    "kanji": "締",
+    "on": "テイ",
+    "kun": "し-める",
+    "meaning": "tighten/conclude",
+    "example": "締 (しめる) tighten/conclude"
+  },
+  {
+    "kanji": "鹿",
+    "on": "ロク",
+    "kun": "しか",
+    "meaning": "deer",
+    "example": "鹿 (しか) deer"
+  },
+  {
+    "kanji": "就",
+    "on": "シュウ・ジュ",
+    "kun": "つ-く",
+    "meaning": "take up/accomplish",
+    "example": "就 (つく) take up/accomplish"
+  },
+  {
+    "kanji": "滅",
+    "on": "メツ",
+    "kun": "ほろ-びる",
+    "meaning": "perish/destroy",
+    "example": "滅 (ほろびる) perish/destroy"
+  },
+  {
+    "kanji": "仰",
+    "on": "ギョウ・コウ",
+    "kun": "あお-ぐ",
+    "meaning": "look up/say",
+    "example": "仰 (あおぐ) look up/say"
+  },
+  {
+    "kanji": "瀬",
+    "on": "セ",
+    "kun": "せ",
+    "meaning": "shoal/rapids",
+    "example": "瀬 (せ) shoal/rapids"
+  },
+  {
+    "kanji": "致",
+    "on": "チ",
+    "kun": "いた-す",
+    "meaning": "cause/bring about",
+    "example": "致 (いたす) cause/bring about"
+  },
+  {
+    "kanji": "伏",
+    "on": "フク",
+    "kun": "ふ-す",
+    "meaning": "lie down/hide",
+    "example": "伏 (ふす) lie down/hide"
+  },
+  {
+    "kanji": "杉",
+    "on": "サン",
+    "kun": "すぎ",
+    "meaning": "cedar",
+    "example": "杉 (すぎ) cedar"
+  },
+  {
+    "kanji": "審",
+    "on": "シン",
+    "kun": "",
+    "meaning": "judge/investigate",
+    "example": "審 (シン) judge/investigate"
+  },
+  {
+    "kanji": "避",
+    "on": "ヒ",
+    "kun": "さ-ける",
+    "meaning": "avoid",
+    "example": "避 (さける) avoid"
+  },
+  {
+    "kanji": "揺",
+    "on": "ヨウ",
+    "kun": "ゆ-れる",
+    "meaning": "shake/sway",
+    "example": "揺 (ゆれる) shake/sway"
+  },
+  {
+    "kanji": "浦",
+    "on": "ホ",
+    "kun": "うら",
+    "meaning": "bay/coast",
+    "example": "浦 (うら) bay/coast"
+  },
+  {
+    "kanji": "至",
+    "on": "シ",
+    "kun": "いた-る",
+    "meaning": "reach/utmost",
+    "example": "至 (いたる) reach/utmost"
+  },
+  {
+    "kanji": "裕",
+    "on": "ユウ",
+    "kun": "ゆた-か",
+    "meaning": "abundant",
+    "example": "裕 (ゆたか) abundant"
+  },
+  {
+    "kanji": "盟",
+    "on": "メイ",
+    "kun": "",
+    "meaning": "alliance/league",
+    "example": "盟 (メイ) alliance/league"
+  },
+  {
+    "kanji": "執",
+    "on": "シツ・シュウ",
+    "kun": "と-る",
+    "meaning": "hold/manage",
+    "example": "執 (とる) hold/manage"
+  },
+  {
+    "kanji": "崩",
+    "on": "ホウ",
+    "kun": "くず-れる",
+    "meaning": "collapse",
+    "example": "崩 (くずれる) collapse"
+  },
+  {
+    "kanji": "鬼",
+    "on": "キ",
+    "kun": "おに",
+    "meaning": "demon/ghost",
+    "example": "鬼 (おに) demon/ghost"
+  },
+  {
+    "kanji": "酸",
+    "on": "サン",
+    "kun": "す-い",
+    "meaning": "sour/acid",
+    "example": "酸 (すい) sour/acid"
+  },
+  {
+    "kanji": "拡",
+    "on": "カク",
+    "kun": "ひろ-げる",
+    "meaning": "expand",
+    "example": "拡 (ひろげる) expand"
+  },
+  {
+    "kanji": "銃",
+    "on": "ジュウ",
+    "kun": "",
+    "meaning": "gun/firearm",
+    "example": "銃 (ジュウ) gun/firearm"
+  },
+  {
+    "kanji": "維",
+    "on": "イ",
+    "kun": "",
+    "meaning": "maintain/fiber",
+    "example": "維 (イ) maintain/fiber"
+  },
+  {
+    "kanji": "縄",
+    "on": "ジョウ",
+    "kun": "なわ",
+    "meaning": "rope",
+    "example": "縄 (なわ) rope"
+  },
+  {
+    "kanji": "詩",
+    "on": "シ",
+    "kun": "うた",
+    "meaning": "poem",
+    "example": "詩 (うた) poem"
+  },
+  {
+    "kanji": "廃",
+    "on": "ハイ",
+    "kun": "すた-れる",
+    "meaning": "abolish",
+    "example": "廃 (すたれる) abolish"
+  },
+  {
+    "kanji": "充",
+    "on": "ジュウ",
+    "kun": "あ-てる",
+    "meaning": "fill/充分",
+    "example": "充 (あてる) fill/充分"
+  },
+  {
+    "kanji": "鏡",
+    "on": "キョウ",
+    "kun": "かがみ",
+    "meaning": "mirror",
+    "example": "鏡 (かがみ) mirror"
+  },
+  {
+    "kanji": "仮",
+    "on": "カ・ケ",
+    "kun": "かり",
+    "meaning": "temporary/假",
+    "example": "仮 (かり) temporary/假"
+  },
+  {
+    "kanji": "吐",
+    "on": "ト",
+    "kun": "は-く",
+    "meaning": "spit/confess",
+    "example": "吐 (はく) spit/confess"
+  },
+  {
+    "kanji": "請",
+    "on": "セイ・ショウ",
+    "kun": "こ-う",
+    "meaning": "request/receive",
+    "example": "請 (こう) request/receive"
+  },
+  {
+    "kanji": "眺",
+    "on": "チョウ",
+    "kun": "なが-める",
+    "meaning": "view/gaze",
+    "example": "眺 (ながめる) view/gaze"
+  },
+  {
+    "kanji": "沖",
+    "on": "チュウ",
+    "kun": "おき",
+    "meaning": "open sea",
+    "example": "沖 (おき) open sea"
+  },
+  {
+    "kanji": "躍",
+    "on": "ヤク",
+    "kun": "おど-る",
+    "meaning": "leap/jump",
+    "example": "躍 (おどる) leap/jump"
+  },
+  {
+    "kanji": "威",
+    "on": "イ",
+    "kun": "おど-す",
+    "meaning": "power/威圧",
+    "example": "威 (おどす) power/威圧"
+  },
+  {
+    "kanji": "屈",
+    "on": "クツ",
+    "kun": "かが-む",
+    "meaning": "bend/submit",
+    "example": "屈 (かがむ) bend/submit"
+  },
+  {
+    "kanji": "勘",
+    "on": "カン",
+    "kun": "",
+    "meaning": "intuition",
+    "example": "勘 (カン) intuition"
+  },
+  {
+    "kanji": "徹",
+    "on": "テツ",
+    "kun": "",
+    "meaning": "penetrate/thorough",
+    "example": "徹 (テツ) penetrate/thorough"
+  },
+  {
+    "kanji": "斎",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "purify/fast",
+    "example": "斎 (サイ) purify/fast"
+  },
+  {
+    "kanji": "謝",
+    "on": "シャ",
+    "kun": "あやま-る",
+    "meaning": "apologize/thank",
+    "example": "謝 (あやまる) apologize/thank"
+  },
+  {
+    "kanji": "艦",
+    "on": "カン",
+    "kun": "",
+    "meaning": "warship",
+    "example": "艦 (カン) warship"
+  },
+  {
+    "kanji": "催",
+    "on": "サイ",
+    "kun": "もよお-す",
+    "meaning": "sponsor/urge",
+    "example": "催 (もよおす) sponsor/urge"
+  },
+  {
+    "kanji": "舎",
+    "on": "シャ",
+    "kun": "",
+    "meaning": "building/shed",
+    "example": "舎 (シャ) building/shed"
+  },
+  {
+    "kanji": "仁",
+    "on": "ジン・ニン",
+    "kun": "",
+    "meaning": "benevolence",
+    "example": "仁 (ジン) benevolence"
+  },
+  {
+    "kanji": "衝",
+    "on": "ショウ",
+    "kun": "つ-く",
+    "meaning": "collide/impulse",
+    "example": "衝 (つく) collide/impulse"
+  },
+  {
+    "kanji": "脚",
+    "on": "キャク・キャ",
+    "kun": "あし",
+    "meaning": "leg/foot",
+    "example": "脚 (あし) leg/foot"
+  },
+  {
+    "kanji": "虎",
+    "on": "コ",
+    "kun": "とら",
+    "meaning": "tiger",
+    "example": "虎 (とら) tiger"
+  },
+  {
+    "kanji": "潮",
+    "on": "チョウ",
+    "kun": "しお",
+    "meaning": "tide/trend",
+    "example": "潮 (しお) tide/trend"
+  },
+  {
+    "kanji": "穴",
+    "on": "ケツ",
+    "kun": "あな",
+    "meaning": "hole/cave",
+    "example": "穴 (あな) hole/cave"
+  },
+  {
+    "kanji": "怪",
+    "on": "カイ・ケ",
+    "kun": "あや-しい",
+    "meaning": "strange/monster",
+    "example": "怪 (あやしい) strange/monster"
+  },
+  {
+    "kanji": "仙",
+    "on": "セン",
+    "kun": "",
+    "meaning": "hermit/wizard",
+    "example": "仙 (セン) hermit/wizard"
+  },
+  {
+    "kanji": "輝",
+    "on": "キ",
+    "kun": "かがや-く",
+    "meaning": "shine/gleam",
+    "example": "輝 (かがやく) shine/gleam"
+  },
+  {
+    "kanji": "緊",
+    "on": "キン",
+    "kun": "",
+    "meaning": "tense/urgent",
+    "example": "緊 (キン) tense/urgent"
+  },
+  {
+    "kanji": "唇",
+    "on": "シン",
+    "kun": "くちびる",
+    "meaning": "lips",
+    "example": "唇 (くちびる) lips"
+  },
+  {
+    "kanji": "忍",
+    "on": "ニン",
+    "kun": "しの-ぶ",
+    "meaning": "endure/ninja",
+    "example": "忍 (しのぶ) endure/ninja"
+  },
+  {
+    "kanji": "狂",
+    "on": "キョウ",
+    "kun": "くる-う",
+    "meaning": "mad/crazy",
+    "example": "狂 (くるう) mad/crazy"
+  },
+  {
+    "kanji": "奪",
+    "on": "ダツ",
+    "kun": "うば-う",
+    "meaning": "snatch",
+    "example": "奪 (うばう) snatch"
+  },
+  {
+    "kanji": "診",
+    "on": "シン",
+    "kun": "み-る",
+    "meaning": "examine/diagnose",
+    "example": "診 (みる) examine/diagnose"
+  },
+  {
+    "kanji": "竜",
+    "on": "リュウ・リョウ",
+    "kun": "たつ",
+    "meaning": "dragon",
+    "example": "竜 (たつ) dragon"
+  },
+  {
+    "kanji": "債",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "debt",
+    "example": "債 (サイ) debt"
+  },
+  {
+    "kanji": "鈴",
+    "on": "レイ・リン",
+    "kun": "すず",
+    "meaning": "bell",
+    "example": "鈴 (すず) bell"
+  },
+  {
+    "kanji": "僧",
+    "on": "ソウ",
+    "kun": "",
+    "meaning": "monk/priest",
+    "example": "僧 (ソウ) monk/priest"
+  },
+  {
+    "kanji": "掲",
+    "on": "ケイ",
+    "kun": "かか-げる",
+    "meaning": "display/post",
+    "example": "掲 (かかげる) display/post"
+  },
+  {
+    "kanji": "伯",
+    "on": "ハク",
+    "kun": "",
+    "meaning": "elder/count",
+    "example": "伯 (ハク) elder/count"
+  },
+  {
+    "kanji": "熊",
+    "on": "ユウ",
+    "kun": "くま",
+    "meaning": "bear",
+    "example": "熊 (くま) bear"
+  },
+  {
+    "kanji": "浪",
+    "on": "ロウ",
+    "kun": "なみ",
+    "meaning": "wave/wander",
+    "example": "浪 (なみ) wave/wander"
+  },
+  {
+    "kanji": "梅",
+    "on": "バイ",
+    "kun": "うめ",
+    "meaning": "plum",
+    "example": "梅 (うめ) plum"
+  },
+  {
+    "kanji": "看",
+    "on": "カン",
+    "kun": "",
+    "meaning": "watch/nurse",
+    "example": "看 (カン) watch/nurse"
+  },
+  {
+    "kanji": "俊",
+    "on": "シュン",
+    "kun": "",
+    "meaning": "talented",
+    "example": "俊 (シュン) talented"
+  },
+  {
+    "kanji": "摘",
+    "on": "テキ",
+    "kun": "つ-む",
+    "meaning": "pick/point out",
+    "example": "摘 (つむ) pick/point out"
+  },
+  {
+    "kanji": "項",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "clause/paragraph",
+    "example": "項 (コウ) clause/paragraph"
+  },
+  {
+    "kanji": "霊",
+    "on": "レイ・リョウ",
+    "kun": "たま",
+    "meaning": "spirit/soul",
+    "example": "霊 (たま) spirit/soul"
+  },
+  {
+    "kanji": "垣",
+    "on": "エン",
+    "kun": "かき",
+    "meaning": "fence/hedge",
+    "example": "垣 (かき) fence/hedge"
+  },
+  {
+    "kanji": "慢",
+    "on": "マン",
+    "kun": "",
+    "meaning": "boast/slow",
+    "example": "慢 (マン) boast/slow"
+  },
+  {
+    "kanji": "扱",
+    "on": "キュウ",
+    "kun": "あつか-う",
+    "meaning": "handle/treat",
+    "example": "扱 (あつかう) handle/treat"
+  },
+  {
+    "kanji": "渉",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "ford/negotiate",
+    "example": "渉 (ショウ) ford/negotiate"
+  },
+  {
+    "kanji": "如",
+    "on": "ジョ・ニョ",
+    "kun": "ごと-く",
+    "meaning": "like/as if",
+    "example": "如 (ごとく) like/as if"
+  },
+  {
+    "kanji": "縮",
+    "on": "シュク",
+    "kun": "ちぢ-む",
+    "meaning": "shrink",
+    "example": "縮 (ちぢむ) shrink"
+  },
+  {
+    "kanji": "詳",
+    "on": "ショウ",
+    "kun": "くわ-しい",
+    "meaning": "detailed",
+    "example": "詳 (くわしい) detailed"
+  },
+  {
+    "kanji": "旦",
+    "on": "タン",
+    "kun": "",
+    "meaning": "dawn/but",
+    "example": "旦 (タン) dawn/but"
+  },
+  {
+    "kanji": "慮",
+    "on": "リョ",
+    "kun": "おもんぱか-る",
+    "meaning": "consider",
+    "example": "慮 (おもんぱかる) consider"
+  },
+  {
+    "kanji": "雅",
+    "on": "ガ",
+    "kun": "みやび",
+    "meaning": "elegant",
+    "example": "雅 (みやび) elegant"
+  },
+  {
+    "kanji": "砲",
+    "on": "ホウ",
+    "kun": "",
+    "meaning": "cannon/gun",
+    "example": "砲 (ホウ) cannon/gun"
+  },
+  {
+    "kanji": "謀",
+    "on": "ボウ・ム",
+    "kun": "はか-る",
+    "meaning": "plot/strategize",
+    "example": "謀 (はかる) plot/strategize"
+  },
+  {
+    "kanji": "懐",
+    "on": "カイ",
+    "kun": "なつ-かしい・ふところ",
+    "meaning": "nostalgic/bosom",
+    "example": "懐 (なつかしい) nostalgic/bosom"
+  },
+  {
+    "kanji": "愚",
+    "on": "グ",
+    "kun": "おろ-か",
+    "meaning": "foolish",
+    "example": "愚 (おろか) foolish"
+  },
+  {
+    "kanji": "舌",
+    "on": "ゼツ",
+    "kun": "した",
+    "meaning": "tongue",
+    "example": "舌 (した) tongue"
+  },
+  {
+    "kanji": "駄",
+    "on": "ダ",
+    "kun": "",
+    "meaning": "poor/useless",
+    "example": "駄 (ダ) poor/useless"
+  },
+  {
+    "kanji": "奴",
+    "on": "ド",
+    "kun": "やっ",
+    "meaning": "fellow/slave",
+    "example": "奴 (やっ) fellow/slave"
+  },
+  {
+    "kanji": "豆",
+    "on": "トウ・ズ",
+    "kun": "まめ",
+    "meaning": "bean",
+    "example": "豆 (まめ) bean"
+  },
+  {
+    "kanji": "又",
+    "on": "ユウ",
+    "kun": "また",
+    "meaning": "again/also",
+    "example": "又 (また) again/also"
+  },
+  {
+    "kanji": "銭",
+    "on": "セン",
+    "kun": "ぜに",
+    "meaning": "money/coin",
+    "example": "銭 (ぜに) money/coin"
+  },
+  {
+    "kanji": "抑",
+    "on": "ヨク",
+    "kun": "おさ-える",
+    "meaning": "suppress",
+    "example": "抑 (おさえる) suppress"
+  },
+  {
+    "kanji": "侍",
+    "on": "ジ",
+    "kun": "さむらい",
+    "meaning": "samurai",
+    "example": "侍 (さむらい) samurai"
+  },
+  {
+    "kanji": "宙",
+    "on": "チュウ",
+    "kun": "",
+    "meaning": "sky/space",
+    "example": "宙 (チュウ) sky/space"
+  },
+  {
+    "kanji": "範",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "example/model",
+    "example": "範 (ハン) example/model"
+  },
+  {
+    "kanji": "潜",
+    "on": "セン",
+    "kun": "もぐ-る",
+    "meaning": "submerge/hide",
+    "example": "潜 (もぐる) submerge/hide"
+  },
+  {
+    "kanji": "酔",
+    "on": "スイ",
+    "kun": "よ-う",
+    "meaning": "drunk",
+    "example": "酔 (よう) drunk"
+  },
+  {
+    "kanji": "呂",
+    "on": "ロ",
+    "kun": "",
+    "meaning": "spine/backbone",
+    "example": "呂 (ロ) spine/backbone"
+  },
+  {
+    "kanji": "還",
+    "on": "カン",
+    "kun": "かえ-る",
+    "meaning": "return",
+    "example": "還 (かえる) return"
+  },
+  {
+    "kanji": "丹",
+    "on": "タン",
+    "kun": "に",
+    "meaning": "red/sincerity",
+    "example": "丹 (に) red/sincerity"
+  },
+  {
+    "kanji": "亜",
+    "on": "ア",
+    "kun": "",
+    "meaning": "sub-/Asia",
+    "example": "亜 (ア) sub-/Asia"
+  },
+  {
+    "kanji": "亀",
+    "on": "キ",
+    "kun": "かめ",
+    "meaning": "tortoise",
+    "example": "亀 (かめ) tortoise"
+  },
+  {
+    "kanji": "沼",
+    "on": "ショウ",
+    "kun": "ぬま",
+    "meaning": "marsh/swamp",
+    "example": "沼 (ぬま) marsh/swamp"
+  },
+  {
+    "kanji": "巡",
+    "on": "ジュン",
+    "kun": "めぐ-る",
+    "meaning": "go around",
+    "example": "巡 (めぐる) go around"
+  },
+  {
+    "kanji": "臭",
+    "on": "シュウ",
+    "kun": "くさ-い",
+    "meaning": "smell/stink",
+    "example": "臭 (くさい) smell/stink"
+  },
+  {
+    "kanji": "慶",
+    "on": "ケイ",
+    "kun": "よろこ-ぶ",
+    "meaning": "congratulate",
+    "example": "慶 (よろこぶ) congratulate"
+  },
+  {
+    "kanji": "距",
+    "on": "キョ",
+    "kun": "",
+    "meaning": "distance",
+    "example": "距 (キョ) distance"
+  },
+  {
+    "kanji": "釈",
+    "on": "シャク",
+    "kun": "",
+    "meaning": "explain/release",
+    "example": "釈 (シャク) explain/release"
+  },
+  {
+    "kanji": "侵",
+    "on": "シン",
+    "kun": "おか-す",
+    "meaning": "invade",
+    "example": "侵 (おかす) invade"
+  },
+  {
+    "kanji": "僚",
+    "on": "リョウ",
+    "kun": "",
+    "meaning": "colleague",
+    "example": "僚 (リョウ) colleague"
+  },
+  {
+    "kanji": "悟",
+    "on": "ゴ",
+    "kun": "さと-る",
+    "meaning": "realize/enlighten",
+    "example": "悟 (さとる) realize/enlighten"
+  },
+  {
+    "kanji": "隆",
+    "on": "リュウ",
+    "kun": "",
+    "meaning": "prosperous",
+    "example": "隆 (リュウ) prosperous"
+  },
+  {
+    "kanji": "裂",
+    "on": "レツ",
+    "kun": "さ-ける",
+    "meaning": "tear/split",
+    "example": "裂 (さける) tear/split"
+  },
+  {
+    "kanji": "尋",
+    "on": "ジン",
+    "kun": "たず-ねる",
+    "meaning": "search/unit",
+    "example": "尋 (たずねる) search/unit"
+  },
+  {
+    "kanji": "旗",
+    "on": "キ",
+    "kun": "はた",
+    "meaning": "flag",
+    "example": "旗 (はた) flag"
+  },
+  {
+    "kanji": "羅",
+    "on": "ラ",
+    "kun": "",
+    "meaning": "net/list",
+    "example": "羅 (ラ) net/list"
+  },
+  {
+    "kanji": "揮",
+    "on": "キ",
+    "kun": "ふる-う",
+    "meaning": "wield/direct",
+    "example": "揮 (ふるう) wield/direct"
+  },
+  {
+    "kanji": "票",
+    "on": "ヒョウ",
+    "kun": "",
+    "meaning": "vote/ticket",
+    "example": "票 (ヒョウ) vote/ticket"
+  },
+  {
+    "kanji": "稲",
+    "on": "トウ",
+    "kun": "いね",
+    "meaning": "rice plant",
+    "example": "稲 (いね) rice plant"
+  },
+  {
+    "kanji": "胞",
+    "on": "ホウ",
+    "kun": "",
+    "meaning": "cell/womb",
+    "example": "胞 (ホウ) cell/womb"
+  },
+  {
+    "kanji": "懸",
+    "on": "ケン・ケ",
+    "kun": "か-ける",
+    "meaning": "hang/risk",
+    "example": "懸 (かける) hang/risk"
+  },
+  {
+    "kanji": "稿",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "draft/manuscript",
+    "example": "稿 (コウ) draft/manuscript"
+  },
+  {
+    "kanji": "塚",
+    "on": "チョウ",
+    "kun": "つか",
+    "meaning": "mound",
+    "example": "塚 (つか) mound"
+  },
+  {
+    "kanji": "盤",
+    "on": "バン",
+    "kun": "",
+    "meaning": "tray/board",
+    "example": "盤 (バン) tray/board"
+  },
+  {
+    "kanji": "災",
+    "on": "サイ",
+    "kun": "わざわ-い",
+    "meaning": "disaster",
+    "example": "災 (わざわい) disaster"
+  },
+  {
+    "kanji": "曹",
+    "on": "ソウ",
+    "kun": "",
+    "meaning": "group/rank",
+    "example": "曹 (ソウ) group/rank"
+  },
+  {
+    "kanji": "尽",
+    "on": "ジン・シン",
+    "kun": "つ-きる",
+    "meaning": "exhaust/尽きる",
+    "example": "尽 (つきる) exhaust/尽きる"
+  },
+  {
+    "kanji": "嫁",
+    "on": "カ",
+    "kun": "よめ",
+    "meaning": "bride/marry",
+    "example": "嫁 (よめ) bride/marry"
+  },
+  {
+    "kanji": "繁",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "luxuriant/busy",
+    "example": "繁 (ハン) luxuriant/busy"
+  },
+  {
+    "kanji": "即",
+    "on": "ソク",
+    "kun": "すなわ-ち",
+    "meaning": "immediately",
+    "example": "即 (すなわち) immediately"
+  },
+  {
+    "kanji": "帳",
+    "on": "チョウ",
+    "kun": "とばり",
+    "meaning": "notebook/curtain",
+    "example": "帳 (とばり) notebook/curtain"
+  },
+  {
+    "kanji": "飾",
+    "on": "ショク",
+    "kun": "かざ-る",
+    "meaning": "decorate",
+    "example": "飾 (かざる) decorate"
+  },
+  {
+    "kanji": "沿",
+    "on": "エン",
+    "kun": "そ-う",
+    "meaning": "along/follow",
+    "example": "沿 (そう) along/follow"
+  },
+  {
+    "kanji": "獲",
+    "on": "カク",
+    "kun": "え-る",
+    "meaning": "catch/acquire",
+    "example": "獲 (える) catch/acquire"
+  },
+  {
+    "kanji": "伴",
+    "on": "ハン・バン",
+    "kun": "ともな-う",
+    "meaning": "accompany",
+    "example": "伴 (ともなう) accompany"
+  },
+  {
+    "kanji": "唐",
+    "on": "トウ",
+    "kun": "から",
+    "meaning": "Tang dynasty/foreign",
+    "example": "唐 (から) Tang dynasty/foreign"
+  },
+  {
+    "kanji": "狭",
+    "on": "キョウ",
+    "kun": "せま-い",
+    "meaning": "narrow",
+    "example": "狭 (せまい) narrow"
+  },
+  {
+    "kanji": "添",
+    "on": "テン",
+    "kun": "そ-える",
+    "meaning": "add/accompany",
+    "example": "添 (そえる) add/accompany"
+  },
+  {
+    "kanji": "剤",
+    "on": "ザイ",
+    "kun": "",
+    "meaning": "medicine/agent",
+    "example": "剤 (ザイ) medicine/agent"
+  },
+  {
+    "kanji": "魅",
+    "on": "ミ",
+    "kun": "",
+    "meaning": "charm/fascinate",
+    "example": "魅 (ミ) charm/fascinate"
+  },
+  {
+    "kanji": "契",
+    "on": "ケイ",
+    "kun": "ちぎ-る",
+    "meaning": "pledge/contract",
+    "example": "契 (ちぎる) pledge/contract"
+  },
+  {
+    "kanji": "邪",
+    "on": "ジャ",
+    "kun": "よこ",
+    "meaning": "evil/wicked",
+    "example": "邪 (よこ) evil/wicked"
+  },
+  {
+    "kanji": "挑",
+    "on": "チョウ",
+    "kun": "いど-む",
+    "meaning": "challenge",
+    "example": "挑 (いどむ) challenge"
+  },
+  {
+    "kanji": "免",
+    "on": "メン",
+    "kun": "まぬか-れる",
+    "meaning": "exempt/avoid",
+    "example": "免 (まぬかれる) exempt/avoid"
+  },
+  {
+    "kanji": "爵",
+    "on": "シャク",
+    "kun": "",
+    "meaning": "peerage/rank",
+    "example": "爵 (シャク) peerage/rank"
+  },
+  {
+    "kanji": "択",
+    "on": "タク",
+    "kun": "",
+    "meaning": "choose/select",
+    "example": "択 (タク) choose/select"
+  },
+  {
+    "kanji": "廊",
+    "on": "ロウ",
+    "kun": "",
+    "meaning": "corridor",
+    "example": "廊 (ロウ) corridor"
+  },
+  {
+    "kanji": "析",
+    "on": "セキ",
+    "kun": "",
+    "meaning": "split/analyze",
+    "example": "析 (セキ) split/analyze"
+  },
+  {
+    "kanji": "輩",
+    "on": "ハイ",
+    "kun": "",
+    "meaning": "fellow/companion",
+    "example": "輩 (ハイ) fellow/companion"
+  },
+  {
+    "kanji": "敏",
+    "on": "ビン",
+    "kun": "",
+    "meaning": "agile/sharp",
+    "example": "敏 (ビン) agile/sharp"
+  },
+  {
+    "kanji": "鶴",
+    "on": "カク",
+    "kun": "つる",
+    "meaning": "crane (bird)",
+    "example": "鶴 (つる) crane (bird)"
+  },
+  {
+    "kanji": "虚",
+    "on": "キョ・コ",
+    "kun": "むな-しい",
+    "meaning": "empty/false",
+    "example": "虚 (むなしい) empty/false"
+  },
+  {
+    "kanji": "往",
+    "on": "オウ",
+    "kun": "",
+    "meaning": "go/past",
+    "example": "往 (オウ) go/past"
+  },
+  {
+    "kanji": "趣",
+    "on": "シュ",
+    "kun": "おもむき",
+    "meaning": "taste/appeal",
+    "example": "趣 (おもむき) taste/appeal"
+  },
+  {
+    "kanji": "烈",
+    "on": "レツ",
+    "kun": "",
+    "meaning": "intense/fierce",
+    "example": "烈 (レツ) intense/fierce"
+  },
+  {
+    "kanji": "索",
+    "on": "サク",
+    "kun": "",
+    "meaning": "search/cord",
+    "example": "索 (サク) search/cord"
+  },
+  {
+    "kanji": "匂",
+    "on": "（訓読み）",
+    "kun": "にお-う",
+    "meaning": "smell/scent",
+    "example": "匂 (におう) smell/scent"
+  },
+  {
+    "kanji": "摩",
+    "on": "マ",
+    "kun": "",
+    "meaning": "rub/磨く",
+    "example": "摩 (マ) rub/磨く"
+  },
+  {
+    "kanji": "菊",
+    "on": "キク",
+    "kun": "",
+    "meaning": "chrysanthemum",
+    "example": "菊 (キク) chrysanthemum"
+  },
+  {
+    "kanji": "滑",
+    "on": "カツ",
+    "kun": "すべ-る・なめ-らか",
+    "meaning": "slide/smooth",
+    "example": "滑 (すべる) slide/smooth"
+  },
+  {
+    "kanji": "沙",
+    "on": "サ",
+    "kun": "すな",
+    "meaning": "sand",
+    "example": "沙 (すな) sand"
+  },
+  {
+    "kanji": "裸",
+    "on": "ラ",
+    "kun": "はだか",
+    "meaning": "naked",
+    "example": "裸 (はだか) naked"
+  },
+  {
+    "kanji": "孝",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "filial piety",
+    "example": "孝 (コウ) filial piety"
+  },
+  {
+    "kanji": "綱",
+    "on": "コウ",
+    "kun": "つな",
+    "meaning": "rope/guideline",
+    "example": "綱 (つな) rope/guideline"
+  },
+  {
+    "kanji": "邸",
+    "on": "テイ",
+    "kun": "やしき",
+    "meaning": "mansion",
+    "example": "邸 (やしき) mansion"
+  },
+  {
+    "kanji": "邦",
+    "on": "ホウ",
+    "kun": "くに",
+    "meaning": "country/Japan",
+    "example": "邦 (くに) country/Japan"
+  },
+  {
+    "kanji": "揚",
+    "on": "ヨウ",
+    "kun": "あ-げる",
+    "meaning": "raise/fry",
+    "example": "揚 (あげる) raise/fry"
+  },
+  {
+    "kanji": "卓",
+    "on": "タク",
+    "kun": "",
+    "meaning": "table/excel",
+    "example": "卓 (タク) table/excel"
+  },
+  {
+    "kanji": "騎",
+    "on": "キ",
+    "kun": "",
+    "meaning": "ride horseback",
+    "example": "騎 (キ) ride horseback"
+  },
+  {
+    "kanji": "墓",
+    "on": "ボ",
+    "kun": "はか",
+    "meaning": "grave/tomb",
+    "example": "墓 (はか) grave/tomb"
+  },
+  {
+    "kanji": "姫",
+    "on": "キ",
+    "kun": "ひめ",
+    "meaning": "princess",
+    "example": "姫 (ひめ) princess"
+  },
+  {
+    "kanji": "孔",
+    "on": "コウ",
+    "kun": "あな",
+    "meaning": "hole/Confucius",
+    "example": "孔 (あな) hole/Confucius"
+  },
+  {
+    "kanji": "耐",
+    "on": "タイ",
+    "kun": "た-える",
+    "meaning": "endure",
+    "example": "耐 (たえる) endure"
+  },
+  {
+    "kanji": "須",
+    "on": "ス・シュ",
+    "kun": "",
+    "meaning": "must/need",
+    "example": "須 (ス) must/need"
+  },
+  {
+    "kanji": "臨",
+    "on": "リン",
+    "kun": "のぞ-む",
+    "meaning": "face/attend",
+    "example": "臨 (のぞむ) face/attend"
+  },
+  {
+    "kanji": "献",
+    "on": "ケン・コン",
+    "kun": "",
+    "meaning": "offer",
+    "example": "献 (ケン) offer"
+  },
+  {
+    "kanji": "脈",
+    "on": "ミャク",
+    "kun": "",
+    "meaning": "pulse/vein",
+    "example": "脈 (ミャク) pulse/vein"
+  },
+  {
+    "kanji": "芝",
+    "on": "シ",
+    "kun": "しば",
+    "meaning": "lawn/turf",
+    "example": "芝 (しば) lawn/turf"
+  },
+  {
+    "kanji": "唱",
+    "on": "ショウ",
+    "kun": "とな-える",
+    "meaning": "chant/sing",
+    "example": "唱 (となえる) chant/sing"
+  },
+  {
+    "kanji": "亭",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "pavilion/inn",
+    "example": "亭 (テイ) pavilion/inn"
+  },
+  {
+    "kanji": "誕",
+    "on": "タン",
+    "kun": "",
+    "meaning": "birth",
+    "example": "誕 (タン) birth"
+  },
+  {
+    "kanji": "貫",
+    "on": "カン",
+    "kun": "つらぬ-く",
+    "meaning": "pierce/unit",
+    "example": "貫 (つらぬく) pierce/unit"
+  },
+  {
+    "kanji": "偽",
+    "on": "ギ",
+    "kun": "いつわ-る",
+    "meaning": "false/fake",
+    "example": "偽 (いつわる) false/fake"
+  },
+  {
+    "kanji": "奮",
+    "on": "フン",
+    "kun": "ふる-う",
+    "meaning": "rouse/excite",
+    "example": "奮 (ふるう) rouse/excite"
+  },
+  {
+    "kanji": "桜",
+    "on": "オウ",
+    "kun": "さくら",
+    "meaning": "cherry blossom",
+    "example": "桜 (さくら) cherry blossom"
+  },
+  {
+    "kanji": "熟",
+    "on": "ジュク",
+    "kun": "う-れる",
+    "meaning": "ripe/熟知",
+    "example": "熟 (うれる) ripe/熟知"
+  },
+  {
+    "kanji": "排",
+    "on": "ハイ",
+    "kun": "",
+    "meaning": "exclude/排除",
+    "example": "排 (ハイ) exclude/排除"
+  },
+  {
+    "kanji": "透",
+    "on": "トウ",
+    "kun": "す-く",
+    "meaning": "transparent",
+    "example": "透 (すく) transparent"
+  },
+  {
+    "kanji": "棄",
+    "on": "キ",
+    "kun": "す-てる",
+    "meaning": "abandon",
+    "example": "棄 (すてる) abandon"
+  },
+  {
+    "kanji": "削",
+    "on": "サク",
+    "kun": "けず-る",
+    "meaning": "scrape/reduce",
+    "example": "削 (けずる) scrape/reduce"
+  },
+  {
+    "kanji": "奏",
+    "on": "ソウ",
+    "kun": "かな-でる",
+    "meaning": "play music",
+    "example": "奏 (かなでる) play music"
+  },
+  {
+    "kanji": "幻",
+    "on": "ゲン",
+    "kun": "まぼろし",
+    "meaning": "illusion",
+    "example": "幻 (まぼろし) illusion"
+  },
+  {
+    "kanji": "麗",
+    "on": "レイ",
+    "kun": "うるわ-しい",
+    "meaning": "beautiful",
+    "example": "麗 (うるわしい) beautiful"
+  },
+  {
+    "kanji": "逮",
+    "on": "タイ",
+    "kun": "",
+    "meaning": "arrest",
+    "example": "逮 (タイ) arrest"
+  },
+  {
+    "kanji": "誠",
+    "on": "セイ",
+    "kun": "まこと",
+    "meaning": "sincerity",
+    "example": "誠 (まこと) sincerity"
+  },
+  {
+    "kanji": "炎",
+    "on": "エン",
+    "kun": "ほのお",
+    "meaning": "flame",
+    "example": "炎 (ほのお) flame"
+  },
+  {
+    "kanji": "椅",
+    "on": "イ",
+    "kun": "",
+    "meaning": "chair",
+    "example": "椅 (イ) chair"
+  },
+  {
+    "kanji": "寛",
+    "on": "カン",
+    "kun": "",
+    "meaning": "tolerant/wide",
+    "example": "寛 (カン) tolerant/wide"
+  },
+  {
+    "kanji": "斉",
+    "on": "セイ",
+    "kun": "",
+    "meaning": "equal/uniform",
+    "example": "斉 (セイ) equal/uniform"
+  },
+  {
+    "kanji": "穂",
+    "on": "スイ",
+    "kun": "ほ",
+    "meaning": "ear of grain",
+    "example": "穂 (ほ) ear of grain"
+  },
+  {
+    "kanji": "兼",
+    "on": "ケン",
+    "kun": "か-ねる",
+    "meaning": "combine/concurrently",
+    "example": "兼 (かねる) combine/concurrently"
+  },
+  {
+    "kanji": "飼",
+    "on": "シ",
+    "kun": "か-う",
+    "meaning": "raise/breed",
+    "example": "飼 (かう) raise/breed"
+  },
+  {
+    "kanji": "促",
+    "on": "ソク",
+    "kun": "うなが-す",
+    "meaning": "urge/promote",
+    "example": "促 (うながす) urge/promote"
+  },
+  {
+    "kanji": "尚",
+    "on": "ショウ",
+    "kun": "たっと-ぶ",
+    "meaning": "still/esteem",
+    "example": "尚 (たっとぶ) still/esteem"
+  },
+  {
+    "kanji": "彩",
+    "on": "サイ",
+    "kun": "いろど-る",
+    "meaning": "color/decorate",
+    "example": "彩 (いろどる) color/decorate"
+  },
+  {
+    "kanji": "暖",
+    "on": "ダン",
+    "kun": "あたた-かい",
+    "meaning": "warm",
+    "example": "暖 (あたたかい) warm"
+  },
+  {
+    "kanji": "俗",
+    "on": "ゾク",
+    "kun": "",
+    "meaning": "custom/vulgar",
+    "example": "俗 (ゾク) custom/vulgar"
+  },
+  {
+    "kanji": "較",
+    "on": "カク",
+    "kun": "",
+    "meaning": "compare",
+    "example": "較 (カク) compare"
+  },
+  {
+    "kanji": "傍",
+    "on": "ボウ",
+    "kun": "かたわら",
+    "meaning": "side/beside",
+    "example": "傍 (かたわら) side/beside"
+  },
+  {
+    "kanji": "肝",
+    "on": "カン",
+    "kun": "きも",
+    "meaning": "liver/vital",
+    "example": "肝 (きも) liver/vital"
+  },
+  {
+    "kanji": "畑",
+    "on": "（和字）",
+    "kun": "はたけ",
+    "meaning": "field/farm",
+    "example": "畑 (はたけ) field/farm"
+  },
+  {
+    "kanji": "峰",
+    "on": "ホウ",
+    "kun": "みね",
+    "meaning": "peak/summit",
+    "example": "峰 (みね) peak/summit"
+  },
+  {
+    "kanji": "抵",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "resist/contradict",
+    "example": "抵 (テイ) resist/contradict"
+  },
+  {
+    "kanji": "恩",
+    "on": "オン",
+    "kun": "",
+    "meaning": "grace/favor",
+    "example": "恩 (オン) grace/favor"
+  },
+  {
+    "kanji": "誇",
+    "on": "コ",
+    "kun": "ほこ-る",
+    "meaning": "boast/proud",
+    "example": "誇 (ほこる) boast/proud"
+  },
+  {
+    "kanji": "網",
+    "on": "モウ",
+    "kun": "あみ",
+    "meaning": "net/network",
+    "example": "網 (あみ) net/network"
+  },
+  {
+    "kanji": "渋",
+    "on": "ジュウ",
+    "kun": "しぶ-い",
+    "meaning": "astringent/reluctant",
+    "example": "渋 (しぶい) astringent/reluctant"
+  },
+  {
+    "kanji": "魂",
+    "on": "コン",
+    "kun": "たましい",
+    "meaning": "soul/spirit",
+    "example": "魂 (たましい) soul/spirit"
+  },
+  {
+    "kanji": "牧",
+    "on": "ボク",
+    "kun": "まき",
+    "meaning": "pasture/herd",
+    "example": "牧 (まき) pasture/herd"
+  },
+  {
+    "kanji": "控",
+    "on": "コウ",
+    "kun": "ひか-える",
+    "meaning": "refrain/note",
+    "example": "控 (ひかえる) refrain/note"
+  },
+  {
+    "kanji": "紛",
+    "on": "フン",
+    "kun": "まぎ-れる",
+    "meaning": "mingle/confused",
+    "example": "紛 (まぎれる) mingle/confused"
+  },
+  {
+    "kanji": "戒",
+    "on": "カイ",
+    "kun": "いまし-める",
+    "meaning": "precept/warn",
+    "example": "戒 (いましめる) precept/warn"
+  },
+  {
+    "kanji": "没",
+    "on": "ボツ",
+    "kun": "しず-む",
+    "meaning": "sink/die",
+    "example": "没 (しずむ) sink/die"
+  },
+  {
+    "kanji": "既",
+    "on": "キ",
+    "kun": "すで-に",
+    "meaning": "already/previous",
+    "example": "既 (すでに) already/previous"
+  },
+  {
+    "kanji": "股",
+    "on": "コ",
+    "kun": "また",
+    "meaning": "thigh/crotch",
+    "example": "股 (また) thigh/crotch"
+  },
+  {
+    "kanji": "脅",
+    "on": "キョウ",
+    "kun": "おびや-かす",
+    "meaning": "threaten",
+    "example": "脅 (おびやかす) threaten"
+  },
+  {
+    "kanji": "征",
+    "on": "セイ",
+    "kun": "",
+    "meaning": "conquer",
+    "example": "征 (セイ) conquer"
+  },
+  {
+    "kanji": "覆",
+    "on": "フク",
+    "kun": "おお-う",
+    "meaning": "cover/overturn",
+    "example": "覆 (おおう) cover/overturn"
+  },
+  {
+    "kanji": "郡",
+    "on": "グン",
+    "kun": "こおり",
+    "meaning": "district",
+    "example": "郡 (こおり) district"
+  },
+  {
+    "kanji": "丘",
+    "on": "キュウ",
+    "kun": "おか",
+    "meaning": "hill",
+    "example": "丘 (おか) hill"
+  },
+  {
+    "kanji": "佳",
+    "on": "カ",
+    "kun": "",
+    "meaning": "beautiful/good",
+    "example": "佳 (カ) beautiful/good"
+  },
+  {
+    "kanji": "叔",
+    "on": "シュク",
+    "kun": "",
+    "meaning": "uncle",
+    "example": "叔 (シュク) uncle"
+  },
+  {
+    "kanji": "託",
+    "on": "タク",
+    "kun": "ことづ-ける",
+    "meaning": "entrust",
+    "example": "託 (ことづける) entrust"
+  },
+  {
+    "kanji": "哀",
+    "on": "アイ",
+    "kun": "あわ-れ",
+    "meaning": "grief/sorrow",
+    "example": "哀 (あわれ) grief/sorrow"
+  },
+  {
+    "kanji": "肥",
+    "on": "ヒ",
+    "kun": "こ-える",
+    "meaning": "fat/fertile",
+    "example": "肥 (こえる) fat/fertile"
+  },
+  {
+    "kanji": "朗",
+    "on": "ロウ",
+    "kun": "ほが-らか",
+    "meaning": "bright/cheerful",
+    "example": "朗 (ほがらか) bright/cheerful"
+  },
+  {
+    "kanji": "慎",
+    "on": "シン",
+    "kun": "つつし-む",
+    "meaning": "prudent/careful",
+    "example": "慎 (つつしむ) prudent/careful"
+  },
+  {
+    "kanji": "悠",
+    "on": "ユウ",
+    "kun": "",
+    "meaning": "calm/distant",
+    "example": "悠 (ユウ) calm/distant"
+  },
+  {
+    "kanji": "眉",
+    "on": "ビ",
+    "kun": "まゆ",
+    "meaning": "eyebrow",
+    "example": "眉 (まゆ) eyebrow"
+  },
+  {
+    "kanji": "拒",
+    "on": "キョ",
+    "kun": "こば-む",
+    "meaning": "refuse",
+    "example": "拒 (こばむ) refuse"
+  },
+  {
+    "kanji": "概",
+    "on": "ガイ",
+    "kun": "",
+    "meaning": "outline/generally",
+    "example": "概 (ガイ) outline/generally"
+  },
+  {
+    "kanji": "顧",
+    "on": "コ",
+    "kun": "かえり-みる",
+    "meaning": "look back/consider",
+    "example": "顧 (かえりみる) look back/consider"
+  },
+  {
+    "kanji": "腐",
+    "on": "フ",
+    "kun": "くさ-る",
+    "meaning": "rot/decay",
+    "example": "腐 (くさる) rot/decay"
+  },
+  {
+    "kanji": "挨",
+    "on": "アイ",
+    "kun": "",
+    "meaning": "push/greeting",
+    "example": "挨 (アイ) push/greeting"
+  },
+  {
+    "kanji": "孤",
+    "on": "コ",
+    "kun": "",
+    "meaning": "isolated/lonely",
+    "example": "孤 (コ) isolated/lonely"
+  },
+  {
+    "kanji": "拶",
+    "on": "サツ",
+    "kun": "",
+    "meaning": "greeting",
+    "example": "拶 (サツ) greeting"
+  },
+  {
+    "kanji": "却",
+    "on": "キャク",
+    "kun": "かえ-って",
+    "meaning": "却って/dismiss",
+    "example": "却 (かえって) 却って/dismiss"
+  },
+  {
+    "kanji": "賊",
+    "on": "ゾク",
+    "kun": "",
+    "meaning": "thief/rebel",
+    "example": "賊 (ゾク) thief/rebel"
+  },
+  {
+    "kanji": "荘",
+    "on": "ソウ",
+    "kun": "",
+    "meaning": "inn/manor",
+    "example": "荘 (ソウ) inn/manor"
+  },
+  {
+    "kanji": "匠",
+    "on": "ショウ",
+    "kun": "たくみ",
+    "meaning": "craftsman",
+    "example": "匠 (たくみ) craftsman"
+  },
+  {
+    "kanji": "悔",
+    "on": "カイ",
+    "kun": "く-やむ",
+    "meaning": "regret",
+    "example": "悔 (くやむ) regret"
+  },
+  {
+    "kanji": "獄",
+    "on": "ゴク",
+    "kun": "",
+    "meaning": "prison",
+    "example": "獄 (ゴク) prison"
+  },
+  {
+    "kanji": "滞",
+    "on": "タイ",
+    "kun": "とどこお-る",
+    "meaning": "stagnate/delay",
+    "example": "滞 (とどこおる) stagnate/delay"
+  },
+  {
+    "kanji": "遇",
+    "on": "グウ",
+    "kun": "",
+    "meaning": "encounter/treat",
+    "example": "遇 (グウ) encounter/treat"
+  },
+  {
+    "kanji": "淡",
+    "on": "タン",
+    "kun": "あわ-い",
+    "meaning": "light/faint",
+    "example": "淡 (あわい) light/faint"
+  },
+  {
+    "kanji": "購",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "buy/purchase",
+    "example": "購 (コウ) buy/purchase"
+  },
+  {
+    "kanji": "併",
+    "on": "ヘイ",
+    "kun": "あわ-せる",
+    "meaning": "merge/combine",
+    "example": "併 (あわせる) merge/combine"
+  },
+  {
+    "kanji": "崇",
+    "on": "スウ",
+    "kun": "",
+    "meaning": "revere/worship",
+    "example": "崇 (スウ) revere/worship"
+  },
+  {
+    "kanji": "唯",
+    "on": "ユイ・イ",
+    "kun": "ただ",
+    "meaning": "only/merely",
+    "example": "唯 (ただ) only/merely"
+  },
+  {
+    "kanji": "垂",
+    "on": "スイ",
+    "kun": "た-れる",
+    "meaning": "hang/droop",
+    "example": "垂 (たれる) hang/droop"
+  },
+  {
+    "kanji": "岐",
+    "on": "キ",
+    "kun": "",
+    "meaning": "branch/fork",
+    "example": "岐 (キ) branch/fork"
+  },
+  {
+    "kanji": "俳",
+    "on": "ハイ",
+    "kun": "",
+    "meaning": "actor/haiku",
+    "example": "俳 (ハイ) actor/haiku"
+  },
+  {
+    "kanji": "斜",
+    "on": "シャ",
+    "kun": "なな-め",
+    "meaning": "diagonal/slant",
+    "example": "斜 (ななめ) diagonal/slant"
+  },
+  {
+    "kanji": "嬢",
+    "on": "ジョウ",
+    "kun": "",
+    "meaning": "young woman",
+    "example": "嬢 (ジョウ) young woman"
+  },
+  {
+    "kanji": "陥",
+    "on": "カン",
+    "kun": "おちい-る",
+    "meaning": "fall into",
+    "example": "陥 (おちいる) fall into"
+  },
+  {
+    "kanji": "償",
+    "on": "ショウ",
+    "kun": "つぐな-う",
+    "meaning": "compensate",
+    "example": "償 (つぐなう) compensate"
+  },
+  {
+    "kanji": "鑑",
+    "on": "カン",
+    "kun": "かがみ",
+    "meaning": "mirror/appraise",
+    "example": "鑑 (かがみ) mirror/appraise"
+  },
+  {
+    "kanji": "勧",
+    "on": "カン",
+    "kun": "すす-める",
+    "meaning": "recommend/advise",
+    "example": "勧 (すすめる) recommend/advise"
+  },
+  {
+    "kanji": "葬",
+    "on": "ソウ",
+    "kun": "ほうむ-る",
+    "meaning": "funeral/bury",
+    "example": "葬 (ほうむる) funeral/bury"
+  },
+  {
+    "kanji": "焦",
+    "on": "ショウ",
+    "kun": "こ-げる・あせ-る",
+    "meaning": "char/impatient",
+    "example": "焦 (こげる) char/impatient"
+  },
+  {
+    "kanji": "剛",
+    "on": "ゴウ",
+    "kun": "",
+    "meaning": "strong/firm",
+    "example": "剛 (ゴウ) strong/firm"
+  },
+  {
+    "kanji": "膨",
+    "on": "ボウ",
+    "kun": "ふく-れる",
+    "meaning": "swell/expand",
+    "example": "膨 (ふくれる) swell/expand"
+  },
+  {
+    "kanji": "廷",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "court/government",
+    "example": "廷 (テイ) court/government"
+  },
+  {
+    "kanji": "紫",
+    "on": "シ",
+    "kun": "むらさき",
+    "meaning": "purple",
+    "example": "紫 (むらさき) purple"
+  },
+  {
+    "kanji": "銘",
+    "on": "メイ",
+    "kun": "",
+    "meaning": "inscription/brand",
+    "example": "銘 (メイ) inscription/brand"
+  },
+  {
+    "kanji": "鎌",
+    "on": "レン",
+    "kun": "かま",
+    "meaning": "sickle",
+    "example": "鎌 (かま) sickle"
+  },
+  {
+    "kanji": "菌",
+    "on": "キン",
+    "kun": "",
+    "meaning": "germ/fungus",
+    "example": "菌 (キン) germ/fungus"
+  },
+  {
+    "kanji": "稼",
+    "on": "カ",
+    "kun": "かせ-ぐ",
+    "meaning": "earn/work",
+    "example": "稼 (かせぐ) earn/work"
+  },
+  {
+    "kanji": "譲",
+    "on": "ジョウ",
+    "kun": "ゆず-る",
+    "meaning": "concede/transfer",
+    "example": "譲 (ゆずる) concede/transfer"
+  },
+  {
+    "kanji": "随",
+    "on": "ズイ",
+    "kun": "",
+    "meaning": "follow/accordingly",
+    "example": "随 (ズイ) follow/accordingly"
+  },
+  {
+    "kanji": "猛",
+    "on": "モウ",
+    "kun": "",
+    "meaning": "fierce/wild",
+    "example": "猛 (モウ) fierce/wild"
+  },
+  {
+    "kanji": "遂",
+    "on": "スイ",
+    "kun": "と-げる",
+    "meaning": "accomplish",
+    "example": "遂 (とげる) accomplish"
+  },
+  {
+    "kanji": "冒",
+    "on": "ボウ",
+    "kun": "おか-す",
+    "meaning": "risk/pretend",
+    "example": "冒 (おかす) risk/pretend"
+  },
+  {
+    "kanji": "泰",
+    "on": "タイ",
+    "kun": "",
+    "meaning": "calm/Thailand",
+    "example": "泰 (タイ) calm/Thailand"
+  },
+  {
+    "kanji": "翼",
+    "on": "ヨク",
+    "kun": "つばさ",
+    "meaning": "wing",
+    "example": "翼 (つばさ) wing"
+  },
+  {
+    "kanji": "凄",
+    "on": "セイ",
+    "kun": "すご-い",
+    "meaning": "wonderful/awful",
+    "example": "凄 (すごい) wonderful/awful"
+  },
+  {
+    "kanji": "序",
+    "on": "ジョ",
+    "kun": "",
+    "meaning": "order/preface",
+    "example": "序 (ジョ) order/preface"
+  },
+  {
+    "kanji": "扉",
+    "on": "ヒ",
+    "kun": "とびら",
+    "meaning": "door/opening",
+    "example": "扉 (とびら) door/opening"
+  },
+  {
+    "kanji": "是",
+    "on": "ゼ",
+    "kun": "",
+    "meaning": "this/correct",
+    "example": "是 (ゼ) this/correct"
+  },
+  {
+    "kanji": "寸",
+    "on": "スン",
+    "kun": "",
+    "meaning": "short unit",
+    "example": "寸 (スン) short unit"
+  },
+  {
+    "kanji": "賃",
+    "on": "チン",
+    "kun": "",
+    "meaning": "rent/wage",
+    "example": "賃 (チン) rent/wage"
+  },
+  {
+    "kanji": "偵",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "spy/detect",
+    "example": "偵 (テイ) spy/detect"
+  },
+  {
+    "kanji": "澄",
+    "on": "チョウ",
+    "kun": "す-む",
+    "meaning": "clear/serene",
+    "example": "澄 (すむ) clear/serene"
+  },
+  {
+    "kanji": "殊",
+    "on": "シュ",
+    "kun": "こと-に",
+    "meaning": "special/particularly",
+    "example": "殊 (ことに) special/particularly"
+  },
+  {
+    "kanji": "緩",
+    "on": "カン",
+    "kun": "ゆる-い",
+    "meaning": "loose/slow",
+    "example": "緩 (ゆるい) loose/slow"
+  },
+  {
+    "kanji": "頑",
+    "on": "ガン",
+    "kun": "かたく-な",
+    "meaning": "stubborn",
+    "example": "頑 (かたくな) stubborn"
+  },
+  {
+    "kanji": "紋",
+    "on": "モン",
+    "kun": "",
+    "meaning": "crest/pattern",
+    "example": "紋 (モン) crest/pattern"
+  },
+  {
+    "kanji": "糖",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "sugar",
+    "example": "糖 (トウ) sugar"
+  },
+  {
+    "kanji": "煮",
+    "on": "シャ",
+    "kun": "に-る",
+    "meaning": "boil/cook",
+    "example": "煮 (にる) boil/cook"
+  },
+  {
+    "kanji": "芳",
+    "on": "ホウ",
+    "kun": "かんば-しい",
+    "meaning": "fragrant/good",
+    "example": "芳 (かんばしい) fragrant/good"
+  },
+  {
+    "kanji": "惨",
+    "on": "サン",
+    "kun": "みじ-め",
+    "meaning": "miserable",
+    "example": "惨 (みじめ) miserable"
+  },
+  {
+    "kanji": "歓",
+    "on": "カン",
+    "kun": "",
+    "meaning": "joy/welcome",
+    "example": "歓 (カン) joy/welcome"
+  },
+  {
+    "kanji": "虐",
+    "on": "ギャク",
+    "kun": "しいた-げる",
+    "meaning": "cruel/oppress",
+    "example": "虐 (しいたげる) cruel/oppress"
+  },
+  {
+    "kanji": "喉",
+    "on": "コウ",
+    "kun": "のど",
+    "meaning": "throat",
+    "example": "喉 (のど) throat"
+  },
+  {
+    "kanji": "旨",
+    "on": "シ",
+    "kun": "むね",
+    "meaning": "purport/tasty",
+    "example": "旨 (むね) purport/tasty"
+  },
+  {
+    "kanji": "凝",
+    "on": "ギョウ",
+    "kun": "こ-る",
+    "meaning": "solidify/concentrate",
+    "example": "凝 (こる) solidify/concentrate"
+  },
+  {
+    "kanji": "圏",
+    "on": "ケン",
+    "kun": "",
+    "meaning": "sphere/zone",
+    "example": "圏 (ケン) sphere/zone"
+  },
+  {
+    "kanji": "拭",
+    "on": "ショク",
+    "kun": "ぬぐ-う",
+    "meaning": "wipe",
+    "example": "拭 (ぬぐう) wipe"
+  },
+  {
+    "kanji": "涯",
+    "on": "ガイ",
+    "kun": "きわ",
+    "meaning": "horizon/shore",
+    "example": "涯 (きわ) horizon/shore"
+  },
+  {
+    "kanji": "貞",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "chaste/upright",
+    "example": "貞 (テイ) chaste/upright"
+  },
+  {
+    "kanji": "堅",
+    "on": "ケン",
+    "kun": "かた-い",
+    "meaning": "hard/firm",
+    "example": "堅 (かたい) hard/firm"
+  },
+  {
+    "kanji": "倫",
+    "on": "リン",
+    "kun": "",
+    "meaning": "ethics/order",
+    "example": "倫 (リン) ethics/order"
+  },
+  {
+    "kanji": "壇",
+    "on": "ダン",
+    "kun": "",
+    "meaning": "platform/altar",
+    "example": "壇 (ダン) platform/altar"
+  },
+  {
+    "kanji": "呉",
+    "on": "ゴ",
+    "kun": "くれ-る",
+    "meaning": "give/Wu dynasty",
+    "example": "呉 (くれる) give/Wu dynasty"
+  },
+  {
+    "kanji": "暇",
+    "on": "カ",
+    "kun": "ひま",
+    "meaning": "free time/leisure",
+    "example": "暇 (ひま) free time/leisure"
+  },
+  {
+    "kanji": "貌",
+    "on": "ボウ",
+    "kun": "かたち",
+    "meaning": "appearance/face",
+    "example": "貌 (かたち) appearance/face"
+  },
+  {
+    "kanji": "塞",
+    "on": "ソク・サイ",
+    "kun": "ふさ-ぐ",
+    "meaning": "block/fort",
+    "example": "塞 (ふさぐ) block/fort"
+  },
+  {
+    "kanji": "噴",
+    "on": "フン",
+    "kun": "ふ-く",
+    "meaning": "spout/erupt",
+    "example": "噴 (ふく) spout/erupt"
+  },
+  {
+    "kanji": "婆",
+    "on": "バ",
+    "kun": "ばあ",
+    "meaning": "old woman/hag",
+    "example": "婆 (ばあ) old woman/hag"
+  },
+  {
+    "kanji": "岳",
+    "on": "ガク",
+    "kun": "たけ",
+    "meaning": "peak/mountain",
+    "example": "岳 (たけ) peak/mountain"
+  },
+  {
+    "kanji": "蹴",
+    "on": "シュウ",
+    "kun": "け-る",
+    "meaning": "kick",
+    "example": "蹴 (ける) kick"
+  },
+  {
+    "kanji": "鍵",
+    "on": "ケン",
+    "kun": "かぎ",
+    "meaning": "key/lock",
+    "example": "鍵 (かぎ) key/lock"
+  },
+  {
+    "kanji": "膳",
+    "on": "ゼン",
+    "kun": "",
+    "meaning": "tray/meal",
+    "example": "膳 (ゼン) tray/meal"
+  },
+  {
+    "kanji": "尺",
+    "on": "シャク",
+    "kun": "",
+    "meaning": "unit/ruler",
+    "example": "尺 (シャク) unit/ruler"
+  },
+  {
+    "kanji": "罰",
+    "on": "バツ・ハツ",
+    "kun": "",
+    "meaning": "punishment",
+    "example": "罰 (バツ) punishment"
+  },
+  {
+    "kanji": "漏",
+    "on": "ロウ",
+    "kun": "も-れる",
+    "meaning": "leak/drip",
+    "example": "漏 (もれる) leak/drip"
+  },
+  {
+    "kanji": "朱",
+    "on": "シュ",
+    "kun": "あか",
+    "meaning": "red/vermilion",
+    "example": "朱 (あか) red/vermilion"
+  },
+  {
+    "kanji": "覧",
+    "on": "ラン",
+    "kun": "み-る",
+    "meaning": "view/覧",
+    "example": "覧 (みる) view/覧"
+  },
+  {
+    "kanji": "漂",
+    "on": "ヒョウ",
+    "kun": "ただよ-う",
+    "meaning": "float/drift",
+    "example": "漂 (ただよう) float/drift"
+  },
+  {
+    "kanji": "汁",
+    "on": "ジュウ",
+    "kun": "しる",
+    "meaning": "juice/soup",
+    "example": "汁 (しる) juice/soup"
+  },
+  {
+    "kanji": "寂",
+    "on": "ジャク・セキ",
+    "kun": "さび-しい",
+    "meaning": "lonely/quiet",
+    "example": "寂 (さびしい) lonely/quiet"
+  },
+  {
+    "kanji": "嘆",
+    "on": "タン",
+    "kun": "なげ-く",
+    "meaning": "sigh/lament",
+    "example": "嘆 (なげく) sigh/lament"
+  },
+  {
+    "kanji": "禅",
+    "on": "ゼン",
+    "kun": "",
+    "meaning": "Zen/meditation",
+    "example": "禅 (ゼン) Zen/meditation"
+  },
+  {
+    "kanji": "浄",
+    "on": "ジョウ",
+    "kun": "きよ-い",
+    "meaning": "pure/clean",
+    "example": "浄 (きよい) pure/clean"
+  },
+  {
+    "kanji": "酷",
+    "on": "コク",
+    "kun": "",
+    "meaning": "cruel/severe",
+    "example": "酷 (コク) cruel/severe"
+  },
+  {
+    "kanji": "刃",
+    "on": "ジン",
+    "kun": "は",
+    "meaning": "blade/edge",
+    "example": "刃 (は) blade/edge"
+  },
+  {
+    "kanji": "漫",
+    "on": "マン",
+    "kun": "",
+    "meaning": "aimless/comic",
+    "example": "漫 (マン) aimless/comic"
+  },
+  {
+    "kanji": "霧",
+    "on": "ム",
+    "kun": "きり",
+    "meaning": "fog/mist",
+    "example": "霧 (きり) fog/mist"
+  },
+  {
+    "kanji": "暑",
+    "on": "ショ",
+    "kun": "あつ-い",
+    "meaning": "hot (weather)",
+    "example": "暑 (あつい) hot (weather)"
+  },
+  {
+    "kanji": "棚",
+    "on": "ホウ",
+    "kun": "たな",
+    "meaning": "shelf/rack",
+    "example": "棚 (たな) shelf/rack"
+  },
+  {
+    "kanji": "袖",
+    "on": "シュウ",
+    "kun": "そで",
+    "meaning": "sleeve",
+    "example": "袖 (そで) sleeve"
+  },
+  {
+    "kanji": "壮",
+    "on": "ソウ",
+    "kun": "",
+    "meaning": "vigorous",
+    "example": "壮 (ソウ) vigorous"
+  },
+  {
+    "kanji": "旬",
+    "on": "ジュン",
+    "kun": "",
+    "meaning": "ten days/season",
+    "example": "旬 (ジュン) ten days/season"
+  },
+  {
+    "kanji": "彫",
+    "on": "チョウ",
+    "kun": "ほ-る",
+    "meaning": "carve/sculpt",
+    "example": "彫 (ほる) carve/sculpt"
+  },
+  {
+    "kanji": "需",
+    "on": "ジュ",
+    "kun": "",
+    "meaning": "demand/need",
+    "example": "需 (ジュ) demand/need"
+  },
+  {
+    "kanji": "鎖",
+    "on": "サ",
+    "kun": "くさり",
+    "meaning": "chain/close",
+    "example": "鎖 (くさり) chain/close"
+  },
+  {
+    "kanji": "潰",
+    "on": "カイ",
+    "kun": "つぶ-れる",
+    "meaning": "crush/collapse",
+    "example": "潰 (つぶれる) crush/collapse"
+  },
+  {
+    "kanji": "縦",
+    "on": "ジュウ",
+    "kun": "たて",
+    "meaning": "vertical",
+    "example": "縦 (たて) vertical"
+  },
+  {
+    "kanji": "粧",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "adorn/make up",
+    "example": "粧 (ショウ) adorn/make up"
+  },
+  {
+    "kanji": "慌",
+    "on": "コウ",
+    "kun": "あわ-てる",
+    "meaning": "flustered",
+    "example": "慌 (あわてる) flustered"
+  },
+  {
+    "kanji": "穏",
+    "on": "オン",
+    "kun": "おだ-やか",
+    "meaning": "calm/mild",
+    "example": "穏 (おだやか) calm/mild"
+  },
+  {
+    "kanji": "枠",
+    "on": "（和字）",
+    "kun": "わく",
+    "meaning": "frame/limit",
+    "example": "枠 (わく) frame/limit"
+  },
+  {
+    "kanji": "謎",
+    "on": "メイ",
+    "kun": "なぞ",
+    "meaning": "riddle/mystery",
+    "example": "謎 (なぞ) riddle/mystery"
+  },
+  {
+    "kanji": "誉",
+    "on": "ヨ",
+    "kun": "ほま-れ",
+    "meaning": "honor/praise",
+    "example": "誉 (ほまれ) honor/praise"
+  },
+  {
+    "kanji": "逸",
+    "on": "イツ",
+    "kun": "",
+    "meaning": "deviate/excel",
+    "example": "逸 (イツ) deviate/excel"
+  },
+  {
+    "kanji": "駒",
+    "on": "ク",
+    "kun": "こま",
+    "meaning": "horse/piece",
+    "example": "駒 (こま) horse/piece"
+  },
+  {
+    "kanji": "惜",
+    "on": "セキ",
+    "kun": "お-しい",
+    "meaning": "regret/precious",
+    "example": "惜 (おしい) regret/precious"
+  },
+  {
+    "kanji": "措",
+    "on": "ソ",
+    "kun": "",
+    "meaning": "deal with",
+    "example": "措 (ソ) deal with"
+  },
+  {
+    "kanji": "晶",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "crystal/clear",
+    "example": "晶 (ショウ) crystal/clear"
+  },
+  {
+    "kanji": "琴",
+    "on": "キン・コン",
+    "kun": "こと",
+    "meaning": "koto/harp",
+    "example": "琴 (こと) koto/harp"
+  },
+  {
+    "kanji": "摂",
+    "on": "セツ",
+    "kun": "",
+    "meaning": "intake/regent",
+    "example": "摂 (セツ) intake/regent"
+  },
+  {
+    "kanji": "拍",
+    "on": "ハク",
+    "kun": "うつ",
+    "meaning": "beat/clap",
+    "example": "拍 (うつ) beat/clap"
+  },
+  {
+    "kanji": "稽",
+    "on": "ケイ",
+    "kun": "",
+    "meaning": "think/practice",
+    "example": "稽 (ケイ) think/practice"
+  },
+  {
+    "kanji": "礎",
+    "on": "ソ",
+    "kun": "いしずえ",
+    "meaning": "foundation",
+    "example": "礎 (いしずえ) foundation"
+  },
+  {
+    "kanji": "遭",
+    "on": "ソウ",
+    "kun": "あ-う",
+    "meaning": "encounter",
+    "example": "遭 (あう) encounter"
+  },
+  {
+    "kanji": "掌",
+    "on": "ショウ",
+    "kun": "てのひら",
+    "meaning": "palm/manage",
+    "example": "掌 (てのひら) palm/manage"
+  },
+  {
+    "kanji": "鍋",
+    "on": "カ",
+    "kun": "なべ",
+    "meaning": "pot/pan",
+    "example": "鍋 (なべ) pot/pan"
+  },
+  {
+    "kanji": "弓",
+    "on": "キュウ",
+    "kun": "ゆみ",
+    "meaning": "bow (weapon)",
+    "example": "弓 (ゆみ) bow (weapon)"
+  },
+  {
+    "kanji": "克",
+    "on": "コク",
+    "kun": "",
+    "meaning": "overcome",
+    "example": "克 (コク) overcome"
+  },
+  {
+    "kanji": "据",
+    "on": "キョ",
+    "kun": "す-える",
+    "meaning": "set/install",
+    "example": "据 (すえる) set/install"
+  },
+  {
+    "kanji": "胆",
+    "on": "タン",
+    "kun": "きも",
+    "meaning": "gallbladder/courage",
+    "example": "胆 (きも) gallbladder/courage"
+  },
+  {
+    "kanji": "跳",
+    "on": "チョウ",
+    "kun": "は-ねる",
+    "meaning": "jump/leap",
+    "example": "跳 (はねる) jump/leap"
+  },
+  {
+    "kanji": "縛",
+    "on": "バク",
+    "kun": "しば-る",
+    "meaning": "bind/tie",
+    "example": "縛 (しばる) bind/tie"
+  },
+  {
+    "kanji": "鎮",
+    "on": "チン",
+    "kun": "しず-める",
+    "meaning": "suppress/calm",
+    "example": "鎮 (しずめる) suppress/calm"
+  },
+  {
+    "kanji": "雷",
+    "on": "ライ",
+    "kun": "かみなり",
+    "meaning": "thunder/lightning",
+    "example": "雷 (かみなり) thunder/lightning"
+  },
+  {
+    "kanji": "恨",
+    "on": "コン",
+    "kun": "うら-む",
+    "meaning": "grudge/resent",
+    "example": "恨 (うらむ) grudge/resent"
+  },
+  {
+    "kanji": "顕",
+    "on": "ケン",
+    "kun": "あらわ-れる",
+    "meaning": "obvious/exhibit",
+    "example": "顕 (あらわれる) obvious/exhibit"
+  },
+  {
+    "kanji": "殖",
+    "on": "ショク",
+    "kun": "ふ-える",
+    "meaning": "multiply/breed",
+    "example": "殖 (ふえる) multiply/breed"
+  },
+  {
+    "kanji": "寧",
+    "on": "ネイ",
+    "kun": "むし-ろ",
+    "meaning": "peaceful/rather",
+    "example": "寧 (むしろ) peaceful/rather"
+  },
+  {
+    "kanji": "湧",
+    "on": "ユウ",
+    "kun": "わ-く",
+    "meaning": "gush/spring",
+    "example": "湧 (わく) gush/spring"
+  },
+  {
+    "kanji": "棋",
+    "on": "キ",
+    "kun": "",
+    "meaning": "chess/go",
+    "example": "棋 (キ) chess/go"
+  },
+  {
+    "kanji": "巧",
+    "on": "コウ",
+    "kun": "たく-み",
+    "meaning": "skillful",
+    "example": "巧 (たくみ) skillful"
+  },
+  {
+    "kanji": "浸",
+    "on": "シン",
+    "kun": "ひた-す",
+    "meaning": "soak/immerse",
+    "example": "浸 (ひたす) soak/immerse"
+  },
+  {
+    "kanji": "桃",
+    "on": "トウ",
+    "kun": "もも",
+    "meaning": "peach",
+    "example": "桃 (もも) peach"
+  },
+  {
+    "kanji": "隔",
+    "on": "カク",
+    "kun": "へだ-てる",
+    "meaning": "separate/isolate",
+    "example": "隔 (へだてる) separate/isolate"
+  },
+  {
+    "kanji": "班",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "group/squad",
+    "example": "班 (ハン) group/squad"
+  },
+  {
+    "kanji": "甚",
+    "on": "ジン",
+    "kun": "はなは-だ",
+    "meaning": "very/extremely",
+    "example": "甚 (はなはだ) very/extremely"
+  },
+  {
+    "kanji": "妊",
+    "on": "ニン",
+    "kun": "",
+    "meaning": "pregnancy",
+    "example": "妊 (ニン) pregnancy"
+  },
+  {
+    "kanji": "祉",
+    "on": "シ",
+    "kun": "",
+    "meaning": "welfare/happiness",
+    "example": "祉 (シ) welfare/happiness"
+  },
+  {
+    "kanji": "獣",
+    "on": "ジュウ",
+    "kun": "けもの",
+    "meaning": "beast/animal",
+    "example": "獣 (けもの) beast/animal"
+  },
+  {
+    "kanji": "疾",
+    "on": "シツ",
+    "kun": "やまい",
+    "meaning": "disease/fast",
+    "example": "疾 (やまい) disease/fast"
+  },
+  {
+    "kanji": "塾",
+    "on": "ジュク",
+    "kun": "",
+    "meaning": "cram school",
+    "example": "塾 (ジュク) cram school"
+  },
+  {
+    "kanji": "潟",
+    "on": "セキ",
+    "kun": "かた",
+    "meaning": "lagoon",
+    "example": "潟 (かた) lagoon"
+  },
+  {
+    "kanji": "撲",
+    "on": "ボク",
+    "kun": "",
+    "meaning": "strike/eradicate",
+    "example": "撲 (ボク) strike/eradicate"
+  },
+  {
+    "kanji": "塊",
+    "on": "カイ",
+    "kun": "かたまり",
+    "meaning": "lump/clod",
+    "example": "塊 (かたまり) lump/clod"
+  },
+  {
+    "kanji": "絞",
+    "on": "コウ",
+    "kun": "しぼ-る",
+    "meaning": "wring/squeeze",
+    "example": "絞 (しぼる) wring/squeeze"
+  },
+  {
+    "kanji": "履",
+    "on": "リ",
+    "kun": "は-く",
+    "meaning": "wear/履く",
+    "example": "履 (はく) wear/履く"
+  },
+  {
+    "kanji": "苗",
+    "on": "ビョウ",
+    "kun": "なえ",
+    "meaning": "seedling/sprout",
+    "example": "苗 (なえ) seedling/sprout"
+  },
+  {
+    "kanji": "芋",
+    "on": "ウ",
+    "kun": "いも",
+    "meaning": "taro/potato",
+    "example": "芋 (いも) taro/potato"
+  },
+  {
+    "kanji": "冗",
+    "on": "ジョウ",
+    "kun": "",
+    "meaning": "surplus/idle",
+    "example": "冗 (ジョウ) surplus/idle"
+  },
+  {
+    "kanji": "陶",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "pottery/refined",
+    "example": "陶 (トウ) pottery/refined"
+  },
+  {
+    "kanji": "励",
+    "on": "レイ",
+    "kun": "はげ-む",
+    "meaning": "encourage",
+    "example": "励 (はげむ) encourage"
+  },
+  {
+    "kanji": "陳",
+    "on": "チン",
+    "kun": "",
+    "meaning": "display/old",
+    "example": "陳 (チン) display/old"
+  },
+  {
+    "kanji": "猿",
+    "on": "エン",
+    "kun": "さる",
+    "meaning": "monkey",
+    "example": "猿 (さる) monkey"
+  },
+  {
+    "kanji": "葛",
+    "on": "カツ",
+    "kun": "くず",
+    "meaning": "arrowroot/trouble",
+    "example": "葛 (くず) arrowroot/trouble"
+  },
+  {
+    "kanji": "傘",
+    "on": "サン",
+    "kun": "かさ",
+    "meaning": "umbrella",
+    "example": "傘 (かさ) umbrella"
+  },
+  {
+    "kanji": "啓",
+    "on": "ケイ",
+    "kun": "ひら-く",
+    "meaning": "enlighten/open",
+    "example": "啓 (ひらく) enlighten/open"
+  },
+  {
+    "kanji": "劣",
+    "on": "レツ",
+    "kun": "おと-る",
+    "meaning": "inferior",
+    "example": "劣 (おとる) inferior"
+  },
+  {
+    "kanji": "撤",
+    "on": "テツ",
+    "kun": "",
+    "meaning": "withdraw",
+    "example": "撤 (テツ) withdraw"
+  },
+  {
+    "kanji": "殴",
+    "on": "オウ",
+    "kun": "なぐ-る",
+    "meaning": "hit/beat",
+    "example": "殴 (なぐる) hit/beat"
+  },
+  {
+    "kanji": "盾",
+    "on": "ジュン",
+    "kun": "たて",
+    "meaning": "shield",
+    "example": "盾 (たて) shield"
+  },
+  {
+    "kanji": "衰",
+    "on": "スイ",
+    "kun": "おとろ-える",
+    "meaning": "decline/weaken",
+    "example": "衰 (おとろえる) decline/weaken"
+  },
+  {
+    "kanji": "滝",
+    "on": "ロウ",
+    "kun": "たき",
+    "meaning": "waterfall",
+    "example": "滝 (たき) waterfall"
+  },
+  {
+    "kanji": "慰",
+    "on": "イ",
+    "kun": "なぐさ-める",
+    "meaning": "console/comfort",
+    "example": "慰 (なぐさめる) console/comfort"
+  },
+  {
+    "kanji": "蛇",
+    "on": "ジャ・ダ",
+    "kun": "へび",
+    "meaning": "snake",
+    "example": "蛇 (へび) snake"
+  },
+  {
+    "kanji": "梨",
+    "on": "リ",
+    "kun": "なし",
+    "meaning": "pear",
+    "example": "梨 (なし) pear"
+  },
+  {
+    "kanji": "癖",
+    "on": "ヘキ",
+    "kun": "くせ",
+    "meaning": "habit/quirk",
+    "example": "癖 (くせ) habit/quirk"
+  },
+  {
+    "kanji": "潤",
+    "on": "ジュン",
+    "kun": "うるお-う",
+    "meaning": "moist/profit",
+    "example": "潤 (うるおう) moist/profit"
+  },
+  {
+    "kanji": "鉢",
+    "on": "ハチ",
+    "kun": "",
+    "meaning": "bowl/pot",
+    "example": "鉢 (ハチ) bowl/pot"
+  },
+  {
+    "kanji": "戯",
+    "on": "ギ・ゲ",
+    "kun": "たわむ-れる",
+    "meaning": "play/joke",
+    "example": "戯 (たわむれる) play/joke"
+  },
+  {
+    "kanji": "腸",
+    "on": "チョウ",
+    "kun": "はらわた",
+    "meaning": "intestine",
+    "example": "腸 (はらわた) intestine"
+  },
+  {
+    "kanji": "偏",
+    "on": "ヘン",
+    "kun": "かたよ-る",
+    "meaning": "partial/偏見",
+    "example": "偏 (かたよる) partial/偏見"
+  },
+  {
+    "kanji": "巣",
+    "on": "ソウ",
+    "kun": "す",
+    "meaning": "nest/lair",
+    "example": "巣 (す) nest/lair"
+  },
+  {
+    "kanji": "宴",
+    "on": "エン",
+    "kun": "うたげ",
+    "meaning": "banquet",
+    "example": "宴 (うたげ) banquet"
+  },
+  {
+    "kanji": "炉",
+    "on": "ロ",
+    "kun": "",
+    "meaning": "furnace/hearth",
+    "example": "炉 (ロ) furnace/hearth"
+  },
+  {
+    "kanji": "棟",
+    "on": "トウ",
+    "kun": "むね",
+    "meaning": "ridgepole/building",
+    "example": "棟 (むね) ridgepole/building"
+  },
+  {
+    "kanji": "洞",
+    "on": "ドウ",
+    "kun": "ほら",
+    "meaning": "cave/hollow",
+    "example": "洞 (ほら) cave/hollow"
+  },
+  {
+    "kanji": "狩",
+    "on": "シュ",
+    "kun": "か-る",
+    "meaning": "hunt",
+    "example": "狩 (かる) hunt"
+  },
+  {
+    "kanji": "陛",
+    "on": "ヘイ",
+    "kun": "",
+    "meaning": "throne/steps",
+    "example": "陛 (ヘイ) throne/steps"
+  },
+  {
+    "kanji": "磁",
+    "on": "ジ",
+    "kun": "",
+    "meaning": "magnet/porcelain",
+    "example": "磁 (ジ) magnet/porcelain"
+  },
+  {
+    "kanji": "潔",
+    "on": "ケツ",
+    "kun": "いさぎよ-い",
+    "meaning": "pure/clean",
+    "example": "潔 (いさぎよい) pure/clean"
+  },
+  {
+    "kanji": "膜",
+    "on": "マク",
+    "kun": "",
+    "meaning": "membrane",
+    "example": "膜 (マク) membrane"
+  },
+  {
+    "kanji": "乏",
+    "on": "ボウ",
+    "kun": "とぼ-しい",
+    "meaning": "scarce/poor",
+    "example": "乏 (とぼしい) scarce/poor"
+  },
+  {
+    "kanji": "祥",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "auspicious",
+    "example": "祥 (ショウ) auspicious"
+  },
+  {
+    "kanji": "曽",
+    "on": "ソウ・ゾ",
+    "kun": "かつて",
+    "meaning": "before/ancestor",
+    "example": "曽 (かつて) before/ancestor"
+  },
+  {
+    "kanji": "舗",
+    "on": "ホ",
+    "kun": "",
+    "meaning": "pave/shop",
+    "example": "舗 (ホ) pave/shop"
+  },
+  {
+    "kanji": "抽",
+    "on": "チュウ",
+    "kun": "ひき-だす",
+    "meaning": "draw out/abstract",
+    "example": "抽 (ひきだす) draw out/abstract"
+  },
+  {
+    "kanji": "睡",
+    "on": "スイ",
+    "kun": "",
+    "meaning": "sleep",
+    "example": "睡 (スイ) sleep"
+  },
+  {
+    "kanji": "賭",
+    "on": "ト",
+    "kun": "か-ける",
+    "meaning": "gamble/bet",
+    "example": "賭 (かける) gamble/bet"
+  },
+  {
+    "kanji": "括",
+    "on": "カツ",
+    "kun": "くく-る",
+    "meaning": "fasten/summarize",
+    "example": "括 (くくる) fasten/summarize"
+  },
+  {
+    "kanji": "貢",
+    "on": "コウ・ク",
+    "kun": "みつ-ぐ",
+    "meaning": "tribute/contribute",
+    "example": "貢 (みつぐ) tribute/contribute"
+  },
+  {
+    "kanji": "犠",
+    "on": "ギ",
+    "kun": "",
+    "meaning": "sacrifice",
+    "example": "犠 (ギ) sacrifice"
+  },
+  {
+    "kanji": "粗",
+    "on": "ソ",
+    "kun": "あら-い",
+    "meaning": "coarse/rough",
+    "example": "粗 (あらい) coarse/rough"
+  },
+  {
+    "kanji": "卑",
+    "on": "ヒ",
+    "kun": "いや-しい",
+    "meaning": "lowly/vulgar",
+    "example": "卑 (いやしい) lowly/vulgar"
+  },
+  {
+    "kanji": "貼",
+    "on": "チョウ",
+    "kun": "は-る",
+    "meaning": "stick/paste",
+    "example": "貼 (はる) stick/paste"
+  },
+  {
+    "kanji": "拉",
+    "on": "ラ",
+    "kun": "",
+    "meaning": "pull/abduct",
+    "example": "拉 (ラ) pull/abduct"
+  },
+  {
+    "kanji": "牲",
+    "on": "セイ",
+    "kun": "",
+    "meaning": "sacrifice/victim",
+    "example": "牲 (セイ) sacrifice/victim"
+  },
+  {
+    "kanji": "帆",
+    "on": "ハン",
+    "kun": "ほ",
+    "meaning": "sail",
+    "example": "帆 (ほ) sail"
+  },
+  {
+    "kanji": "挿",
+    "on": "ソウ",
+    "kun": "さ-す",
+    "meaning": "insert/illustrate",
+    "example": "挿 (さす) insert/illustrate"
+  },
+  {
+    "kanji": "翻",
+    "on": "ホン",
+    "kun": "ひるが-える",
+    "meaning": "flip/translate",
+    "example": "翻 (ひるがえる) flip/translate"
+  },
+  {
+    "kanji": "羊",
+    "on": "ヨウ",
+    "kun": "ひつじ",
+    "meaning": "sheep",
+    "example": "羊 (ひつじ) sheep"
+  },
+  {
+    "kanji": "枕",
+    "on": "チン",
+    "kun": "まくら",
+    "meaning": "pillow",
+    "example": "枕 (まくら) pillow"
+  },
+  {
+    "kanji": "錯",
+    "on": "サク",
+    "kun": "",
+    "meaning": "mix up/mistake",
+    "example": "錯 (サク) mix up/mistake"
+  },
+  {
+    "kanji": "謙",
+    "on": "ケン",
+    "kun": "へりくだ-る",
+    "meaning": "modest/humble",
+    "example": "謙 (へりくだる) modest/humble"
+  },
+  {
+    "kanji": "珠",
+    "on": "シュ",
+    "kun": "たま",
+    "meaning": "pearl/gem",
+    "example": "珠 (たま) pearl/gem"
+  },
+  {
+    "kanji": "蓄",
+    "on": "チク",
+    "kun": "たくわ-える",
+    "meaning": "store/accumulate",
+    "example": "蓄 (たくわえる) store/accumulate"
+  },
+  {
+    "kanji": "拓",
+    "on": "タク",
+    "kun": "きり-ひらく",
+    "meaning": "open up/clear",
+    "example": "拓 (きりひらく) open up/clear"
+  },
+  {
+    "kanji": "鼓",
+    "on": "コ",
+    "kun": "つづみ",
+    "meaning": "drum",
+    "example": "鼓 (つづみ) drum"
+  },
+  {
+    "kanji": "粋",
+    "on": "スイ",
+    "kun": "いき",
+    "meaning": "essence/純粋",
+    "example": "粋 (いき) essence/純粋"
+  },
+  {
+    "kanji": "尉",
+    "on": "イ",
+    "kun": "",
+    "meaning": "officer/comfort",
+    "example": "尉 (イ) officer/comfort"
+  },
+  {
+    "kanji": "后",
+    "on": "コウ",
+    "kun": "きさき",
+    "meaning": "queen/empress",
+    "example": "后 (きさき) queen/empress"
+  },
+  {
+    "kanji": "粘",
+    "on": "ネン",
+    "kun": "ねば-る",
+    "meaning": "sticky/persevere",
+    "example": "粘 (ねばる) sticky/persevere"
+  },
+  {
+    "kanji": "披",
+    "on": "ヒ",
+    "kun": "ひら-く",
+    "meaning": "spread/open",
+    "example": "披 (ひらく) spread/open"
+  },
+  {
+    "kanji": "徐",
+    "on": "ジョ",
+    "kun": "おもむろ-に",
+    "meaning": "gradually/slowly",
+    "example": "徐 (おもむろに) gradually/slowly"
+  },
+  {
+    "kanji": "悦",
+    "on": "エツ",
+    "kun": "よろこ-ぶ",
+    "meaning": "joy/pleased",
+    "example": "悦 (よろこぶ) joy/pleased"
+  },
+  {
+    "kanji": "堪",
+    "on": "カン",
+    "kun": "た-える",
+    "meaning": "endure/bear",
+    "example": "堪 (たえる) endure/bear"
+  },
+  {
+    "kanji": "冠",
+    "on": "カン",
+    "kun": "かんむり",
+    "meaning": "crown/top",
+    "example": "冠 (かんむり) crown/top"
+  },
+  {
+    "kanji": "愉",
+    "on": "ユ",
+    "kun": "たの-しい",
+    "meaning": "pleasant/cheerful",
+    "example": "愉 (たのしい) pleasant/cheerful"
+  },
+  {
+    "kanji": "尿",
+    "on": "ニョウ",
+    "kun": "",
+    "meaning": "urine",
+    "example": "尿 (ニョウ) urine"
+  },
+  {
+    "kanji": "顎",
+    "on": "ガク",
+    "kun": "あご",
+    "meaning": "jaw/chin",
+    "example": "顎 (あご) jaw/chin"
+  },
+  {
+    "kanji": "誓",
+    "on": "セイ",
+    "kun": "ちか-う",
+    "meaning": "vow/swear",
+    "example": "誓 (ちかう) vow/swear"
+  },
+  {
+    "kanji": "憂",
+    "on": "ユウ",
+    "kun": "うれ-い",
+    "meaning": "grief/melancholy",
+    "example": "憂 (うれい) grief/melancholy"
+  },
+  {
+    "kanji": "簿",
+    "on": "ボ",
+    "kun": "",
+    "meaning": "book/register",
+    "example": "簿 (ボ) book/register"
+  },
+  {
+    "kanji": "糧",
+    "on": "リョウ・ロウ",
+    "kun": "かて",
+    "meaning": "food/provisions",
+    "example": "糧 (かて) food/provisions"
+  },
+  {
+    "kanji": "架",
+    "on": "カ",
+    "kun": "か-ける",
+    "meaning": "frame/set up",
+    "example": "架 (かける) frame/set up"
+  },
+  {
+    "kanji": "芽",
+    "on": "ガ",
+    "kun": "め",
+    "meaning": "bud/sprout",
+    "example": "芽 (め) bud/sprout"
+  },
+  {
+    "kanji": "軸",
+    "on": "ジク",
+    "kun": "",
+    "meaning": "axis/scroll",
+    "example": "軸 (ジク) axis/scroll"
+  },
+  {
+    "kanji": "苛",
+    "on": "カ",
+    "kun": "いじ-める",
+    "meaning": "harsh/torment",
+    "example": "苛 (いじめる) harsh/torment"
+  },
+  {
+    "kanji": "蓋",
+    "on": "ガイ",
+    "kun": "ふた",
+    "meaning": "lid/cover",
+    "example": "蓋 (ふた) lid/cover"
+  },
+  {
+    "kanji": "盆",
+    "on": "ボン",
+    "kun": "",
+    "meaning": "basin/Obon",
+    "example": "盆 (ボン) basin/Obon"
+  },
+  {
+    "kanji": "凶",
+    "on": "キョウ",
+    "kun": "",
+    "meaning": "evil/bad luck",
+    "example": "凶 (キョウ) evil/bad luck"
+  },
+  {
+    "kanji": "妃",
+    "on": "ヒ",
+    "kun": "きさき",
+    "meaning": "queen/princess",
+    "example": "妃 (きさき) queen/princess"
+  },
+  {
+    "kanji": "庶",
+    "on": "ショ",
+    "kun": "",
+    "meaning": "common/various",
+    "example": "庶 (ショ) common/various"
+  },
+  {
+    "kanji": "秩",
+    "on": "チツ",
+    "kun": "",
+    "meaning": "order/序",
+    "example": "秩 (チツ) order/序"
+  },
+  {
+    "kanji": "裾",
+    "on": "キョ",
+    "kun": "すそ",
+    "meaning": "hem/foot",
+    "example": "裾 (すそ) hem/foot"
+  },
+  {
+    "kanji": "幽",
+    "on": "ユウ",
+    "kun": "かす-か",
+    "meaning": "faint/secluded",
+    "example": "幽 (かすか) faint/secluded"
+  },
+  {
+    "kanji": "凡",
+    "on": "ボン・ハン",
+    "kun": "およ-そ",
+    "meaning": "ordinary/all",
+    "example": "凡 (およそ) ordinary/all"
+  },
+  {
+    "kanji": "漠",
+    "on": "バク",
+    "kun": "",
+    "meaning": "vague/desert",
+    "example": "漠 (バク) vague/desert"
+  },
+  {
+    "kanji": "拙",
+    "on": "セツ",
+    "kun": "つたな-い",
+    "meaning": "clumsy/unskilled",
+    "example": "拙 (つたない) clumsy/unskilled"
+  },
+  {
+    "kanji": "恒",
+    "on": "コウ",
+    "kun": "つね",
+    "meaning": "constant/permanent",
+    "example": "恒 (つね) constant/permanent"
+  },
+  {
+    "kanji": "暦",
+    "on": "レキ",
+    "kun": "こよみ",
+    "meaning": "calendar",
+    "example": "暦 (こよみ) calendar"
+  },
+  {
+    "kanji": "腫",
+    "on": "シュ",
+    "kun": "は-れる",
+    "meaning": "tumor/swell",
+    "example": "腫 (はれる) tumor/swell"
+  },
+  {
+    "kanji": "峠",
+    "on": "（和字）",
+    "kun": "とうげ",
+    "meaning": "mountain pass",
+    "example": "峠 (とうげ) mountain pass"
+  },
+  {
+    "kanji": "宰",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "control/manage",
+    "example": "宰 (サイ) control/manage"
+  },
+  {
+    "kanji": "蛮",
+    "on": "バン",
+    "kun": "",
+    "meaning": "barbarous",
+    "example": "蛮 (バン) barbarous"
+  },
+  {
+    "kanji": "窮",
+    "on": "キュウ",
+    "kun": "きわ-める",
+    "meaning": "exhausted/poor",
+    "example": "窮 (きわめる) exhausted/poor"
+  },
+  {
+    "kanji": "擦",
+    "on": "サツ",
+    "kun": "こす-る",
+    "meaning": "rub/graze",
+    "example": "擦 (こする) rub/graze"
+  },
+  {
+    "kanji": "爪",
+    "on": "ソウ",
+    "kun": "つめ",
+    "meaning": "nail/claw",
+    "example": "爪 (つめ) nail/claw"
+  },
+  {
+    "kanji": "稚",
+    "on": "チ",
+    "kun": "おさな-い",
+    "meaning": "young/immature",
+    "example": "稚 (おさない) young/immature"
+  },
+  {
+    "kanji": "辱",
+    "on": "ジョク",
+    "kun": "はずか-しめる",
+    "meaning": "disgrace",
+    "example": "辱 (はずかしめる) disgrace"
+  },
+  {
+    "kanji": "嵐",
+    "on": "ラン",
+    "kun": "あらし",
+    "meaning": "storm",
+    "example": "嵐 (あらし) storm"
+  },
+  {
+    "kanji": "憤",
+    "on": "フン",
+    "kun": "いきどお-る",
+    "meaning": "indignant/angry",
+    "example": "憤 (いきどおる) indignant/angry"
+  },
+  {
+    "kanji": "癒",
+    "on": "ユ",
+    "kun": "いや-す",
+    "meaning": "heal/cure",
+    "example": "癒 (いやす) heal/cure"
+  },
+  {
+    "kanji": "鬱",
+    "on": "ウツ",
+    "kun": "",
+    "meaning": "depression/gloomy",
+    "example": "鬱 (ウツ) depression/gloomy"
+  },
+  {
+    "kanji": "疎",
+    "on": "ソ",
+    "kun": "うと-い",
+    "meaning": "estranged/rough",
+    "example": "疎 (うとい) estranged/rough"
+  },
+  {
+    "kanji": "雰",
+    "on": "フン",
+    "kun": "",
+    "meaning": "atmosphere",
+    "example": "雰 (フン) atmosphere"
+  },
+  {
+    "kanji": "彰",
+    "on": "ショウ",
+    "kun": "あきら-か",
+    "meaning": "manifest/honor",
+    "example": "彰 (あきらか) manifest/honor"
+  },
+  {
+    "kanji": "肺",
+    "on": "ハイ",
+    "kun": "",
+    "meaning": "lung",
+    "example": "肺 (ハイ) lung"
+  },
+  {
+    "kanji": "傑",
+    "on": "ケツ",
+    "kun": "すぐ-れる",
+    "meaning": "excel/hero",
+    "example": "傑 (すぐれる) excel/hero"
+  },
+  {
+    "kanji": "拘",
+    "on": "コウ",
+    "kun": "かか-わる",
+    "meaning": "arrest/confine",
+    "example": "拘 (かかわる) arrest/confine"
+  },
+  {
+    "kanji": "頻",
+    "on": "ヒン",
+    "kun": "しきり-に",
+    "meaning": "frequent",
+    "example": "頻 (しきりに) frequent"
+  },
+  {
+    "kanji": "緯",
+    "on": "イ",
+    "kun": "",
+    "meaning": "latitude/woof",
+    "example": "緯 (イ) latitude/woof"
+  },
+  {
+    "kanji": "妖",
+    "on": "ヨウ",
+    "kun": "あや-しい",
+    "meaning": "bewitching",
+    "example": "妖 (あやしい) bewitching"
+  },
+  {
+    "kanji": "豚",
+    "on": "トン",
+    "kun": "ぶた",
+    "meaning": "pig/pork",
+    "example": "豚 (ぶた) pig/pork"
+  },
+  {
+    "kanji": "藍",
+    "on": "ラン",
+    "kun": "あい",
+    "meaning": "indigo",
+    "example": "藍 (あい) indigo"
+  },
+  {
+    "kanji": "矛",
+    "on": "ム",
+    "kun": "ほこ",
+    "meaning": "halberd/spear",
+    "example": "矛 (ほこ) halberd/spear"
+  },
+  {
+    "kanji": "鍛",
+    "on": "タン",
+    "kun": "きた-える",
+    "meaning": "forge/train",
+    "example": "鍛 (きたえる) forge/train"
+  },
+  {
+    "kanji": "繊",
+    "on": "セン",
+    "kun": "",
+    "meaning": "fiber/slender",
+    "example": "繊 (セン) fiber/slender"
+  },
+  {
+    "kanji": "縫",
+    "on": "ホウ",
+    "kun": "ぬ-う",
+    "meaning": "sew/stitch",
+    "example": "縫 (ぬう) sew/stitch"
+  },
+  {
+    "kanji": "把",
+    "on": "ハ",
+    "kun": "",
+    "meaning": "grasp/bundle",
+    "example": "把 (ハ) grasp/bundle"
+  },
+  {
+    "kanji": "楼",
+    "on": "ロウ",
+    "kun": "",
+    "meaning": "tower/high building",
+    "example": "楼 (ロウ) tower/high building"
+  },
+  {
+    "kanji": "捉",
+    "on": "ソク",
+    "kun": "とら-える",
+    "meaning": "catch/grasp",
+    "example": "捉 (とらえる) catch/grasp"
+  },
+  {
+    "kanji": "漬",
+    "on": "シ",
+    "kun": "つ-ける",
+    "meaning": "pickle/soak",
+    "example": "漬 (つける) pickle/soak"
+  },
+  {
+    "kanji": "紳",
+    "on": "シン",
+    "kun": "",
+    "meaning": "gentleman",
+    "example": "紳 (シン) gentleman"
+  },
+  {
+    "kanji": "飽",
+    "on": "ホウ",
+    "kun": "あ-きる",
+    "meaning": "satiated/tired of",
+    "example": "飽 (あきる) satiated/tired of"
+  },
+  {
+    "kanji": "宛",
+    "on": "エン",
+    "kun": "あ-てる",
+    "meaning": "address/as if",
+    "example": "宛 (あてる) address/as if"
+  },
+  {
+    "kanji": "閥",
+    "on": "バツ",
+    "kun": "",
+    "meaning": "clique/faction",
+    "example": "閥 (バツ) clique/faction"
+  },
+  {
+    "kanji": "旋",
+    "on": "セン",
+    "kun": "",
+    "meaning": "spin/revolve",
+    "example": "旋 (セン) spin/revolve"
+  },
+  {
+    "kanji": "坪",
+    "on": "ヘイ",
+    "kun": "つぼ",
+    "meaning": "tsubo (unit)",
+    "example": "坪 (つぼ) tsubo (unit)"
+  },
+  {
+    "kanji": "崖",
+    "on": "ガイ",
+    "kun": "がけ",
+    "meaning": "cliff",
+    "example": "崖 (がけ) cliff"
+  },
+  {
+    "kanji": "叱",
+    "on": "シツ",
+    "kun": "しか-る",
+    "meaning": "scold",
+    "example": "叱 (しかる) scold"
+  },
+  {
+    "kanji": "鶏",
+    "on": "ケイ",
+    "kun": "にわとり",
+    "meaning": "chicken",
+    "example": "鶏 (にわとり) chicken"
+  },
+  {
+    "kanji": "峡",
+    "on": "キョウ",
+    "kun": "はざま",
+    "meaning": "gorge/strait",
+    "example": "峡 (はざま) gorge/strait"
+  },
+  {
+    "kanji": "溝",
+    "on": "コウ",
+    "kun": "みぞ",
+    "meaning": "ditch/groove",
+    "example": "溝 (みぞ) ditch/groove"
+  },
+  {
+    "kanji": "朴",
+    "on": "ボク・ハク",
+    "kun": "ほお",
+    "meaning": "plain/simple",
+    "example": "朴 (ほお) plain/simple"
+  },
+  {
+    "kanji": "軌",
+    "on": "キ",
+    "kun": "",
+    "meaning": "track/orbit",
+    "example": "軌 (キ) track/orbit"
+  },
+  {
+    "kanji": "瓦",
+    "on": "ガ",
+    "kun": "かわら",
+    "meaning": "tile/gram",
+    "example": "瓦 (かわら) tile/gram"
+  },
+  {
+    "kanji": "喪",
+    "on": "ソウ",
+    "kun": "も",
+    "meaning": "mourning/lose",
+    "example": "喪 (も) mourning/lose"
+  },
+  {
+    "kanji": "墨",
+    "on": "ボク",
+    "kun": "すみ",
+    "meaning": "ink/sumi",
+    "example": "墨 (すみ) ink/sumi"
+  },
+  {
+    "kanji": "疫",
+    "on": "エキ・ヤク",
+    "kun": "",
+    "meaning": "epidemic/disease",
+    "example": "疫 (エキ) epidemic/disease"
+  },
+  {
+    "kanji": "遍",
+    "on": "ヘン",
+    "kun": "",
+    "meaning": "all over/everywhere",
+    "example": "遍 (ヘン) all over/everywhere"
+  },
+  {
+    "kanji": "濁",
+    "on": "ダク",
+    "kun": "にご-る",
+    "meaning": "muddy/voiced",
+    "example": "濁 (にごる) muddy/voiced"
+  },
+  {
+    "kanji": "扇",
+    "on": "セン",
+    "kun": "おうぎ",
+    "meaning": "fan",
+    "example": "扇 (おうぎ) fan"
+  },
+  {
+    "kanji": "拳",
+    "on": "ケン",
+    "kun": "こぶし",
+    "meaning": "fist",
+    "example": "拳 (こぶし) fist"
+  },
+  {
+    "kanji": "乙",
+    "on": "オツ",
+    "kun": "おと",
+    "meaning": "second/stylish",
+    "example": "乙 (おと) second/stylish"
+  },
+  {
+    "kanji": "酵",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "ferment/yeast",
+    "example": "酵 (コウ) ferment/yeast"
+  },
+  {
+    "kanji": "堤",
+    "on": "テイ",
+    "kun": "つつみ",
+    "meaning": "embankment/dike",
+    "example": "堤 (つつみ) embankment/dike"
+  },
+  {
+    "kanji": "阻",
+    "on": "ソ",
+    "kun": "はば-む",
+    "meaning": "obstruct/block",
+    "example": "阻 (はばむ) obstruct/block"
+  },
+  {
+    "kanji": "桑",
+    "on": "ソウ",
+    "kun": "くわ",
+    "meaning": "mulberry",
+    "example": "桑 (くわ) mulberry"
+  },
+  {
+    "kanji": "虜",
+    "on": "リョ",
+    "kun": "とりこ",
+    "meaning": "captive/prisoner",
+    "example": "虜 (とりこ) captive/prisoner"
+  },
+  {
+    "kanji": "乞",
+    "on": "コツ",
+    "kun": "こ-う",
+    "meaning": "beg",
+    "example": "乞 (こう) beg"
+  },
+  {
+    "kanji": "恭",
+    "on": "キョウ",
+    "kun": "うやうや-しい",
+    "meaning": "respectful",
+    "example": "恭 (うやうやしい) respectful"
+  },
+  {
+    "kanji": "鐘",
+    "on": "ショウ",
+    "kun": "かね",
+    "meaning": "bell/gong",
+    "example": "鐘 (かね) bell/gong"
+  },
+  {
+    "kanji": "剰",
+    "on": "ジョウ",
+    "kun": "あま-る",
+    "meaning": "surplus/excess",
+    "example": "剰 (あまる) surplus/excess"
+  },
+  {
+    "kanji": "慈",
+    "on": "ジ",
+    "kun": "いつく-しむ",
+    "meaning": "compassion",
+    "example": "慈 (いつくしむ) compassion"
+  },
+  {
+    "kanji": "径",
+    "on": "ケイ",
+    "kun": "こみち",
+    "meaning": "diameter/path",
+    "example": "径 (こみち) diameter/path"
+  },
+  {
+    "kanji": "培",
+    "on": "バイ",
+    "kun": "つちか-う",
+    "meaning": "cultivate/foster",
+    "example": "培 (つちかう) cultivate/foster"
+  },
+  {
+    "kanji": "擁",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "embrace/protect",
+    "example": "擁 (ヨウ) embrace/protect"
+  },
+  {
+    "kanji": "郭",
+    "on": "カク",
+    "kun": "",
+    "meaning": "enclosure/castle",
+    "example": "郭 (カク) enclosure/castle"
+  },
+  {
+    "kanji": "呪",
+    "on": "ジュ",
+    "kun": "のろ-う",
+    "meaning": "curse/spell",
+    "example": "呪 (のろう) curse/spell"
+  },
+  {
+    "kanji": "砕",
+    "on": "サイ",
+    "kun": "くだ-く",
+    "meaning": "crush/break",
+    "example": "砕 (くだく) crush/break"
+  },
+  {
+    "kanji": "汰",
+    "on": "タ",
+    "kun": "",
+    "meaning": "wash away",
+    "example": "汰 (タ) wash away"
+  },
+  {
+    "kanji": "勃",
+    "on": "ボツ",
+    "kun": "",
+    "meaning": "suddenly arise",
+    "example": "勃 (ボツ) suddenly arise"
+  },
+  {
+    "kanji": "翁",
+    "on": "オウ",
+    "kun": "おきな",
+    "meaning": "old man",
+    "example": "翁 (おきな) old man"
+  },
+  {
+    "kanji": "絹",
+    "on": "ケン",
+    "kun": "きぬ",
+    "meaning": "silk",
+    "example": "絹 (きぬ) silk"
+  },
+  {
+    "kanji": "譜",
+    "on": "フ",
+    "kun": "",
+    "meaning": "score/genealogy",
+    "example": "譜 (フ) score/genealogy"
+  },
+  {
+    "kanji": "陵",
+    "on": "リョウ",
+    "kun": "みささぎ",
+    "meaning": "mausoleum/hill",
+    "example": "陵 (みささぎ) mausoleum/hill"
+  },
+  {
+    "kanji": "痴",
+    "on": "チ",
+    "kun": "おろ-か",
+    "meaning": "stupid/fool",
+    "example": "痴 (おろか) stupid/fool"
+  },
+  {
+    "kanji": "笛",
+    "on": "テキ",
+    "kun": "ふえ",
+    "meaning": "flute/whistle",
+    "example": "笛 (ふえ) flute/whistle"
+  },
+  {
+    "kanji": "昧",
+    "on": "マイ",
+    "kun": "",
+    "meaning": "dark/unclear",
+    "example": "昧 (マイ) dark/unclear"
+  },
+  {
+    "kanji": "訟",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "lawsuit",
+    "example": "訟 (ショウ) lawsuit"
+  },
+  {
+    "kanji": "唾",
+    "on": "ダ",
+    "kun": "つば",
+    "meaning": "saliva/spit",
+    "example": "唾 (つば) saliva/spit"
+  },
+  {
+    "kanji": "肪",
+    "on": "ボウ",
+    "kun": "",
+    "meaning": "fat/lard",
+    "example": "肪 (ボウ) fat/lard"
+  },
+  {
+    "kanji": "塀",
+    "on": "ヘイ",
+    "kun": "",
+    "meaning": "fence/wall",
+    "example": "塀 (ヘイ) fence/wall"
+  },
+  {
+    "kanji": "碁",
+    "on": "ゴ",
+    "kun": "",
+    "meaning": "go (game)",
+    "example": "碁 (ゴ) go (game)"
+  },
+  {
+    "kanji": "敢",
+    "on": "カン",
+    "kun": "あえ-て",
+    "meaning": "dare/bold",
+    "example": "敢 (あえて) dare/bold"
+  },
+  {
+    "kanji": "塁",
+    "on": "ルイ",
+    "kun": "",
+    "meaning": "base/fort",
+    "example": "塁 (ルイ) base/fort"
+  },
+  {
+    "kanji": "暁",
+    "on": "ギョウ",
+    "kun": "あかつき",
+    "meaning": "dawn/enlighten",
+    "example": "暁 (あかつき) dawn/enlighten"
+  },
+  {
+    "kanji": "胴",
+    "on": "ドウ",
+    "kun": "",
+    "meaning": "trunk/torso",
+    "example": "胴 (ドウ) trunk/torso"
+  },
+  {
+    "kanji": "謡",
+    "on": "ヨウ",
+    "kun": "うたい",
+    "meaning": "chant/ballad",
+    "example": "謡 (うたい) chant/ballad"
+  },
+  {
+    "kanji": "飢",
+    "on": "キ",
+    "kun": "う-える",
+    "meaning": "hungry/starve",
+    "example": "飢 (うえる) hungry/starve"
+  },
+  {
+    "kanji": "欄",
+    "on": "ラン",
+    "kun": "",
+    "meaning": "column/railing",
+    "example": "欄 (ラン) column/railing"
+  },
+  {
+    "kanji": "艶",
+    "on": "エン",
+    "kun": "つや",
+    "meaning": "luster/sexy",
+    "example": "艶 (つや) luster/sexy"
+  },
+  {
+    "kanji": "痕",
+    "on": "コン",
+    "kun": "あと",
+    "meaning": "scar/trace",
+    "example": "痕 (あと) scar/trace"
+  },
+  {
+    "kanji": "怠",
+    "on": "タイ",
+    "kun": "おこた-る",
+    "meaning": "lazy/neglect",
+    "example": "怠 (おこたる) lazy/neglect"
+  },
+  {
+    "kanji": "欺",
+    "on": "ギ",
+    "kun": "あざむ-く",
+    "meaning": "deceive",
+    "example": "欺 (あざむく) deceive"
+  },
+  {
+    "kanji": "弦",
+    "on": "ゲン",
+    "kun": "つる",
+    "meaning": "string/bowstring",
+    "example": "弦 (つる) string/bowstring"
+  },
+  {
+    "kanji": "泡",
+    "on": "ホウ",
+    "kun": "あわ",
+    "meaning": "bubble/foam",
+    "example": "泡 (あわ) bubble/foam"
+  },
+  {
+    "kanji": "諦",
+    "on": "テイ",
+    "kun": "あきら-める",
+    "meaning": "resign/Buddhist truth",
+    "example": "諦 (あきらめる) resign/Buddhist truth"
+  },
+  {
+    "kanji": "伐",
+    "on": "バツ",
+    "kun": "き-る",
+    "meaning": "cut/attack",
+    "example": "伐 (きる) cut/attack"
+  },
+  {
+    "kanji": "餅",
+    "on": "ヘイ",
+    "kun": "もち",
+    "meaning": "rice cake",
+    "example": "餅 (もち) rice cake"
+  },
+  {
+    "kanji": "寮",
+    "on": "リョウ",
+    "kun": "",
+    "meaning": "dormitory",
+    "example": "寮 (リョウ) dormitory"
+  },
+  {
+    "kanji": "厄",
+    "on": "ヤク",
+    "kun": "",
+    "meaning": "misfortune/厄介",
+    "example": "厄 (ヤク) misfortune/厄介"
+  },
+  {
+    "kanji": "奔",
+    "on": "ホン",
+    "kun": "はし-る",
+    "meaning": "run/奔走",
+    "example": "奔 (はしる) run/奔走"
+  },
+  {
+    "kanji": "瞳",
+    "on": "ドウ",
+    "kun": "ひとみ",
+    "meaning": "pupil/eyes",
+    "example": "瞳 (ひとみ) pupil/eyes"
+  },
+  {
+    "kanji": "昆",
+    "on": "コン",
+    "kun": "",
+    "meaning": "descendants/insects",
+    "example": "昆 (コン) descendants/insects"
+  },
+  {
+    "kanji": "椎",
+    "on": "ツイ",
+    "kun": "つち・しい",
+    "meaning": "hammer/spine",
+    "example": "椎 (つち) hammer/spine"
+  },
+  {
+    "kanji": "懇",
+    "on": "コン",
+    "kun": "ねんご-ろ",
+    "meaning": "cordial/earnest",
+    "example": "懇 (ねんごろ) cordial/earnest"
+  },
+  {
+    "kanji": "唄",
+    "on": "バイ",
+    "kun": "うた",
+    "meaning": "song/ballad",
+    "example": "唄 (うた) song/ballad"
+  },
+  {
+    "kanji": "渦",
+    "on": "カ",
+    "kun": "うず",
+    "meaning": "whirlpool/vortex",
+    "example": "渦 (うず) whirlpool/vortex"
+  },
+  {
+    "kanji": "襟",
+    "on": "キン",
+    "kun": "えり",
+    "meaning": "collar/lapel",
+    "example": "襟 (えり) collar/lapel"
+  },
+  {
+    "kanji": "吟",
+    "on": "ギン",
+    "kun": "",
+    "meaning": "chant/recite",
+    "example": "吟 (ギン) chant/recite"
+  },
+  {
+    "kanji": "覇",
+    "on": "ハ",
+    "kun": "",
+    "meaning": "supremacy/champion",
+    "example": "覇 (ハ) supremacy/champion"
+  },
+  {
+    "kanji": "衡",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "balance/measure",
+    "example": "衡 (コウ) balance/measure"
+  },
+  {
+    "kanji": "呈",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "present/show",
+    "example": "呈 (テイ) present/show"
+  },
+  {
+    "kanji": "隙",
+    "on": "ゲキ",
+    "kun": "すき",
+    "meaning": "gap/opportunity",
+    "example": "隙 (すき) gap/opportunity"
+  },
+  {
+    "kanji": "淫",
+    "on": "イン",
+    "kun": "みだ-ら",
+    "meaning": "lewd/excessive",
+    "example": "淫 (みだら) lewd/excessive"
+  },
+  {
+    "kanji": "娠",
+    "on": "シン",
+    "kun": "",
+    "meaning": "pregnancy",
+    "example": "娠 (シン) pregnancy"
+  },
+  {
+    "kanji": "循",
+    "on": "ジュン",
+    "kun": "",
+    "meaning": "follow/cycle",
+    "example": "循 (ジュン) follow/cycle"
+  },
+  {
+    "kanji": "懲",
+    "on": "チョウ",
+    "kun": "こ-りる",
+    "meaning": "punish/discipline",
+    "example": "懲 (こりる) punish/discipline"
+  },
+  {
+    "kanji": "錦",
+    "on": "キン",
+    "kun": "にしき",
+    "meaning": "brocade/beautiful",
+    "example": "錦 (にしき) brocade/beautiful"
+  },
+  {
+    "kanji": "猟",
+    "on": "リョウ",
+    "kun": "",
+    "meaning": "hunting",
+    "example": "猟 (リョウ) hunting"
+  },
+  {
+    "kanji": "幣",
+    "on": "ヘイ",
+    "kun": "",
+    "meaning": "currency/offering",
+    "example": "幣 (ヘイ) currency/offering"
+  },
+  {
+    "kanji": "附",
+    "on": "フ",
+    "kun": "",
+    "meaning": "attach/follow",
+    "example": "附 (フ) attach/follow"
+  },
+  {
+    "kanji": "箇",
+    "on": "カ・コ",
+    "kun": "",
+    "meaning": "counter for items",
+    "example": "箇 (カ) counter for items"
+  },
+  {
+    "kanji": "醜",
+    "on": "シュウ",
+    "kun": "みにく-い",
+    "meaning": "ugly",
+    "example": "醜 (みにくい) ugly"
+  },
+  {
+    "kanji": "箸",
+    "on": "チョ",
+    "kun": "はし",
+    "meaning": "chopsticks",
+    "example": "箸 (はし) chopsticks"
+  },
+  {
+    "kanji": "戚",
+    "on": "セキ",
+    "kun": "",
+    "meaning": "relative/grieve",
+    "example": "戚 (セキ) relative/grieve"
+  },
+  {
+    "kanji": "喚",
+    "on": "カン",
+    "kun": "さけ-ぶ",
+    "meaning": "shout/summon",
+    "example": "喚 (さけぶ) shout/summon"
+  },
+  {
+    "kanji": "紺",
+    "on": "コン",
+    "kun": "",
+    "meaning": "dark blue",
+    "example": "紺 (コン) dark blue"
+  },
+  {
+    "kanji": "某",
+    "on": "ボウ",
+    "kun": "あるもの",
+    "meaning": "某/a certain",
+    "example": "某 (あるもの) 某/a certain"
+  },
+  {
+    "kanji": "鋼",
+    "on": "コウ",
+    "kun": "はがね",
+    "meaning": "steel",
+    "example": "鋼 (はがね) steel"
+  },
+  {
+    "kanji": "褒",
+    "on": "ホウ",
+    "kun": "ほ-める",
+    "meaning": "praise",
+    "example": "褒 (ほめる) praise"
+  },
+  {
+    "kanji": "赴",
+    "on": "フ",
+    "kun": "おもむ-く",
+    "meaning": "proceed to",
+    "example": "赴 (おもむく) proceed to"
+  },
+  {
+    "kanji": "媒",
+    "on": "バイ",
+    "kun": "",
+    "meaning": "intermediary",
+    "example": "媒 (バイ) intermediary"
+  },
+  {
+    "kanji": "妬",
+    "on": "ト",
+    "kun": "ねた-む",
+    "meaning": "jealous/envious",
+    "example": "妬 (ねたむ) jealous/envious"
+  },
+  {
+    "kanji": "遮",
+    "on": "シャ",
+    "kun": "さえぎ-る",
+    "meaning": "block/shield",
+    "example": "遮 (さえぎる) block/shield"
+  },
+  {
+    "kanji": "窯",
+    "on": "ヨウ",
+    "kun": "かま",
+    "meaning": "kiln/oven",
+    "example": "窯 (かま) kiln/oven"
+  },
+  {
+    "kanji": "侯",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "feudal lord",
+    "example": "侯 (コウ) feudal lord"
+  },
+  {
+    "kanji": "釜",
+    "on": "フ",
+    "kun": "かま",
+    "meaning": "pot/kettle",
+    "example": "釜 (かま) pot/kettle"
+  },
+  {
+    "kanji": "茎",
+    "on": "ケイ",
+    "kun": "くき",
+    "meaning": "stem/stalk",
+    "example": "茎 (くき) stem/stalk"
+  },
+  {
+    "kanji": "蔑",
+    "on": "ベツ",
+    "kun": "さげす-む",
+    "meaning": "despise/scorn",
+    "example": "蔑 (さげすむ) despise/scorn"
+  },
+  {
+    "kanji": "嗅",
+    "on": "キュウ",
+    "kun": "か-ぐ",
+    "meaning": "smell/sniff",
+    "example": "嗅 (かぐ) smell/sniff"
+  },
+  {
+    "kanji": "壌",
+    "on": "ジョウ",
+    "kun": "つち",
+    "meaning": "soil/earth",
+    "example": "壌 (つち) soil/earth"
+  },
+  {
+    "kanji": "蜜",
+    "on": "ミツ",
+    "kun": "みつ",
+    "meaning": "honey/nectar",
+    "example": "蜜 (みつ) honey/nectar"
+  },
+  {
+    "kanji": "尼",
+    "on": "ニ",
+    "kun": "あま",
+    "meaning": "nun",
+    "example": "尼 (あま) nun"
+  },
+  {
+    "kanji": "肢",
+    "on": "シ",
+    "kun": "",
+    "meaning": "limb",
+    "example": "肢 (シ) limb"
+  },
+  {
+    "kanji": "赦",
+    "on": "シャ",
+    "kun": "ゆる-す",
+    "meaning": "pardon/forgive",
+    "example": "赦 (ゆるす) pardon/forgive"
+  },
+  {
+    "kanji": "酬",
+    "on": "シュウ",
+    "kun": "むく-いる",
+    "meaning": "repay/toast",
+    "example": "酬 (むくいる) repay/toast"
+  },
+  {
+    "kanji": "戴",
+    "on": "タイ",
+    "kun": "いただ-く",
+    "meaning": "receive/wear",
+    "example": "戴 (いただく) receive/wear"
+  },
+  {
+    "kanji": "詠",
+    "on": "エイ",
+    "kun": "よ-む",
+    "meaning": "chant/compose",
+    "example": "詠 (よむ) chant/compose"
+  },
+  {
+    "kanji": "斗",
+    "on": "ト",
+    "kun": "",
+    "meaning": "dipper/measure",
+    "example": "斗 (ト) dipper/measure"
+  },
+  {
+    "kanji": "宜",
+    "on": "ギ",
+    "kun": "よろ-しい",
+    "meaning": "good/appropriate",
+    "example": "宜 (よろしい) good/appropriate"
+  },
+  {
+    "kanji": "殻",
+    "on": "カク",
+    "kun": "から",
+    "meaning": "shell/husk",
+    "example": "殻 (から) shell/husk"
+  },
+  {
+    "kanji": "墳",
+    "on": "フン",
+    "kun": "",
+    "meaning": "grave/mound",
+    "example": "墳 (フン) grave/mound"
+  },
+  {
+    "kanji": "炊",
+    "on": "スイ",
+    "kun": "た-く",
+    "meaning": "cook/炊事",
+    "example": "炊 (たく) cook/炊事"
+  },
+  {
+    "kanji": "碑",
+    "on": "ヒ",
+    "kun": "いしぶみ",
+    "meaning": "monument/stone tablet",
+    "example": "碑 (いしぶみ) monument/stone tablet"
+  },
+  {
+    "kanji": "痩",
+    "on": "ソウ",
+    "kun": "や-せる",
+    "meaning": "thin/lean",
+    "example": "痩 (やせる) thin/lean"
+  },
+  {
+    "kanji": "但",
+    "on": "タン",
+    "kun": "ただ-し",
+    "meaning": "but/provided that",
+    "example": "但 (ただし) but/provided that"
+  },
+  {
+    "kanji": "奨",
+    "on": "ショウ",
+    "kun": "すす-める",
+    "meaning": "encourage/recommend",
+    "example": "奨 (すすめる) encourage/recommend"
+  },
+  {
+    "kanji": "践",
+    "on": "セン",
+    "kun": "ふ-む",
+    "meaning": "practice/tread",
+    "example": "践 (ふむ) practice/tread"
+  },
+  {
+    "kanji": "滋",
+    "on": "ジ",
+    "kun": "しげ-る",
+    "meaning": "nourish/grow",
+    "example": "滋 (しげる) nourish/grow"
+  },
+  {
+    "kanji": "儒",
+    "on": "ジュ",
+    "kun": "",
+    "meaning": "Confucian",
+    "example": "儒 (ジュ) Confucian"
+  },
+  {
+    "kanji": "薦",
+    "on": "セン",
+    "kun": "すす-める",
+    "meaning": "recommend/rush",
+    "example": "薦 (すすめる) recommend/rush"
+  },
+  {
+    "kanji": "怨",
+    "on": "エン・オン",
+    "kun": "うら-む",
+    "meaning": "grudge/resent",
+    "example": "怨 (うらむ) grudge/resent"
+  },
+  {
+    "kanji": "栽",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "cultivate/plant",
+    "example": "栽 (サイ) cultivate/plant"
+  },
+  {
+    "kanji": "刈",
+    "on": "ガイ",
+    "kun": "か-る",
+    "meaning": "mow/cut",
+    "example": "刈 (かる) mow/cut"
+  },
+  {
+    "kanji": "閑",
+    "on": "カン",
+    "kun": "",
+    "meaning": "quiet/leisurely",
+    "example": "閑 (カン) quiet/leisurely"
+  },
+  {
+    "kanji": "錠",
+    "on": "ジョウ",
+    "kun": "",
+    "meaning": "lock/tablet",
+    "example": "錠 (ジョウ) lock/tablet"
+  },
+  {
+    "kanji": "扶",
+    "on": "フ",
+    "kun": "たす-ける",
+    "meaning": "support/help",
+    "example": "扶 (たすける) support/help"
+  },
+  {
+    "kanji": "妥",
+    "on": "ダ",
+    "kun": "",
+    "meaning": "appropriate/妥当",
+    "example": "妥 (ダ) appropriate/妥当"
+  },
+  {
+    "kanji": "妨",
+    "on": "ボウ",
+    "kun": "さまた-げる",
+    "meaning": "obstruct/hinder",
+    "example": "妨 (さまたげる) obstruct/hinder"
+  },
+  {
+    "kanji": "醒",
+    "on": "セイ",
+    "kun": "さ-める",
+    "meaning": "awaken/sober",
+    "example": "醒 (さめる) awaken/sober"
+  },
+  {
+    "kanji": "詣",
+    "on": "ケイ",
+    "kun": "もう-でる",
+    "meaning": "visit a shrine",
+    "example": "詣 (もうでる) visit a shrine"
+  },
+  {
+    "kanji": "胎",
+    "on": "タイ",
+    "kun": "はら",
+    "meaning": "womb/fetus",
+    "example": "胎 (はら) womb/fetus"
+  },
+  {
+    "kanji": "窟",
+    "on": "クツ",
+    "kun": "いわや",
+    "meaning": "cave/den",
+    "example": "窟 (いわや) cave/den"
+  },
+  {
+    "kanji": "巾",
+    "on": "キン",
+    "kun": "ぬの",
+    "meaning": "cloth/towel",
+    "example": "巾 (ぬの) cloth/towel"
+  },
+  {
+    "kanji": "蜂",
+    "on": "ホウ",
+    "kun": "はち",
+    "meaning": "bee/wasp",
+    "example": "蜂 (はち) bee/wasp"
+  },
+  {
+    "kanji": "忌",
+    "on": "キ",
+    "kun": "い-む",
+    "meaning": "avoid/mourn",
+    "example": "忌 (いむ) avoid/mourn"
+  },
+  {
+    "kanji": "骸",
+    "on": "ガイ",
+    "kun": "むくろ",
+    "meaning": "bones/remains",
+    "example": "骸 (むくろ) bones/remains"
+  },
+  {
+    "kanji": "弄",
+    "on": "ロウ",
+    "kun": "もてあそ-ぶ",
+    "meaning": "play with/ridicule",
+    "example": "弄 (もてあそぶ) play with/ridicule"
+  },
+  {
+    "kanji": "嫉",
+    "on": "シツ",
+    "kun": "",
+    "meaning": "jealous",
+    "example": "嫉 (シツ) jealous"
+  },
+  {
+    "kanji": "粛",
+    "on": "シュク",
+    "kun": "",
+    "meaning": "solemn/strict",
+    "example": "粛 (シュク) solemn/strict"
+  },
+  {
+    "kanji": "罵",
+    "on": "バ",
+    "kun": "ののし-る",
+    "meaning": "abuse/curse",
+    "example": "罵 (ののしる) abuse/curse"
+  },
+  {
+    "kanji": "囚",
+    "on": "シュウ",
+    "kun": "とら-われる",
+    "meaning": "prisoner",
+    "example": "囚 (とらわれる) prisoner"
+  },
+  {
+    "kanji": "鉛",
+    "on": "エン",
+    "kun": "なまり",
+    "meaning": "lead (metal)",
+    "example": "鉛 (なまり) lead (metal)"
+  },
+  {
+    "kanji": "搭",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "board/ride",
+    "example": "搭 (トウ) board/ride"
+  },
+  {
+    "kanji": "諭",
+    "on": "ユ",
+    "kun": "さと-す",
+    "meaning": "admonish",
+    "example": "諭 (さとす) admonish"
+  },
+  {
+    "kanji": "璧",
+    "on": "ヘキ",
+    "kun": "",
+    "meaning": "jewel/perfect",
+    "example": "璧 (ヘキ) jewel/perfect"
+  },
+  {
+    "kanji": "阜",
+    "on": "フ",
+    "kun": "",
+    "meaning": "mound/hill",
+    "example": "阜 (フ) mound/hill"
+  },
+  {
+    "kanji": "喝",
+    "on": "カツ",
+    "kun": "",
+    "meaning": "scold/shout",
+    "example": "喝 (カツ) scold/shout"
+  },
+  {
+    "kanji": "享",
+    "on": "キョウ",
+    "kun": "う-ける",
+    "meaning": "receive/enjoy",
+    "example": "享 (うける) receive/enjoy"
+  },
+  {
+    "kanji": "騰",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "rise/leap",
+    "example": "騰 (トウ) rise/leap"
+  },
+  {
+    "kanji": "嗣",
+    "on": "シ",
+    "kun": "",
+    "meaning": "heir/succeed",
+    "example": "嗣 (シ) heir/succeed"
+  },
+  {
+    "kanji": "勅",
+    "on": "チョク",
+    "kun": "",
+    "meaning": "imperial order",
+    "example": "勅 (チョク) imperial order"
+  },
+  {
+    "kanji": "篤",
+    "on": "トク",
+    "kun": "あつ-い",
+    "meaning": "sincere/serious",
+    "example": "篤 (あつい) sincere/serious"
+  },
+  {
+    "kanji": "勲",
+    "on": "クン",
+    "kun": "",
+    "meaning": "merit/honor",
+    "example": "勲 (クン) merit/honor"
+  },
+  {
+    "kanji": "埼",
+    "on": "キ",
+    "kun": "さき",
+    "meaning": "promontory",
+    "example": "埼 (さき) promontory"
+  },
+  {
+    "kanji": "伎",
+    "on": "ギ",
+    "kun": "わざ",
+    "meaning": "skill/art",
+    "example": "伎 (わざ) skill/art"
+  },
+  {
+    "kanji": "曖",
+    "on": "アイ",
+    "kun": "",
+    "meaning": "unclear/vague",
+    "example": "曖 (アイ) unclear/vague"
+  },
+  {
+    "kanji": "詐",
+    "on": "サ",
+    "kun": "いつわ-る",
+    "meaning": "deceive/fraud",
+    "example": "詐 (いつわる) deceive/fraud"
+  },
+  {
+    "kanji": "餌",
+    "on": "ジ",
+    "kun": "えさ",
+    "meaning": "bait/feed",
+    "example": "餌 (えさ) bait/feed"
+  },
+  {
+    "kanji": "岬",
+    "on": "コウ",
+    "kun": "みさき",
+    "meaning": "cape/promontory",
+    "example": "岬 (みさき) cape/promontory"
+  },
+  {
+    "kanji": "暫",
+    "on": "ザン",
+    "kun": "しばら-く",
+    "meaning": "temporarily",
+    "example": "暫 (しばらく) temporarily"
+  },
+  {
+    "kanji": "爽",
+    "on": "ソウ",
+    "kun": "さわ-やか",
+    "meaning": "refreshing/clear",
+    "example": "爽 (さわやか) refreshing/clear"
+  },
+  {
+    "kanji": "肖",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "resemble/portrait",
+    "example": "肖 (ショウ) resemble/portrait"
+  },
+  {
+    "kanji": "詮",
+    "on": "セン",
+    "kun": "",
+    "meaning": "reason/select",
+    "example": "詮 (セン) reason/select"
+  },
+  {
+    "kanji": "諾",
+    "on": "ダク",
+    "kun": "",
+    "meaning": "consent/answer",
+    "example": "諾 (ダク) consent/answer"
+  },
+  {
+    "kanji": "柿",
+    "on": "シ",
+    "kun": "かき",
+    "meaning": "persimmon",
+    "example": "柿 (かき) persimmon"
+  },
+  {
+    "kanji": "芯",
+    "on": "シン",
+    "kun": "",
+    "meaning": "core/wick",
+    "example": "芯 (シン) core/wick"
+  },
+  {
+    "kanji": "綻",
+    "on": "タン",
+    "kun": "ほころ-びる",
+    "meaning": "come apart",
+    "example": "綻 (ほころびる) come apart"
+  },
+  {
+    "kanji": "訂",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "correct/revise",
+    "example": "訂 (テイ) correct/revise"
+  },
+  {
+    "kanji": "汽",
+    "on": "キ",
+    "kun": "",
+    "meaning": "steam/vapor",
+    "example": "汽 (キ) steam/vapor"
+  },
+  {
+    "kanji": "薫",
+    "on": "クン",
+    "kun": "かお-る",
+    "meaning": "fragrant/cultivate",
+    "example": "薫 (かおる) fragrant/cultivate"
+  },
+  {
+    "kanji": "隷",
+    "on": "レイ",
+    "kun": "",
+    "meaning": "slave/subordinate",
+    "example": "隷 (レイ) slave/subordinate"
+  },
+  {
+    "kanji": "俵",
+    "on": "ヒョウ",
+    "kun": "たわら",
+    "meaning": "straw bag",
+    "example": "俵 (たわら) straw bag"
+  },
+  {
+    "kanji": "遷",
+    "on": "セン",
+    "kun": "うつ-る",
+    "meaning": "move/change",
+    "example": "遷 (うつる) move/change"
+  },
+  {
+    "kanji": "枢",
+    "on": "スウ",
+    "kun": "",
+    "meaning": "pivot/hub",
+    "example": "枢 (スウ) pivot/hub"
+  },
+  {
+    "kanji": "肘",
+    "on": "チュウ",
+    "kun": "ひじ",
+    "meaning": "elbow",
+    "example": "肘 (ひじ) elbow"
+  },
+  {
+    "kanji": "麓",
+    "on": "ロク",
+    "kun": "ふもと",
+    "meaning": "foot of mountain",
+    "example": "麓 (ふもと) foot of mountain"
+  },
+  {
+    "kanji": "憧",
+    "on": "ドウ",
+    "kun": "あこが-れる",
+    "meaning": "longing/admire",
+    "example": "憧 (あこがれる) longing/admire"
+  },
+  {
+    "kanji": "帥",
+    "on": "スイ",
+    "kun": "",
+    "meaning": "commander",
+    "example": "帥 (スイ) commander"
+  },
+  {
+    "kanji": "漆",
+    "on": "シツ",
+    "kun": "うるし",
+    "meaning": "lacquer/varnish",
+    "example": "漆 (うるし) lacquer/varnish"
+  },
+  {
+    "kanji": "酌",
+    "on": "シャク",
+    "kun": "く-む",
+    "meaning": "pour/consider",
+    "example": "酌 (くむ) pour/consider"
+  },
+  {
+    "kanji": "頓",
+    "on": "トン",
+    "kun": "",
+    "meaning": "suddenly/bow",
+    "example": "頓 (トン) suddenly/bow"
+  },
+  {
+    "kanji": "賠",
+    "on": "バイ",
+    "kun": "",
+    "meaning": "compensate",
+    "example": "賠 (バイ) compensate"
+  },
+  {
+    "kanji": "渇",
+    "on": "カツ",
+    "kun": "かわ-く",
+    "meaning": "thirst/dry up",
+    "example": "渇 (かわく) thirst/dry up"
+  },
+  {
+    "kanji": "慕",
+    "on": "ボ",
+    "kun": "した-う",
+    "meaning": "yearn/admire",
+    "example": "慕 (したう) yearn/admire"
+  },
+  {
+    "kanji": "婿",
+    "on": "セイ",
+    "kun": "むこ",
+    "meaning": "son-in-law",
+    "example": "婿 (むこ) son-in-law"
+  },
+  {
+    "kanji": "妄",
+    "on": "モウ・ボウ",
+    "kun": "みだ-り",
+    "meaning": "reckless/delusion",
+    "example": "妄 (みだり) reckless/delusion"
+  },
+  {
+    "kanji": "慨",
+    "on": "ガイ",
+    "kun": "なげ-く",
+    "meaning": "deplore/sigh",
+    "example": "慨 (なげく) deplore/sigh"
+  },
+  {
+    "kanji": "匿",
+    "on": "トク",
+    "kun": "かく-す",
+    "meaning": "conceal/hide",
+    "example": "匿 (かくす) conceal/hide"
+  },
+  {
+    "kanji": "渓",
+    "on": "ケイ",
+    "kun": "たに",
+    "meaning": "mountain stream",
+    "example": "渓 (たに) mountain stream"
+  },
+  {
+    "kanji": "侮",
+    "on": "ブ",
+    "kun": "あなど-る",
+    "meaning": "despise",
+    "example": "侮 (あなどる) despise"
+  },
+  {
+    "kanji": "髄",
+    "on": "ズイ",
+    "kun": "",
+    "meaning": "marrow/essence",
+    "example": "髄 (ズイ) marrow/essence"
+  },
+  {
+    "kanji": "穀",
+    "on": "コク",
+    "kun": "",
+    "meaning": "grain/cereal",
+    "example": "穀 (コク) grain/cereal"
+  },
+  {
+    "kanji": "薪",
+    "on": "シン",
+    "kun": "たきぎ",
+    "meaning": "firewood",
+    "example": "薪 (たきぎ) firewood"
+  },
+  {
+    "kanji": "轄",
+    "on": "カツ",
+    "kun": "",
+    "meaning": "control/jurisdiction",
+    "example": "轄 (カツ) control/jurisdiction"
+  },
+  {
+    "kanji": "洪",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "flood",
+    "example": "洪 (コウ) flood"
+  },
+  {
+    "kanji": "牙",
+    "on": "ガ・ゲ",
+    "kun": "きば",
+    "meaning": "tusk/fang",
+    "example": "牙 (きば) tusk/fang"
+  },
+  {
+    "kanji": "咽",
+    "on": "イン",
+    "kun": "のど",
+    "meaning": "throat/choke",
+    "example": "咽 (のど) throat/choke"
+  },
+  {
+    "kanji": "迅",
+    "on": "ジン",
+    "kun": "",
+    "meaning": "swift",
+    "example": "迅 (ジン) swift"
+  },
+  {
+    "kanji": "該",
+    "on": "ガイ",
+    "kun": "",
+    "meaning": "applicable/该当",
+    "example": "該 (ガイ) applicable/该当"
+  },
+  {
+    "kanji": "逐",
+    "on": "チク",
+    "kun": "",
+    "meaning": "chase/one by one",
+    "example": "逐 (チク) chase/one by one"
+  },
+  {
+    "kanji": "嘲",
+    "on": "チョウ",
+    "kun": "あざけ-る",
+    "meaning": "ridicule/mock",
+    "example": "嘲 (あざける) ridicule/mock"
+  },
+  {
+    "kanji": "墜",
+    "on": "ツイ",
+    "kun": "お-ちる",
+    "meaning": "fall/crash",
+    "example": "墜 (おちる) fall/crash"
+  },
+  {
+    "kanji": "臆",
+    "on": "オク",
+    "kun": "",
+    "meaning": "timid/presume",
+    "example": "臆 (オク) timid/presume"
+  },
+  {
+    "kanji": "餓",
+    "on": "ガ",
+    "kun": "う-える",
+    "meaning": "starve/hunger",
+    "example": "餓 (うえる) starve/hunger"
+  },
+  {
+    "kanji": "挫",
+    "on": "ザ",
+    "kun": "くじ-く",
+    "meaning": "sprain/frustrate",
+    "example": "挫 (くじく) sprain/frustrate"
+  },
+  {
+    "kanji": "錬",
+    "on": "レン",
+    "kun": "",
+    "meaning": "refine/temper",
+    "example": "錬 (レン) refine/temper"
+  },
+  {
+    "kanji": "桟",
+    "on": "サン",
+    "kun": "さん",
+    "meaning": "scaffold/grid",
+    "example": "桟 (さん) scaffold/grid"
+  },
+  {
+    "kanji": "溺",
+    "on": "デキ",
+    "kun": "おぼ-れる",
+    "meaning": "drown/indulge",
+    "example": "溺 (おぼれる) drown/indulge"
+  },
+  {
+    "kanji": "賄",
+    "on": "ワイ",
+    "kun": "まかな-う",
+    "meaning": "bribe",
+    "example": "賄 (まかなう) bribe"
+  },
+  {
+    "kanji": "盲",
+    "on": "モウ",
+    "kun": "めくら",
+    "meaning": "blind",
+    "example": "盲 (めくら) blind"
+  },
+  {
+    "kanji": "鯨",
+    "on": "ゲイ",
+    "kun": "くじら",
+    "meaning": "whale",
+    "example": "鯨 (くじら) whale"
+  },
+  {
+    "kanji": "侶",
+    "on": "リョ",
+    "kun": "",
+    "meaning": "companion/fellow",
+    "example": "侶 (リョ) companion/fellow"
+  },
+  {
+    "kanji": "艇",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "small boat",
+    "example": "艇 (テイ) small boat"
+  },
+  {
+    "kanji": "丼",
+    "on": "ドン",
+    "kun": "どんぶり",
+    "meaning": "bowl",
+    "example": "丼 (どんぶり) bowl"
+  },
+  {
+    "kanji": "堕",
+    "on": "ダ",
+    "kun": "お-ちる",
+    "meaning": "fall/degenerate",
+    "example": "堕 (おちる) fall/degenerate"
+  },
+  {
+    "kanji": "瘍",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "ulcer/tumor",
+    "example": "瘍 (ヨウ) ulcer/tumor"
+  },
+  {
+    "kanji": "槽",
+    "on": "ソウ",
+    "kun": "おけ",
+    "meaning": "vat/tank",
+    "example": "槽 (おけ) vat/tank"
+  },
+  {
+    "kanji": "憩",
+    "on": "ケイ",
+    "kun": "いこ-う",
+    "meaning": "rest/relax",
+    "example": "憩 (いこう) rest/relax"
+  },
+  {
+    "kanji": "僅",
+    "on": "キン",
+    "kun": "わず-か",
+    "meaning": "small amount",
+    "example": "僅 (わずか) small amount"
+  },
+  {
+    "kanji": "閲",
+    "on": "エツ",
+    "kun": "",
+    "meaning": "inspect/review",
+    "example": "閲 (エツ) inspect/review"
+  },
+  {
+    "kanji": "柵",
+    "on": "サク",
+    "kun": "",
+    "meaning": "fence/stockade",
+    "example": "柵 (サク) fence/stockade"
+  },
+  {
+    "kanji": "畔",
+    "on": "ハン",
+    "kun": "ほとり",
+    "meaning": "bank/edge",
+    "example": "畔 (ほとり) bank/edge"
+  },
+  {
+    "kanji": "睦",
+    "on": "ボク",
+    "kun": "むつ-まじい",
+    "meaning": "friendly/harmonious",
+    "example": "睦 (むつまじい) friendly/harmonious"
+  },
+  {
+    "kanji": "唆",
+    "on": "サ",
+    "kun": "そそのか-す",
+    "meaning": "instigate",
+    "example": "唆 (そそのかす) instigate"
+  },
+  {
+    "kanji": "悼",
+    "on": "トウ",
+    "kun": "いた-む",
+    "meaning": "mourn/grieve",
+    "example": "悼 (いたむ) mourn/grieve"
+  },
+  {
+    "kanji": "吏",
+    "on": "リ",
+    "kun": "",
+    "meaning": "official/officer",
+    "example": "吏 (リ) official/officer"
+  },
+  {
+    "kanji": "穫",
+    "on": "カク",
+    "kun": "",
+    "meaning": "harvest",
+    "example": "穫 (カク) harvest"
+  },
+  {
+    "kanji": "酢",
+    "on": "サク",
+    "kun": "す",
+    "meaning": "vinegar",
+    "example": "酢 (す) vinegar"
+  },
+  {
+    "kanji": "賜",
+    "on": "シ",
+    "kun": "たまわ-る",
+    "meaning": "bestow/grant",
+    "example": "賜 (たまわる) bestow/grant"
+  },
+  {
+    "kanji": "腎",
+    "on": "ジン",
+    "kun": "",
+    "meaning": "kidney",
+    "example": "腎 (ジン) kidney"
+  },
+  {
+    "kanji": "梗",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "stiff/outline",
+    "example": "梗 (コウ) stiff/outline"
+  },
+  {
+    "kanji": "瑠",
+    "on": "リュウ",
+    "kun": "",
+    "meaning": "lapis lazuli",
+    "example": "瑠 (リュウ) lapis lazuli"
+  },
+  {
+    "kanji": "羨",
+    "on": "セン",
+    "kun": "うらや-む",
+    "meaning": "envy/admire",
+    "example": "羨 (うらやむ) envy/admire"
+  },
+  {
+    "kanji": "搬",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "transport/carry",
+    "example": "搬 (ハン) transport/carry"
+  },
+  {
+    "kanji": "剖",
+    "on": "ボウ",
+    "kun": "",
+    "meaning": "divide/dissect",
+    "example": "剖 (ボウ) divide/dissect"
+  },
+  {
+    "kanji": "酎",
+    "on": "チュウ",
+    "kun": "",
+    "meaning": "strong sake",
+    "example": "酎 (チュウ) strong sake"
+  },
+  {
+    "kanji": "畿",
+    "on": "キ",
+    "kun": "",
+    "meaning": "capital area",
+    "example": "畿 (キ) capital area"
+  },
+  {
+    "kanji": "宵",
+    "on": "ショウ",
+    "kun": "よい",
+    "meaning": "evening/night",
+    "example": "宵 (よい) evening/night"
+  },
+  {
+    "kanji": "拐",
+    "on": "カイ",
+    "kun": "",
+    "meaning": "kidnap/abduct",
+    "example": "拐 (カイ) kidnap/abduct"
+  },
+  {
+    "kanji": "醸",
+    "on": "ジョウ",
+    "kun": "かも-す",
+    "meaning": "brew/cause",
+    "example": "醸 (かもす) brew/cause"
+  },
+  {
+    "kanji": "猶",
+    "on": "ユウ",
+    "kun": "なお",
+    "meaning": "still/moreover",
+    "example": "猶 (なお) still/moreover"
+  },
+  {
+    "kanji": "諮",
+    "on": "シ",
+    "kun": "はか-る",
+    "meaning": "consult/advise",
+    "example": "諮 (はかる) consult/advise"
+  },
+  {
+    "kanji": "畏",
+    "on": "イ",
+    "kun": "おそ-れる",
+    "meaning": "fear/revere",
+    "example": "畏 (おそれる) fear/revere"
+  },
+  {
+    "kanji": "泌",
+    "on": "ヒ",
+    "kun": "",
+    "meaning": "secrete/flow",
+    "example": "泌 (ヒ) secrete/flow"
+  },
+  {
+    "kanji": "愁",
+    "on": "シュウ",
+    "kun": "うれ-える",
+    "meaning": "grief/sorrow",
+    "example": "愁 (うれえる) grief/sorrow"
+  },
+  {
+    "kanji": "逝",
+    "on": "セイ",
+    "kun": "い-く・の-く",
+    "meaning": "die/pass away",
+    "example": "逝 (いく) die/pass away"
+  },
+  {
+    "kanji": "朽",
+    "on": "キュウ",
+    "kun": "く-ちる",
+    "meaning": "decay/rot",
+    "example": "朽 (くちる) decay/rot"
+  },
+  {
+    "kanji": "硫",
+    "on": "リュウ",
+    "kun": "",
+    "meaning": "sulfur",
+    "example": "硫 (リュウ) sulfur"
+  },
+  {
+    "kanji": "瞭",
+    "on": "リョウ",
+    "kun": "",
+    "meaning": "clear/obvious",
+    "example": "瞭 (リョウ) clear/obvious"
+  },
+  {
+    "kanji": "擬",
+    "on": "ギ",
+    "kun": "",
+    "meaning": "imitate/pseudo",
+    "example": "擬 (ギ) imitate/pseudo"
+  },
+  {
+    "kanji": "叙",
+    "on": "ジョ",
+    "kun": "",
+    "meaning": "describe/narrate",
+    "example": "叙 (ジョ) describe/narrate"
+  },
+  {
+    "kanji": "弊",
+    "on": "ヘイ",
+    "kun": "",
+    "meaning": "evil/our",
+    "example": "弊 (ヘイ) evil/our"
+  },
+  {
+    "kanji": "累",
+    "on": "ルイ",
+    "kun": "",
+    "meaning": "accumulate/involve",
+    "example": "累 (ルイ) accumulate/involve"
+  },
+  {
+    "kanji": "煩",
+    "on": "ハン・ボン",
+    "kun": "わずら-う",
+    "meaning": "trouble/worry",
+    "example": "煩 (わずらう) trouble/worry"
+  },
+  {
+    "kanji": "踪",
+    "on": "ソウ",
+    "kun": "",
+    "meaning": "track/trace",
+    "example": "踪 (ソウ) track/trace"
+  },
+  {
+    "kanji": "藻",
+    "on": "ソウ",
+    "kun": "も",
+    "meaning": "seaweed/algae",
+    "example": "藻 (も) seaweed/algae"
+  },
+  {
+    "kanji": "蚊",
+    "on": "ブン",
+    "kun": "か",
+    "meaning": "mosquito",
+    "example": "蚊 (か) mosquito"
+  },
+  {
+    "kanji": "栃",
+    "on": "トチ",
+    "kun": "とち",
+    "meaning": "horse chestnut",
+    "example": "栃 (とち) horse chestnut"
+  },
+  {
+    "kanji": "且",
+    "on": "ショ",
+    "kun": "か-つ",
+    "meaning": "moreover/and",
+    "example": "且 (かつ) moreover/and"
+  },
+  {
+    "kanji": "鋳",
+    "on": "チュウ",
+    "kun": "い-る",
+    "meaning": "cast/mold",
+    "example": "鋳 (いる) cast/mold"
+  },
+  {
+    "kanji": "蔽",
+    "on": "ヘイ",
+    "kun": "おお-う",
+    "meaning": "cover/conceal",
+    "example": "蔽 (おおう) cover/conceal"
+  },
+  {
+    "kanji": "茨",
+    "on": "シ",
+    "kun": "いばら",
+    "meaning": "thorn/Ibaraki",
+    "example": "茨 (いばら) thorn/Ibaraki"
+  },
+  {
+    "kanji": "棺",
+    "on": "カン",
+    "kun": "ひつぎ",
+    "meaning": "coffin",
+    "example": "棺 (ひつぎ) coffin"
+  },
+  {
+    "kanji": "慄",
+    "on": "リツ",
+    "kun": "おのの-く",
+    "meaning": "tremble/shudder",
+    "example": "慄 (おののく) tremble/shudder"
+  },
+  {
+    "kanji": "傲",
+    "on": "ゴウ",
+    "kun": "おご-る",
+    "meaning": "arrogant",
+    "example": "傲 (おごる) arrogant"
+  },
+  {
+    "kanji": "硝",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "saltpeter/nitre",
+    "example": "硝 (ショウ) saltpeter/nitre"
+  },
+  {
+    "kanji": "舶",
+    "on": "ハク",
+    "kun": "",
+    "meaning": "ocean vessel",
+    "example": "舶 (ハク) ocean vessel"
+  },
+  {
+    "kanji": "租",
+    "on": "ソ",
+    "kun": "",
+    "meaning": "tax/tribute",
+    "example": "租 (ソ) tax/tribute"
+  },
+  {
+    "kanji": "倣",
+    "on": "ホウ",
+    "kun": "なら-う",
+    "meaning": "imitate",
+    "example": "倣 (ならう) imitate"
+  },
+  {
+    "kanji": "謹",
+    "on": "キン",
+    "kun": "つつし-む",
+    "meaning": "respectful/careful",
+    "example": "謹 (つつしむ) respectful/careful"
+  },
+  {
+    "kanji": "抹",
+    "on": "マツ",
+    "kun": "",
+    "meaning": "rub/erase",
+    "example": "抹 (マツ) rub/erase"
+  },
+  {
+    "kanji": "虹",
+    "on": "コウ",
+    "kun": "にじ",
+    "meaning": "rainbow",
+    "example": "虹 (にじ) rainbow"
+  },
+  {
+    "kanji": "捻",
+    "on": "ネン",
+    "kun": "ひね-る",
+    "meaning": "twist/wrench",
+    "example": "捻 (ひねる) twist/wrench"
+  },
+  {
+    "kanji": "娯",
+    "on": "ゴ",
+    "kun": "",
+    "meaning": "pleasure/amusement",
+    "example": "娯 (ゴ) pleasure/amusement"
+  },
+  {
+    "kanji": "臼",
+    "on": "キュウ",
+    "kun": "うす",
+    "meaning": "mortar/bowl",
+    "example": "臼 (うす) mortar/bowl"
+  },
+  {
+    "kanji": "喩",
+    "on": "ユ",
+    "kun": "",
+    "meaning": "metaphor",
+    "example": "喩 (ユ) metaphor"
+  },
+  {
+    "kanji": "萎",
+    "on": "イ",
+    "kun": "しお-れる",
+    "meaning": "wither/weaken",
+    "example": "萎 (しおれる) wither/weaken"
+  },
+  {
+    "kanji": "蛍",
+    "on": "ケイ",
+    "kun": "ほたる",
+    "meaning": "firefly",
+    "example": "蛍 (ほたる) firefly"
+  },
+  {
+    "kanji": "窒",
+    "on": "チツ",
+    "kun": "",
+    "meaning": "obstruct/asphyxiate",
+    "example": "窒 (チツ) obstruct/asphyxiate"
+  },
+  {
+    "kanji": "腺",
+    "on": "セン",
+    "kun": "",
+    "meaning": "gland",
+    "example": "腺 (セン) gland"
+  },
+  {
+    "kanji": "桁",
+    "on": "ケタ",
+    "kun": "けた",
+    "meaning": "digit/beam",
+    "example": "桁 (けた) digit/beam"
+  },
+  {
+    "kanji": "玩",
+    "on": "ガン",
+    "kun": "もてあそ-ぶ",
+    "meaning": "toy/enjoy",
+    "example": "玩 (もてあそぶ) toy/enjoy"
+  },
+  {
+    "kanji": "冶",
+    "on": "ヤ",
+    "kun": "",
+    "meaning": "smelt/cast",
+    "example": "冶 (ヤ) smelt/cast"
+  },
+  {
+    "kanji": "羞",
+    "on": "シュウ",
+    "kun": "は-じる",
+    "meaning": "shame/shy",
+    "example": "羞 (はじる) shame/shy"
+  },
+  {
+    "kanji": "栓",
+    "on": "セン",
+    "kun": "",
+    "meaning": "plug/stopper",
+    "example": "栓 (セン) plug/stopper"
+  },
+  {
+    "kanji": "惧",
+    "on": "ク",
+    "kun": "おそ-れる",
+    "meaning": "fear",
+    "example": "惧 (おそれる) fear"
+  },
+  {
+    "kanji": "寡",
+    "on": "カ",
+    "kun": "すくな-い",
+    "meaning": "few/widow",
+    "example": "寡 (すくない) few/widow"
+  },
+  {
+    "kanji": "畝",
+    "on": "ホ",
+    "kun": "うね",
+    "meaning": "ridge/unit",
+    "example": "畝 (うね) ridge/unit"
+  },
+  {
+    "kanji": "淑",
+    "on": "シュク",
+    "kun": "しと-やか",
+    "meaning": "graceful/gentle",
+    "example": "淑 (しとやか) graceful/gentle"
+  },
+  {
+    "kanji": "嫡",
+    "on": "チャク",
+    "kun": "",
+    "meaning": "legitimate/heir",
+    "example": "嫡 (チャク) legitimate/heir"
+  },
+  {
+    "kanji": "屯",
+    "on": "トン",
+    "kun": "たむろ-する",
+    "meaning": "stationed/gather",
+    "example": "屯 (たむろする) stationed/gather"
+  },
+  {
+    "kanji": "糾",
+    "on": "キュウ",
+    "kun": "ただ-す",
+    "meaning": "investigate/twist",
+    "example": "糾 (ただす) investigate/twist"
+  },
+  {
+    "kanji": "遡",
+    "on": "ソ",
+    "kun": "さかのぼ-る",
+    "meaning": "go upstream",
+    "example": "遡 (さかのぼる) go upstream"
+  },
+  {
+    "kanji": "陪",
+    "on": "バイ",
+    "kun": "",
+    "meaning": "accompany/jury",
+    "example": "陪 (バイ) accompany/jury"
+  },
+  {
+    "kanji": "雌",
+    "on": "シ",
+    "kun": "めす",
+    "meaning": "female",
+    "example": "雌 (めす) female"
+  },
+  {
+    "kanji": "舷",
+    "on": "ゲン",
+    "kun": "ふなばた",
+    "meaning": "gunwale/ship side",
+    "example": "舷 (ふなばた) gunwale/ship side"
+  },
+  {
+    "kanji": "霜",
+    "on": "ソウ",
+    "kun": "しも",
+    "meaning": "frost",
+    "example": "霜 (しも) frost"
+  },
+  {
+    "kanji": "殉",
+    "on": "ジュン",
+    "kun": "",
+    "meaning": "die for/follow in death",
+    "example": "殉 (ジュン) die for/follow in death"
+  },
+  {
+    "kanji": "紡",
+    "on": "ボウ",
+    "kun": "つむ-ぐ",
+    "meaning": "spin/weave",
+    "example": "紡 (つむぐ) spin/weave"
+  },
+  {
+    "kanji": "貪",
+    "on": "ドン",
+    "kun": "むさぼ-る",
+    "meaning": "greedy",
+    "example": "貪 (むさぼる) greedy"
+  },
+  {
+    "kanji": "庸",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "mediocre/employ",
+    "example": "庸 (ヨウ) mediocre/employ"
+  },
+  {
+    "kanji": "韻",
+    "on": "イン",
+    "kun": "",
+    "meaning": "rhyme/sound",
+    "example": "韻 (イン) rhyme/sound"
+  },
+  {
+    "kanji": "繕",
+    "on": "ゼン",
+    "kun": "つくろ-う",
+    "meaning": "repair/mend",
+    "example": "繕 (つくろう) repair/mend"
+  },
+  {
+    "kanji": "搾",
+    "on": "サク",
+    "kun": "しぼ-る",
+    "meaning": "squeeze/press",
+    "example": "搾 (しぼる) squeeze/press"
+  },
+  {
+    "kanji": "刹",
+    "on": "サツ・セツ",
+    "kun": "",
+    "meaning": "temple/moment",
+    "example": "刹 (サツ) temple/moment"
+  },
+  {
+    "kanji": "采",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "dice/color",
+    "example": "采 (サイ) dice/color"
+  },
+  {
+    "kanji": "堆",
+    "on": "タイ",
+    "kun": "",
+    "meaning": "pile/heap",
+    "example": "堆 (タイ) pile/heap"
+  },
+  {
+    "kanji": "禍",
+    "on": "カ",
+    "kun": "わざわい",
+    "meaning": "disaster/misfortune",
+    "example": "禍 (わざわい) disaster/misfortune"
+  },
+  {
+    "kanji": "煎",
+    "on": "セン",
+    "kun": "い-る",
+    "meaning": "roast/boil",
+    "example": "煎 (いる) roast/boil"
+  },
+  {
+    "kanji": "姻",
+    "on": "イン",
+    "kun": "",
+    "meaning": "marriage",
+    "example": "姻 (イン) marriage"
+  },
+  {
+    "kanji": "斑",
+    "on": "ハン",
+    "kun": "まだら",
+    "meaning": "spot/speckle",
+    "example": "斑 (まだら) spot/speckle"
+  },
+  {
+    "kanji": "冥",
+    "on": "メイ",
+    "kun": "くら-い",
+    "meaning": "dark/underworld",
+    "example": "冥 (くらい) dark/underworld"
+  },
+  {
+    "kanji": "抄",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "excerpt/copy",
+    "example": "抄 (ショウ) excerpt/copy"
+  },
+  {
+    "kanji": "拷",
+    "on": "ゴウ",
+    "kun": "",
+    "meaning": "torture",
+    "example": "拷 (ゴウ) torture"
+  },
+  {
+    "kanji": "遜",
+    "on": "ソン",
+    "kun": "へりくだ-る",
+    "meaning": "modest/inferior",
+    "example": "遜 (へりくだる) modest/inferior"
+  },
+  {
+    "kanji": "旺",
+    "on": "オウ",
+    "kun": "",
+    "meaning": "flourishing",
+    "example": "旺 (オウ) flourishing"
+  },
+  {
+    "kanji": "准",
+    "on": "ジュン",
+    "kun": "",
+    "meaning": "approve/semi-",
+    "example": "准 (ジュン) approve/semi-"
+  },
+  {
+    "kanji": "勾",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "hook/detain",
+    "example": "勾 (コウ) hook/detain"
+  },
+  {
+    "kanji": "廉",
+    "on": "レン",
+    "kun": "",
+    "meaning": "cheap/clean",
+    "example": "廉 (レン) cheap/clean"
+  },
+  {
+    "kanji": "礁",
+    "on": "ショウ",
+    "kun": "",
+    "meaning": "reef/shoal",
+    "example": "礁 (ショウ) reef/shoal"
+  },
+  {
+    "kanji": "壱",
+    "on": "イチ",
+    "kun": "",
+    "meaning": "one (formal)",
+    "example": "壱 (イチ) one (formal)"
+  },
+  {
+    "kanji": "麺",
+    "on": "メン",
+    "kun": "",
+    "meaning": "noodles",
+    "example": "麺 (メン) noodles"
+  },
+  {
+    "kanji": "升",
+    "on": "ショウ",
+    "kun": "ます",
+    "meaning": "measure/rise",
+    "example": "升 (ます) measure/rise"
+  },
+  {
+    "kanji": "卸",
+    "on": "シャ",
+    "kun": "おろ-す",
+    "meaning": "wholesale",
+    "example": "卸 (おろす) wholesale"
+  },
+  {
+    "kanji": "耗",
+    "on": "コウ・モウ",
+    "kun": "",
+    "meaning": "consume/waste",
+    "example": "耗 (コウ) consume/waste"
+  },
+  {
+    "kanji": "謁",
+    "on": "エツ",
+    "kun": "",
+    "meaning": "audience/謁見",
+    "example": "謁 (エツ) audience/謁見"
+  },
+  {
+    "kanji": "璃",
+    "on": "リ",
+    "kun": "",
+    "meaning": "glass/jewel",
+    "example": "璃 (リ) glass/jewel"
+  },
+  {
+    "kanji": "坑",
+    "on": "コウ",
+    "kun": "あな",
+    "meaning": "pit/mine",
+    "example": "坑 (あな) pit/mine"
+  },
+  {
+    "kanji": "串",
+    "on": "カン",
+    "kun": "くし",
+    "meaning": "skewer/string",
+    "example": "串 (くし) skewer/string"
+  },
+  {
+    "kanji": "弔",
+    "on": "チョウ",
+    "kun": "とむら-う",
+    "meaning": "mourn/condole",
+    "example": "弔 (とむらう) mourn/condole"
+  },
+  {
+    "kanji": "賓",
+    "on": "ヒン",
+    "kun": "まろうど",
+    "meaning": "guest/visitor",
+    "example": "賓 (まろうど) guest/visitor"
+  },
+  {
+    "kanji": "塡",
+    "on": "テン",
+    "kun": "",
+    "meaning": "fill in",
+    "example": "塡 (テン) fill in"
+  },
+  {
+    "kanji": "痢",
+    "on": "リ",
+    "kun": "",
+    "meaning": "diarrhea",
+    "example": "痢 (リ) diarrhea"
+  },
+  {
+    "kanji": "嚇",
+    "on": "カク",
+    "kun": "",
+    "meaning": "threaten/intimidate",
+    "example": "嚇 (カク) threaten/intimidate"
+  },
+  {
+    "kanji": "濫",
+    "on": "ラン",
+    "kun": "みだ-りに",
+    "meaning": "overflow/excessive",
+    "example": "濫 (みだりに) overflow/excessive"
+  },
+  {
+    "kanji": "俸",
+    "on": "ホウ",
+    "kun": "",
+    "meaning": "salary/stipend",
+    "example": "俸 (ホウ) salary/stipend"
+  },
+  {
+    "kanji": "箋",
+    "on": "セン",
+    "kun": "",
+    "meaning": "letter/paper",
+    "example": "箋 (セン) letter/paper"
+  },
+  {
+    "kanji": "凸",
+    "on": "トツ",
+    "kun": "でこ",
+    "meaning": "convex",
+    "example": "凸 (でこ) convex"
+  },
+  {
+    "kanji": "脊",
+    "on": "セキ",
+    "kun": "せ",
+    "meaning": "spine/back",
+    "example": "脊 (せ) spine/back"
+  },
+  {
+    "kanji": "詔",
+    "on": "ショウ",
+    "kun": "みことのり",
+    "meaning": "imperial edict",
+    "example": "詔 (みことのり) imperial edict"
+  },
+  {
+    "kanji": "緻",
+    "on": "チ",
+    "kun": "",
+    "meaning": "fine/dense",
+    "example": "緻 (チ) fine/dense"
+  },
+  {
+    "kanji": "凹",
+    "on": "オウ",
+    "kun": "くぼ",
+    "meaning": "concave",
+    "example": "凹 (くぼ) concave"
+  },
+  {
+    "kanji": "罷",
+    "on": "ヒ",
+    "kun": "",
+    "meaning": "stop/dismiss",
+    "example": "罷 (ヒ) stop/dismiss"
+  },
+  {
+    "kanji": "漸",
+    "on": "ゼン",
+    "kun": "ようや-く",
+    "meaning": "gradually",
+    "example": "漸 (ようやく) gradually"
+  },
+  {
+    "kanji": "賦",
+    "on": "フ",
+    "kun": "",
+    "meaning": "levy/poetry",
+    "example": "賦 (フ) levy/poetry"
+  },
+  {
+    "kanji": "弧",
+    "on": "コ",
+    "kun": "",
+    "meaning": "arc/parenthesis",
+    "example": "弧 (コ) arc/parenthesis"
+  },
+  {
+    "kanji": "褐",
+    "on": "カツ",
+    "kun": "",
+    "meaning": "coarse cloth/brown",
+    "example": "褐 (カツ) coarse cloth/brown"
+  },
+  {
+    "kanji": "辣",
+    "on": "ラツ",
+    "kun": "",
+    "meaning": "spicy/harsh",
+    "example": "辣 (ラツ) spicy/harsh"
+  },
+  {
+    "kanji": "摯",
+    "on": "シ",
+    "kun": "",
+    "meaning": "sincere/earnest",
+    "example": "摯 (シ) sincere/earnest"
+  },
+  {
+    "kanji": "汎",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "widespread",
+    "example": "汎 (ハン) widespread"
+  },
+  {
+    "kanji": "斥",
+    "on": "セキ",
+    "kun": "しりぞ-ける",
+    "meaning": "repel/dismiss",
+    "example": "斥 (しりぞける) repel/dismiss"
+  },
+  {
+    "kanji": "厘",
+    "on": "リン",
+    "kun": "",
+    "meaning": "rin (unit)",
+    "example": "厘 (リン) rin (unit)"
+  },
+  {
+    "kanji": "矯",
+    "on": "キョウ",
+    "kun": "た-める",
+    "meaning": "correct/bend",
+    "example": "矯 (ためる) correct/bend"
+  },
+  {
+    "kanji": "毀",
+    "on": "キ",
+    "kun": "こぼ-つ",
+    "meaning": "destroy/slander",
+    "example": "毀 (こぼつ) destroy/slander"
+  },
+  {
+    "kanji": "窃",
+    "on": "セツ",
+    "kun": "ぬす-む",
+    "meaning": "steal/secret",
+    "example": "窃 (ぬすむ) steal/secret"
+  },
+  {
+    "kanji": "遵",
+    "on": "ジュン",
+    "kun": "",
+    "meaning": "follow/comply",
+    "example": "遵 (ジュン) follow/comply"
+  },
+  {
+    "kanji": "賂",
+    "on": "ロ",
+    "kun": "まいな-う",
+    "meaning": "bribe",
+    "example": "賂 (まいなう) bribe"
+  },
+  {
+    "kanji": "惰",
+    "on": "ダ",
+    "kun": "",
+    "meaning": "lazy/idle",
+    "example": "惰 (ダ) lazy/idle"
+  },
+  {
+    "kanji": "蚕",
+    "on": "サン",
+    "kun": "かいこ",
+    "meaning": "silkworm",
+    "example": "蚕 (かいこ) silkworm"
+  },
+  {
+    "kanji": "氾",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "overflow/widespread",
+    "example": "氾 (ハン) overflow/widespread"
+  },
+  {
+    "kanji": "諧",
+    "on": "カイ",
+    "kun": "",
+    "meaning": "harmony/jest",
+    "example": "諧 (カイ) harmony/jest"
+  },
+  {
+    "kanji": "倹",
+    "on": "ケン",
+    "kun": "つつし-む",
+    "meaning": "frugal/modest",
+    "example": "倹 (つつしむ) frugal/modest"
+  },
+  {
+    "kanji": "款",
+    "on": "カン",
+    "kun": "",
+    "meaning": "article/goodwill",
+    "example": "款 (カン) article/goodwill"
+  },
+  {
+    "kanji": "媛",
+    "on": "エン",
+    "kun": "ひめ",
+    "meaning": "beautiful woman",
+    "example": "媛 (ひめ) beautiful woman"
+  },
+  {
+    "kanji": "憾",
+    "on": "カン",
+    "kun": "うら-む",
+    "meaning": "regret/resentment",
+    "example": "憾 (うらむ) regret/resentment"
+  },
+  {
+    "kanji": "哺",
+    "on": "ホ",
+    "kun": "ふく-む",
+    "meaning": "feed/nurse",
+    "example": "哺 (ふくむ) feed/nurse"
+  },
+  {
+    "kanji": "衷",
+    "on": "チュウ",
+    "kun": "",
+    "meaning": "inner feelings",
+    "example": "衷 (チュウ) inner feelings"
+  },
+  {
+    "kanji": "彙",
+    "on": "イ",
+    "kun": "",
+    "meaning": "gather/category",
+    "example": "彙 (イ) gather/category"
+  },
+  {
+    "kanji": "迭",
+    "on": "テツ",
+    "kun": "",
+    "meaning": "alternate/change",
+    "example": "迭 (テツ) alternate/change"
+  },
+  {
+    "kanji": "嘱",
+    "on": "ショク",
+    "kun": "",
+    "meaning": "entrust/commission",
+    "example": "嘱 (ショク) entrust/commission"
+  },
+  {
+    "kanji": "恣",
+    "on": "シ",
+    "kun": "ほしいまま",
+    "meaning": "arbitrary/自恣",
+    "example": "恣 (ほしいまま) arbitrary/自恣"
+  },
+  {
+    "kanji": "墾",
+    "on": "コン",
+    "kun": "",
+    "meaning": "cultivate/reclaim",
+    "example": "墾 (コン) cultivate/reclaim"
+  },
+  {
+    "kanji": "逓",
+    "on": "テイ",
+    "kun": "",
+    "meaning": "relay/successive",
+    "example": "逓 (テイ) relay/successive"
+  },
+  {
+    "kanji": "劾",
+    "on": "ガイ",
+    "kun": "",
+    "meaning": "impeach",
+    "example": "劾 (ガイ) impeach"
+  },
+  {
+    "kanji": "酪",
+    "on": "ラク",
+    "kun": "",
+    "meaning": "dairy/酪農",
+    "example": "酪 (ラク) dairy/酪農"
+  },
+  {
+    "kanji": "沃",
+    "on": "ヨク",
+    "kun": "",
+    "meaning": "fertile/irrigate",
+    "example": "沃 (ヨク) fertile/irrigate"
+  },
+  {
+    "kanji": "塑",
+    "on": "ソ",
+    "kun": "",
+    "meaning": "model/plastic",
+    "example": "塑 (ソ) model/plastic"
+  },
+  {
+    "kanji": "痘",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "smallpox",
+    "example": "痘 (トウ) smallpox"
+  },
+  {
+    "kanji": "憬",
+    "on": "ケイ",
+    "kun": "あこが-れる",
+    "meaning": "long for/admire",
+    "example": "憬 (あこがれる) long for/admire"
+  },
+  {
+    "kanji": "朕",
+    "on": "チン",
+    "kun": "",
+    "meaning": "imperial we",
+    "example": "朕 (チン) imperial we"
+  },
+  {
+    "kanji": "虞",
+    "on": "グ",
+    "kun": "おそ-れ",
+    "meaning": "fear/mistake",
+    "example": "虞 (おそれ) fear/mistake"
+  },
+  {
+    "kanji": "丙",
+    "on": "ヘイ",
+    "kun": "",
+    "meaning": "third/C",
+    "example": "丙 (ヘイ) third/C"
+  },
+  {
+    "kanji": "斤",
+    "on": "キン",
+    "kun": "おの",
+    "meaning": "catty (unit)",
+    "example": "斤 (おの) catty (unit)"
+  },
+  {
+    "kanji": "捗",
+    "on": "ホ",
+    "kun": "はかど-る",
+    "meaning": "make progress",
+    "example": "捗 (はかどる) make progress"
+  },
+  {
+    "kanji": "弐",
+    "on": "ニ",
+    "kun": "ふた",
+    "meaning": "two (formal)",
+    "example": "弐 (ふた) two (formal)"
+  },
+  {
+    "kanji": "訃",
+    "on": "フ",
+    "kun": "",
+    "meaning": "death notice",
+    "example": "訃 (フ) death notice"
+  },
+  {
+    "kanji": "謄",
+    "on": "トウ",
+    "kun": "",
+    "meaning": "copy/duplicate",
+    "example": "謄 (トウ) copy/duplicate"
+  },
+  {
+    "kanji": "繭",
+    "on": "ケン",
+    "kun": "まゆ",
+    "meaning": "cocoon",
+    "example": "繭 (まゆ) cocoon"
+  },
+  {
+    "kanji": "璽",
+    "on": "ジ",
+    "kun": "",
+    "meaning": "imperial seal",
+    "example": "璽 (ジ) imperial seal"
+  },
+  {
+    "kanji": "頒",
+    "on": "ハン",
+    "kun": "",
+    "meaning": "distribute/divide",
+    "example": "頒 (ハン) distribute/divide"
+  },
+  {
+    "kanji": "楷",
+    "on": "カイ",
+    "kun": "",
+    "meaning": "model/regular",
+    "example": "楷 (カイ) model/regular"
+  },
+  {
+    "kanji": "剥",
+    "on": "ハク",
+    "kun": "は-ぐ",
+    "meaning": "peel/strip",
+    "example": "剥 (はぐ) peel/strip"
+  },
+  {
+    "kanji": "籠",
+    "on": "ロウ",
+    "kun": "かご",
+    "meaning": "basket/cage",
+    "example": "籠 (かご) basket/cage"
+  },
+  {
+    "kanji": "錮",
+    "on": "コ",
+    "kun": "",
+    "meaning": "confine/obstruct",
+    "example": "錮 (コ) confine/obstruct"
+  },
+  {
+    "kanji": "頰",
+    "on": "キョウ",
+    "kun": "ほお",
+    "meaning": "cheek",
+    "example": "頰 (ほお) cheek"
+  },
+  {
+    "kanji": "圧",
+    "on": "アツ",
+    "kun": "",
+    "meaning": "pressure, overwhelm",
+    "example": "圧力 (あつりょく) pressure"
+  },
+  {
+    "kanji": "嘘",
+    "on": "",
+    "kun": "うそ",
+    "meaning": "lie, falsehood",
+    "example": "嘘 (うそ) a lie"
+  },
+  {
+    "kanji": "奥",
+    "on": "オウ",
+    "kun": "おく",
+    "meaning": "interior, deep inside",
+    "example": "奥 (おく) interior/depth"
+  },
+  {
+    "kanji": "患",
+    "on": "カン",
+    "kun": "わずら",
+    "meaning": "worry, patient, suffer",
+    "example": "患者 (かんじゃ) patient (medical)"
+  },
+  {
+    "kanji": "慣",
+    "on": "カン",
+    "kun": "な",
+    "meaning": "get used to, habit",
+    "example": "慣れる (なれる) to get used to"
+  }
+]
