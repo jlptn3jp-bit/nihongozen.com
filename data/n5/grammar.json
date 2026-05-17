@@ -1,1 +1,146 @@
 
+{
+  "level": "N5",
+  "vocabulary": [
+    {
+      "word": "ありがとう",
+      "romaji": "arigatou",
+      "meaning": "Thank you",
+      "audio": ""
+    },
+    {
+      "word": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "meaning": "Good morning",
+      "audio": ""
+    },
+    {
+      "word": "こんにちは",
+      "romaji": "konnichiwa",
+      "meaning": "Hello / Good afternoon",
+      "audio": ""
+    },
+    {
+      "word": "さようなら",
+      "romaji": "sayounara",
+      "meaning": "Goodbye",
+      "audio": ""
+    },
+    {
+      "word": "はい",
+      "romaji": "hai",
+      "meaning": "Yes",
+      "audio": ""
+    },
+    {
+      "word": "いいえ",
+      "romaji": "iie",
+      "meaning": "No",
+      "audio": ""
+    },
+    {
+      "word": "すみません",
+      "romaji": "sumimasen",
+      "meaning": "Excuse me / Sorry",
+      "audio": ""
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "〜は〜です",
+      "romaji": "~ wa ~ desu",
+      "usage": "Used to state identity or describe something. Subject marker は followed by predicate.",
+      "example": "わたしは学生です。",
+      "translation": "I am a student."
+    },
+    {
+      "pattern": "〜が好きです",
+      "romaji": "~ ga suki desu",
+      "usage": "To express liking something. が marks the object of feeling.",
+      "example": "ねこが好きです。",
+      "translation": "I like cats."
+    },
+    {
+      "pattern": "〜をください",
+      "romaji": "~ wo kudasai",
+      "usage": "To politely request something. Used in shops, restaurants.",
+      "example": "みずをください。",
+      "translation": "Please give me water."
+    }
+  ],
+  "kanji": [
+    {
+      "char": "日",
+      "onyomi": "にち・じつ",
+      "kunyomi": "ひ・か",
+      "meaning": "Sun, Day",
+      "stroke_count": 4
+    },
+    {
+      "char": "月",
+      "onyomi": "げつ・がつ",
+      "kunyomi": "つき",
+      "meaning": "Moon, Month",
+      "stroke_count": 4
+    },
+    {
+      "char": "山",
+      "onyomi": "さん",
+      "kunyomi": "やま",
+      "meaning": "Mountain",
+      "stroke_count": 3
+    },
+    {
+      "char": "川",
+      "onyomi": "せん",
+      "kunyomi": "かわ",
+      "meaning": "River",
+      "stroke_count": 3
+    },
+    {
+      "char": "人",
+      "onyomi": "じん・にん",
+      "kunyomi": "ひと",
+      "meaning": "Person",
+      "stroke_count": 2
+    },
+    {
+      "char": "大",
+      "onyomi": "だい・たい",
+      "kunyomi": "おお",
+      "meaning": "Big, Large",
+      "stroke_count": 3
+    },
+    {
+      "char": "小",
+      "onyomi": "しょう",
+      "kunyomi": "ちい・こ・お",
+      "meaning": "Small, Little",
+      "stroke_count": 3
+    },
+    {
+      "char": "火",
+      "onyomi": "か",
+      "kunyomi": "ひ",
+      "meaning": "Fire",
+      "stroke_count": 4
+    }
+  ],
+  "sentences": [
+    {
+      "ja": "はじめまして。",
+      "romaji": "Hajimemashite.",
+      "en": "Nice to meet you."
+    },
+    {
+      "ja": "どうぞよろしくお願いします。",
+      "romaji": "Douzo yoroshiku onegaishimasu.",
+      "en": "Please treat me well."
+    },
+    {
+      "ja": "お名前は何ですか？",
+      "romaji": "O-namae wa nan desu ka?",
+      "en": "What is your name?"
+    }
+  ]
+}
