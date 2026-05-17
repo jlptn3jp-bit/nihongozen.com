@@ -1,0 +1,2809 @@
+[
+  {
+    "kanji": "合",
+    "on": "ゴウ・ガッ・カッ",
+    "kun": "あ-う・あ-わせる",
+    "meaning": "fit/meet",
+    "example": "合 (あう) fit/meet"
+  },
+  {
+    "kanji": "部",
+    "on": "ブ",
+    "kun": "",
+    "meaning": "part/section",
+    "example": "部 (ブ) part/section"
+  },
+  {
+    "kanji": "彼",
+    "on": "カ",
+    "kun": "かれ・かの",
+    "meaning": "he/that",
+    "example": "彼 (かれ) he/that"
+  },
+  {
+    "kanji": "内",
+    "on": "ナイ・ダイ",
+    "kun": "うち",
+    "meaning": "inside",
+    "example": "内 (うち) inside"
+  },
+  {
+    "kanji": "実",
+    "on": "ジツ",
+    "kun": "みの-る・じつ",
+    "meaning": "reality/fruit",
+    "example": "実 (みのる) reality/fruit"
+  },
+  {
+    "kanji": "当",
+    "on": "トウ",
+    "kun": "あ-たる・まさ-に",
+    "meaning": "hit/当たる",
+    "example": "当 (あたる) hit/当たる"
+  },
+  {
+    "kanji": "戦",
+    "on": "セン",
+    "kun": "いくさ・たたか-う",
+    "meaning": "war/battle",
+    "example": "戦 (いくさ) war/battle"
+  },
+  {
+    "kanji": "性",
+    "on": "セイ・ショウ",
+    "kun": "さが",
+    "meaning": "nature/sex",
+    "example": "性 (さが) nature/sex"
+  },
+  {
+    "kanji": "対",
+    "on": "タイ・ツイ",
+    "kun": "",
+    "meaning": "opposite/対",
+    "example": "対 (タイ) opposite/対"
+  },
+  {
+    "kanji": "関",
+    "on": "カン",
+    "kun": "せき・かか-わる",
+    "meaning": "barrier/関係",
+    "example": "関 (せき) barrier/関係"
+  },
+  {
+    "kanji": "感",
+    "on": "カン",
+    "kun": "",
+    "meaning": "feeling",
+    "example": "感 (カン) feeling"
+  },
+  {
+    "kanji": "定",
+    "on": "テイ・ジョウ",
+    "kun": "さだ-める",
+    "meaning": "decide/fixed",
+    "example": "定 (さだめる) decide/fixed"
+  },
+  {
+    "kanji": "政",
+    "on": "セイ・ショウ",
+    "kun": "まつりごと",
+    "meaning": "politics",
+    "example": "政 (まつりごと) politics"
+  },
+  {
+    "kanji": "取",
+    "on": "シュ",
+    "kun": "と-る",
+    "meaning": "take",
+    "example": "取 (とる) take"
+  },
+  {
+    "kanji": "所",
+    "on": "ショ・ジョ",
+    "kun": "ところ",
+    "meaning": "place",
+    "example": "所 (ところ) place"
+  },
+  {
+    "kanji": "現",
+    "on": "ゲン",
+    "kun": "あらわ-れる・げん",
+    "meaning": "present/appear",
+    "example": "現 (あらわれる) present/appear"
+  },
+  {
+    "kanji": "最",
+    "on": "サイ",
+    "kun": "もっと-も",
+    "meaning": "most",
+    "example": "最 (もっとも) most"
+  },
+  {
+    "kanji": "化",
+    "on": "カ・ケ",
+    "kun": "ば-ける",
+    "meaning": "change",
+    "example": "化 (ばける) change"
+  },
+  {
+    "kanji": "民",
+    "on": "ミン",
+    "kun": "たみ",
+    "meaning": "people",
+    "example": "民 (たみ) people"
+  },
+  {
+    "kanji": "相",
+    "on": "ソウ・ショウ",
+    "kun": "あい",
+    "meaning": "mutual/appearance",
+    "example": "相 (あい) mutual/appearance"
+  },
+  {
+    "kanji": "法",
+    "on": "ホウ・ハッ",
+    "kun": "のり",
+    "meaning": "law/method",
+    "example": "法 (のり) law/method"
+  },
+  {
+    "kanji": "全",
+    "on": "ゼン",
+    "kun": "すべ-て・まった-く",
+    "meaning": "all/complete",
+    "example": "全 (すべて) all/complete"
+  },
+  {
+    "kanji": "情",
+    "on": "ジョウ",
+    "kun": "なさ-け",
+    "meaning": "feeling/情報",
+    "example": "情 (なさけ) feeling/情報"
+  },
+  {
+    "kanji": "向",
+    "on": "コウ",
+    "kun": "む-く・む-ける",
+    "meaning": "face/direction",
+    "example": "向 (むく) face/direction"
+  },
+  {
+    "kanji": "平",
+    "on": "ヘイ・ビョウ",
+    "kun": "たい-ら・ひら",
+    "meaning": "flat/peace",
+    "example": "平 (たいら) flat/peace"
+  },
+  {
+    "kanji": "成",
+    "on": "セイ・ジョウ",
+    "kun": "な-る・な-す",
+    "meaning": "become/成功",
+    "example": "成 (なる) become/成功"
+  },
+  {
+    "kanji": "経",
+    "on": "ケイ・キョウ",
+    "kun": "へ-る",
+    "meaning": "pass/経済",
+    "example": "経 (へる) pass/経済"
+  },
+  {
+    "kanji": "信",
+    "on": "シン",
+    "kun": "",
+    "meaning": "trust/信じる",
+    "example": "信 (シン) trust/信じる"
+  },
+  {
+    "kanji": "面",
+    "on": "メン",
+    "kun": "おも・つら",
+    "meaning": "face/surface",
+    "example": "面 (おも) face/surface"
+  },
+  {
+    "kanji": "連",
+    "on": "レン",
+    "kun": "つら-なる・つ-れる",
+    "meaning": "connect/link",
+    "example": "連 (つらなる) connect/link"
+  },
+  {
+    "kanji": "原",
+    "on": "ゲン",
+    "kun": "はら",
+    "meaning": "origin/field",
+    "example": "原 (はら) origin/field"
+  },
+  {
+    "kanji": "顔",
+    "on": "ガン",
+    "kun": "かお",
+    "meaning": "face",
+    "example": "顔 (かお) face"
+  },
+  {
+    "kanji": "機",
+    "on": "キ",
+    "kun": "はた",
+    "meaning": "machine/opportunity",
+    "example": "機 (はた) machine/opportunity"
+  },
+  {
+    "kanji": "次",
+    "on": "ジ・シ",
+    "kun": "つ-ぐ・つぎ",
+    "meaning": "next",
+    "example": "次 (つぐ) next"
+  },
+  {
+    "kanji": "数",
+    "on": "スウ・ス",
+    "kun": "かず・かぞ-える",
+    "meaning": "number",
+    "example": "数 (かず) number"
+  },
+  {
+    "kanji": "美",
+    "on": "ビ",
+    "kun": "うつく-しい",
+    "meaning": "beauty",
+    "example": "美 (うつくしい) beauty"
+  },
+  {
+    "kanji": "回",
+    "on": "カイ",
+    "kun": "まわ-る",
+    "meaning": "turn/time",
+    "example": "回 (まわる) turn/time"
+  },
+  {
+    "kanji": "表",
+    "on": "ヒョウ",
+    "kun": "おもて・あらわ-す",
+    "meaning": "surface/表現",
+    "example": "表 (おもて) surface/表現"
+  },
+  {
+    "kanji": "声",
+    "on": "セイ・ショウ",
+    "kun": "こえ",
+    "meaning": "voice",
+    "example": "声 (こえ) voice"
+  },
+  {
+    "kanji": "報",
+    "on": "ホウ",
+    "kun": "むく-いる",
+    "meaning": "report/reward",
+    "example": "報 (むくいる) report/reward"
+  },
+  {
+    "kanji": "要",
+    "on": "ヨウ",
+    "kun": "い-る・かなめ",
+    "meaning": "need/important",
+    "example": "要 (いる) need/important"
+  },
+  {
+    "kanji": "変",
+    "on": "ヘン",
+    "kun": "か-わる",
+    "meaning": "change/strange",
+    "example": "変 (かわる) change/strange"
+  },
+  {
+    "kanji": "神",
+    "on": "シン・ジン",
+    "kun": "かみ・かん",
+    "meaning": "god/spirit",
+    "example": "神 (かみ) god/spirit"
+  },
+  {
+    "kanji": "記",
+    "on": "キ",
+    "kun": "しる-す",
+    "meaning": "record",
+    "example": "記 (しるす) record"
+  },
+  {
+    "kanji": "和",
+    "on": "ワ・オ",
+    "kun": "やわ-らぐ・なご-む",
+    "meaning": "peace/Japan",
+    "example": "和 (やわらぐ) peace/Japan"
+  },
+  {
+    "kanji": "引",
+    "on": "イン",
+    "kun": "ひ-く",
+    "meaning": "pull",
+    "example": "引 (ひく) pull"
+  },
+  {
+    "kanji": "治",
+    "on": "ジ・チ",
+    "kun": "なお-る・おさ-める",
+    "meaning": "cure/govern",
+    "example": "治 (なおる) cure/govern"
+  },
+  {
+    "kanji": "決",
+    "on": "ケツ",
+    "kun": "き-める",
+    "meaning": "decide",
+    "example": "決 (きめる) decide"
+  },
+  {
+    "kanji": "太",
+    "on": "タイ・タ",
+    "kun": "ふと-い",
+    "meaning": "fat/thick",
+    "example": "太 (ふとい) fat/thick"
+  },
+  {
+    "kanji": "込",
+    "on": "ニュウ（込む）",
+    "kun": "こ-む",
+    "meaning": "crowded/stuff",
+    "example": "込 (こむ) crowded/stuff"
+  },
+  {
+    "kanji": "受",
+    "on": "ジュ",
+    "kun": "う-ける",
+    "meaning": "receive",
+    "example": "受 (うける) receive"
+  },
+  {
+    "kanji": "解",
+    "on": "カイ・ゲ",
+    "kun": "と-く・わか-る",
+    "meaning": "solve/understand",
+    "example": "解 (とく) solve/understand"
+  },
+  {
+    "kanji": "市",
+    "on": "シ",
+    "kun": "いち",
+    "meaning": "city/market",
+    "example": "市 (いち) city/market"
+  },
+  {
+    "kanji": "期",
+    "on": "キ・ゴ",
+    "kun": "",
+    "meaning": "period/expect",
+    "example": "期 (キ) period/expect"
+  },
+  {
+    "kanji": "様",
+    "on": "ヨウ",
+    "kun": "さま",
+    "meaning": "Mr./Ms./manner",
+    "example": "様 (さま) Mr./Ms./manner"
+  },
+  {
+    "kanji": "活",
+    "on": "カツ",
+    "kun": "い-きる",
+    "meaning": "lively/activity",
+    "example": "活 (いきる) lively/activity"
+  },
+  {
+    "kanji": "頭",
+    "on": "トウ・ズ・ト",
+    "kun": "あたま・かしら",
+    "meaning": "head",
+    "example": "頭 (あたま) head"
+  },
+  {
+    "kanji": "組",
+    "on": "ソ",
+    "kun": "く-む・くみ",
+    "meaning": "group/assemble",
+    "example": "組 (くむ) group/assemble"
+  },
+  {
+    "kanji": "指",
+    "on": "シ",
+    "kun": "ゆび・さ-す",
+    "meaning": "finger/point",
+    "example": "指 (ゆび) finger/point"
+  },
+  {
+    "kanji": "説",
+    "on": "セツ・ゼイ",
+    "kun": "と-く",
+    "meaning": "explain/theory",
+    "example": "説 (とく) explain/theory"
+  },
+  {
+    "kanji": "能",
+    "on": "ノウ",
+    "kun": "",
+    "meaning": "ability",
+    "example": "能 (ノウ) ability"
+  },
+  {
+    "kanji": "葉",
+    "on": "ヨウ",
+    "kun": "は",
+    "meaning": "leaf/word",
+    "example": "葉 (は) leaf/word"
+  },
+  {
+    "kanji": "流",
+    "on": "リュウ・ル",
+    "kun": "なが-れる",
+    "meaning": "flow",
+    "example": "流 (ながれる) flow"
+  },
+  {
+    "kanji": "然",
+    "on": "ゼン・ネン",
+    "kun": "",
+    "meaning": "nature/so",
+    "example": "然 (ゼン) nature/so"
+  },
+  {
+    "kanji": "初",
+    "on": "ショ",
+    "kun": "はじ-め・はじ-めて・うい",
+    "meaning": "first/beginning",
+    "example": "初 (はじめ) first/beginning"
+  },
+  {
+    "kanji": "在",
+    "on": "ザイ",
+    "kun": "あ-る",
+    "meaning": "exist",
+    "example": "在 (ある) exist"
+  },
+  {
+    "kanji": "調",
+    "on": "チョウ",
+    "kun": "しら-べる・ととの-える",
+    "meaning": "investigate/tone",
+    "example": "調 (しらべる) investigate/tone"
+  },
+  {
+    "kanji": "笑",
+    "on": "ショウ",
+    "kun": "わら-う・え-む",
+    "meaning": "laugh/smile",
+    "example": "笑 (わらう) laugh/smile"
+  },
+  {
+    "kanji": "議",
+    "on": "ギ",
+    "kun": "",
+    "meaning": "discuss",
+    "example": "議 (ギ) discuss"
+  },
+  {
+    "kanji": "直",
+    "on": "チョク・ジキ",
+    "kun": "なお-す・ただ-ちに",
+    "meaning": "straight/fix",
+    "example": "直 (なおす) straight/fix"
+  },
+  {
+    "kanji": "夫",
+    "on": "フ・フウ",
+    "kun": "おっと・おとこ",
+    "meaning": "husband/man",
+    "example": "夫 (おっと) husband/man"
+  },
+  {
+    "kanji": "選",
+    "on": "セン",
+    "kun": "えら-ぶ",
+    "meaning": "select",
+    "example": "選 (えらぶ) select"
+  },
+  {
+    "kanji": "権",
+    "on": "ケン・ゴン",
+    "kun": "",
+    "meaning": "right/authority",
+    "example": "権 (ケン) right/authority"
+  },
+  {
+    "kanji": "利",
+    "on": "リ",
+    "kun": "き-く",
+    "meaning": "profit/advantage",
+    "example": "利 (きく) profit/advantage"
+  },
+  {
+    "kanji": "制",
+    "on": "セイ",
+    "kun": "",
+    "meaning": "system/control",
+    "example": "制 (セイ) system/control"
+  },
+  {
+    "kanji": "続",
+    "on": "ゾク",
+    "kun": "つづ-く",
+    "meaning": "continue",
+    "example": "続 (つづく) continue"
+  },
+  {
+    "kanji": "石",
+    "on": "セキ・シャク",
+    "kun": "いし",
+    "meaning": "stone",
+    "example": "石 (いし) stone"
+  },
+  {
+    "kanji": "進",
+    "on": "シン",
+    "kun": "すす-む",
+    "meaning": "advance",
+    "example": "進 (すすむ) advance"
+  },
+  {
+    "kanji": "伝",
+    "on": "デン",
+    "kun": "つた-える",
+    "meaning": "transmit",
+    "example": "伝 (つたえる) transmit"
+  },
+  {
+    "kanji": "加",
+    "on": "カ",
+    "kun": "くわ-える",
+    "meaning": "add",
+    "example": "加 (くわえる) add"
+  },
+  {
+    "kanji": "助",
+    "on": "ジョ",
+    "kun": "たす-ける・たす-かる",
+    "meaning": "help",
+    "example": "助 (たすける) help"
+  },
+  {
+    "kanji": "点",
+    "on": "テン",
+    "kun": "",
+    "meaning": "point/dot",
+    "example": "点 (テン) point/dot"
+  },
+  {
+    "kanji": "産",
+    "on": "サン",
+    "kun": "う-む・うぶ",
+    "meaning": "produce/birth",
+    "example": "産 (うむ) produce/birth"
+  },
+  {
+    "kanji": "務",
+    "on": "ム",
+    "kun": "つと-める",
+    "meaning": "duty",
+    "example": "務 (つとめる) duty"
+  },
+  {
+    "kanji": "件",
+    "on": "ケン",
+    "kun": "くだん",
+    "meaning": "matter/case",
+    "example": "件 (くだん) matter/case"
+  },
+  {
+    "kanji": "命",
+    "on": "メイ・ミョウ",
+    "kun": "いのち",
+    "meaning": "life/order",
+    "example": "命 (いのち) life/order"
+  },
+  {
+    "kanji": "番",
+    "on": "バン",
+    "kun": "",
+    "meaning": "number/order",
+    "example": "番 (バン) number/order"
+  },
+  {
+    "kanji": "落",
+    "on": "ラク",
+    "kun": "お-ちる・お-とす",
+    "meaning": "fall/drop",
+    "example": "落 (おちる) fall/drop"
+  },
+  {
+    "kanji": "付",
+    "on": "フ",
+    "kun": "つ-ける",
+    "meaning": "attach",
+    "example": "付 (つける) attach"
+  },
+  {
+    "kanji": "得",
+    "on": "トク",
+    "kun": "え-る・う-る",
+    "meaning": "gain/understand",
+    "example": "得 (える) gain/understand"
+  },
+  {
+    "kanji": "好",
+    "on": "コウ",
+    "kun": "す-く・この-む",
+    "meaning": "like/fond",
+    "example": "好 (すく) like/fond"
+  },
+  {
+    "kanji": "違",
+    "on": "イ",
+    "kun": "ちが-う",
+    "meaning": "differ/wrong",
+    "example": "違 (ちがう) differ/wrong"
+  },
+  {
+    "kanji": "殺",
+    "on": "サツ・セツ・サイ",
+    "kun": "ころ-す",
+    "meaning": "kill",
+    "example": "殺 (ころす) kill"
+  },
+  {
+    "kanji": "置",
+    "on": "チ",
+    "kun": "お-く",
+    "meaning": "put/leave",
+    "example": "置 (おく) put/leave"
+  },
+  {
+    "kanji": "返",
+    "on": "ヘン",
+    "kun": "かえ-す",
+    "meaning": "return",
+    "example": "返 (かえす) return"
+  },
+  {
+    "kanji": "論",
+    "on": "ロン",
+    "kun": "",
+    "meaning": "argue/theory",
+    "example": "論 (ロン) argue/theory"
+  },
+  {
+    "kanji": "際",
+    "on": "サイ",
+    "kun": "きわ",
+    "meaning": "occasion/edge",
+    "example": "際 (きわ) occasion/edge"
+  },
+  {
+    "kanji": "歳",
+    "on": "サイ・セイ",
+    "kun": "とし",
+    "meaning": "age/year",
+    "example": "歳 (とし) age/year"
+  },
+  {
+    "kanji": "反",
+    "on": "ハン・ホン・タン",
+    "kun": "そ-る",
+    "meaning": "oppose/反",
+    "example": "反 (そる) oppose/反"
+  },
+  {
+    "kanji": "形",
+    "on": "ケイ・ギョウ",
+    "kun": "かたち・かた",
+    "meaning": "shape",
+    "example": "形 (かたち) shape"
+  },
+  {
+    "kanji": "光",
+    "on": "コウ",
+    "kun": "ひか-る・ひかり",
+    "meaning": "light",
+    "example": "光 (ひかる) light"
+  },
+  {
+    "kanji": "首",
+    "on": "シュ",
+    "kun": "くび",
+    "meaning": "neck/head",
+    "example": "首 (くび) neck/head"
+  },
+  {
+    "kanji": "勝",
+    "on": "ショウ",
+    "kun": "か-つ",
+    "meaning": "win",
+    "example": "勝 (かつ) win"
+  },
+  {
+    "kanji": "必",
+    "on": "ヒツ",
+    "kun": "かなら-ず",
+    "meaning": "certainly",
+    "example": "必 (かならず) certainly"
+  },
+  {
+    "kanji": "係",
+    "on": "ケイ",
+    "kun": "かかり・かか-る",
+    "meaning": "relate/person in charge",
+    "example": "係 (かかり) relate/person in charge"
+  },
+  {
+    "kanji": "由",
+    "on": "ユウ・ユ",
+    "kun": "よし",
+    "meaning": "reason/from",
+    "example": "由 (よし) reason/from"
+  },
+  {
+    "kanji": "愛",
+    "on": "アイ",
+    "kun": "",
+    "meaning": "love",
+    "example": "愛 (アイ) love"
+  },
+  {
+    "kanji": "都",
+    "on": "ト・ツ",
+    "kun": "みやこ",
+    "meaning": "capital/all",
+    "example": "都 (みやこ) capital/all"
+  },
+  {
+    "kanji": "放",
+    "on": "ホウ",
+    "kun": "はな-す・はな-れる",
+    "meaning": "release",
+    "example": "放 (はなす) release"
+  },
+  {
+    "kanji": "確",
+    "on": "カク",
+    "kun": "たし-か・たし-かめる",
+    "meaning": "certain",
+    "example": "確 (たしか) certain"
+  },
+  {
+    "kanji": "過",
+    "on": "カ",
+    "kun": "す-ぎる・あやま-ち",
+    "meaning": "pass/exceed",
+    "example": "過 (すぎる) pass/exceed"
+  },
+  {
+    "kanji": "約",
+    "on": "ヤク",
+    "kun": "",
+    "meaning": "approximately/promise",
+    "example": "約 (ヤク) approximately/promise"
+  },
+  {
+    "kanji": "馬",
+    "on": "バ・マ",
+    "kun": "うま",
+    "meaning": "horse",
+    "example": "馬 (うま) horse"
+  },
+  {
+    "kanji": "状",
+    "on": "ジョウ",
+    "kun": "",
+    "meaning": "condition/letter",
+    "example": "状 (ジョウ) condition/letter"
+  },
+  {
+    "kanji": "想",
+    "on": "ソウ・ソ",
+    "kun": "おも-う",
+    "meaning": "think/imagine",
+    "example": "想 (おもう) think/imagine"
+  },
+  {
+    "kanji": "官",
+    "on": "カン",
+    "kun": "",
+    "meaning": "government official",
+    "example": "官 (カン) government official"
+  },
+  {
+    "kanji": "交",
+    "on": "コウ",
+    "kun": "まじ-わる・こう-",
+    "meaning": "exchange/mix",
+    "example": "交 (まじわる) exchange/mix"
+  },
+  {
+    "kanji": "米",
+    "on": "ベイ・マイ",
+    "kun": "こめ",
+    "meaning": "rice/America",
+    "example": "米 (こめ) rice/America"
+  },
+  {
+    "kanji": "配",
+    "on": "ハイ",
+    "kun": "くば-る",
+    "meaning": "distribute/worry",
+    "example": "配 (くばる) distribute/worry"
+  },
+  {
+    "kanji": "若",
+    "on": "ジャク・ニャク",
+    "kun": "わか-い",
+    "meaning": "young",
+    "example": "若 (わかい) young"
+  },
+  {
+    "kanji": "資",
+    "on": "シ",
+    "kun": "",
+    "meaning": "resource/fund",
+    "example": "資 (シ) resource/fund"
+  },
+  {
+    "kanji": "常",
+    "on": "ジョウ",
+    "kun": "つね・とこ",
+    "meaning": "ordinary/always",
+    "example": "常 (つね) ordinary/always"
+  },
+  {
+    "kanji": "果",
+    "on": "カ",
+    "kun": "は-たす・くだもの",
+    "meaning": "result/fruit",
+    "example": "果 (はたす) result/fruit"
+  },
+  {
+    "kanji": "呼",
+    "on": "コ",
+    "kun": "よ-ぶ",
+    "meaning": "call",
+    "example": "呼 (よぶ) call"
+  },
+  {
+    "kanji": "共",
+    "on": "キョウ",
+    "kun": "とも",
+    "meaning": "together",
+    "example": "共 (とも) together"
+  },
+  {
+    "kanji": "残",
+    "on": "ザン",
+    "kun": "のこ-る",
+    "meaning": "remain",
+    "example": "残 (のこる) remain"
+  },
+  {
+    "kanji": "判",
+    "on": "ハン・バン",
+    "kun": "",
+    "meaning": "judge",
+    "example": "判 (ハン) judge"
+  },
+  {
+    "kanji": "役",
+    "on": "ヤク・エキ",
+    "kun": "",
+    "meaning": "role/service",
+    "example": "役 (ヤク) role/service"
+  },
+  {
+    "kanji": "他",
+    "on": "タ",
+    "kun": "ほか",
+    "meaning": "other",
+    "example": "他 (ほか) other"
+  },
+  {
+    "kanji": "術",
+    "on": "ジュツ",
+    "kun": "すべ",
+    "meaning": "art/technique",
+    "example": "術 (すべ) art/technique"
+  },
+  {
+    "kanji": "支",
+    "on": "シ",
+    "kun": "ささ-える",
+    "meaning": "support/branch",
+    "example": "支 (ささえる) support/branch"
+  },
+  {
+    "kanji": "両",
+    "on": "リョウ",
+    "kun": "",
+    "meaning": "both",
+    "example": "両 (リョウ) both"
+  },
+  {
+    "kanji": "乗",
+    "on": "ジョウ",
+    "kun": "の-る",
+    "meaning": "ride",
+    "example": "乗 (のる) ride"
+  },
+  {
+    "kanji": "済",
+    "on": "サイ・セイ",
+    "kun": "す-む",
+    "meaning": "finish/economy",
+    "example": "済 (すむ) finish/economy"
+  },
+  {
+    "kanji": "供",
+    "on": "キョウ・ク",
+    "kun": "そな-える・とも",
+    "meaning": "offer/child",
+    "example": "供 (そなえる) offer/child"
+  },
+  {
+    "kanji": "格",
+    "on": "カク・コウ",
+    "kun": "",
+    "meaning": "status/pattern",
+    "example": "格 (カク) status/pattern"
+  },
+  {
+    "kanji": "打",
+    "on": "ダ",
+    "kun": "う-つ",
+    "meaning": "hit",
+    "example": "打 (うつ) hit"
+  },
+  {
+    "kanji": "御",
+    "on": "ゴ・ギョ・オ",
+    "kun": "",
+    "meaning": "honorific",
+    "example": "御 (ゴ) honorific"
+  },
+  {
+    "kanji": "断",
+    "on": "ダン",
+    "kun": "ことわ-る・た-つ",
+    "meaning": "refuse/cut",
+    "example": "断 (ことわる) refuse/cut"
+  },
+  {
+    "kanji": "式",
+    "on": "シキ",
+    "kun": "",
+    "meaning": "ceremony/formula",
+    "example": "式 (シキ) ceremony/formula"
+  },
+  {
+    "kanji": "師",
+    "on": "シ",
+    "kun": "",
+    "meaning": "master/teacher",
+    "example": "師 (シ) master/teacher"
+  },
+  {
+    "kanji": "告",
+    "on": "コク",
+    "kun": "つ-げる",
+    "meaning": "inform/report",
+    "example": "告 (つげる) inform/report"
+  },
+  {
+    "kanji": "深",
+    "on": "シン",
+    "kun": "ふか-い",
+    "meaning": "deep",
+    "example": "深 (ふかい) deep"
+  },
+  {
+    "kanji": "存",
+    "on": "ソン・ゾン",
+    "kun": "",
+    "meaning": "exist",
+    "example": "存 (ソン) exist"
+  },
+  {
+    "kanji": "争",
+    "on": "ソウ",
+    "kun": "あらそ-う",
+    "meaning": "compete/argue",
+    "example": "争 (あらそう) compete/argue"
+  },
+  {
+    "kanji": "覚",
+    "on": "カク",
+    "kun": "おぼ-える・さ-める",
+    "meaning": "remember/wake",
+    "example": "覚 (おぼえる) remember/wake"
+  },
+  {
+    "kanji": "側",
+    "on": "ソク",
+    "kun": "がわ",
+    "meaning": "side",
+    "example": "側 (がわ) side"
+  },
+  {
+    "kanji": "飛",
+    "on": "ヒ",
+    "kun": "と-ぶ",
+    "meaning": "fly",
+    "example": "飛 (とぶ) fly"
+  },
+  {
+    "kanji": "参",
+    "on": "サン",
+    "kun": "まい-る",
+    "meaning": "visit/participate",
+    "example": "参 (まいる) visit/participate"
+  },
+  {
+    "kanji": "突",
+    "on": "トツ",
+    "kun": "つ-く",
+    "meaning": "pierce/突然",
+    "example": "突 (つく) pierce/突然"
+  },
+  {
+    "kanji": "容",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "appearance/contain",
+    "example": "容 (ヨウ) appearance/contain"
+  },
+  {
+    "kanji": "育",
+    "on": "イク",
+    "kun": "そだ-てる",
+    "meaning": "raise/grow",
+    "example": "育 (そだてる) raise/grow"
+  },
+  {
+    "kanji": "構",
+    "on": "コウ",
+    "kun": "かま-える",
+    "meaning": "structure",
+    "example": "構 (かまえる) structure"
+  },
+  {
+    "kanji": "認",
+    "on": "ニン",
+    "kun": "みと-める",
+    "meaning": "recognize",
+    "example": "認 (みとめる) recognize"
+  },
+  {
+    "kanji": "位",
+    "on": "イ",
+    "kun": "くらい",
+    "meaning": "rank/position",
+    "example": "位 (くらい) rank/position"
+  },
+  {
+    "kanji": "達",
+    "on": "タツ",
+    "kun": "",
+    "meaning": "reach/pl. suffix",
+    "example": "達 (タツ) reach/pl. suffix"
+  },
+  {
+    "kanji": "守",
+    "on": "シュ・ス",
+    "kun": "まも-る",
+    "meaning": "protect",
+    "example": "守 (まもる) protect"
+  },
+  {
+    "kanji": "満",
+    "on": "マン",
+    "kun": "み-ちる",
+    "meaning": "full",
+    "example": "満 (みちる) full"
+  },
+  {
+    "kanji": "消",
+    "on": "ショウ",
+    "kun": "き-える・け-す",
+    "meaning": "erase/消える",
+    "example": "消 (きえる) erase/消える"
+  },
+  {
+    "kanji": "任",
+    "on": "ニン",
+    "kun": "まか-せる",
+    "meaning": "entrust/duty",
+    "example": "任 (まかせる) entrust/duty"
+  },
+  {
+    "kanji": "居",
+    "on": "キョ",
+    "kun": "い-る",
+    "meaning": "be/exist",
+    "example": "居 (いる) be/exist"
+  },
+  {
+    "kanji": "予",
+    "on": "ヨ",
+    "kun": "",
+    "meaning": "in advance",
+    "example": "予 (ヨ) in advance"
+  },
+  {
+    "kanji": "路",
+    "on": "ロ",
+    "kun": "みち",
+    "meaning": "road/路",
+    "example": "路 (みち) road/路"
+  },
+  {
+    "kanji": "座",
+    "on": "ザ",
+    "kun": "すわ-る",
+    "meaning": "sit/seat",
+    "example": "座 (すわる) sit/seat"
+  },
+  {
+    "kanji": "客",
+    "on": "キャク・カク",
+    "kun": "",
+    "meaning": "guest/customer",
+    "example": "客 (キャク) guest/customer"
+  },
+  {
+    "kanji": "船",
+    "on": "セン",
+    "kun": "ふね",
+    "meaning": "ship",
+    "example": "船 (ふね) ship"
+  },
+  {
+    "kanji": "追",
+    "on": "ツイ",
+    "kun": "お-う",
+    "meaning": "chase",
+    "example": "追 (おう) chase"
+  },
+  {
+    "kanji": "背",
+    "on": "ハイ",
+    "kun": "せ・せい",
+    "meaning": "back/height",
+    "example": "背 (せ) back/height"
+  },
+  {
+    "kanji": "観",
+    "on": "カン",
+    "kun": "み-る",
+    "meaning": "observe/view",
+    "example": "観 (みる) observe/view"
+  },
+  {
+    "kanji": "誰",
+    "on": "スイ",
+    "kun": "だれ",
+    "meaning": "who",
+    "example": "誰 (だれ) who"
+  },
+  {
+    "kanji": "息",
+    "on": "ソク",
+    "kun": "いき",
+    "meaning": "breath/son",
+    "example": "息 (いき) breath/son"
+  },
+  {
+    "kanji": "失",
+    "on": "シツ",
+    "kun": "うしな-う",
+    "meaning": "lose",
+    "example": "失 (うしなう) lose"
+  },
+  {
+    "kanji": "老",
+    "on": "ロウ",
+    "kun": "お-いる",
+    "meaning": "old/age",
+    "example": "老 (おいる) old/age"
+  },
+  {
+    "kanji": "良",
+    "on": "リョウ",
+    "kun": "よ-い",
+    "meaning": "good",
+    "example": "良 (よい) good"
+  },
+  {
+    "kanji": "示",
+    "on": "ジ・シ",
+    "kun": "しめ-す",
+    "meaning": "show",
+    "example": "示 (しめす) show"
+  },
+  {
+    "kanji": "号",
+    "on": "ゴウ",
+    "kun": "",
+    "meaning": "number/name",
+    "example": "号 (ゴウ) number/name"
+  },
+  {
+    "kanji": "職",
+    "on": "ショク",
+    "kun": "",
+    "meaning": "employment",
+    "example": "職 (ショク) employment"
+  },
+  {
+    "kanji": "王",
+    "on": "オウ",
+    "kun": "",
+    "meaning": "king",
+    "example": "王 (オウ) king"
+  },
+  {
+    "kanji": "識",
+    "on": "シキ",
+    "kun": "",
+    "meaning": "discern",
+    "example": "識 (シキ) discern"
+  },
+  {
+    "kanji": "警",
+    "on": "ケイ",
+    "kun": "",
+    "meaning": "warn/police",
+    "example": "警 (ケイ) warn/police"
+  },
+  {
+    "kanji": "優",
+    "on": "ユウ",
+    "kun": "やさ-しい・すぐ-れる",
+    "meaning": "gentle/superior",
+    "example": "優 (やさしい) gentle/superior"
+  },
+  {
+    "kanji": "投",
+    "on": "トウ",
+    "kun": "な-げる",
+    "meaning": "throw",
+    "example": "投 (なげる) throw"
+  },
+  {
+    "kanji": "局",
+    "on": "キョク",
+    "kun": "",
+    "meaning": "bureau/situation",
+    "example": "局 (キョク) bureau/situation"
+  },
+  {
+    "kanji": "難",
+    "on": "ナン",
+    "kun": "むずか-しい",
+    "meaning": "difficult",
+    "example": "難 (むずかしい) difficult"
+  },
+  {
+    "kanji": "種",
+    "on": "シュ",
+    "kun": "たね",
+    "meaning": "kind/seed",
+    "example": "種 (たね) kind/seed"
+  },
+  {
+    "kanji": "念",
+    "on": "ネン",
+    "kun": "",
+    "meaning": "thought/wish",
+    "example": "念 (ネン) thought/wish"
+  },
+  {
+    "kanji": "寄",
+    "on": "キ",
+    "kun": "よ-る",
+    "meaning": "draw near",
+    "example": "寄 (よる) draw near"
+  },
+  {
+    "kanji": "商",
+    "on": "ショウ",
+    "kun": "あきな-う",
+    "meaning": "trade/commerce",
+    "example": "商 (あきなう) trade/commerce"
+  },
+  {
+    "kanji": "害",
+    "on": "ガイ",
+    "kun": "",
+    "meaning": "harm",
+    "example": "害 (ガイ) harm"
+  },
+  {
+    "kanji": "頼",
+    "on": "ライ",
+    "kun": "たの-む・たよ-る",
+    "meaning": "rely/request",
+    "example": "頼 (たのむ) rely/request"
+  },
+  {
+    "kanji": "横",
+    "on": "オウ",
+    "kun": "よこ",
+    "meaning": "horizontal/side",
+    "example": "横 (よこ) horizontal/side"
+  },
+  {
+    "kanji": "増",
+    "on": "ゾウ",
+    "kun": "ふ-える",
+    "meaning": "increase",
+    "example": "増 (ふえる) increase"
+  },
+  {
+    "kanji": "差",
+    "on": "サ",
+    "kun": "さ-す",
+    "meaning": "difference",
+    "example": "差 (さす) difference"
+  },
+  {
+    "kanji": "苦",
+    "on": "ク",
+    "kun": "くる-しい",
+    "meaning": "painful",
+    "example": "苦 (くるしい) painful"
+  },
+  {
+    "kanji": "収",
+    "on": "シュウ",
+    "kun": "おさ-める",
+    "meaning": "income/store",
+    "example": "収 (おさめる) income/store"
+  },
+  {
+    "kanji": "段",
+    "on": "ダン",
+    "kun": "",
+    "meaning": "step/level",
+    "example": "段 (ダン) step/level"
+  },
+  {
+    "kanji": "俺",
+    "on": "エン",
+    "kun": "おれ",
+    "meaning": "I (masculine)",
+    "example": "俺 (おれ) I (masculine)"
+  },
+  {
+    "kanji": "渡",
+    "on": "ト",
+    "kun": "わた-る",
+    "meaning": "cross/hand over",
+    "example": "渡 (わたる) cross/hand over"
+  },
+  {
+    "kanji": "与",
+    "on": "ヨ",
+    "kun": "あた-える",
+    "meaning": "give",
+    "example": "与 (あたえる) give"
+  },
+  {
+    "kanji": "演",
+    "on": "エン",
+    "kun": "",
+    "meaning": "perform",
+    "example": "演 (エン) perform"
+  },
+  {
+    "kanji": "備",
+    "on": "ビ",
+    "kun": "そな-える",
+    "meaning": "prepare",
+    "example": "備 (そなえる) prepare"
+  },
+  {
+    "kanji": "申",
+    "on": "シン",
+    "kun": "もう-す",
+    "meaning": "say humbly",
+    "example": "申 (もうす) say humbly"
+  },
+  {
+    "kanji": "例",
+    "on": "レイ",
+    "kun": "たと-える",
+    "meaning": "example",
+    "example": "例 (たとえる) example"
+  },
+  {
+    "kanji": "働",
+    "on": "ドウ",
+    "kun": "はたら-く",
+    "meaning": "work",
+    "example": "働 (はたらく) work"
+  },
+  {
+    "kanji": "景",
+    "on": "ケイ",
+    "kun": "",
+    "meaning": "scenery",
+    "example": "景 (ケイ) scenery"
+  },
+  {
+    "kanji": "抜",
+    "on": "バツ",
+    "kun": "ぬ-く",
+    "meaning": "pull out",
+    "example": "抜 (ぬく) pull out"
+  },
+  {
+    "kanji": "遠",
+    "on": "エン・オン",
+    "kun": "とお-い",
+    "meaning": "far",
+    "example": "遠 (とおい) far"
+  },
+  {
+    "kanji": "絶",
+    "on": "ゼツ",
+    "kun": "た-える",
+    "meaning": "cut off/absolute",
+    "example": "絶 (たえる) cut off/absolute"
+  },
+  {
+    "kanji": "負",
+    "on": "フ",
+    "kun": "ま-ける・お-う",
+    "meaning": "lose/bear",
+    "example": "負 (まける) lose/bear"
+  },
+  {
+    "kanji": "福",
+    "on": "フク",
+    "kun": "",
+    "meaning": "happiness",
+    "example": "福 (フク) happiness"
+  },
+  {
+    "kanji": "球",
+    "on": "キュウ",
+    "kun": "たま",
+    "meaning": "ball/sphere",
+    "example": "球 (たま) ball/sphere"
+  },
+  {
+    "kanji": "酒",
+    "on": "シュ",
+    "kun": "さけ・さか",
+    "meaning": "alcohol",
+    "example": "酒 (さけ) alcohol"
+  },
+  {
+    "kanji": "君",
+    "on": "クン",
+    "kun": "きみ",
+    "meaning": "you/lord",
+    "example": "君 (きみ) you/lord"
+  },
+  {
+    "kanji": "察",
+    "on": "サツ",
+    "kun": "",
+    "meaning": "guess/inspect",
+    "example": "察 (サツ) guess/inspect"
+  },
+  {
+    "kanji": "望",
+    "on": "ボウ・モウ",
+    "kun": "のぞ-む",
+    "meaning": "hope/望む",
+    "example": "望 (のぞむ) hope/望む"
+  },
+  {
+    "kanji": "婚",
+    "on": "コン",
+    "kun": "",
+    "meaning": "marry",
+    "example": "婚 (コン) marry"
+  },
+  {
+    "kanji": "単",
+    "on": "タン",
+    "kun": "",
+    "meaning": "single/simple",
+    "example": "単 (タン) single/simple"
+  },
+  {
+    "kanji": "押",
+    "on": "オウ",
+    "kun": "お-す",
+    "meaning": "push",
+    "example": "押 (おす) push"
+  },
+  {
+    "kanji": "割",
+    "on": "カツ",
+    "kun": "わ-る・わり",
+    "meaning": "divide/proportion",
+    "example": "割 (わる) divide/proportion"
+  },
+  {
+    "kanji": "限",
+    "on": "ゲン",
+    "kun": "かぎ-る",
+    "meaning": "limit",
+    "example": "限 (かぎる) limit"
+  },
+  {
+    "kanji": "戻",
+    "on": "レイ",
+    "kun": "もど-る",
+    "meaning": "return",
+    "example": "戻 (もどる) return"
+  },
+  {
+    "kanji": "科",
+    "on": "カ",
+    "kun": "",
+    "meaning": "department/science",
+    "example": "科 (カ) department/science"
+  },
+  {
+    "kanji": "求",
+    "on": "キュウ",
+    "kun": "もと-める",
+    "meaning": "seek",
+    "example": "求 (もとめる) seek"
+  },
+  {
+    "kanji": "談",
+    "on": "ダン",
+    "kun": "",
+    "meaning": "talk/discuss",
+    "example": "談 (ダン) talk/discuss"
+  },
+  {
+    "kanji": "降",
+    "on": "コウ",
+    "kun": "お-りる・ふ-る",
+    "meaning": "descend/precipitation",
+    "example": "降 (おりる) descend/precipitation"
+  },
+  {
+    "kanji": "妻",
+    "on": "サイ",
+    "kun": "つま",
+    "meaning": "wife",
+    "example": "妻 (つま) wife"
+  },
+  {
+    "kanji": "岡",
+    "on": "コウ",
+    "kun": "おか",
+    "meaning": "hill",
+    "example": "岡 (おか) hill"
+  },
+  {
+    "kanji": "熱",
+    "on": "ネツ",
+    "kun": "あつ-い",
+    "meaning": "hot/heat",
+    "example": "熱 (あつい) hot/heat"
+  },
+  {
+    "kanji": "浮",
+    "on": "フ",
+    "kun": "う-く",
+    "meaning": "float",
+    "example": "浮 (うく) float"
+  },
+  {
+    "kanji": "等",
+    "on": "トウ",
+    "kun": "ひと-しい・など",
+    "meaning": "equal/etc.",
+    "example": "等 (ひとしい) equal/etc."
+  },
+  {
+    "kanji": "末",
+    "on": "マツ・バツ",
+    "kun": "すえ",
+    "meaning": "end/tip",
+    "example": "末 (すえ) end/tip"
+  },
+  {
+    "kanji": "幸",
+    "on": "コウ",
+    "kun": "しあわ-せ・さいわ-い",
+    "meaning": "happiness",
+    "example": "幸 (しあわせ) happiness"
+  },
+  {
+    "kanji": "草",
+    "on": "ソウ",
+    "kun": "くさ",
+    "meaning": "grass",
+    "example": "草 (くさ) grass"
+  },
+  {
+    "kanji": "越",
+    "on": "エツ",
+    "kun": "こ-える",
+    "meaning": "surpass/cross",
+    "example": "越 (こえる) surpass/cross"
+  },
+  {
+    "kanji": "登",
+    "on": "トウ・ト",
+    "kun": "のぼ-る",
+    "meaning": "climb",
+    "example": "登 (のぼる) climb"
+  },
+  {
+    "kanji": "類",
+    "on": "ルイ",
+    "kun": "たぐ-い",
+    "meaning": "type/category",
+    "example": "類 (たぐい) type/category"
+  },
+  {
+    "kanji": "未",
+    "on": "ミ",
+    "kun": "まだ",
+    "meaning": "not yet",
+    "example": "未 (まだ) not yet"
+  },
+  {
+    "kanji": "規",
+    "on": "キ",
+    "kun": "",
+    "meaning": "standard",
+    "example": "規 (キ) standard"
+  },
+  {
+    "kanji": "精",
+    "on": "セイ・ショウ",
+    "kun": "",
+    "meaning": "spirit/精力",
+    "example": "精 (セイ) spirit/精力"
+  },
+  {
+    "kanji": "抱",
+    "on": "ホウ",
+    "kun": "だ-く・いだ-く",
+    "meaning": "embrace",
+    "example": "抱 (だく) embrace"
+  },
+  {
+    "kanji": "労",
+    "on": "ロウ",
+    "kun": "",
+    "meaning": "labor",
+    "example": "労 (ロウ) labor"
+  },
+  {
+    "kanji": "処",
+    "on": "ショ",
+    "kun": "",
+    "meaning": "deal with",
+    "example": "処 (ショ) deal with"
+  },
+  {
+    "kanji": "退",
+    "on": "タイ",
+    "kun": "しりぞ-く",
+    "meaning": "retreat",
+    "example": "退 (しりぞく) retreat"
+  },
+  {
+    "kanji": "費",
+    "on": "ヒ",
+    "kun": "つい-やす",
+    "meaning": "expense",
+    "example": "費 (ついやす) expense"
+  },
+  {
+    "kanji": "非",
+    "on": "ヒ",
+    "kun": "",
+    "meaning": "wrong/non-",
+    "example": "非 (ヒ) wrong/non-"
+  },
+  {
+    "kanji": "喜",
+    "on": "キ",
+    "kun": "よろこ-ぶ",
+    "meaning": "joy",
+    "example": "喜 (よろこぶ) joy"
+  },
+  {
+    "kanji": "娘",
+    "on": "ジョウ",
+    "kun": "むすめ",
+    "meaning": "daughter",
+    "example": "娘 (むすめ) daughter"
+  },
+  {
+    "kanji": "逃",
+    "on": "トウ",
+    "kun": "に-げる",
+    "meaning": "escape",
+    "example": "逃 (にげる) escape"
+  },
+  {
+    "kanji": "探",
+    "on": "タン",
+    "kun": "さが-す",
+    "meaning": "search",
+    "example": "探 (さがす) search"
+  },
+  {
+    "kanji": "犯",
+    "on": "ハン",
+    "kun": "おか-す",
+    "meaning": "crime",
+    "example": "犯 (おかす) crime"
+  },
+  {
+    "kanji": "薬",
+    "on": "ヤク",
+    "kun": "くすり",
+    "meaning": "medicine",
+    "example": "薬 (くすり) medicine"
+  },
+  {
+    "kanji": "園",
+    "on": "エン",
+    "kun": "その",
+    "meaning": "garden",
+    "example": "園 (その) garden"
+  },
+  {
+    "kanji": "疑",
+    "on": "ギ",
+    "kun": "うたが-う",
+    "meaning": "doubt",
+    "example": "疑 (うたがう) doubt"
+  },
+  {
+    "kanji": "緒",
+    "on": "ショ・チョ",
+    "kun": "お",
+    "meaning": "string/together",
+    "example": "緒 (お) string/together"
+  },
+  {
+    "kanji": "静",
+    "on": "セイ・ジョウ",
+    "kun": "しず-か",
+    "meaning": "quiet",
+    "example": "静 (しずか) quiet"
+  },
+  {
+    "kanji": "具",
+    "on": "グ",
+    "kun": "",
+    "meaning": "tool/具体",
+    "example": "具 (グ) tool/具体"
+  },
+  {
+    "kanji": "席",
+    "on": "セキ",
+    "kun": "",
+    "meaning": "seat",
+    "example": "席 (セキ) seat"
+  },
+  {
+    "kanji": "速",
+    "on": "ソク",
+    "kun": "はや-い・はや-める",
+    "meaning": "fast",
+    "example": "速 (はやい) fast"
+  },
+  {
+    "kanji": "舞",
+    "on": "ブ",
+    "kun": "ま-う",
+    "meaning": "dance",
+    "example": "舞 (まう) dance"
+  },
+  {
+    "kanji": "宿",
+    "on": "シュク",
+    "kun": "やど",
+    "meaning": "inn/lodge",
+    "example": "宿 (やど) inn/lodge"
+  },
+  {
+    "kanji": "程",
+    "on": "テイ",
+    "kun": "ほど",
+    "meaning": "degree/extent",
+    "example": "程 (ほど) degree/extent"
+  },
+  {
+    "kanji": "倒",
+    "on": "トウ",
+    "kun": "たお-れる",
+    "meaning": "fall/collapse",
+    "example": "倒 (たおれる) fall/collapse"
+  },
+  {
+    "kanji": "寝",
+    "on": "シン",
+    "kun": "ね-る",
+    "meaning": "sleep",
+    "example": "寝 (ねる) sleep"
+  },
+  {
+    "kanji": "宅",
+    "on": "タク",
+    "kun": "",
+    "meaning": "home/residence",
+    "example": "宅 (タク) home/residence"
+  },
+  {
+    "kanji": "絵",
+    "on": "カイ・エ",
+    "kun": "え",
+    "meaning": "painting",
+    "example": "絵 (え) painting"
+  },
+  {
+    "kanji": "破",
+    "on": "ハ",
+    "kun": "やぶ-る",
+    "meaning": "break",
+    "example": "破 (やぶる) break"
+  },
+  {
+    "kanji": "庭",
+    "on": "テイ",
+    "kun": "にわ",
+    "meaning": "garden",
+    "example": "庭 (にわ) garden"
+  },
+  {
+    "kanji": "婦",
+    "on": "フ",
+    "kun": "",
+    "meaning": "woman/wife",
+    "example": "婦 (フ) woman/wife"
+  },
+  {
+    "kanji": "余",
+    "on": "ヨ",
+    "kun": "あま-る",
+    "meaning": "excess/I",
+    "example": "余 (あまる) excess/I"
+  },
+  {
+    "kanji": "訪",
+    "on": "ホウ",
+    "kun": "おとず-れる・たず-ねる",
+    "meaning": "visit",
+    "example": "訪 (おとずれる) visit"
+  },
+  {
+    "kanji": "冷",
+    "on": "レイ",
+    "kun": "つめ-たい・ひ-える",
+    "meaning": "cold",
+    "example": "冷 (つめたい) cold"
+  },
+  {
+    "kanji": "暮",
+    "on": "ボ",
+    "kun": "く-れる・く-らす",
+    "meaning": "live/sunset",
+    "example": "暮 (くれる) live/sunset"
+  },
+  {
+    "kanji": "腹",
+    "on": "フク",
+    "kun": "はら",
+    "meaning": "stomach/belly",
+    "example": "腹 (はら) stomach/belly"
+  },
+  {
+    "kanji": "危",
+    "on": "キ",
+    "kun": "あぶ-ない",
+    "meaning": "dangerous",
+    "example": "危 (あぶない) dangerous"
+  },
+  {
+    "kanji": "許",
+    "on": "キョ",
+    "kun": "ゆる-す",
+    "meaning": "permit",
+    "example": "許 (ゆるす) permit"
+  },
+  {
+    "kanji": "似",
+    "on": "ジ",
+    "kun": "に-る",
+    "meaning": "resemble",
+    "example": "似 (にる) resemble"
+  },
+  {
+    "kanji": "険",
+    "on": "ケン",
+    "kun": "けわ-しい",
+    "meaning": "steep/dangerous",
+    "example": "険 (けわしい) steep/dangerous"
+  },
+  {
+    "kanji": "財",
+    "on": "ザイ・サイ",
+    "kun": "たから",
+    "meaning": "wealth",
+    "example": "財 (たから) wealth"
+  },
+  {
+    "kanji": "遊",
+    "on": "ユウ",
+    "kun": "あそ-ぶ",
+    "meaning": "play",
+    "example": "遊 (あそぶ) play"
+  },
+  {
+    "kanji": "雑",
+    "on": "ザツ・ゾウ",
+    "kun": "",
+    "meaning": "miscellaneous",
+    "example": "雑 (ザツ) miscellaneous"
+  },
+  {
+    "kanji": "恐",
+    "on": "キョウ",
+    "kun": "おそ-れる",
+    "meaning": "fear",
+    "example": "恐 (おそれる) fear"
+  },
+  {
+    "kanji": "値",
+    "on": "チ",
+    "kun": "ね・あたい",
+    "meaning": "price/value",
+    "example": "値 (ね) price/value"
+  },
+  {
+    "kanji": "暗",
+    "on": "アン",
+    "kun": "くら-い",
+    "meaning": "dark",
+    "example": "暗 (くらい) dark"
+  },
+  {
+    "kanji": "積",
+    "on": "セキ",
+    "kun": "つ-む",
+    "meaning": "pile up",
+    "example": "積 (つむ) pile up"
+  },
+  {
+    "kanji": "夢",
+    "on": "ム",
+    "kun": "ゆめ",
+    "meaning": "dream",
+    "example": "夢 (ゆめ) dream"
+  },
+  {
+    "kanji": "痛",
+    "on": "ツウ",
+    "kun": "いた-い",
+    "meaning": "painful",
+    "example": "痛 (いたい) painful"
+  },
+  {
+    "kanji": "富",
+    "on": "フ・フウ",
+    "kun": "とみ・と-む",
+    "meaning": "wealth",
+    "example": "富 (とみ) wealth"
+  },
+  {
+    "kanji": "刻",
+    "on": "コク",
+    "kun": "きざ-む",
+    "meaning": "engrave/moment",
+    "example": "刻 (きざむ) engrave/moment"
+  },
+  {
+    "kanji": "鳴",
+    "on": "メイ",
+    "kun": "な-く・な-らす",
+    "meaning": "cry/ring",
+    "example": "鳴 (なく) cry/ring"
+  },
+  {
+    "kanji": "欲",
+    "on": "ヨク",
+    "kun": "ほ-しい",
+    "meaning": "desire",
+    "example": "欲 (ほしい) desire"
+  },
+  {
+    "kanji": "途",
+    "on": "ト",
+    "kun": "",
+    "meaning": "way/on the way",
+    "example": "途 (ト) way/on the way"
+  },
+  {
+    "kanji": "曲",
+    "on": "キョク",
+    "kun": "ま-がる",
+    "meaning": "bend/melody",
+    "example": "曲 (まがる) bend/melody"
+  },
+  {
+    "kanji": "耳",
+    "on": "ジ",
+    "kun": "みみ",
+    "meaning": "ear",
+    "example": "耳 (みみ) ear"
+  },
+  {
+    "kanji": "完",
+    "on": "カン",
+    "kun": "",
+    "meaning": "complete",
+    "example": "完 (カン) complete"
+  },
+  {
+    "kanji": "願",
+    "on": "ガン",
+    "kun": "ねが-う",
+    "meaning": "wish/request",
+    "example": "願 (ねがう) wish/request"
+  },
+  {
+    "kanji": "罪",
+    "on": "ザイ",
+    "kun": "つみ",
+    "meaning": "crime/sin",
+    "example": "罪 (つみ) crime/sin"
+  },
+  {
+    "kanji": "陽",
+    "on": "ヨウ",
+    "kun": "",
+    "meaning": "sunlight/positive",
+    "example": "陽 (ヨウ) sunlight/positive"
+  },
+  {
+    "kanji": "亡",
+    "on": "ボウ・モウ",
+    "kun": "な-くなる",
+    "meaning": "die/lost",
+    "example": "亡 (なくなる) die/lost"
+  },
+  {
+    "kanji": "散",
+    "on": "サン",
+    "kun": "ち-る",
+    "meaning": "scatter",
+    "example": "散 (ちる) scatter"
+  },
+  {
+    "kanji": "掛",
+    "on": "カ",
+    "kun": "か-ける",
+    "meaning": "hang",
+    "example": "掛 (かける) hang"
+  },
+  {
+    "kanji": "昨",
+    "on": "サク",
+    "kun": "",
+    "meaning": "yesterday/last",
+    "example": "昨 (サク) yesterday/last"
+  },
+  {
+    "kanji": "怒",
+    "on": "ド・ヌ",
+    "kun": "おこ-る・いか-る",
+    "meaning": "anger",
+    "example": "怒 (おこる) anger"
+  },
+  {
+    "kanji": "留",
+    "on": "リュウ・ル",
+    "kun": "と-まる",
+    "meaning": "remain/留学",
+    "example": "留 (とまる) remain/留学"
+  },
+  {
+    "kanji": "礼",
+    "on": "レイ・ライ",
+    "kun": "",
+    "meaning": "gratitude/bow",
+    "example": "礼 (レイ) gratitude/bow"
+  },
+  {
+    "kanji": "列",
+    "on": "レツ",
+    "kun": "",
+    "meaning": "row/列車",
+    "example": "列 (レツ) row/列車"
+  },
+  {
+    "kanji": "雪",
+    "on": "セツ",
+    "kun": "ゆき",
+    "meaning": "snow",
+    "example": "雪 (ゆき) snow"
+  },
+  {
+    "kanji": "払",
+    "on": "フツ",
+    "kun": "はら-う",
+    "meaning": "pay",
+    "example": "払 (はらう) pay"
+  },
+  {
+    "kanji": "給",
+    "on": "キュウ",
+    "kun": "",
+    "meaning": "supply/salary",
+    "example": "給 (キュウ) supply/salary"
+  },
+  {
+    "kanji": "敗",
+    "on": "ハイ",
+    "kun": "やぶ-れる",
+    "meaning": "lose/fail",
+    "example": "敗 (やぶれる) lose/fail"
+  },
+  {
+    "kanji": "捕",
+    "on": "ホ",
+    "kun": "つか-まえる",
+    "meaning": "catch",
+    "example": "捕 (つかまえる) catch"
+  },
+  {
+    "kanji": "忘",
+    "on": "ボウ",
+    "kun": "わす-れる",
+    "meaning": "forget",
+    "example": "忘 (わすれる) forget"
+  },
+  {
+    "kanji": "晴",
+    "on": "セイ",
+    "kun": "は-れる",
+    "meaning": "clear weather",
+    "example": "晴 (はれる) clear weather"
+  },
+  {
+    "kanji": "因",
+    "on": "イン",
+    "kun": "よ-る",
+    "meaning": "cause",
+    "example": "因 (よる) cause"
+  },
+  {
+    "kanji": "折",
+    "on": "セツ",
+    "kun": "お-る・おり",
+    "meaning": "fold/break",
+    "example": "折 (おる) fold/break"
+  },
+  {
+    "kanji": "迎",
+    "on": "ゲイ",
+    "kun": "むか-える",
+    "meaning": "greet/welcome",
+    "example": "迎 (むかえる) greet/welcome"
+  },
+  {
+    "kanji": "悲",
+    "on": "ヒ",
+    "kun": "かな-しい",
+    "meaning": "sad",
+    "example": "悲 (かなしい) sad"
+  },
+  {
+    "kanji": "港",
+    "on": "コウ",
+    "kun": "みなと",
+    "meaning": "harbor",
+    "example": "港 (みなと) harbor"
+  },
+  {
+    "kanji": "責",
+    "on": "セキ",
+    "kun": "せ-める",
+    "meaning": "blame/duty",
+    "example": "責 (せめる) blame/duty"
+  },
+  {
+    "kanji": "除",
+    "on": "ジョ・ジ",
+    "kun": "のぞ-く",
+    "meaning": "remove",
+    "example": "除 (のぞく) remove"
+  },
+  {
+    "kanji": "困",
+    "on": "コン",
+    "kun": "こま-る",
+    "meaning": "困る",
+    "example": "困 (こまる) 困る"
+  },
+  {
+    "kanji": "閉",
+    "on": "ヘイ",
+    "kun": "し-める・と-じる",
+    "meaning": "close",
+    "example": "閉 (しめる) close"
+  },
+  {
+    "kanji": "吸",
+    "on": "キュウ",
+    "kun": "す-う",
+    "meaning": "breathe in",
+    "example": "吸 (すう) breathe in"
+  },
+  {
+    "kanji": "髪",
+    "on": "ハツ",
+    "kun": "かみ",
+    "meaning": "hair",
+    "example": "髪 (かみ) hair"
+  },
+  {
+    "kanji": "束",
+    "on": "ソク",
+    "kun": "たば",
+    "meaning": "bundle",
+    "example": "束 (たば) bundle"
+  },
+  {
+    "kanji": "眠",
+    "on": "ミン",
+    "kun": "ねむ-る",
+    "meaning": "sleep",
+    "example": "眠 (ねむる) sleep"
+  },
+  {
+    "kanji": "易",
+    "on": "エキ・イ",
+    "kun": "やさ-しい",
+    "meaning": "easy/trade",
+    "example": "易 (やさしい) easy/trade"
+  },
+  {
+    "kanji": "窓",
+    "on": "ソウ",
+    "kun": "まど",
+    "meaning": "window",
+    "example": "窓 (まど) window"
+  },
+  {
+    "kanji": "祖",
+    "on": "ソ",
+    "kun": "",
+    "meaning": "ancestor",
+    "example": "祖 (ソ) ancestor"
+  },
+  {
+    "kanji": "勤",
+    "on": "キン・ゴン",
+    "kun": "つと-める",
+    "meaning": "work/commute",
+    "example": "勤 (つとめる) work/commute"
+  },
+  {
+    "kanji": "昔",
+    "on": "セキ・シャク",
+    "kun": "むかし",
+    "meaning": "past",
+    "example": "昔 (むかし) past"
+  },
+  {
+    "kanji": "便",
+    "on": "ベン・ビン",
+    "kun": "たよ-り",
+    "meaning": "convenient/mail",
+    "example": "便 (たより) convenient/mail"
+  },
+  {
+    "kanji": "適",
+    "on": "テキ",
+    "kun": "",
+    "meaning": "suitable",
+    "example": "適 (テキ) suitable"
+  },
+  {
+    "kanji": "吹",
+    "on": "スイ",
+    "kun": "ふ-く",
+    "meaning": "blow",
+    "example": "吹 (ふく) blow"
+  },
+  {
+    "kanji": "候",
+    "on": "コウ",
+    "kun": "そうろう",
+    "meaning": "season/condition",
+    "example": "候 (そうろう) season/condition"
+  },
+  {
+    "kanji": "怖",
+    "on": "フ",
+    "kun": "こわ-い",
+    "meaning": "scary",
+    "example": "怖 (こわい) scary"
+  },
+  {
+    "kanji": "辞",
+    "on": "ジ",
+    "kun": "や-める",
+    "meaning": "resign/word",
+    "example": "辞 (やめる) resign/word"
+  },
+  {
+    "kanji": "否",
+    "on": "ヒ",
+    "kun": "いな",
+    "meaning": "no/deny",
+    "example": "否 (いな) no/deny"
+  },
+  {
+    "kanji": "遅",
+    "on": "チ",
+    "kun": "おそ-い・おく-れる",
+    "meaning": "late/slow",
+    "example": "遅 (おそい) late/slow"
+  },
+  {
+    "kanji": "煙",
+    "on": "エン",
+    "kun": "けむ-り",
+    "meaning": "smoke",
+    "example": "煙 (けむり) smoke"
+  },
+  {
+    "kanji": "徒",
+    "on": "ト",
+    "kun": "",
+    "meaning": "follower/on foot",
+    "example": "徒 (ト) follower/on foot"
+  },
+  {
+    "kanji": "欠",
+    "on": "ケツ",
+    "kun": "か-ける",
+    "meaning": "lack",
+    "example": "欠 (かける) lack"
+  },
+  {
+    "kanji": "迷",
+    "on": "メイ",
+    "kun": "まよ-う",
+    "meaning": "lost/迷惑",
+    "example": "迷 (まよう) lost/迷惑"
+  },
+  {
+    "kanji": "洗",
+    "on": "セン",
+    "kun": "あら-う",
+    "meaning": "wash",
+    "example": "洗 (あらう) wash"
+  },
+  {
+    "kanji": "互",
+    "on": "ゴ",
+    "kun": "たが-い",
+    "meaning": "mutual",
+    "example": "互 (たがい) mutual"
+  },
+  {
+    "kanji": "才",
+    "on": "サイ",
+    "kun": "",
+    "meaning": "talent",
+    "example": "才 (サイ) talent"
+  },
+  {
+    "kanji": "更",
+    "on": "コウ",
+    "kun": "さら・ふ-ける",
+    "meaning": "furthermore/renew",
+    "example": "更 (さら) furthermore/renew"
+  },
+  {
+    "kanji": "歯",
+    "on": "シ",
+    "kun": "は",
+    "meaning": "tooth",
+    "example": "歯 (は) tooth"
+  },
+  {
+    "kanji": "盗",
+    "on": "トウ",
+    "kun": "ぬす-む",
+    "meaning": "steal",
+    "example": "盗 (ぬすむ) steal"
+  },
+  {
+    "kanji": "慣",
+    "on": "カン",
+    "kun": "な-れる",
+    "meaning": "accustomed",
+    "example": "慣 (なれる) accustomed"
+  },
+  {
+    "kanji": "晩",
+    "on": "バン",
+    "kun": "",
+    "meaning": "evening",
+    "example": "晩 (バン) evening"
+  },
+  {
+    "kanji": "箱",
+    "on": "ソウ",
+    "kun": "はこ",
+    "meaning": "box",
+    "example": "箱 (はこ) box"
+  },
+  {
+    "kanji": "到",
+    "on": "トウ",
+    "kun": "いた-る",
+    "meaning": "arrive",
+    "example": "到 (いたる) arrive"
+  },
+  {
+    "kanji": "頂",
+    "on": "チョウ",
+    "kun": "いただ-く・いただき",
+    "meaning": "top/receive",
+    "example": "頂 (いただく) top/receive"
+  },
+  {
+    "kanji": "杯",
+    "on": "ハイ",
+    "kun": "さかずき",
+    "meaning": "cup/counter",
+    "example": "杯 (さかずき) cup/counter"
+  },
+  {
+    "kanji": "皆",
+    "on": "カイ",
+    "kun": "みな",
+    "meaning": "all/everyone",
+    "example": "皆 (みな) all/everyone"
+  },
+  {
+    "kanji": "招",
+    "on": "ショウ",
+    "kun": "まね-く",
+    "meaning": "invite",
+    "example": "招 (まねく) invite"
+  },
+  {
+    "kanji": "寒",
+    "on": "カン",
+    "kun": "さむ-い",
+    "meaning": "cold",
+    "example": "寒 (さむい) cold"
+  },
+  {
+    "kanji": "恥",
+    "on": "チ",
+    "kun": "は-じる",
+    "meaning": "shame",
+    "example": "恥 (はじる) shame"
+  },
+  {
+    "kanji": "疲",
+    "on": "ヒ",
+    "kun": "つか-れる",
+    "meaning": "tired",
+    "example": "疲 (つかれる) tired"
+  },
+  {
+    "kanji": "貧",
+    "on": "ヒン・ビン",
+    "kun": "まず-しい",
+    "meaning": "poor",
+    "example": "貧 (まずしい) poor"
+  },
+  {
+    "kanji": "猫",
+    "on": "ビョウ",
+    "kun": "ねこ",
+    "meaning": "cat",
+    "example": "猫 (ねこ) cat"
+  },
+  {
+    "kanji": "誤",
+    "on": "ゴ",
+    "kun": "あやま-る",
+    "meaning": "mistake",
+    "example": "誤 (あやまる) mistake"
+  },
+  {
+    "kanji": "努",
+    "on": "ド",
+    "kun": "つと-める",
+    "meaning": "effort",
+    "example": "努 (つとめる) effort"
+  },
+  {
+    "kanji": "幾",
+    "on": "キ",
+    "kun": "いく",
+    "meaning": "how many",
+    "example": "幾 (いく) how many"
+  },
+  {
+    "kanji": "賛",
+    "on": "サン",
+    "kun": "",
+    "meaning": "agree/praise",
+    "example": "賛 (サン) agree/praise"
+  },
+  {
+    "kanji": "偶",
+    "on": "グウ",
+    "kun": "たま-たま",
+    "meaning": "by chance",
+    "example": "偶 (たまたま) by chance"
+  },
+  {
+    "kanji": "忙",
+    "on": "ボウ",
+    "kun": "いそが-しい",
+    "meaning": "busy",
+    "example": "忙 (いそがしい) busy"
+  },
+  {
+    "kanji": "泳",
+    "on": "エイ",
+    "kun": "およ-ぐ",
+    "meaning": "swim",
+    "example": "泳 (およぐ) swim"
+  },
+  {
+    "kanji": "靴",
+    "on": "カ",
+    "kun": "くつ",
+    "meaning": "shoes",
+    "example": "靴 (くつ) shoes"
+  },
+  {
+    "kanji": "偉",
+    "on": "イ",
+    "kun": "えら-い",
+    "meaning": "great/admirable",
+    "example": "偉 (えらい) great/admirable"
+  },
+  {
+    "kanji": "意",
+    "on": "イ",
+    "kun": "",
+    "meaning": "intention, meaning, mind",
+    "example": "意味 (いみ) meaning"
+  },
+  {
+    "kanji": "員",
+    "on": "イン",
+    "kun": "",
+    "meaning": "member, employee, count",
+    "example": "社員 (しゃいん) company employee"
+  },
+  {
+    "kanji": "運",
+    "on": "ウン",
+    "kun": "はこ",
+    "meaning": "luck, carry, fate, fortune",
+    "example": "運動 (うんどう) exercise"
+  },
+  {
+    "kanji": "映",
+    "on": "エイ",
+    "kun": "うつ",
+    "meaning": "reflect, project, shine",
+    "example": "映画 (えいが) movie"
+  },
+  {
+    "kanji": "駅",
+    "on": "エキ",
+    "kun": "",
+    "meaning": "station, post",
+    "example": "駅 (えき) train station"
+  },
+  {
+    "kanji": "温",
+    "on": "オン",
+    "kun": "あたた・ぬる",
+    "meaning": "warm, temperature",
+    "example": "温度 (おんど) temperature"
+  },
+  {
+    "kanji": "漢",
+    "on": "カン",
+    "kun": "",
+    "meaning": "Chinese character, Han dynasty",
+    "example": "漢字 (かんじ) Chinese character"
+  },
+  {
+    "kanji": "究",
+    "on": "キュウ",
+    "kun": "きわ",
+    "meaning": "research, investigate, pursue",
+    "example": "研究 (けんきゅう) research"
+  },
+  {
+    "kanji": "去",
+    "on": "キョ・コ",
+    "kun": "さ",
+    "meaning": "past, leave, depart",
+    "example": "去年 (きょねん) last year"
+  },
+  {
+    "kanji": "競",
+    "on": "キョウ・ケイ",
+    "kun": "きそ・せ",
+    "meaning": "compete, rival, race",
+    "example": "競争 (きょうそう) competition"
+  },
+  {
+    "kanji": "研",
+    "on": "ケン",
+    "kun": "と",
+    "meaning": "polish, research, sharpen",
+    "example": "研究 (けんきゅう) research"
+  },
+  {
+    "kanji": "建",
+    "on": "ケン・コン",
+    "kun": "た",
+    "meaning": "build, construct, establish",
+    "example": "建物 (たてもの) building"
+  },
+  {
+    "kanji": "功",
+    "on": "コウ",
+    "kun": "",
+    "meaning": "merit, achievement, success",
+    "example": "成功 (せいこう) success"
+  },
+  {
+    "kanji": "死",
+    "on": "シ",
+    "kun": "し",
+    "meaning": "death, die, deceased",
+    "example": "死ぬ (しぬ) to die"
+  },
+  {
+    "kanji": "質",
+    "on": "シツ・シチ",
+    "kun": "",
+    "meaning": "quality, nature, pawn",
+    "example": "質問 (しつもん) question"
+  },
+  {
+    "kanji": "集",
+    "on": "シュウ",
+    "kun": "あつ",
+    "meaning": "gather, collect, assemble",
+    "example": "集める (あつめる) to collect"
+  },
+  {
+    "kanji": "住",
+    "on": "ジュウ",
+    "kun": "す",
+    "meaning": "live, reside, dwell",
+    "example": "住む (すむ) to live (in)"
+  },
+  {
+    "kanji": "重",
+    "on": "ジュウ・チョウ",
+    "kun": "おも・かさ",
+    "meaning": "heavy, important, double",
+    "example": "重要 (じゅうよう) important"
+  },
+  {
+    "kanji": "松",
+    "on": "ショウ",
+    "kun": "まつ",
+    "meaning": "pine tree",
+    "example": "松 (まつ) pine tree"
+  },
+  {
+    "kanji": "食",
+    "on": "ショク",
+    "kun": "た",
+    "meaning": "eat, food",
+    "example": "食事 (しょくじ) meal"
+  },
+  {
+    "kanji": "親",
+    "on": "シン",
+    "kun": "おや・した",
+    "meaning": "parent, intimate, relative",
+    "example": "親 (おや) parent"
+  },
+  {
+    "kanji": "世",
+    "on": "セ・セイ",
+    "kun": "よ",
+    "meaning": "world, society, era",
+    "example": "世界 (せかい) world"
+  },
+  {
+    "kanji": "切",
+    "on": "セツ・サイ",
+    "kun": "き",
+    "meaning": "cut, sever, expire, important",
+    "example": "切る (きる) to cut"
+  },
+  {
+    "kanji": "線",
+    "on": "セン",
+    "kun": "",
+    "meaning": "line, track, wire",
+    "example": "電話線 (でんわせん) telephone line"
+  },
+  {
+    "kanji": "走",
+    "on": "ソウ",
+    "kun": "はし",
+    "meaning": "run",
+    "example": "走る (はしる) to run"
+  },
+  {
+    "kanji": "送",
+    "on": "ソウ",
+    "kun": "おく",
+    "meaning": "send, escort, dispatch",
+    "example": "送る (おくる) to send"
+  },
+  {
+    "kanji": "台",
+    "on": "ダイ・タイ",
+    "kun": "",
+    "meaning": "stand, counter for machines",
+    "example": "台風 (たいふう) typhoon"
+  },
+  {
+    "kanji": "代",
+    "on": "ダイ・タイ",
+    "kun": "か・よ",
+    "meaning": "replace, era, generation, fee",
+    "example": "時代 (じだい) era/age"
+  },
+  {
+    "kanji": "待",
+    "on": "タイ",
+    "kun": "ま",
+    "meaning": "wait, await, treat",
+    "example": "待つ (まつ) to wait"
+  },
+  {
+    "kanji": "貸",
+    "on": "タイ",
+    "kun": "か",
+    "meaning": "lend, loan, rent out",
+    "example": "貸す (かす) to lend"
+  },
+  {
+    "kanji": "注",
+    "on": "チュウ",
+    "kun": "そそ",
+    "meaning": "pour, focus, pay attention",
+    "example": "注意 (ちゅうい) caution/attention"
+  }
+]
